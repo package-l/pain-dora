@@ -1,0 +1,16 @@
+.cookie-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: grey;
+    background-image: url('../img/Madeleine/Madeleine BG.png');
+    background-size: cover;
+    position: relative;
+}
+
+.character-card img {
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:20;
+}

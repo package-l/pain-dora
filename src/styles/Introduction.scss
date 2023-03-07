@@ -1,0 +1,37 @@
+@import url("https://use.typekit.net/ory6hcc.css");
+
+$bgcolor:#a8a8a8;
+
+@mixin fontD {
+    font-family: nautica, sans-serif;
+    font-weight: 700;
+    font-size: 4.6vw;
+    letter-spacing: 0.06em;
+    font-style: normal;
+    color: white;
+}
+
+.introduction {
+    @include fontD;
+    height: 100vh;
+    position: absolute;
+    z-index: 20;
+}
+
+.lid-modal {
+    height: 90vh;
+    width: 90vw;
+    /*display: flex;*/
+    background-color: $bgcolor;
+    margin-top: 3%;
+    margin-left: 3%;
+    /*margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;*/
+}
+
+.lid-modal-content {
+    position: absolute;
+    top: 75vh;
+    left: 43vw;
+}

@@ -1,0 +1,68 @@
+@mixin fontA {
+    font-family: minion-pro, serif;
+    font-size: 16px;
+    font-weight: semi-bold;
+    letter-spacing: 1.92px;
+    //font-kerning: normal;
+}
+
+.spotlight-image, .splash {
+    height: 100%;
+    width: 100%; //vw includes scrollbar
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.splash .enter {
+    background-color: black;
+    color: transparent;
+    border: none;
+    width: 100px;
+    height: 100px;
+    z-index: 14;
+    margin-top: 50vh;
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    display: transparent;
+    position: absolute;
+}
+
+.splash .enter:hover, .splash .enter span:hover { //check .enter span is correct syntax
+    display: inline-block;
+    color: white;
+}
+
+.splash {
+    text-align: center;
+    //background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: none;
+}
+
+.splash .mouse {
+    position: absolute;
+    background-image: radial-gradient(circle, transparent 100px, black 100px);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.splash img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.splash .text {
+    @include fontA;
+    position: absolute;
+    z-index: 1;
+    //pointer-events: none;
+    //user-select: none;
+    margin-top: 10vh;
+    color: white;
+}

@@ -1,0 +1,41 @@
+.hamburger {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 40;
+    cursor: pointer;
+}
+
+.hamburger#menu {
+    position: fixed;
+    left: 4%;
+    top: 15%;
+}
+
+.hamburger#map {
+    position: fixed;
+    right: 4%;
+    top: 15%;
+}
+
+.burger {
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    background-color: black;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+}
+
+#navmap-button.hamburger {
+    right: 4vw !important;
+    bottom: 10vh;
+}
+
+#navmap-button.hamburger {
+    left: 4vw !important;
+    bottom: 10vh;
+}
+

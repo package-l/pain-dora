@@ -1,0 +1,192 @@
+//General page styles
+
+@mixin fontA {
+    font-family: Arbotek Light, sans-serif;
+    font-size: 1.8vh;
+    font-weight: semi-bold;
+    letter-spacing: 0.192vh;
+}
+
+@mixin fontB {
+    font-family: Minion Pro, serif;
+    font-weight: semi-bold;
+    font-style: italic;
+}
+
+* { //maybe need class name and not *
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+
+.accept-cookies-page {
+    height: 100vh;
+    width: 100vw;
+    @include fontB;
+}
+
+.accept-cookies-page .arbotek {
+    text-decoration: none;
+    color: black;
+}
+
+.accept-cookies-page .decline {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    text-align: center;
+    position: relative;
+}
+
+.cookietext, .accept, .decline, .cookie-explanation, .dot {
+    transition-property: opacity;
+    transition-duration: 2.5s;
+}
+
+//Accept and decline buttons styling
+
+.accept div, .decline div {
+    font-size: 148px;
+}
+
+.accept {
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    width: 20vw;
+    cursor: pointer;
+}
+
+.decline {
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    position: absolute;
+    top: 45%;
+    left: 67%;
+    width: 20vw;
+    cursor: pointer;
+}
+
+.arbotek {
+    @include fontA;
+    font-style: normal;
+    position: relative;
+    padding-right: 4vw;
+}
+
+.accept .arbotek .minion-small:first-child {
+    @include fontB;
+    font-size: 3vh;
+    position: absolute;
+    top: 0;
+    padding-top: 4vh;
+    left: 0;
+    padding-left: 12.5vw;
+}
+
+.accept .arbotek .minion-small:nth-child(2) {
+    @include fontB;
+    font-size: 3vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 6vh;
+    padding-left: 14vw;
+}
+
+.decline .arbotek .minion-small:first-child {
+    @include fontB;
+    font-size: 3vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 20vh;
+    padding-left: 12vw;
+}
+
+//Page text and dot styling
+
+.cookietext {
+    @include fontB;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+.cookie-explanation {
+    text-align: center;
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    width: 35vw;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: black;
+    height: 19px;
+    width: 19px;
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.accept-cookies-page button {
+    background-color: black;
+    color: transparent;
+    border: none;
+    width: 100px;
+    height: 100px;
+    z-index: 14;
+    margin-top: 50vh;
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    display: transparent;
+}
+
+.accept-cookies-page button:hover, .accept-cookies-page span:hover {
+    display: inline;
+    color: white;
+}
+
+.splash {
+    text-align: center;
+    //background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: none;
+}
+
+.accept-cookies-page .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: calc(20px + 2vw);
+    font-weight: 700;
+    //pointer-events: none;
+    //user-select: none;
+    white-space: nowrap;
+    margin-top: 10vh;
+}
+
+.accept-cookies-page button {
+    position: absolute;
+}

@@ -1,0 +1,422 @@
+/*html {
+    scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
+}*/
+
+@mixin fontA {
+    font-family: Nautica;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+@mixin fontB {
+    font-family: Sinhala MN;
+    font-size: 18pt;
+    letter-spacing: 0.5vw;
+}
+
+html, body {
+    scroll-snap-type: y mandatory;
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+}
+
+.home {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#home-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+section {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-snap-align: start;
+}
+
+.tempwrapper {
+    background-image: url('../img/tempwrapper.png');
+}
+
+
+/*.home img { 
+    height: 35vh;
+}
+*/
+
+/*
+.roof { 
+    background-image: url('../img/2F.png');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    object-position: center center;
+    display: inline-block;
+}
+
+.roof .roof-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.roof .macaron {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    transform: rotate(-35deg);
+}
+
+.roof .chess {
+    position: absolute;
+    bottom: 8%;
+    left: 6%;
+}
+
+.roof .fortune {
+    position: absolute;
+    top: 15%;
+    left: 55%;
+    margin:auto;
+}
+*/
+/*.floor2 {
+    background-image: url('../img/2F.png');
+}
+
+.ground {
+    background-image: url('../img/2F.png');
+}*/
+
+/*
+.basement div {
+    height: 100vh;
+    width: 100vw;
+}
+
+.basement p {
+    position: absolute;
+    top: 50%;
+    z-index: 30;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cellar div {
+    position: relative;
+}
+
+.cellar-border {
+    height: 100vh;
+}*/
+
+/*this needs to be fixed with reusable components and styling*/
+
+.hamburger-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+//test
+.map-container {
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.map {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cookie-map-container {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 856 / 481;
+}
+
+.home .cookie {
+    height: 10vw;
+}
+
+.cookie {
+    cursor: pointer;
+    transition: 1s ease;
+    position: absolute;
+}
+
+/*.cookie:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}*/
+
+//2F
+
+.fortune {
+    top: 18%;
+    left: 65%;
+}
+
+.fortune:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+.macaron {
+    top: 28%;
+    left: 26%;
+    transform: rotate(-25deg);
+}
+
+.macaron:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+.chess {
+    top: 72%;
+    left: 18.5%;
+    height: 9vw !important;
+    transition: 0.5s;
+}
+
+.chess:hover {
+    animation: slide 4s;
+}
+
+@keyframes slide {
+    25% {
+        transform: translateX(-30px);
+    }
+    75% {
+        transform: translate(30px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+
+
+//cellar with circles
+
+.bigcircle {
+    @include fontA;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 25vw;
+    width: 25vw;
+    text-align: center;
+    line-height: 25pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -38%);
+
+    background: linear-gradient(to top, rgb(208, 15, 15) 50%, #fff 50%);
+    background-size: 100% 220%;
+    background-position: top;
+    transition: all 1s ease-out;
+}
+
+.bigcircle:hover {
+    background-position: bottom;
+    color: white;
+}
+
+.bigcircle:hover ~ .circle {
+    background-position: bottom;
+    color: white;
+}
+
+.bloodcircle p, .watercircle p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bigcircle p {
+    padding-top: 40%;
+    /*transition: all .6s ease-out;*/
+}
+
+.bloodcircle {
+    @include fontA;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 8vw;
+    width: 8vw;
+    text-align: center;
+    position: absolute;
+    top: 11.5%;
+    left: 64.5%;
+
+    background: linear-gradient(to top, rgb(208, 15, 15) 50%, #fff 50%);
+    background-size: 100% 220%;
+    background-position: top;
+    transition: all 1s ease-out;
+}
+
+.watercircle {
+    @include fontA;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 8vw;
+    width: 8vw;
+    text-align: center;
+    position: absolute;
+    top: 18%;
+    left: 77.5%;
+
+    background: linear-gradient(to top, rgb(208, 15, 15) 50%, #fff 50%);
+    background-size: 100% 220%;
+    background-position: top;
+    transition: all 1s ease-out;
+}
+
+.softcookie {
+    @include fontA;
+    top: 55%;
+    left: 15%;
+}
+
+//Cellar? Madeleine floor
+
+.madeleine {
+    top: 42%;
+    left: 42%;
+}
+
+.madeleine:hover {
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    transition: 2s ease;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both, scale 1s forwards;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-6px, 4px, 0);
+    }
+  
+    20%, 80% {
+      transform: translate3d(8px, 0, 5px) rotate(-20deg);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-10px, 0, -5px);
+    }
+  
+    40%, 60% {
+      transform: translate3d(10px, -4px, 0) rotate(20deg);
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(3);
+    }
+}
+
+/*.wafer {
+    top: 50%;
+    left: 20%;
+    height: 7vw !important;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.wafer:hover {
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    transition: 1s ease;
+}*/
+
+.wafer {
+    top: 50%;
+    left: 20%;
+    height: 8vw !important;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+    --m:
+        left   var(--_i,0%) top    var(--_g),
+        bottom var(--_i,0%) left   var(--_g),
+        top    var(--_i,0%) right  var(--_g),
+        right  var(--_i,0%) bottom var(--_g);
+    -webkit-mask: var(--m);
+            mask: var(--m);
+    outline-offset: -100vmax;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.wafer:hover {
+    --_i: 10%;
+    outline-color: #0000;
+}
+
+.linzer {
+    top: 70%;
+    right: 20%;
+}
+
+.brownie {
+    top: 20%;
+    right: 15%;
+   height: 5vh !important;
+   transform: rotate(45deg);
+}
+
+.linzer:hover, .brownie:hover, .softcookie:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+// Basement
+
+.basement p {
+    @include fontB;
+    position: absolute;
+    top: 50%;
+    z-index: 30;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

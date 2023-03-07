@@ -1,0 +1,69 @@
+@mixin fontA {
+    font-family: Arbotek Light, sans-serif;
+    font-size: 10vw;
+    font-weight: semi-bold;
+    letter-spacing: 0.192vh;
+}
+
+@mixin fontB {
+    font-family: Minion Pro, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.9vh;
+    letter-spacing: 0.192vh;
+}
+
+.line1a, .line1b {
+    @include fontA;
+}
+
+.line1a span, .line1b span {
+    font-size: 2vw;
+    position: absolute;
+    top: 50%;
+}
+
+.line1a span {
+    right: -20%;
+}
+
+.line1b span {
+    left: -20%;
+}
+
+.reject-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "line1a line1b"
+        "line2 line2"
+}
+
+.reject-container .line1a {
+    grid-area: line1a;
+    text-align: right;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.reject-container .line1b {
+    grid-area: line1b;
+    text-align: left;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.reject-container .line2 {
+    @include fontB;
+    grid-area: line2;
+    height: 50vh;
+    width: 100vw;
+}

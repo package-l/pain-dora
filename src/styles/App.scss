@@ -1,0 +1,140 @@
+/*@font-face {
+    font-family: "ITC Edwardian Script";
+    src: url("https://learn.microsoft.com/en-us/typography/font-list/edwardian-script-itc");
+}*/
+
+/*@mixin fontA {
+    font-family: minion-pro, serif;
+    font-size: 16px;
+    font-weight: semi-bold;
+    letter-spacing: 1.92px;
+    //font-kerning: normal;
+}*/
+
+/*@mixin fontB {
+    font-family: "ITC Edwardian Script", serif;
+    font-size: 148px;
+}*/
+
+/*@mixin fontC {
+    font-family: Sinhala MN, serif;
+    font-size: 24px;
+}*/
+
+/*button {
+    background-color: black;
+    color: transparent;
+    border: none;
+    width: 100px;
+    height: 100px;
+    z-index: 14;
+    margin-top: 50vh;
+    -ms-transform: translate(-50%, -50%); //review translate
+    transform: translate(-50%, -50%); //review translate
+    display: transparent;
+}
+
+button:hover, span:hover {
+    display: inline;
+    color: white;
+}
+
+.splash {
+    text-align: center;
+    //background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: none;
+}
+
+.mouse {
+    position: absolute;
+    background-image: radial-gradient(circle, transparent 100px, black 100px);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text {
+    @include fontA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    //pointer-events: none;
+    //user-select: none;
+    margin-top: 10vh;
+}
+
+button {
+    position: absolute;
+}
+
+.accept {
+    color: blue;
+    z-index: 15;
+}*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+}

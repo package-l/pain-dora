@@ -1,0 +1,89 @@
+@mixin fontA {
+    font-family: nautica, sans-serif;
+    font-weight: 700;
+    font-size: 5vw;
+    letter-spacing: 0.06em;
+    font-style: normal;
+}
+
+@mixin fontB {
+    font-family: Minion Pro, serif;
+    font-weight: semi-bold;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    font-size: 1.25vw;
+}
+
+.wrapper {
+    /*height: 100vh;
+    width: 100%;*/
+    position: relative;
+    /*overflow-x: hidden;*/
+    z-index: 10;
+}
+
+.wrapper-modal {
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    /*display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 8% 8% 16% 8% 35%;
+    grid-template-areas:*/
+}
+
+.wrapper-modal .titlea {
+    padding-top: 3%;
+}
+
+.wrapper-modal .titleb {
+    padding-left: 30%;
+}
+
+.wrapper-modal .line2 {
+    text-align: left;
+    padding-bottom: 3%;
+    padding-top: 6%;
+}
+
+.wrapper-modal .line3 {
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 35%;
+    padding-bottom: 3%;
+}
+
+.wrapper-modal .line4 {
+    text-align: right;
+}
+
+.wrapper-modal .titlec {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 60%;
+    position: absolute;
+    top: 70%;
+
+}
+
+
+.wrapper-text {
+    @include fontA;
+    position: absolute;
+    z-index: 10;
+    top: 10vh;
+    left: 10vw;
+    width: 80%;
+}
+
+.wrapper-text h3 {
+    font-size: 3vw;
+}
+
+.wrapper-text p {
+    @include fontB
+}
+
+.wrapperImage {
+    width: 100%;
+}

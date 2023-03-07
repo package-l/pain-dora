@@ -1,0 +1,175 @@
+@mixin fontA {
+    font-family: Sinhala MN;
+    font-size: 1vw;
+    color: black;
+    letter-spacing: 0.3vw;
+}
+
+@mixin fontB {
+    font-family: Nautica;
+    font-size: 2.5vw;
+}
+
+.titlemenu {
+    @include fontB;
+}
+
+.navmenu {
+    @include fontA;
+    height: 80vh;
+    width: 25vw;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    z-index: 30;
+    position: fixed;
+    top: 10%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*border: 1.5px solid grey;*/
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    background-color: white;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip {
+    transform: rotateY(180deg);
+}
+
+.flip .flip-card-front li{
+    display: none;
+}
+  
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border: 1px solid black;
+}
+
+.navmenu ul {
+    padding-top: 1vh;
+}
+  
+
+.navmenu li {
+    padding: 2vh;
+    transition: color 0.3s linear;
+}
+
+.navmenu-border {
+    border: 2.5px solid black;
+    outline: 1.5px solid black;
+    outline-offset: 2px;
+    position: absolute;
+    height: 90%;
+    width: 82%;
+    top: 2vw;
+    left: 2vw;
+    margin: auto;
+    z-index: 20;
+}
+
+.navmenu li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.navmenu li a:hover {
+    text-decoration: underline;
+}
+
+.flip-card-back {
+    @include fontB;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back {
+    z-index: 20;
+    text-align: center;
+}
+
+.flip-card-back .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flip-card-back .text p:first-of-type + p {
+    padding-left: 4vw;
+}
+
+.flip-card-back .arrowback {
+    @include fontA;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*
+.navmenu button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: 25;
+}
+.navmenu .toggle {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;;
+    border: none;
+}
+.navmenu .menu-nav {
+    list-style: none;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    max-width: 15vw;
+    height: 70vh;
+    z-index: 9;
+    /*box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
+    transform: translateX(-100px);
+    transform: translateY(100px);
+    transition: transform ease-in-out 0.2s;
+    z-index: 25;
+}
+.navmenu .menu-nav .show-menu {
+    width: 100%;
+    transform: translateX(0px);
+    transform: translateY(100px);
+    border-style: solid;
+    outline: 2px solid;
+    outline-offset: -8px;
+    border-color: black;
+    border-width: 1px;
+}
+.navmenu .menu-nav ul {
+    padding-top: 10rem;
+}
+
+.navmenu .menu-nav li a, .navmenu .menu-nav li span {
+    display: block;
+    padding: 1rem;
+}*/
+
+.link {
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+@mixin fontA {
+    font-family: Sinhala MN;
+    font-size: 1rem;
+    color: black;
+    letter-spacing: 0.3vw;
+}
+
+@mixin fontB {
+    font-family: Nautica;
+    font-size: 2rem;
+    color: black;
+}
+
+.navmap {
+    @include fontA;
+    height: 80vh;
+    width: 25vw;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 30;
+    position: fixed;
+    top: 10%;
+    right: 0%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*border: 1.5px solid grey;*/
+    border: 1px solid black;
+}
+
+.navmap a {
+    text-decoration: none;
+    color: black;
+}
+
+.navmap-border {
+    height: 100%;
+}
+
+.navmap-border div {
+    height: 100%;
+    text-align: center;
+}
+
+.navmap-border ul {
+    height: 100%;
+}
+
+.navmap li {
+    padding: 3vh;
+    transition: color 0.3s linear;
+    height: 10%;
+    width: 60%;
+    margin: auto;
+    border: 1.5px solid grey;
+    outline: 1px solid grey;
+    outline-offset: 1px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*.navmap-border {
+    border: 2.5px solid black;
+    outline: 1.5px solid black;
+    outline-offset: 2px;
+    position: absolute;
+    height: 90%;
+    width: 82%;
+    top: 2vw;
+    right: 2vw;
+    margin: auto;
+    z-index: 20;
+}*/
