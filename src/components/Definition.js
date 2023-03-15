@@ -5,7 +5,7 @@ import '../styles/Definition.scss';
 const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Definition = () => {
-    const { isDefinitionShowing,  hideDefinition, showSplash } = useSplash();
+    const { isDefinitionShowing,  hideDefinition, showSpotlight } = useSplash();
 
     useEffect(() => {
         (async () => {
@@ -13,7 +13,7 @@ const Definition = () => {
           await sleep(10500);//10500
           // As soon as the backgorund work finishes, hide the splash and display the home screen
           hideDefinition();
-          showSplash();
+          showSpotlight();
         })();
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);

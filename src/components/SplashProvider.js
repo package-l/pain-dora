@@ -2,6 +2,7 @@ import { createContext, useState, useContext } from 'react';
 //import { Link } from 'react-router-dom';
 import AcceptCookies from './AcceptCookies';
 import Definition from './Definition';
+import Start from './Start';
 import useWindowDimensions from './useWindowDimensions';
 import spotlightImage from '../img/SpotlightWIP.png';
 import Cookies from 'js-cookie';
@@ -14,18 +15,15 @@ const SplashContext = createContext({
   hideAcceptCookies: () => {},
   showDefinition: () => {},
   hideDefinition: () => {},
-  showSplash: () => {},
-  hideSplash: () => {},
-  //showDoor: () => {},
-  //hideDoor: () => {},
+  showSpotlight: () => {},
+  hideSpotlight: () => {},
   showLid: () => {},
   hideLid: () => {},
   showWrapper: () => {},
   hideWrapper: () => {},
   isAcceptCookiesShowing: true,
   isDefinitionShowing: false,
-  isShowing: false,
-  //isDoorShowing: false
+  isSpotlightShowing: false,
   isLidShowing: false,
   isWrapperShowing: false,
 })
@@ -41,7 +39,7 @@ export const useSplash = () => {
 export const SplashProvider = ({children}) => {
   const [isAcceptCookiesShowing, setIsAcceptCookiesShowing] = useState(true);
   const [isDefinitionShowing, setIsDefinitionShowing] = useState(false);
-  const [isShowing, setIsShowing] = useState(false);
+  const [isSpotlightShowing, setIsSpotlightShowing] = useState(false);
   const [position, setPosition] = useState({
     left: -500,
     top: -500
@@ -62,9 +60,9 @@ export const SplashProvider = ({children}) => {
   }*/
 
   function handleButtonClick() {
-    setIsLidShowing(true); //was setDoor
+    setIsLidShowing(true);
     setIsWrapperShowing(true);
-    setIsShowing(false);
+    setIsSpotlightShowing(false);
   }
 
   return (
@@ -74,28 +72,28 @@ export const SplashProvider = ({children}) => {
         hideAcceptCookies: () => {setIsAcceptCookiesShowing(false)},
         showDefinition: () => {setIsDefinitionShowing(true)},
         hideDefinition: () => {setIsDefinitionShowing(false)},
-        showSplash: () => {setIsShowing(true);},
-        hideSplash: () => {setIsShowing(false);},
+        showSpotlight: () => {setIsSpotlightShowing(true);},
+        hideSpotlight: () => {setIsSpotlightShowing(false);},
         showLid: () => {setIsLidShowing(true);},
         hideLid: () => {setIsLidShowing(false);},
         showWrapper: () => {setIsWrapperShowing(true);},
         hideWrapper: () => {setIsWrapperShowing(false);},
         isAcceptCookiesShowing,
         isDefinitionShowing,
-        isShowing,
+        isSpotlightShowing,
         isLidShowing,
         isWrapperShowing,
       }}>
         {!Cookies.get('home') ? (
           <AcceptCookies />
-        ): null }
+        ): null}
         {/*Cookies.get('home') ? (
           <Definition />
         ): null*/}
-        {isDefinitionShowing ? (
+        {/*{isDefinitionShowing ? (
           <Definition />
         ): null}
-        {isShowing ? (
+        {isSpotlightShowing ? (
           <div className="splash" onMouseMove={(eve) => handleMouseMove(eve)}>
             <button className="enter" onClick={handleButtonClick}><span>Enter</span></button>
             <img className="spotlight-image" src={spotlightImage} alt="room background"></img>
@@ -103,7 +101,7 @@ export const SplashProvider = ({children}) => {
               backgroundImage: `radial-gradient(circle at ${position.left / width * 100}% ${position.top / height * 100}%, transparent ${height/5}px, black ${height/5}px)`
             }}></div>
           </div>
-        ) : null}
+          ) : null}*/}
         {children}
       </SplashContext.Provider>
     </>

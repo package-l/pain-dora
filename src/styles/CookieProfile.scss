@@ -1,0 +1,61 @@
+@mixin fontA {
+    font-family: Chantal;
+    font-weight: light;
+    font-size: 18pt;
+    letter-spacing: 100;
+    line-height: 25.6pt;
+}
+
+//Age font
+@mixin fontB {
+    font-size: 1.2vw;
+    font-family: Sinhala MN, sans-serif;
+}
+
+.cookie-container {
+    @include fontA;
+    height: 100vh;
+    width: 100vw;
+    //background-color: grey;
+    position: relative;
+    //background-image: url('../img/Madeleine/Madeleine BG.png');
+    background-size: cover;
+}
+
+.character-card {
+    //width: 30vw;
+    background-color: white;
+    height: 80vh;
+    position: absolute;
+    left: 5vw;
+    top: 10vh;
+    bottom: 10vh;
+    outline: 0.6vh double black;
+    outline-offset: -2vh;
+    aspect-ratio: 457 / 778;
+}
+
+.character-card .profileImg {
+    height: 23vh;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.character-card .fullname {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.character-card .description {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100%);
+    width: 20vw;
+    white-space: pre-line;
+}

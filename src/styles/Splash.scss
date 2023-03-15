@@ -29,6 +29,12 @@
     position: absolute;
 }
 
+.splash .enter a {
+    display: transparent;
+    text-decoration: none;
+    color: black;
+}
+
 .splash .enter:hover, .splash .enter span:hover { //check .enter span is correct syntax
     display: inline-block;
     color: white;

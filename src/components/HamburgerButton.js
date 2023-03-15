@@ -10,9 +10,11 @@ const HamburgerButton = ({ name, open, setOpen }) => {
   return (
     <>
         <div className="hamburger" id={name} open={open} onClick={toggleOpen}>
+          <div className="hamburgerwrapper">
             <div className="burger burger1"></div>
             <div className="burger burger2"></div>
             <div className="burger burger3"></div>
+          </div>
         </div>
     </>
   )

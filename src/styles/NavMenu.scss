@@ -108,6 +108,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: black;
+}
+
+.flip-card-back .text:hover {
+    opacity: 50%;
 }
 
 .flip-card-back .text p:first-of-type + p {
@@ -172,4 +178,5 @@
 
 .link {
     cursor: pointer;
+    color: grey;
 }

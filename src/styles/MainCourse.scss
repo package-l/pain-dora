@@ -55,3 +55,16 @@
     text-justify: inter-character;
     line-height: 4vh;
 }
+
+.heartwrapper {
+    animation:pulse 1s infinite;
+}
+
+.heart {
+    height: 8vh;
+    padding-top: 1vh;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.1)}
+}

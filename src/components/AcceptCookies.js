@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 
 const AcceptCookies = () => {
-  const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSplash } = useSplash();
+  const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSpotlight } = useSplash();
   const [opacity, setOpacity] = useState({
     accept: 1,
     decline: 1,
@@ -16,7 +16,7 @@ const AcceptCookies = () => {
   function handleAccept() {
     Cookies.set('home', true);
     hideAcceptCookies();
-    hideSplash();
+    hideSpotlight();
     showDefinition();
   }
 
@@ -36,7 +36,7 @@ const AcceptCookies = () => {
 
   return (
     <>
-      {/*!isAcceptCookiesShowing*/ Cookies.get('home') ? null : (
+      {!isAcceptCookiesShowing ? null : (
         <div className="accept-cookies-page">
           <div className="choices">
             <div className="cookietext" style={{

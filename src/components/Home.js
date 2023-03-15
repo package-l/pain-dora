@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-//import { Link, Outlet } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useSplash } from './SplashProvider';
 import '../styles/Home.scss';
 import Introduction from './Introduction';
 import '../styles/Wrapper.scss';
-import NavMenu from './NavMenu';
-import NavMap from './NavMap';
 import Brownie from '../img/icons/Icon_Brownie.png';
 import Chess from '../img/icons/Icon_Chess.png';
 import Fortune from '../img/icons/Icon_Fortune.png';
@@ -14,18 +12,23 @@ import Macaron from '../img/icons/Icon_Macaron.png';
 import Madeleine from '../img/icons/Icon_Madeleine.png';
 import SoftCookie from '../img/icons/Icon_Madeleine.png';
 import Wafer from '../img/icons/Icon_Wafer.png';
+
 import HamburgerButton from './HamburgerButton';
-import Roof from '../img/2F.png';
-import Cellar from '../img/Cellar.png';
-import Basement from '../img/basement.png'
-import { Link } from "react-router-dom";
+import NavMenu from './NavMenu';
+import NavMap from './NavMap';
+
+import Roof from '../img/house/Floor_2.png';
+import Ground from '../img/house/Floor_G_Text.png'
+import Cellar from '../img/house/Floor_Cellar.png';
+import Basement from '../img/house/Floor_Basement.png';
+import Fork from '../img/house/Fork_For_Cellar.png';
 
 
 //const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 
 
 const Home = () => {
-  const { isShowing, isAcceptCookiesShowing, isDefinitionShowing, isLidShowing } = useSplash();
+  const { isSpotlightShowing, isAcceptCookiesShowing, isDefinitionShowing, isLidShowing, showSpotlight, showDefinition } = useSplash();
 
   const [openMenu, setOpenMenu] = useState(false);
   const [openMap, setOpenMap] = useState(false);
@@ -47,7 +50,7 @@ const Home = () => {
           <Introduction />
         </>
       ): null}
-      {(isShowing || isAcceptCookiesShowing || isDefinitionShowing) ? null :
+
           <div className="home-main" id="home-grid">
             <div className="hamburger-container">
               <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
@@ -81,39 +84,58 @@ const Home = () => {
             <section className="map-container" id="floor2">
               <img className="map" src={Roof} alt="Roof floor"></img>
               <div className="cookie-map-container">
-                <Link to="/macaron"><img className="macaron cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
-                <Link to="/chess"><img className="chess cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
-                <Link to="/fortunecookie"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
+                <div id="f2-grid" className="content">
+                  <div className="mac">
+                    <Link to="/macaron"><img className="macaron cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
+                  </div>
+                </div>
+                <div className="che">
+                  <Link to="/chess"><img className="chess cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
+                </div>
+                <div className="for">
+                  <Link to="/fortune"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
+                </div>
               </div>
             </section>
             <section className="map-container" id="ground">
+                <img className="map" src={Ground} alt="Roof floor"></img>
+                <div className="cookie-map-container">
+                  <div id="ground-grid" className="content">
+                    <div className="mad">
+                      <Link to="/madeleine"><img className="madeleine cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
+                    </div>
+                    <div className="waf">
+                      <Link to="/madeleine"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
+                    </div>
+                    <div className="linz">
+                      <Link to="/madeleine"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
+                    </div>
+                    <div className="bro">
+                      <Link to="/brownie"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section className="map-container" id="cellar">
+              <img className="fork" src={Fork} alt="Fork"></img>
               <img className="map" src={Cellar} alt="Cellar floor"></img>
               <div className="cookie-map-container">
                 <Link to="/softcookie"><img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img></Link>
                 <div className="circles">
+                  <div className="bigcircleborder"></div>
                   <div className="bigcircle circle"><p>Garden<br />of Eating</p></div>
                   <div className="bloodcircle circle"><p>Blood<br />Pool</p></div>
                   <div className="watercircle circle"><p>Water<br />Pond</p></div>
                 </div>
               </div>
             </section>
-            <section className="map-container" id="cellar">
-              <img className="map" src={Roof} alt="Roof floor"></img>
-              <div className="cookie-map-container">
-                <Link to="/madeleine"><img className="madeleine cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
-                <Link to="/madeleine"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
-                <Link to="/madeleine"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
-                <Link to="/madeleine"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
-              </div>
-            </section>
             <section className="map-container basement" id="basement">
               <img className="map" src={Basement} alt="Basement floor"></img>
-              <div>
+              {/*<div>
                 <p>UNDER_CONSTRUCTION</p>
-              </div>
+              </div>*/}
             </section>
           </div>
-      }
     </div>
   )
 }

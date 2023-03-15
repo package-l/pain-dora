@@ -19,25 +19,24 @@ const NavMenu = ({ open }) => {
                         <ul>
                             <li className="titlemenu">menu</li>
                             <li></li>
-                            <li><Link to="/start_er">start_er</Link></li>
+                            <li><Link to="/">start_er</Link></li>
                             <li><Link to="/home">home</Link></li>
                             <li><Link to="/flavourprofiles">flavour<br/>profiles</Link></li>
                             <li></li>
                             <li><Link to="/maincourse">main course<br/>of action</Link></li>
                             <li></li>
                             <li></li>
-                            <li><Link to="/about">about</Link></li>
-                            <li className="link" onClick={handleCardFlipClick}>&gt;</li>
+                            <li className="link" onClick={handleCardFlipClick}>about &gt;</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="flip-card-back">
-              <div className="text">
+              <Link to="/about" className="text">
                 <p>fine,</p>
                 <p>di(n)e</p>
                 <p>w/ me</p>
-              </div>
+              </Link>
               <p className="arrowback link" onClick={handleCardFlipClick}>&lt;</p>
             </div>
           </div>
