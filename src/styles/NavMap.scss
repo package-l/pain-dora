@@ -13,7 +13,7 @@
 
 .navmap {
     @include fontA;
-    height: 80vh;
+    height: 90vh;
     width: 25vw;
     display: flex;
     list-style: none;
@@ -22,10 +22,8 @@
     transition: transform 0.3s ease-in-out;
     z-index: 30;
     position: fixed;
-    top: 10%;
-    right: 0%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 5%;
+    right: 0;
     /*border: 1.5px solid grey;*/
     border: 1px solid black;
 }
@@ -59,6 +57,10 @@
     outline-offset: 1px;
     margin-top: 5%;
     margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 /*.navmap-border {

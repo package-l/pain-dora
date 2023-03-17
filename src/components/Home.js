@@ -79,7 +79,7 @@ const Home = () => {
                   </div>
               </div>
       </section>*/}
-            <section className="tempwrapper" id="lid">
+            <section className="tempwrapper" id="roof">
             </section>
             <section className="map-container" id="floor2">
               <img className="map" src={Roof} alt="Roof floor"></img>
@@ -98,23 +98,23 @@ const Home = () => {
               </div>
             </section>
             <section className="map-container" id="ground">
-                <img className="map" src={Ground} alt="Roof floor"></img>
-                <div className="cookie-map-container">
-                  <div id="ground-grid" className="content">
-                    <div className="mad">
-                      <Link to="/madeleine"><img className="madeleine cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
-                    </div>
-                    <div className="waf">
-                      <Link to="/madeleine"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
-                    </div>
-                    <div className="linz">
-                      <Link to="/madeleine"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
-                    </div>
-                    <div className="bro">
-                      <Link to="/brownie"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
-                    </div>
+              <div className="cookie-map-container">
+                {/*<img className="map" src={Ground} alt="Roof floor"></img>*/}
+                <div id="ground-grid" className="content">
+                  <div className="mad">
+                    <Link to="/madeleine"><img className="madeleine cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
+                  </div>
+                  <div className="waf">
+                    <Link to="/madeleine"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
+                  </div>
+                  <div className="linz">
+                    <Link to="/madeleine"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
+                  </div>
+                  <div className="bro">
+                    <Link to="/brownie"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
                   </div>
                 </div>
+              </div>
             </section>
             <section className="map-container" id="cellar">
               <img className="fork" src={Fork} alt="Fork"></img>

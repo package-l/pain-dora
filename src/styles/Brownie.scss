@@ -10,25 +10,93 @@
     position: relative;
 }
 
+.brownie-interaction-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+}
+
+.ripple-container {
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    width: 15vw;
+    height: auto;
+    aspect-ratio: 4/3;
+    position: relative;
+}
+
 .leftBox {
+    width: 35vw;
+    height: 100vh;
+}
+
+.leftBox-img {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.leftBox-img .canvas {
+    width: 35vw;
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+.rightBox {
+    position: relative;
+    width: 60%;
+    align-self: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.rightBox img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.rightBox-text {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.dialogue1 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    aspect-ratio: 357 / 663;
+    background-size: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*.leftBox {
     position: absolute;
     height: 80vh;
     left: 5vw;
     top: 10vh;
     bottom: 10vh;
     aspect-ratio: 457 / 778;
-    /*left: 5vw;
-    top: 10vh;
-    //transform: translate(-50%, 50%);
-    max-height: 20vh;
-    width: auto;*/
 }
 
 .leftBox-img {
     position: absolute;
     left: 20%;
     top: 15%;
-    //transform: translateX(20%);
     z-index: 20;
 }
 
@@ -39,7 +107,6 @@
     left: 100vw;
     top: 100vh;
     bottom: 10vh;
-    //aspect-ratio: 457 / 778;
     z-index: 20;
 }
 
@@ -67,7 +134,7 @@
 
 
 .rightBox {
-    position: absolute;
+    position: relative;
     display: inline-block;
     top: 50%;
     right: 50%;
@@ -76,10 +143,7 @@
 }
 
 .rightBox img {
-    /*left: 50%;
-    top: 0;
-    transform: translateX(-50%);*/
-    //max-height: 20vh;
+
     max-width: 60vw;
     top: 0;
     right: 0;
@@ -87,11 +151,14 @@
     display: inline-block;
 }
 
-.rightBox .dialogue {
-    @include fontA;
-    width: 50vw;
+
+.rightBox-text {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
+    height: 200px;
+    width: 100%;
+    left: 50vw;
+    top: 50vh;
+    bottom: 10vh;
+
+    z-index: 20;
+}*/

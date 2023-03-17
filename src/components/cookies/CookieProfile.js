@@ -8,7 +8,6 @@ import Brownie from "./Brownie";
 //import '../../styles/Madeleine.scss';
 
 //Math.random() * width*0.7 - width*0.7,
-
 const CookieProfile = (props) => {
   const [cookie, setCookie] = useState([props.data.name]);
 

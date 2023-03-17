@@ -5,23 +5,34 @@ const Brownie = (props) => {
 
   return (
     <div className="brownie-interaction-container">
-     <div className="leftBox">
-     <WaterWave className="leftBox-img" imageUrl={props.data.img} style={{ width: '100%', height: '30%', backgroundSize: 'contain' }} 
-     resolution={512}
-     dropRadius={20}
-     perturbance={0.03}
-     interactive={true}>{()=> {}}</WaterWave>
+     <div className="column leftBox">
+        <div className="ripple-container">
+          <WaterWave className="leftBox-img" imageUrl={props.data.img} 
+              style={{ width: '100%', height: '100%', backgroundSize: 'cover' }}
+              resolution={312}
+              dropRadius={20}
+              perturbance={0.03}
+              interactive={true}
+          >{()=> {}}</WaterWave>
+        </div>
         <div className="dialogue">{`Move the Cursor\n
             around specific areas\n
             & find out what happens !`}
         </div>
      </div>
-     <div className="rightBox">
+     <div className="column rightBox">
         <img src={props.data.customAssets.interactionBox} alt="interactive text box"></img>
-        <WaterWave className="rightBox-text" imageUrl={props.data.img} style={{ width: '100%', height: '100%', backgroundSize: 'contain' }}>{() => (
-            <></>
-        )}</WaterWave>
-        <div className="dialogue">{`oh . . . Sorry, i didn't notice you were investigating about 
+        <div className="rightBox-text">
+          <WaterWave className="dialogue1" imageUrl={props.data.customAssets.dialogue1}
+              resolution={5000}
+              dropRadius={8}
+              perturbance={0.03}
+              interactive={true}
+          >{() => (
+              <></>
+          )}</WaterWave>
+        </div>
+        {/*<div className="dialogue">{`oh . . . Sorry, i didn't notice you were investigating about 
         the Soft cookie missing case, i was lost in my own pity party of trainwreck thoughts. I'll 
         probably bore you with details that most likely wont be beneficial to your efforts 
         in trying to solve the cookie murder mystery . . . 
@@ -46,7 +57,7 @@ const Brownie = (props) => {
 
         i am tired of talking about soft cookies, it's not like they have it that bad, I have it way worse. 
 `}
-        </div>
+        </div>*/}
      </div>
     </div>
 

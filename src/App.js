@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 //import Cookies from 'js-cookie';
 import './styles/App.scss';
 
@@ -25,9 +26,25 @@ function App() {
   */
   
   //Cookies.remove('home');
+  const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    if (hash === '') {
+      window.scrollTo(0,0);
+    }
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
 
   return (
-    <BrowserRouter>
+
       <Routes>
         {/* Website Overall + Navigation */}
         <Route path="/" element={<SplashProvider><Start /></SplashProvider>} />
@@ -49,7 +66,7 @@ function App() {
         })
         }
       </Routes>        
-    </BrowserRouter>
+
   );
 }
 

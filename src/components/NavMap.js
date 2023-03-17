@@ -7,11 +7,11 @@ const NavMap = ({ open }) => {
         <div className="navmap-border">
             <div>
                 <ul>
-                    <li><a href="#roof">Roof/Lid</a></li>
-                    <li><a href="#floor2">Floor 2</a></li>
-                    <li><a href="#ground">_Ground_</a></li>
-                    <li><a href="#cellar">||Cellar||</a></li>
-                    <li><a href="#basement">Basement</a></li>
+                    <a href="#roof"><li>Roof/Lid</li></a>
+                    <a href="#floor2"><li>Floor 2</li></a>
+                    <a href="#ground"><li>_Ground_</li></a>
+                    <a href="#cellar"><li>||Cellar||</li></a>
+                    <a href="#basement"><li>Basement</li></a>
                 </ul>
             </div>
         </div>

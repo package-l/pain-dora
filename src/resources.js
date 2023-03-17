@@ -17,3 +17,7 @@
 //https://codepen.io/alvarotrigo/pen/VwMPzVJ
 //https://codesandbox.io/s/fzvh9
 
+//Anchors and React-router
+//https://stackoverflow.com/questions/40280369/use-anchors-with-react-router
+
+

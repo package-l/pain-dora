@@ -23,6 +23,7 @@ html, body {
     scroll-snap-type: y mandatory;
     overscroll-behavior-y: none;
     overflow-x: hidden;
+
 }
 
 body {
@@ -53,98 +54,9 @@ section {
     scroll-snap-align: start;
 }
 
-.cookie-map-container {
-    display: inline-grid;
-    grid-template-rows: 8% 84% 8%;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-areas:
-        ". . . "
-        ". content ."
-        ". . . ";
-    justify-items: center;
-    align-items: center;
-}
-
-.content {
-    grid-area: content;
-}
-
 .tempwrapper {
     background-image: url('../img/house/Wrapper_With_Text.png');
 }
-
-
-/*.home img { 
-    height: 35vh;
-}
-*/
-
-/*
-.roof { 
-    background-image: url('../img/2F.png');
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    object-fit: cover;
-    object-position: center center;
-    display: inline-block;
-}
-
-.roof .roof-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.roof .macaron {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    transform: rotate(-35deg);
-}
-
-.roof .chess {
-    position: absolute;
-    bottom: 8%;
-    left: 6%;
-}
-
-.roof .fortune {
-    position: absolute;
-    top: 15%;
-    left: 55%;
-    margin:auto;
-}
-*/
-/*.floor2 {
-    background-image: url('../img/2F.png');
-}
-
-.ground {
-    background-image: url('../img/2F.png');
-}*/
-
-/*
-.basement div {
-    height: 100vh;
-    width: 100vw;
-}
-
-.basement p {
-    position: absolute;
-    top: 50%;
-    z-index: 30;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.cellar div {
-    position: relative;
-}
-
-.cellar-border {
-    height: 100vh;
-}*/
 
 /*this needs to be fixed with reusable components and styling*/
 
@@ -156,13 +68,13 @@ section {
     top: 0;
 }
 
-//test
+//ALL SECTIONS
 .map-container {
     position: relative;
     //might need to return max-height
     max-height: 100vh;
     overflow: hidden;
-    display: inline-flex;
+    //display: inline-flex;
 }
 
 .map {
@@ -174,17 +86,38 @@ section {
     transform: translate(-50%, -50%);
 }
 
-#ground .cookie-map-container {
-    //SOLUTION!!
-    max-width: 100%;
+//#ground .cookie-map-container
+.cookie-map-container {
     max-height: 100%;
-    height: inherit !important;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     aspect-ratio: 856 / 481;
+    display: block;
+    position: relative;
+    background-size:cover; /* any size that stretches the background */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100%;
+    margin: auto;
+}
+
+#floor2 .cookie-map-container{
+    background: url('../img/house/Floor_2.png') no-repeat center center;
+    background-size:cover; /* any size that stretches the background */
+}
+
+#ground .cookie-map-container{
+    background: url('../img/house/Floor_G_Text.png') no-repeat center center;
+    background-size:cover; /* any size that stretches the background */
+}
+
+#cellar .cookie-map-container {
+    background: url('../img/house/Floor_Cellar.png') no-repeat center center;
+    background-size:cover; /* any size that stretches the background */
+}
+
+#basement .cookie-map-container {
+    background: url('../img/house/Floor_Basement.png') no-repeat center center;
+    background-size:cover; /* any size that stretches the background */
 }
 
 .home .macaron, .home .fortune, .home .softcookie {
@@ -225,7 +158,6 @@ section {
 
 .bro {
     grid-area: brownie;
-    justify-content: center;
 }
 
 .fortune {
@@ -418,15 +350,15 @@ section {
 #ground-grid.content {
     height: 100%;
     width: 100%;
-    display: inherit;
+    display: grid;
     grid-template-columns: inherit;
     grid-template-rows: 25% 25% 43%;
-    grid-template-columns: 12.5% 12.5% 3.5% 7.5% 15.75%;
+    grid-template-columns: 12.5% 16% 7.5% 15.75%;
     grid-template-areas:
-        "madeleine  madeleine . . wafer ."
-        "madeleine madeleine . . . brownie"
-        ". . . linzer linzer . "
-        ". . . . . .";
+        "madeleine  madeleine  . wafer ."
+        "madeleine madeleine  . . brownie"
+        ". .  linzer linzer . "
+        ". .  . . .";
 }
 
 //Cellar? Madeleine floor
@@ -446,7 +378,6 @@ section {
 
 .bro {
     grid-area: brownie;
-    justify-content: center;
 }
 
 a {
@@ -456,7 +387,7 @@ a {
 
 .home img.madeleine {
     position: relative;
-    top: 50%;
+    top: 60%;
     left: 25%;
     transform: rotate(-5deg);
     height: 8.5vw;
@@ -468,7 +399,7 @@ a {
     transform: scale(3);
     transition: 2s ease;
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both, scale 1s forwards;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
 }
 
 @keyframes shake {
@@ -481,7 +412,7 @@ a {
     }
   
     30%, 50%, 70% {
-      transform: translate3d(-10px, 0, -5px);
+      transform: translate3d(-10px, 0, -5px) translateX(60%);
     }
   
     40%, 60% {
@@ -497,7 +428,7 @@ a {
 
 .wafer {
     position: relative;
-    top: 35%;
+    top: 65%;
     left: 10%;
     height: 7vw !important;
 
@@ -524,13 +455,16 @@ a {
 
 .linzer {
     position: relative;
-    top: 30%;
+    top: 25%;
+    left: 5%;
     width: 8vw;
 }
 
 img.brownie {
     position: relative;
-    top: 50%;
+    top: 56%;
+    left: -5%;
+    //transform: translateX(-20%);
     max-height: 5vh;
     width: 9vw;
     transform: rotate(190deg);
