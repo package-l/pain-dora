@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6ed4838a.css",
+    "main.js": "/static/js/main.8cc45622.js",
+    "static/js/787.c6301898.chunk.js": "/static/js/787.c6301898.chunk.js",
+    "static/media/BG_Madeleine.png": "/static/media/BG_Madeleine.b18ad8724448bdb89fa8.png",
+    "static/media/SpotlightWIP.png": "/static/media/SpotlightWIP.a1b4cc8516d0e28d849c.png",
+    "static/media/Floor_G_Text.png": "/static/media/Floor_G_Text.16daf573e0436dec9df5.png",
+    "static/media/Floor_Basement.png": "/static/media/Floor_Basement.97294870a71f1e7c1d7b.png",
+    "static/media/Brownie.png": "/static/media/Brownie.377e300970001ae2c6a8.png",
+    "static/media/Wrapper_With_Text.png": "/static/media/Wrapper_With_Text.1988f6b712f99bcc02a9.png",
+    "static/media/Monster_Blank.png": "/static/media/Monster_Blank.7e0dd02b94234fb54954.png",
+    "static/media/Floor_2.png": "/static/media/Floor_2.f4c4647b84618c0c55a5.png",
+    "static/media/Brownie_Dialogue_5.png": "/static/media/Brownie_Dialogue_5.d04dadf2e591f44dac96.png",
+    "static/media/Madeleine.png": "/static/media/Madeleine.f0b8f61fa70db0f5e8d4.png",
+    "static/media/Brownie_Dialogue_4.png": "/static/media/Brownie_Dialogue_4.40dc2a9a94dc156b6e59.png",
+    "static/media/Icon_Madeleine.png": "/static/media/Icon_Madeleine.77dadc8cd4c4b8b53083.png",
+    "static/media/Brownie_Dialogue_3.png": "/static/media/Brownie_Dialogue_3.dd9eac2e0fa2b377df0b.png",
+    "static/media/Brownie_Dialogue_1.png": "/static/media/Brownie_Dialogue_1.c68da45bdf2aed612767.png",
+    "static/media/Chat_Box_Tape_Brownie.png": "/static/media/Chat_Box_Tape_Brownie.cf193f816079873c2838.png",
+    "static/media/Brownie_Dialogue_2.png": "/static/media/Brownie_Dialogue_2.0dd7535fd05c8f6e170a.png",
+    "static/media/Icon_Linzer.png": "/static/media/Icon_Linzer.7efa22315f9daef84278.png",
+    "static/media/Icon_Chess.png": "/static/media/Icon_Chess.79537f9af65f3410b76f.png",
+    "static/media/Icon_Fortune.png": "/static/media/Icon_Fortune.e9b2911505a4dab9cc41.png",
+    "static/media/Icon_Wafer.png": "/static/media/Icon_Wafer.20887c1356ee5f5d86da.png",
+    "static/media/Floor_Cellar.png": "/static/media/Floor_Cellar.ff6d4961a090bd22edae.png",
+    "static/media/BG_Brownie_Grey_White.png": "/static/media/BG_Brownie_Grey_White.638e21b020ac50d5839e.png",
+    "static/media/Fork_For_Cellar.png": "/static/media/Fork_For_Cellar.f18bac14cb21ff50cf50.png",
+    "index.html": "/index.html",
+    "main.6ed4838a.css.map": "/static/css/main.6ed4838a.css.map",
+    "main.8cc45622.js.map": "/static/js/main.8cc45622.js.map",
+    "787.c6301898.chunk.js.map": "/static/js/787.c6301898.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ed4838a.css",
+    "static/js/main.8cc45622.js"
+  ]
+}
