@@ -1,19 +1,28 @@
-@mixin fontA {
+@mixin nameFont {
     font-family: Chantal;
     font-weight: light;
-    font-size: 18pt;
-    letter-spacing: 100;
-    line-height: 25.6pt;
+    font-size: 3vh;
+    letter-spacing: 0.1em;
+    line-height: 2vh;
 }
 
 //Age font
-@mixin fontB {
-    font-size: 1.2vw;
+@mixin ageFont {
     font-family: Sinhala MN, sans-serif;
+    font-size: 2vh;
+    line-height: 2vh;
+    letter-spacing: 0.1em;
+}
+
+@mixin instructionFont {
+    font-family: Sinhala MN, sans-serif;
+    font-size: 1vh;
+    line-height: 1.5vh;
+    letter-spacing: 0.1em;
 }
 
 .cookie-container {
-    @include fontA;
+    @include nameFont;
     height: 100vh;
     width: 100vw;
     //background-color: grey;
@@ -22,40 +31,91 @@
     background-size: cover;
 }
 
+/*.character-left-section {
+    width: 33vw;
+    height: 100vh;
+}*/
+
 .character-card {
-    //width: 30vw;
+    width: 28vw;
     background-color: white;
-    height: 80vh;
+    min-height: 80vh;
+    min-width: 200px;
+    max-height: 90vh;
+    max-width: 400px;
     position: absolute;
     left: 5vw;
-    top: 10vh;
+    top: 50%;
+    transform: translateY(-50%);
     bottom: 10vh;
     outline: 0.6vh double black;
     outline-offset: -2vh;
     aspect-ratio: 457 / 778;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 .character-card .profileImg {
     height: 23vh;
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    transform: translateX(-50%);
     z-index: 20;
+    padding-top: 10vh;
 }
 
 .character-card .fullname {
-    position: absolute;
+    /*position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 55%;
+    transform: translate(-50%, -50%);*/
+    width: 20vw;
+    padding: 2vh;
 }
 
 .character-card .description {
-    position: absolute;
+    @include ageFont;
+    /*position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, 100%);
-    width: 20vw;
+    top: 55%;
+    transform: translate(-50%, 100%);*/
+    padding: 2vh;
     white-space: pre-line;
+}
+
+.madeleine-interaction-container {
+    width: 28vw;
+    //left: 5vw;;
+    aspect-ratio: 457 / 778;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+//For instructions img
+
+.consumerBox {
+    width: 28vw;
+    min-height: 80vh;
+    min-width: 200px;
+    max-height: 90vh;
+    max-width: 400px;
+    position: absolute;
+    left: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 10vh;
+    aspect-ratio: 457 / 778;
+}
+
+.consumerBox img {
+    height: 23vh;
+    z-index: 20;
+    padding-top: 50vh;
+}
+
+.consumerBox .dialogue {
+    height: 20vh;
+    top: 50%;
+    transform: translateX(-60%);
 }

@@ -82,18 +82,18 @@ const Home = () => {
             <section className="tempwrapper" id="roof">
             </section>
             <section className="map-container" id="floor2">
-              <img className="map" src={Roof} alt="Roof floor"></img>
+              {/*<img className="map" src={Roof} alt="Roof floor"></img>*/}
               <div className="cookie-map-container">
                 <div id="f2-grid" className="content">
                   <div className="mac">
                     <Link to="/macaron"><img className="macaron cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
                   </div>
-                </div>
-                <div className="che">
-                  <Link to="/chess"><img className="chess cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
-                </div>
-                <div className="for">
-                  <Link to="/fortune"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
+                  <div className="che">
+                    <Link to="/chess"><img className="chess cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
+                  </div>
+                  <div className="for">
+                    <Link to="/fortune"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
+                  </div>
                 </div>
               </div>
             </section>
@@ -105,10 +105,10 @@ const Home = () => {
                     <Link to="/madeleine"><img className="madeleine cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
                   </div>
                   <div className="waf">
-                    <Link to="/madeleine"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
+                    <Link to="/wafer"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
                   </div>
                   <div className="linz">
-                    <Link to="/madeleine"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
+                    <Link to="/linzer"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
                   </div>
                   <div className="bro">
                     <Link to="/brownie"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
@@ -118,7 +118,7 @@ const Home = () => {
             </section>
             <section className="map-container" id="cellar">
               <img className="fork" src={Fork} alt="Fork"></img>
-              <img className="map" src={Cellar} alt="Cellar floor"></img>
+              {/*<img className="map" src={Cellar} alt="Cellar floor"></img>*/}
               <div className="cookie-map-container">
                 <Link to="/softcookie"><img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img></Link>
                 <div className="circles">

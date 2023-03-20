@@ -12,7 +12,8 @@ const Madeleine = (props) => {
   // State management for text dialogue
   const [index, setIndex] = useState(0);
   const [madeleineText, setMadeleineText] = useState();
-  const [consumerText, setConsumerText] = useState();
+  const [consumerText, setConsumerText] = useState(`This will be your dialogue box - the Investigator.\n
+  Please c/lick this black box\n to begin, & continue c/licking.`);
   const [list, setList] = useState([]);
 
   const handleMadeleineDialogueClick = () => {
@@ -45,8 +46,11 @@ const Madeleine = (props) => {
   return (
     <div className="madeleine-interaction-container">
         <div className="consumerBox">
-          <img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
-          <p className="dialogue">{consumerText}</p>
+          <div className="test" onClick={handleMadeleineDialogueClick} style={{
+            backgroundImage: `url(${props.data.customAssets.consumerBox})`
+          }}><p className="dialogue">{consumerText}</p></div>
+          {/*<img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
+          <p className="dialogue">{consumerText}</p>*/}
         </div>
         <div className="right-section" ref={ref}>
           {list.map((item, i) => 

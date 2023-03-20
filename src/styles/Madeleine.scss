@@ -1,37 +1,15 @@
 @mixin fontA {
-    font-size: 1.5vh;
     font-family: Sinhala MN, sans-serif;
+    font-size: 1.5vh;
+    line-height: 1.5vh;
+    letter-spacing: 0.1em;
 }
 
 .madeleine-interaction-container {
     height: 100vh;
     width: 100vw;
     position: relative;
-}
-
-.consumerBox {
-    position: absolute;
-    height: 80vh;
-    left: 5vw;
-    top: 10vh;
-    bottom: 10vh;
-    aspect-ratio: 457 / 778;
-    /*left: 5vw;
-    top: 10vh;
-    //transform: translate(-50%, 50%);
-    max-height: 20vh;
-    width: auto;*/
-}
-
-.consumerBox img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 50%);
-    max-height: 20vh;
-    max-height: 20vh;
-    width: auto;
-    cursor: pointer;
+    overflow: hidden;
 }
 
 .consumerBox .dialogue {
@@ -43,20 +21,11 @@
     left: 50%;
     transform: translateX(-50%);
     top: 70%;
+    height: 20vh;
 }
 
 .madeleineBox {
     position: absolute;
-    display: inline-block;
-}
-
-.madeleineBox img {
-    /*left: 50%;
-    top: 0;
-    transform: translateX(-50%);*/
-    //max-height: 20vh;
-    max-width: 20vw;
-    z-index: 5;
     display: inline-block;
 }
 
@@ -78,31 +47,49 @@
     padding-right: 5%;
 }
 
-#index-25 img {
-    max-width: 20vw;
+.right-section img {
+    height: 23vh;
+    z-index: 20;
+}
+
+.right-section #index-24 img {
+    height: 35vh;
     z-index: 5;
     display: inline-block;
     right: 30%;
     top: 70%;
 }
 
-#index-25 .mad-dialogue {
-    animation: shake 0.7s infinite;
-    font-size: 1vw;
-}
-
-#index-26 img {
-    max-width: 40vw;
+.right-section #index-25 img {
+    height: 35vh;
     z-index: 5;
     display: inline-block;
-    right: 50%;
-    top: 20%;
-    transform: translateY(-50%, 50%);
+    right: 30%;
+    top: 70%;
 }
 
-#index-26 .mad-dialogue {
-    animation: dance-shake 0.5s infinite;
+.right-section #index-25 .mad-dialogue {
+    animation: dance-shake 0.7s infinite;
+    font-size: 1vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.right-section #index-26 img {
+    height: 50vh;
+    z-index: 5;
+    display: inline-block;
+    right: 50% !important;
+    top: 20% !important; 
+}
+
+.right-section #index-26 .mad-dialogue {
+    animation: dance-shake 0.5s infinite !important;
     font-size: 1.5vw;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, 50%) !important;
 }
 
 @keyframes shake {
@@ -116,7 +103,26 @@
 @keyframes dance-shake {
     0% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
     25% { transform: translate(-50%, -50%) translate(5px, 5px) rotate(5deg); }
-    50% { transform: translate(-50%, -50%) translate(0, 0) rotate(0eg); }
+    50% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
     75% { transform: translate(-50%, -50%) translate(-5px, 5px) rotate(-5deg); }
     100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+}
+
+.consumerBox .test {
+    @include fontA;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 28vh;
+    margin-top: 50vh;
+    text-align: center;
+    cursor: pointer;
+}
+
+.consumerBox .test .dialogue {
+    line-height: 1.5vh;
+    width: 14vw;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 10%;
 }

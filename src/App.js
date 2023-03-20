@@ -58,10 +58,9 @@ function App() {
 
         {/* Cookie Profiles */}\
         {cookieData.map((cookie, key) => {
+          console.log(key);
           return (
-            <>
-            <Route path={"/" + cookie.name} element={<CookieProfile name={cookie.name} data={cookie} />} />
-            </>
+              <Route path={"/" + cookie.name} key={key} element={<CookieProfile name={cookie.name} data={cookie} />} />
           )
         })
         }

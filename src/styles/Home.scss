@@ -135,13 +135,13 @@ section {
 #f2-grid.content {
     height: 100%;
     width: 100%;
-    display: inherit;
+    display: grid;
     grid-template-columns: inherit;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 7% 14% 14% 15% 41% 9%;
+    grid-template-rows: 50%;
+    grid-template-columns: 15.4% 13.5% 18.5% 26.5% 26.5%;
     grid-template-areas:
         ". . macaron . fortune ."
-        ". chess . finance ."
+        ". chess . finance .";
 }
 
 .mac {
@@ -353,7 +353,7 @@ section {
     display: grid;
     grid-template-columns: inherit;
     grid-template-rows: 25% 25% 43%;
-    grid-template-columns: 12.5% 16% 7.5% 15.75%;
+    grid-template-columns: 12.5% 18% 5.5% 15.75%;
     grid-template-areas:
         "madeleine  madeleine  . wafer ."
         "madeleine madeleine  . . brownie"
@@ -456,7 +456,6 @@ a {
 .linzer {
     position: relative;
     top: 25%;
-    left: 5%;
     width: 8vw;
 }
 
