@@ -33,7 +33,9 @@ const Start = () => {
       hideSplash();
     })();*/
     (async () => {
-      showDefinition();
+      if (!isAcceptCookiesShowing) {
+        showDefinition();
+      }
       console.log(isDefinitionShowing);
     })();
     //eslint-disable-next-line react-hooks/exhaustive-deps
