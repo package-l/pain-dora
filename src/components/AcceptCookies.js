@@ -20,7 +20,6 @@ const AcceptCookies = () => {
     hideAcceptCookies();
     hideSpotlight();
     showDefinition();
-    console.log(isDefinitionShowing);
   }
 
   function handleAcceptHover() {

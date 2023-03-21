@@ -34,7 +34,7 @@ const Definition = () => {
                   <div className="line4a cookiedefinition">=</div>
                   <div className="line4b cookiedefinition">"little _ cake"</div>
             </div>
-        ): <div>HELLO</div> }
+        ): null }
         {/*isSpotlightShowing ? (
           <div>Call spotlight here?</div>
         ): <div>Call spotlight not here?</div>*/}

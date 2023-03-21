@@ -33,9 +33,7 @@ const Start = () => {
       hideSplash();
     })();*/
     (async () => {
-      if (!isAcceptCookiesShowing) {
-        showDefinition();
-      }
+      //showDefinition();
       console.log(isDefinitionShowing);
     })();
     //eslint-disable-next-line react-hooks/exhaustive-deps
@@ -51,10 +49,10 @@ const Start = () => {
     <div className="start">
         {isAcceptCookiesShowing && !Cookies.get('home') ? (
           <AcceptCookies />
-        ): null}
-        {isDefinitionShowing ? (
+        ): <Definition />}
+        {/*isDefinitionShowing ? (
           <Definition />
-        ): null}
+        ): null*/}
         {isSpotlightShowing ? (
           <div className="splash" onMouseMove={(eve) => handleMouseMove(eve)}>
             <button className="enter"><Link to="/home" onClick={handleButtonClick}><span>Enter</span></Link></button>
