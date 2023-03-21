@@ -84,9 +84,9 @@ export const SplashProvider = ({children}) => {
         isLidShowing,
         isWrapperShowing,
       }}>
-        {!Cookies.get('home') ? (
+        {/*!Cookies.get('home') ? (
           <AcceptCookies />
-        ): null}
+        ): null*/}
         {/*Cookies.get('home') ? (
           <Definition />
         ): null*/}

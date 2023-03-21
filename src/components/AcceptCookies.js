@@ -39,7 +39,7 @@ const AcceptCookies = () => {
 
   return (
     <>
-      {!isAcceptCookiesShowing ? <Start /> : (
+      {!isAcceptCookiesShowing ? null : (
         <div className="accept-cookies-page">
           <div className="choices">
             <div className="cookietext" style={{

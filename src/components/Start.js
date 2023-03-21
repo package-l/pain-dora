@@ -1,12 +1,14 @@
 import { useSplash } from './SplashProvider';
 import Definition from './Definition';
+import AcceptCookies from './AcceptCookies';
 import useWindowDimensions from './useWindowDimensions';
 import { useState, useEffect } from 'react';
 import spotlightImage from '../img/Monster_Blank.png';
 import { Link } from "react-router-dom";
+import Cookies from 'js-cookie';
 
 const Start = () => {
-  const { isSpotlightShowing, isDefinitionShowing, isAcceptCookies, showLid, showWrapper, hideSpotlight, showDefinition, showSpotlight } = useSplash();
+  const { isSpotlightShowing, isDefinitionShowing, isAcceptCookiesShowing, showLid, showWrapper, hideSpotlight, showDefinition, showSpotlight } = useSplash();
   const { height, width } = useWindowDimensions();
   const [position, setPosition] = useState({
     left: -500,
@@ -45,6 +47,9 @@ const Start = () => {
 
   return (
     <div className="start">
+        {isAcceptCookiesShowing && !Cookies.get('home') ? (
+          <AcceptCookies />
+        ): null}
         {isDefinitionShowing ? (
           <Definition />
         ): null}
