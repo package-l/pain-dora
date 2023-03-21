@@ -1,11 +1,12 @@
 import { useSplash } from './SplashProvider';
 import { useEffect } from 'react';
 import '../styles/Definition.scss';
+import Start from './Start';
 
 const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Definition = () => {
-    const { isDefinitionShowing,  hideDefinition, showSpotlight } = useSplash();
+    const { isSpotlightShowing, isDefinitionShowing,  hideDefinition, showSpotlight } = useSplash();
 
     useEffect(() => {
         (async () => {
@@ -33,7 +34,10 @@ const Definition = () => {
                   <div className="line4a cookiedefinition">=</div>
                   <div className="line4b cookiedefinition">"little _ cake"</div>
             </div>
-        ): null}
+        ): <div>HELLO</div> }
+        {/*isSpotlightShowing ? (
+          <div>Call spotlight here?</div>
+        ): <div>Call spotlight not here?</div>*/}
     </>
   )
 }

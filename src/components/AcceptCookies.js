@@ -4,9 +4,11 @@ import { useSplash } from './SplashProvider';
 import '../styles/AcceptCookies.scss';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import Start from './Start';
+import Definition from './Definition';
 
 const AcceptCookies = () => {
-  const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSpotlight } = useSplash();
+  const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSpotlight, isDefinitionShowing } = useSplash();
   const [opacity, setOpacity] = useState({
     accept: 1,
     decline: 1,
@@ -36,7 +38,7 @@ const AcceptCookies = () => {
 
   return (
     <>
-      {!isAcceptCookiesShowing ? null : (
+      {!isAcceptCookiesShowing ? <Start /> : (
         <div className="accept-cookies-page">
           <div className="choices">
             <div className="cookietext" style={{

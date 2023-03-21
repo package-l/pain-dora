@@ -6,7 +6,7 @@ import spotlightImage from '../img/Monster_Blank.png';
 import { Link } from "react-router-dom";
 
 const Start = () => {
-  const { isSpotlightShowing, isDefinitionShowing, showLid, showWrapper, hideSpotlight, showDefinition, showSpotlight } = useSplash();
+  const { isSpotlightShowing, isDefinitionShowing, isAcceptCookies, showLid, showWrapper, hideSpotlight, showDefinition, showSpotlight } = useSplash();
   const { height, width } = useWindowDimensions();
   const [position, setPosition] = useState({
     left: -500,
@@ -32,6 +32,7 @@ const Start = () => {
     })();*/
     (async () => {
       showDefinition();
+      console.log(isDefinitionShowing);
     })();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -49,7 +50,7 @@ const Start = () => {
         ): null}
         {isSpotlightShowing ? (
           <div className="splash" onMouseMove={(eve) => handleMouseMove(eve)}>
-            <button className="enter" onClick={handleButtonClick}><Link to="/home"><span>Enter</span></Link></button>
+            <button className="enter"><Link to="/home" onClick={handleButtonClick}><span>Enter</span></Link></button>
             <img className="spotlight-image" src={spotlightImage} alt="room background"></img>
             <div className="mouse" style={{
               backgroundImage: `radial-gradient(circle at ${position.left / width * 100}% ${position.top / height * 100}%, transparent ${height/5}px, black ${height/5}px)`
