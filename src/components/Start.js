@@ -33,6 +33,9 @@ const Start = () => {
       hideSplash();
     })();*/
     (async () => {
+      if (Cookies.get('home')) {
+        showDefinition();
+      }
       //showDefinition();
       console.log(isDefinitionShowing);
     })();
