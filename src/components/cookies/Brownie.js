@@ -10,7 +10,7 @@ const Brownie = (props) => {
           <WaterWave className="leftBox-img" imageUrl={props.data.img} 
               style={{ width: '88%', height: '88%', backgroundSize: 'contain'}}
               resolution={512}
-              dropRadius={20}
+              dropRadius={10}
               perturbance={0.04}
               interactive={true}
           >{()=> {}}</WaterWave>
@@ -21,17 +21,45 @@ const Brownie = (props) => {
         around specific areas\n
         & find out what happens !`}</p></div>
       </div>
-     <div className="right-section">
-        <img src={props.data.customAssets.interactionBox} alt="interactive text box"></img>
+     <div className="right-section" style={{
+          backgroundImage: `url(${props.data.customAssets.interactionBox})`
+      }}>
         <div className="rightBox-text">
           <WaterWave className="dialogue1" imageUrl={props.data.customAssets.dialogue1}
-              resolution={5000}
+              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              resolution={1000}
               dropRadius={8}
               perturbance={0.03}
               interactive={true}
-          >{() => (
-              <></>
-          )}</WaterWave>
+          >{() => {}}</WaterWave>
+          <WaterWave className="dialogue2" imageUrl={props.data.customAssets.dialogue2}
+              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              resolution={512}
+              dropRadius={8}
+              perturbance={0.4}
+              interactive={true}
+          >{() => {}}</WaterWave>
+          <WaterWave className="dialogue3" imageUrl={props.data.customAssets.dialogue3}
+              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              resolution={512}
+              dropRadius={8}
+              perturbance={0.03}
+              interactive={true}
+          >{() => {}}</WaterWave>
+          <WaterWave className="dialogue4" imageUrl={props.data.customAssets.dialogue4}
+              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              resolution={512}
+              dropRadius={8}
+              perturbance={0.03}
+              interactive={true}
+          >{() => {}}</WaterWave>
+          <WaterWave className="dialogue5" imageUrl={props.data.customAssets.dialogue5}
+              style={{ width: '80%', height: 'auto', backgroundSize: 'contain'}}
+              resolution={512}
+              dropRadius={8}
+              perturbance={0.03}
+              interactive={true}
+          >{() => {}}</WaterWave>
         </div>
         {/*<div className="dialogue">{`oh . . . Sorry, i didn't notice you were investigating about 
         the Soft cookie missing case, i was lost in my own pity party of trainwreck thoughts. I'll 
