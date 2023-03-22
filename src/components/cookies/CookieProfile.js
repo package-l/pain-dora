@@ -5,6 +5,7 @@ import { useState, useNavigate } from 'react';
 //Cookies:
 import Madeleine from "./Madeleine";
 import Brownie from "./Brownie";
+import Linzer from './Linzer/Linzer';
 //import '../../styles/Madeleine.scss';
 
 //Math.random() * width*0.7 - width*0.7,
@@ -21,19 +22,25 @@ const CookieProfile = (props) => {
       <div className="backarrow"></div>
       <div className="character-card">
         <div className="character-card-border"></div>
-        {cookie.toString() !== "brownie" &&
-          <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
-        }
+          {cookie.toString() === "brownie" ? 
+            <div className="profileImg"></div> :
+            <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
+          }
         <div className="fullname">{props.data.fullname}</div>
         <div className="description">{props.data.description}</div>
       </div>
     {/*</div>*/}
-    {cookie.toString() === "madeleine" &&
-      <Madeleine data={props.data}/>
-    }
-    {cookie.toString() === "brownie" &&
-      <Brownie data={props.data}/>
-    }
+    <div className="character-right-section">
+      {cookie.toString() === "madeleine" &&
+        <Madeleine data={props.data}/>
+      }
+      {cookie.toString() === "linzer" &&
+        <Linzer data={props.data}/>
+      }
+      {cookie.toString() === "brownie" &&
+        <Brownie data={props.data}/>
+      }
+    </div>
   </div>
   )
 }

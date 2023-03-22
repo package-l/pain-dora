@@ -5,22 +5,23 @@ const Brownie = (props) => {
 
   return (
     <div className="brownie-interaction-container">
-     <div className="column leftBox">
+      <div className="consumerBox">
         <div className="ripple-container">
           <WaterWave className="leftBox-img" imageUrl={props.data.img} 
-              style={{ width: '100%', height: '100%', backgroundSize: 'cover' }}
-              resolution={312}
+              style={{ width: '88%', height: '88%', backgroundSize: 'contain'}}
+              resolution={512}
               dropRadius={20}
-              perturbance={0.03}
+              perturbance={0.04}
               interactive={true}
           >{()=> {}}</WaterWave>
         </div>
-        <div className="dialogue">{`Move the Cursor\n
-            around specific areas\n
-            & find out what happens !`}
-        </div>
-     </div>
-     <div className="column rightBox">
+        <div className="test" style={{
+          backgroundImage: `url(${props.data.customAssets.instructionsBox})`
+        }}><p className="dialogue">{`Move the Cursor\n
+        around specific areas\n
+        & find out what happens !`}</p></div>
+      </div>
+     <div className="right-section">
         <img src={props.data.customAssets.interactionBox} alt="interactive text box"></img>
         <div className="rightBox-text">
           <WaterWave className="dialogue1" imageUrl={props.data.customAssets.dialogue1}

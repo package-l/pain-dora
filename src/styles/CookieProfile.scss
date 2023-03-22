@@ -16,7 +16,7 @@
 
 @mixin instructionFont {
     font-family: Sinhala MN, sans-serif;
-    font-size: 1vh;
+    font-size: 1.5vh;
     line-height: 1.5vh;
     letter-spacing: 0.1em;
 }
@@ -108,14 +108,49 @@
     aspect-ratio: 457 / 778;
 }
 
-.consumerBox img {
+/*.consumerBox img {
     height: 23vh;
     z-index: 20;
     padding-top: 50vh;
+    //display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+    display: table-cell; 
+}*/
+
+.test {
+    @include instructionFont;
+    width:23vw;
+    height:30vh;  
+    display: table; 
+    //display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    //height: 28vh;
+    margin-top: 50vh;
+    text-align: center;
+    cursor: pointer;
+    max-width: 400px;
 }
 
 .consumerBox .dialogue {
-    height: 20vh;
-    top: 50%;
-    transform: translateX(-60%);
+    @include instructionFont;
+    //position: absolute;
+    color: white;
+    max-height: 20vh;
+    padding: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    //width: 17vw;
+    //left: 50%;
+    //transform: translateX(-50%);
+    //top: 70%;
+    //height: 20vh;
+
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell;  
 }

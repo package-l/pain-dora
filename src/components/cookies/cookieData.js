@@ -41,11 +41,17 @@ export const cookieData = [
     },
     {
         "name": "linzer",
-        "fullname": "Madame Fortune",
-        "description": "Age: Physically 21 - ??? Emotionally 2",
+        "fullname": "Lying Linzer Lindsay",
+        "description": "Age: Unknown",
         "icon": require('../../img/icons/Icon_Linzer.png'),
-        "img": require('../../img/Madeleine/Madeleine.png'),
-        "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
+        "img": require('../../img/Linzer/Linzer.png'),
+        "bgImg": require('../../img/Linzer/BG_Linzer.png'),
+        "customAssets": {
+            "answerBoxOdd": require('../../img/Linzer/Linzer_Dialogue_ANSWER_Box_1_3_5.png'),
+            "answerBoxEven" : require('../../img/Linzer/Linzer_Dialogue_ANSWER_Box_2_4_6.png'),
+            "instructionsBox": require('../../img/Linzer/Linzer_Dialogue_INSTRUCTIONS_Box.png'),
+            "promptBox": require('../../img/Linzer/Linzer_Dialogue_PROMPT_Box.png')
+        }
     },
     {
         "name": "brownie",

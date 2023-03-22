@@ -16,18 +16,43 @@
     clear: both;
 }
 
-.column {
-    float: left;
-}
 
 .ripple-container {
-    left: 50%;
+    //left: 60%;
+    //top: 18vh;
+    //transform: translateX(-50%);
+    //width: 15vw;
+    //height: auto;
+    //position: absolute;
+    height: 28vh;
+    aspect-ratio: 4/3;
+    position: absolute;
+}
+
+.brownie-interaction-container .test {
+    cursor: default;
+}
+
+.brownie-interaction-container .dialogue {
+    max-height: 20vh;
+    padding: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    //width: 17vw;
+    //left: 50%;
+    //transform: translateX(-50%);
+    //top: 70%;
+    //height: 20vh;
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell;  
+}
+
+.ripple-container .leftBox-img {
+    position: absolute;
+    left: 56%;
     top: 15%;
     transform: translateX(-50%);
-    width: 15vw;
-    height: auto;
-    aspect-ratio: 4/3;
-    position: relative;
 }
 
 .leftBox {
@@ -36,17 +61,19 @@
 }
 
 .leftBox-img {
-    box-sizing: border-box;
+    /*box-sizing: border-box;
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 20;
-    background-size: contain;
+    z-index: 20;*/
+    //background-size: contain;
     background-repeat: no-repeat;
+    //left: 55%;
+    //transform: translateX(-50%);
+    //top: 10vh;
 }
 
 .leftBox-img .canvas {
-    width: 35vw;
     position: fixed;
     left:0;
     top:0;
@@ -60,11 +87,17 @@
     align-self: center;
     text-align: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rightBox img {
     max-width: 100%;
     max-height: 100%;
+    margin: auto;
+    display: block;
+  
 }
 
 .rightBox-text {
@@ -162,3 +195,5 @@
 
     z-index: 20;
 }*/
+
+//test

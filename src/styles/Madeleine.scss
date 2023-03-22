@@ -12,18 +12,6 @@
     overflow: hidden;
 }
 
-.consumerBox .dialogue {
-    @include fontA;
-    position: absolute;
-    color: white;
-    max-height: 20vh;
-    width: 17vw;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 70%;
-    height: 20vh;
-}
-
 .madeleineBox {
     position: absolute;
     display: inline-block;
@@ -106,23 +94,4 @@
     50% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
     75% { transform: translate(-50%, -50%) translate(-5px, 5px) rotate(-5deg); }
     100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
-}
-
-.consumerBox .test {
-    @include fontA;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 28vh;
-    margin-top: 50vh;
-    text-align: center;
-    cursor: pointer;
-}
-
-.consumerBox .test .dialogue {
-    line-height: 1.5vh;
-    width: 14vw;
-    display: inline-block;
-    vertical-align: middle;
-    padding-top: 10%;
 }
