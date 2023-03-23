@@ -27,10 +27,11 @@ const Brownie = (props) => {
         <div className="rightBox-text">
           <WaterWave className="dialogue1" imageUrl={props.data.customAssets.dialogue1}
               style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
-              resolution={1000}
+              resolution={3000}
               dropRadius={8}
               perturbance={0.03}
               interactive={true}
+              crossOrigin={props.data.customAssets.dialogue1}
           >{() => {}}</WaterWave>
           <WaterWave className="dialogue2" imageUrl={props.data.customAssets.dialogue2}
               style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}

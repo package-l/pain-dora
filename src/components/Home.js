@@ -131,6 +131,7 @@ const Home = () => {
             </section>
             <section className="map-container basement" id="basement">
               <img className="map" src={Basement} alt="Basement floor"></img>
+
               {/*<div>
                 <p>UNDER_CONSTRUCTION</p>
               </div>*/}

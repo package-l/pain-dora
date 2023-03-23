@@ -19,10 +19,20 @@
     background-color: black;
 }
 
+.hamburger#menu:hover {
+    background-color: grey;
+    border-color: grey;
+}
+
 .hamburger#map {
     position: fixed;
     right: -1.5%;
     top: 30%;
+}
+
+.hamburger#map:hover {
+    background-color: grey;
+    border-color: grey;
 }
 
 .hamburgerwrapper {

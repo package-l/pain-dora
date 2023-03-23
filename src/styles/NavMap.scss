@@ -63,6 +63,11 @@
     justify-content: center;
 }
 
+.navmap li:hover {
+    opacity: 50%;
+}
+
+
 /*.navmap-border {
     border: 2.5px solid black;
     outline: 1.5px solid black;
