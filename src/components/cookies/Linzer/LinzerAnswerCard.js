@@ -9,12 +9,12 @@ const LinzerAnswerCard = ({ cardNum, answer, bgImgEven, bgImgOdd }) => {
   const handleAnswerReveal1 = () => {
 
     if (answer[cardNum].line1.isTruth) {
-      setLine1Color("green");
-      setLine2Color("red");
-      setLine3Color("red");
+      setLine1Color("#007800");
+      setLine2Color("#a20000");
+      setLine3Color("#a20000");
     }
     else if (!answer[cardNum].line1.isTruth) {
-      setLine1Color("red")
+      setLine1Color("#a20000")
     }
 
   }
@@ -22,24 +22,24 @@ const LinzerAnswerCard = ({ cardNum, answer, bgImgEven, bgImgOdd }) => {
   const handleAnswerReveal2 = () => {
 
     if (answer[cardNum].line2.isTruth) {
-      setLine2Color("green");
-      setLine1Color("red");
-      setLine3Color("red");
+      setLine2Color("#007800");
+      setLine1Color("#a20000");
+      setLine3Color("#a20000");
     }
     else if (!answer[cardNum].line2.isTruth) {
-      setLine2Color("red")
+      setLine2Color("#a20000")
     }
   }
 
   const handleAnswerReveal3 = () => {
 
     if (answer[cardNum].line3.isTruth) {
-      setLine3Color("green");
-      setLine1Color("red");
-      setLine2Color("red");
+      setLine3Color("#007800");
+      setLine1Color("#a20000");
+      setLine2Color("#a20000");
     }
     else if (!answer[cardNum].line3.isTruth) {
-      setLine3Color("red")
+      setLine3Color("#a20000")
     }
   }
 
