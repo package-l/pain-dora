@@ -25,37 +25,38 @@ const Brownie = (props) => {
           backgroundImage: `url(${props.data.customAssets.interactionBox})`
       }}>
         <div className="rightBox-text">
+      
           <WaterWave className="dialogue1" imageUrl={props.data.customAssets.dialogue1}
-              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
-              resolution={3000}
+              style={{ width: '20%', height: '50%', maxHeight: '100%', overflow: 'auto', backgroundSize: 'contain', imageRendering: '-webkit-optimize-contrast'}}
+              resolution={1500}
               dropRadius={8}
               perturbance={0.03}
               interactive={true}
               crossOrigin={props.data.customAssets.dialogue1}
           >{() => {}}</WaterWave>
           <WaterWave className="dialogue2" imageUrl={props.data.customAssets.dialogue2}
-              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              style={{ width: '20%', height: '60%', maxHeight: '100%', overflow: 'auto', backgroundSize: '100%', imageRendering: '-webkit-optimize-contrast'}}
               resolution={512}
               dropRadius={8}
               perturbance={0.4}
               interactive={true}
           >{() => {}}</WaterWave>
           <WaterWave className="dialogue3" imageUrl={props.data.customAssets.dialogue3}
-              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              style={{ width: '20%', height: '50%', maxHeight: '100%', overflow: 'auto', backgroundSize: '100%', imageRendering: '-webkit-optimize-contrast'}}
               resolution={512}
               dropRadius={8}
               perturbance={0.03}
               interactive={true}
           >{() => {}}</WaterWave>
           <WaterWave className="dialogue4" imageUrl={props.data.customAssets.dialogue4}
-              style={{ width: '50%', height: '50%', backgroundSize: 'contain'}}
+              style={{ width: '20%', height: '60%', maxHeight: '100%', overflow: 'auto', backgroundSize: '100%', imageRendering: '-webkit-optimize-contrast'}}
               resolution={512}
               dropRadius={8}
               perturbance={0.03}
               interactive={true}
           >{() => {}}</WaterWave>
           <WaterWave className="dialogue5" imageUrl={props.data.customAssets.dialogue5}
-              style={{ width: '80%', height: 'auto', backgroundSize: 'contain'}}
+              style={{ width: '80%', height: '30%', backgroundSize: 'contain'}}
               resolution={512}
               dropRadius={8}
               perturbance={0.03}

@@ -31,7 +31,7 @@ const Linzer = (props) => {
           </div>
         </div>
       </div>
-  </div>
+    </div>
   )
 }
 

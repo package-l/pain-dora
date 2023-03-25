@@ -1,7 +1,7 @@
 
 export const madeleineData = [
     {
-        "madeleineBox": require('../../img/Madeleine/Mad_D_Blank.png'),
+        "madeleineBox": require('../../img/Madeleine/Chat_Box_50.png'),
         "consumerBox": require('../../img/Madeleine/Con_D_Blank.png'),
         "dialogue": [
             {

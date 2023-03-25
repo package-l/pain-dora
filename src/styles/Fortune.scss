@@ -1,0 +1,363 @@
+@mixin fontA {
+    font-family: Sinhala MN;
+    font-size: 1vw;
+}
+
+.fortune-interaction-container {
+    .grid-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20% 20% 20% 20%;
+        grid-template-areas:
+            "triangle . . rhombus"
+            ". number1 number1 ."
+            "circle . . heart"
+            ". number2 number2 ."
+            "pentagon . . square";
+    }
+
+    .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #fortune-triangle-container {
+        grid-area: triangle;
+    }
+
+    #fortune-triangle-container > .fortune-paper,
+    #fortune-rhombus-container > .fortune-paper,
+    #fortune-circle-container > .fortune-paper,
+    #fortune-heart-container > .fortune-paper,
+    #fortune-pentagon-container > .fortune-paper,
+    #fortune-square-container > .fortune-paper
+    {
+        position: absolute;
+        z-index: -5;
+    }
+
+    #fortune-rhombus-container {
+        grid-area: rhombus;
+    }
+
+    #fortune-circle-container {
+        grid-area: circle;
+    }
+
+    #fortune-heart-container {
+        grid-area: heart;
+    }
+
+    #fortune-pentagon-container {
+        grid-area: pentagon;
+    }
+
+    #fortune-square-container {
+        grid-area: square;
+    }
+
+    #fortune-triangle {
+        height: 9vh;
+        width: 9vh;
+        background-color: black;
+        clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        color: white;
+    }
+
+    .close {
+        position: relative;
+        top: 50%;
+        font-size: 5vh; 
+        cursor: pointer;
+    }
+
+    .close:hover {
+        position: relative;
+        top: 50%;
+        font-size: 5vh; 
+        cursor: pointer;
+        color: red;
+    }
+
+
+    #fortune-rhombus {
+        height: 9vh;
+        width: 9vh;
+        background-color: black;
+        //top: 50%;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        color: white;
+        //transform: translate(-50%, -50%);
+        //transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    #fortune-circle {
+        height: 9vh;
+        width: 9vh;
+        background-color: black;
+        border-radius: 50%;
+        color: white;
+
+    }
+
+    #fortune-heart {
+        height: 9vh;
+        background-image: url('../img/Fortune/Heart_Fortune.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 9vh;
+        color: white;
+    }
+
+    #fortune-pentagon {
+        color: white;
+        width: 9vh;
+        height: 9vh;
+        background-color: black;
+        clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+    }
+
+    #fortune-square {
+        width: 9vh;
+        height: 9vh;
+        background-color: black;
+        color: white;
+    }
+
+    #fortune-number1 {
+        grid-area: number1;
+        height: 6vh;
+        width: 100%;
+        background-color: white;
+    }
+
+    #fortune-number2 {
+        grid-area: number2;
+        height: 6vh;
+        width: 100%;
+        background-color: white;
+    }
+
+    .fortune-paper {
+        //width: 40vh;
+        width: 6vh;
+        height: 5vh;
+        background-color: white;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .left {
+        left: 50%;
+    }
+
+    .right {
+        right: 50%;
+    }
+
+    .fortune-paper p {
+        @include fontA;
+        //visibility: hidden;
+    }
+
+    #fortune-number1 .flip-card-back div {
+        color: #da1f27 !important;
+    }
+
+    #fortune-number2 .flip-card-front div {
+        color: #da1f27;
+    }
+
+}
+
+@keyframes grow {
+    0% {
+        width: 6vh;
+    }
+    100% {
+        width: 60vh;
+    }
+}
+
+@keyframes shrink {
+    from {
+        width: 60vh;
+    }
+    to {
+        width: 6vh;
+    }
+}
+
+#fortune-number1, #fortune-number2 {
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        background-color: white;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip {
+        transform: rotateY(180deg);
+    }
+
+    
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+        @include fontA;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        text-justify: distribute;
+    }
+
+    .flip-card-front div, .flip-card-back div {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .flip-card-back {
+        position: absolute;
+        color: black;
+        transform: rotateY(180deg);
+        z-index: 20;
+        text-align: center;
+    }
+
+}
+
+
+/*
+
+    .grid-item {
+        &.fortune-triangle {
+            grid-area: triangle;
+            width: 0; 
+            height: 0; 
+            border-left: 5vh solid transparent;
+            border-right: 5vh solid transparent;
+            border-bottom: 9vh solid black;
+        }
+
+        &.fortune-rhombus {
+            grid-area: rhombus;
+            height: 7vh;
+            width: 7vh;
+            background-color: black;
+            transform: translate(-50%, -50%) rotate(-45deg);
+    
+        }
+    
+        &.fortune-circle {
+            grid-area: circle;
+            height: 9vh;
+            width: 9vh;
+            background-color: black;
+            border-radius: 50%;
+    
+        }
+    
+        &.fortune-heart {
+            grid-area: heart;
+            height: 9vh;
+            background-image: url('../img/Fortune/Heart_Fortune.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+    
+        }
+    
+        &.fortune-pentagon {
+            grid-area: pentagon;
+    
+            width: 9vh;
+            height: 9vh;
+            background-color: black;
+            clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+        }
+    
+        &.fortune-square {
+            grid-area: square;
+            width: 9vh;
+            height: 9vh;
+            background-color: black;
+        }
+
+        &#fortune-number1 {
+            grid-area: number1;
+            height: 6vh;
+            width: 100%;
+            background-color: white;
+        }
+    
+        &#fortune-number2 {
+            grid-area: number2;
+            height: 6vh;
+            width: 100%;
+            background-color: white;
+        }
+    }
+
+    .fortune-paper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        //width: 40vh;
+        width: 5vh;
+        height: 5vh;
+        background-color: white;        
+    }
+
+    .fortune-paper {
+        &.left {
+            left: 50%;
+        }
+
+        &.right {
+            right: 50%;
+        }
+
+        &.fortune-triangle {
+            grid-area: triangle;
+        }
+
+        &.fortune-rhombus {
+            grid-area: rhombus;
+        }
+    
+        &.fortune-circle {
+            grid-area: circle;
+        }
+    
+        &.fortune-heart {
+            grid-area: heart;
+        }
+    
+        &.fortune-pentagon {
+            grid-area: pentagon;
+        }
+    
+        &.fortune-square {
+            grid-area: square;
+        }
+    }
+*/

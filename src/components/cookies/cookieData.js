@@ -9,35 +9,38 @@ export const cookieData = [
     },
     {
         "name": "macaron",
-        "fullname": "Madame Fortune",
-        "description": "Age: Physically 21 - ??? Emotionally 2",
+        "fullname": "Macaron",
+        "description": "This page's interaction has not yet been coded.",
         "icon": require('../../img/icons/Icon_Macaron.png'),
-        "img": require('../../img/Madeleine/Madeleine.png'),
+        "img": require('../../img/Macaron/Macaron.png'),
         "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
     },
     {
         "name": "wafer",
-        "fullname": "Madame Fortune",
-        "description": "Age: Physically 21 - ??? Emotionally 2",
+        "fullname": "",
+        "description": "This page has not yet been coded.",
         "icon": require('../../img/icons/Icon_Wafer.png'),
         "img": require('../../img/Madeleine/Madeleine.png'),
         "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
     },
     {
         "name": "fortune",
-        "fullname": "Madame Fortune",
-        "description": "Age: Physically 21 - ??? Emotionally 2",
+        "fullname": "mis .FOrTUnE",
+        "description": "Age: 19",
         "icon": require('../../img/icons/Icon_Fortune.png'),
-        "img": require('../../img/Madeleine/Madeleine.png'),
-        "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
+        "img": require('../../img/Fortune/MisFortune.png'),
+        "bgImg": require('../../img/Fortune/BG_Fortune.png'),
+        "customAssets": {
+            "instructionsBox": require('../../img/Fortune/BlackBox_Fortune.png')
+        }
     },
     {
         "name": "chess",
-        "fullname": "Madame Fortune",
-        "description": "Age: Physically 21 - ??? Emotionally 2",
+        "fullname": "Queen Knowah",
+        "description": "The interaction for this page isn't coded yet. :)",
         "icon": require('../../img/icons/Icon_Chess.png'),
-        "img": require('../../img/Madeleine/Madeleine.png'),
-        "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
+        "img": require('../../img/Chess/Chess.png'),
+        "bgImg": require('../../img/Chess/BG_Chess.png'),
     },
     {
         "name": "linzer",
@@ -63,7 +66,7 @@ export const cookieData = [
         "customAssets": {
             "instructionsBox": require('../../img/Brownie/Black_Box_Brownie.png'),
             "interactionBox": require('../../img/Brownie/Chat_Box_Tape_Brownie.png'),
-            "dialogue1": require('../../img/Brownie/Brownie_Dialogue_1.png'),
+            "dialogue1": require('../../img/Brownie/Brownie_Text_1.png'),
             "dialogue2": require('../../img/Brownie/Brownie_Dialogue_2.png'),
             "dialogue3": require('../../img/Brownie/Brownie_Dialogue_3.png'),
             "dialogue4": require('../../img/Brownie/Brownie_Dialogue_4.png'),
@@ -78,7 +81,7 @@ export const cookieData = [
         "img": require('../../img/Madeleine/Madeleine.png'),
         "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
         "customAssets": {
-            "madeleineBox": require('../../img/Madeleine/Mad_D_Blank.png'),
+            "madeleineBox": require('../../img/Madeleine/Chat_Box_50.png'),
             "consumerBox": require('../../img/Madeleine/Con_D_Blank.png'),
             "dialogue": [
                 {

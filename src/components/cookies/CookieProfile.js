@@ -3,6 +3,7 @@ import '../../styles/CookieProfile.scss';
 import { useState, useNavigate } from 'react';
 
 //Cookies:
+import Fortune from './Fortune/Fortune';
 import Madeleine from "./Madeleine";
 import Brownie from "./Brownie";
 import Linzer from './Linzer/Linzer';
@@ -31,6 +32,9 @@ const CookieProfile = (props) => {
       </div>
     {/*</div>*/}
     <div className="character-right-section">
+      {cookie.toString() === "fortune" &&
+        <Fortune data={props.data}/>
+      }
       {cookie.toString() === "madeleine" &&
         <Madeleine data={props.data}/>
       }

@@ -56,7 +56,7 @@ const Madeleine = (props) => {
           {list.map((item, i) => 
             (
               item.text !== undefined &&
-              <>
+              
                 <div className="madeleineBox" key={i} id={`index-${i}`} style={{
                     right: item.right,
                     top: item.top
@@ -64,7 +64,7 @@ const Madeleine = (props) => {
                   <img src={props.data.customAssets.madeleineBox} alt="Mad Mad Baby Madeleine Dialogue Box"></img>
                   <div className="mad-dialogue">{item.text}</div>
                 </div>
-              </>
+
             )
           )}
         </div>
