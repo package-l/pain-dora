@@ -26,8 +26,7 @@
 }
 
 //text
-
-.right-section {
+.madeleine-interaction-container .right-section {
     position: absolute;
     width: 60vw;
     height: 90vh;
@@ -36,7 +35,7 @@
 }
 
 .right-section img {
-    height: 28vh;
+    height: 27vh;
     z-index: 20;
 }
 
@@ -57,7 +56,7 @@
 }
 
 .right-section #index-25 .mad-dialogue {
-    animation: dance-shake 0.7s infinite;
+    //animation: dance-shake 0.7s infinite;
     font-size: 1vw;
     top: 50%;
     left: 50%;
@@ -72,12 +71,21 @@
     top: 20% !important; 
 }
 
+.right-section #index-26.madeleineBox {
+    height: 50vh;
+    z-index: 5;
+    display: inline-block;
+    right: 50% !important;
+    top: 20% !important; 
+}
+
 .right-section #index-26 .mad-dialogue {
-    animation: shake 0.5s infinite !important;
+    animation: shake 0.5s infinite;
     font-size: 1.5vw;
+    line-height: 2vw;
     top: 50% !important;
     left: 50% !important;
-    transform: translate(-50%, 50%) !important;
+    transform: translate(-50%, -40%) !important;
 }
 
 @keyframes shake {

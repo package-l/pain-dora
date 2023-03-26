@@ -66,11 +66,11 @@ export const cookieData = [
         "customAssets": {
             "instructionsBox": require('../../img/Brownie/Black_Box_Brownie.png'),
             "interactionBox": require('../../img/Brownie/Chat_Box_Tape_Brownie.png'),
-            "dialogue1": require('../../img/Brownie/Brownie_Text_1.png'),
-            "dialogue2": require('../../img/Brownie/Brownie_Dialogue_2.png'),
-            "dialogue3": require('../../img/Brownie/Brownie_Dialogue_3.png'),
-            "dialogue4": require('../../img/Brownie/Brownie_Dialogue_4.png'),
-            "dialogue5": require('../../img/Brownie/Brownie_Dialogue_5.png'),
+            "dialogue1": require('../../img/Brownie/Bold_BD1.png'),
+            "dialogue2": require('../../img/Brownie/Bold_BD2.png'),
+            "dialogue3": require('../../img/Brownie/Bold_BD3.png'),
+            "dialogue4": require('../../img/Brownie/Bold_BD4.png'),
+            "dialogue5": require('../../img/Brownie/Bold_BD5.png'),
         },
     },
     {

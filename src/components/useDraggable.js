@@ -4,6 +4,9 @@ const id = (x) => x;
 
 const useDraggable = ({ onDrag = id } = {}) => {
     const [pressed, setPressed] = useState(false);
+    const [closeVisibility, setCloseVisibility] = useState("hidden");
+    const [paperTextVisibility, setPaperTextVisibility] = useState("hidden");
+    const [fadeAnimation, setFadeAnimation] = useState("none");
 
     const position = useRef({ x: 0, y: 0});
     const ref = useRef();
@@ -32,6 +35,9 @@ const useDraggable = ({ onDrag = id } = {}) => {
         const handleMouseUp = (e) => {
                 e.target.style.userSelect = "auto";
                 setPressed(false);
+                setCloseVisibility("visible");
+                setPaperTextVisibility("visible");
+                setFadeAnimation("fadeIn");
         };
         document.addEventListener("mousemove", handleMouseMove);
         document.addEventListener("mouseup", handleMouseUp);
@@ -39,8 +45,8 @@ const useDraggable = ({ onDrag = id } = {}) => {
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);
         };
-    }, [pressed, onDrag])
-    return [ref, pressed, handleMouseDown];
+    }, [pressed, onDrag, closeVisibility, paperTextVisibility, fadeAnimation])
+    return [ref, pressed, handleMouseDown, closeVisibility, setCloseVisibility, paperTextVisibility, setPaperTextVisibility, fadeAnimation, setFadeAnimation];
 };
 
 export default useDraggable

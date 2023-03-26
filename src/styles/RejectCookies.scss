@@ -13,6 +13,10 @@
     letter-spacing: 0.192vh;
 }
 
+.reject-container {
+    overflow: hidden;
+}
+
 .line1a, .line1b {
     @include fontA;
 }

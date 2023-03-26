@@ -24,6 +24,9 @@ import Basement from '../img/house/Floor_Basement.png';
 import Fork from '../img/house/Fork_For_Cellar.png';
 
 import { useMediaQuery } from 'react-responsive';
+import Cookies from 'js-cookie';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 
 //const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -36,16 +39,16 @@ const Home = () => {
   const [openMap, setOpenMap] = useState(false);
 
   //Media Query
-  const isDesktopOrLaptop = useMediaQuery({
-    query: `(min-width: 1224px)`
-  })
   const isBigScreen = useMediaQuery({ 
     query: '(min-width: 850px)' 
   })
   const isAspectRatio = useMediaQuery({
-    query: '(min-aspect-ratio: 9/3)'
+    query: '(min-aspect-ratio: 8/3)'
   })
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isTallScreen = useMediaQuery({
+    query: '(min-height: 450px)'
+  })
+
 
   useEffect(() => {
     /*(async () => {
@@ -64,10 +67,10 @@ const Home = () => {
           <Introduction />
         </>
       ): null}
-      {!isBigScreen || isAspectRatio ? 
-      <div className="page-warning" style={{color: 'white', fontFamily: 'Chantal', paddingTop: '20vh', paddingLeft: '2vw', paddingRight: '2vw'}}>
-        Due to the interactive nature of the website, please use at a larger screen size.
-        <br></br><br></br>Thank you!
+      {!isBigScreen || isAspectRatio || !isTallScreen ? 
+      <div className="page-warning" style={{height: '100vh', color: 'white', fontFamily: 'Chantal', paddingTop: '20vh', paddingLeft: '2vw', paddingRight: '2vw', backgroundColor: 'black'}}>
+        <div className="page-warning-text" style={{top: '50%', transform: 'translateY(-50%)'}}>Due to the interactive nature of the website, please use at a larger screen size/aspect ratio.
+        <br></br><br></br>Thank you!</div>
       </div>
         : 
         <div className="home-main" id="home-grid">
@@ -139,7 +142,14 @@ const Home = () => {
           <img className="fork" src={Fork} alt="Fork"></img>
           {/*<img className="map" src={Cellar} alt="Cellar floor"></img>*/}
           <div className="cookie-map-container">
-            <Link to="/softcookie"><img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img></Link>
+            {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') &&
+            Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
+                 <Link to="/softcookie"><img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img></Link> :
+                (<div className="Locked">
+                  <img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img>
+                  <FontAwesomeIcon className="Icon" icon={faLock} />
+                </div>)
+              }
             <div className="circles">
               <div className="bigcircleborder"></div>
               <div className="bigcircle circle"><p>Garden<br />of Eating</p></div>

@@ -3,7 +3,21 @@
     font-size: 1vw;
 }
 
+
 .fortune-interaction-container {
+    //overflow: hidden;
+}
+
+.fortune-interaction-container {
+
+    .right-section {
+        position: absolute;
+        width: 60vw;
+        height: 90vh;
+        right: 0;
+        padding-right: 5%;
+    }
+
     .grid-container {
         height: 100%;
         display: grid;
@@ -164,6 +178,13 @@
         right: 50%;
     }
 
+    .fortune-paper {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
     .fortune-paper p {
         @include fontA;
         //visibility: hidden;
@@ -175,6 +196,15 @@
 
     #fortune-number2 .flip-card-front div {
         color: #da1f27;
+    }
+
+    .fortune-paper p {
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        
     }
 
 }
@@ -194,6 +224,32 @@
     }
     to {
         width: 6vh;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    90% {
+        opacity: 0;
+        visibility: "visible";
+    }
+    100% {
+        opacity: 1;
+        visibility: "visible";
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: "visible";
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 

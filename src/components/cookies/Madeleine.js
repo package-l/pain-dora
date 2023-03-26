@@ -1,8 +1,10 @@
 import '../../styles/Madeleine.scss';
 import { useState, useEffect, useRef } from 'react';
+import Cookies from 'js-cookie';
 
 
 const Madeleine = (props) => {
+  Cookies.set('madeleine', true);
 
   //State management for position of elements
   const [rightHeight, setRightHeight] = useState(0);

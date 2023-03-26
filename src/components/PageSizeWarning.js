@@ -1,4 +1,4 @@
-import '../styles/PageSizeWarning.scss'
+//import '../styles/PageSizeWarning.scss'
 
 const PageSizeWarning = () => {
   return (

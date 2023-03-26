@@ -1,7 +1,9 @@
 import '../../styles/Brownie.scss';
 import WaterWave from 'react-water-wave';
+import Cookies from 'js-cookie';
 
 const Brownie = (props) => {
+  Cookies.set('brownie', true);
 
   return (
     <div className="brownie-interaction-container">

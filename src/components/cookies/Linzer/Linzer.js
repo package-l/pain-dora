@@ -2,9 +2,11 @@ import { linzerAnswerData } from './linzerAnswerData';
 import { linzerQuestionData } from './linzerQuestionData'; 
 import LinzerQuestionCard from './LinzerQuestionCard';
 import LinzerAnswerCard from './LinzerAnswerCard';
-import '../../../styles/Linzer.scss'
+import '../../../styles/Linzer.scss';
+import Cookies from 'js-cookie';
 
 const Linzer = (props) => {
+  Cookies.set('linzer', true);
 
   return (
     <div className="linzer-interaction-container">

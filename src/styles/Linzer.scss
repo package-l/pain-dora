@@ -1,6 +1,6 @@
 @mixin cardFont {
     font-family: Sinhala MN;
-    font-size: 1.6vh;
+    font-size: 1.5vh;
     letter-spacing: 0.1em;
     line-height: 1.8vh;
 }
@@ -36,6 +36,9 @@
         padding: 10px;
         position: relative;
         transition: opacity 0.5s;
+        aspect-ratio: 760 / 458;
+        padding-right: 1vw;
+        padding-left: 1vw;
     }
 
     .answer-card {
@@ -44,13 +47,21 @@
     }
 
     .question-card-text {
-        padding: 10vh;
+        padding: 2vw;
     }
 
     .line1, .line2, .line3 {
-        padding: 1vh;
-        width: 80%;
+        padding: 0.8vh;
+        width: 90%;
         cursor: pointer;
+    }
+
+    .right-section {
+        position: absolute;
+        width: 60vw;
+        height: 90vh;
+        right: 0;
+        margin: 1vw;
     }
 
 }

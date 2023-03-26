@@ -6,7 +6,7 @@
     line-height: 2vh;
 }
 
-* {
+*, html {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -15,11 +15,15 @@
     overflow: hidden;
 }
 
+body {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
 .page-warning {
     @include nameFont;
     background-color: black;
     color: white;
-    width: 100vw;
     height: 100vh;
-    padding: 70px 0;
+    width: 100vw;
 }

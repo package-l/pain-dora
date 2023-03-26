@@ -3,7 +3,10 @@ import Numbers from './Numbers';
 import '../../../styles/Fortune.scss';
 import { fortuneData } from './fortuneData';
 
+import Cookies from 'js-cookie';
+
 const Fortune = (props) => {
+  Cookies.set('fortune', true);
 
   return (
     <div className="fortune-interaction-container">
