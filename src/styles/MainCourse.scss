@@ -14,7 +14,12 @@
     height: 100vh;
 }
 
-.maincourse > * {
+.maincourse .hamburger-container {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.maincourse > *:not(:first-child){
     display: inline-block;
     vertical-align: middle;
     margin: 2vw;

@@ -49,6 +49,8 @@ const Home = () => {
     query: '(min-height: 450px)'
   })
 
+  Cookies.remove('linzer');
+
 
   useEffect(() => {
     /*(async () => {
@@ -144,9 +146,9 @@ const Home = () => {
           <div className="cookie-map-container">
             {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') &&
             Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
-                 <Link to="/softcookie"><img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img></Link> :
+                 <Link to="/softcookie"><img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img></Link> :
                 (<div className="Locked">
-                  <img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img>
+                  <img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img>
                   <FontAwesomeIcon className="Icon" icon={faLock} />
                 </div>)
               }
