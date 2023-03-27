@@ -84,12 +84,7 @@ export const cookieData = [
             "madeleineBox": require('../../img/Madeleine/Chat_Box_50.png'),
             "consumerBox": require('../../img/Madeleine/Con_D_Blank.png'),
             "dialogue": [
-                {
-                    "speaker": "consumer",
-                    "text": `This will be your dialogue box - the Investigator.\n
-                    Please c/lick this black box\n to begin, & continue c/licking.`,
-                    "speed": 70,
-                },
+
                 {
                     "speaker": "consumer",
                     "text": `Hi, I came to ask about\n Soft Cookie.\n Do you know anything about their disappearance?`,

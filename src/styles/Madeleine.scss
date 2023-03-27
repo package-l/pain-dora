@@ -39,53 +39,68 @@
     z-index: 20;
 }
 
+.right-section #index-5 {
+    display: inline-block;
+    right: 0 !important;
+    left: 30% !important;
+    top: 6% !important;
+}
+
+.right-section #index-14 {
+    display: inline-block;
+    right: 0 !important;
+    left: 5% !important;
+    top: 65% !important;
+}
+
+.right-section #index-17 {
+    display: inline-block;
+    right: 0 !important;
+    left: 10% !important;
+    top: 60% !important;
+}
+
 .right-section #index-24 img {
     height: 35vh;
     z-index: 5;
     display: inline-block;
     right: 30%;
-    top: 70%;
+    top: 50%;
 }
 
-.right-section #index-25 img {
-    height: 35vh;
-    z-index: 5;
-    display: inline-block;
-    right: 30%;
-    top: 70%;
-}
-
-.right-section #index-25 .mad-dialogue {
-    //animation: dance-shake 0.7s infinite;
-    font-size: 1vw;
+.right-section #index-24 .mad-dialogue {
+    animation: dance-shake 0.7s infinite;
+    font-size: 1.8vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
 }
 
-.right-section #index-26 img {
-    height: 50vh;
+.right-section #index-25 img {
+    height: 45vh;
     z-index: 5;
     display: inline-block;
     right: 50% !important;
     top: 20% !important; 
 }
 
-.right-section #index-26.madeleineBox {
-    height: 50vh;
+.right-section #index-25.madeleineBox {
+    height: 45vh;
     z-index: 5;
     display: inline-block;
     right: 50% !important;
     top: 20% !important; 
 }
 
-.right-section #index-26 .mad-dialogue {
-    animation: shake 0.5s infinite;
-    font-size: 1.5vw;
+.right-section #index-25 .mad-dialogue {
+    animation-name: dance-shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    font-size: 1.8vw;
     line-height: 2vw;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -40%) !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
 }
 
 @keyframes shake {

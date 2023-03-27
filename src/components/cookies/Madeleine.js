@@ -23,7 +23,7 @@ const Madeleine = (props) => {
       setIndex(index+1);
     }
     else {
-      setIndex(23);
+      setIndex(22);
     }
     if (props.data.customAssets.dialogue[index].speaker === "consumer") {
       setConsumerText(props.data.customAssets.dialogue[index].text)
