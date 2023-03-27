@@ -26,14 +26,17 @@ const CookieProfile = (props) => {
   const isAspectRatio = useMediaQuery({
     query: '(min-aspect-ratio: 8/3)'
   })
+  const isTallScreen = useMediaQuery({
+    query: '(min-height: 450px)'
+  })
   
   return (
     <>
-      {!isBigScreen || isAspectRatio ? 
-      <div className="page-warning" style={{height: '100vh', color: 'white', fontFamily: 'Chantal', paddingTop: '20vh', paddingLeft: '2vw', paddingRight: '2vw', backgroundColor: 'black'}}>
-        <div className="page-warning-text" style={{top: '50%', transform: 'translateY(-50%)'}}>Due to the interactive nature of the website, please use at a larger screen size/aspect ratio.
+      {!isBigScreen || isAspectRatio || !isTallScreen ? 
+      <div className="page-warning" style={{height: '100vh', color: 'white', fontFamily: 'Chantal', backgroundColor: 'black'}}>
+        <div className="page-warning-text" style={{paddingTop: '30vh', top: '50%', transform: 'translateY(50%)'}}>Due to the interactive nature of the website, please use at a larger screen size/aspect ratio.
         <br></br><br></br>Thank you!</div>
-      </div>
+    </div>
         : 
       <div className="cookie-container" id={props.data.name} style={{
         backgroundImage: `url(${props.data.bgImg})`

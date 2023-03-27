@@ -68,9 +68,9 @@ export const cookieData = [
             "interactionBox": require('../../img/Brownie/Chat_Box_Tape_Brownie.png'),
             "dialogue1": require('../../img/Brownie/Bold_BD1.png'),
             "dialogue2": require('../../img/Brownie/Bold_BD2.png'),
-            "dialogue3": require('../../img/Brownie/Bold_BD3.png'),
+            "dialogue3": require('../../img/Brownie/BD3.png'),
             "dialogue4": require('../../img/Brownie/Bold_BD4.png'),
-            "dialogue5": require('../../img/Brownie/Bold_BD5.png'),
+            "dialogue5": require('../../img/Brownie/BD5.png'),
         },
     },
     {

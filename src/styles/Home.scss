@@ -43,9 +43,6 @@ body::-webkit-scrollbar {
     grid-template-rows: 1fr;
 }
 
-#home-grid {
-
-}
 section {
     background-position: center center;
     background-repeat: no-repeat;
@@ -140,14 +137,19 @@ section {
     display: grid;
     grid-template-columns: inherit;
     grid-template-rows: 50%;
-    grid-template-columns: 15.4% 13.5% 18.5% 26.5% 26.5%;
+    //grid-template-columns: 15.4% 13.5% 18.5% 26.5% 26.5%;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-areas:
-        ". . macaron . fortune ."
+        ". macaron . . fortune"
         ". chess . finance .";
 }
 
 .mac {
     grid-area: macaron;
+    height: 10vw;
+    width: 10vw;
+    top: 50%;
+    position: relative;
 }
 
 .che {
@@ -175,8 +177,8 @@ section {
 }
 
 .macaron {
-    top: 28%;
-    left: 26%;
+    //top: 28%;
+    //left: 26%;
     transform: rotate(-25deg);
 }
 

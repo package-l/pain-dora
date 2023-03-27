@@ -20,7 +20,7 @@ import NavMap from './NavMap';
 import Roof from '../img/house/Floor_2.png';
 import Ground from '../img/house/Floor_G_Text.png'
 import Cellar from '../img/house/Floor_Cellar.png';
-import Basement from '../img/house/Floor_Basement.png';
+import Basement from '../img/house/Floor_Grey_Basement_Fixed.png';
 import Fork from '../img/house/Fork_For_Cellar.png';
 
 import { useMediaQuery } from 'react-responsive';
@@ -48,8 +48,6 @@ const Home = () => {
   const isTallScreen = useMediaQuery({
     query: '(min-height: 450px)'
   })
-
-  Cookies.remove('linzer');
 
 
   useEffect(() => {

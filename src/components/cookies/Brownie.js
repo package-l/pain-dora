@@ -58,7 +58,7 @@ const Brownie = (props) => {
               interactive={true}
           >{() => {}}</WaterWave>
           <WaterWave className="dialogue5" imageUrl={props.data.customAssets.dialogue5}
-              style={{ width: '85%', height: '30%', backgroundSize: 'contain'}}
+              style={{ width: '82%', height: '30%', backgroundSize: 'contain'}}
               resolution={512}
               dropRadius={8}
               perturbance={0.03}
