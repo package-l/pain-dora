@@ -6,8 +6,20 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import Start from './Start';
 import Definition from './Definition';
+import { useMediaQuery } from 'react-responsive';
 
 const AcceptCookies = () => {
+  //Media Query
+  const isBigScreen = useMediaQuery({ 
+    query: '(min-width: 850px)' 
+  })
+  const isAspectRatio = useMediaQuery({
+    query: '(min-aspect-ratio: 8/3)'
+  })
+  const isTallScreen = useMediaQuery({
+    query: '(min-height: 450px)'
+  })
+
   const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSpotlight, isDefinitionShowing } = useSplash();
   const [opacity, setOpacity] = useState({
     accept: 1,
@@ -38,6 +50,14 @@ const AcceptCookies = () => {
 
   return (
     <>
+      {!isBigScreen || isAspectRatio || !isTallScreen ? 
+        <div className="page-warning" style={{height: '100vh', color: 'white', fontFamily: 'Chantal', backgroundColor: 'black'}}>
+          <div className="page-warning-text" style={{paddingTop: '30vh', top: '50%', transform: 'translateY(50%)'}}>Due to the interactive nature of the website, please use at a larger screen size/aspect ratio.
+          <br></br><br></br>Thank you!</div>
+      </div>
+        : 
+        <>
+
       {!isAcceptCookiesShowing ? null : (
         <div className="accept-cookies-page">
           <div className="choices">
@@ -67,6 +87,8 @@ const AcceptCookies = () => {
           </div>
         </div>
       )}
+      </>
+      }
     </>
   )
 }
