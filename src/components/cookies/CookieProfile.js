@@ -1,6 +1,7 @@
 //import '../../styles/Chess.scss';
 import '../../styles/CookieProfile.scss';
-import { useState, useNavigate } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 //Cookies:
@@ -12,11 +13,13 @@ import Macaron from './Macaron';
 import Chess from './Chess';
 import Wafer from './Wafer';
 import SoftCookie from './SoftCookie';
+import Financier from './Financier';
 //import '../../styles/Madeleine.scss';
 
 //Math.random() * width*0.7 - width*0.7,
 const CookieProfile = (props) => {
   const [cookie, setCookie] = useState([props.data.name]);
+  const navigate = useNavigate();
   //const navigate = useNavigate();
 
   //Media Query
@@ -42,18 +45,19 @@ const CookieProfile = (props) => {
         backgroundImage: `url(${props.data.bgImg})`
       }}>
       {/*<div className="character-left-section">*/}
-        <div className="backarrow"></div>
+        <div className="backarrow" onClick={() => navigate(-1)}></div>
         <div className="character-card">
           <div className="character-card-border"></div>
             {cookie.toString() === "brownie" ? 
               <div className="profileImg"></div> :
               <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
             }
+            <br/><br/>
           <div className="fullname">{props.data.fullname}</div>
-          <div className="description">{props.data.description}</div>
+          <div className="description">{props.data.description}</div><br/>
         </div>
       {/*</div>*/}
-      <div className="character-right-section">
+
         {cookie.toString() === "fortune" &&
           <Fortune data={props.data}/>
         }
@@ -62,6 +66,9 @@ const CookieProfile = (props) => {
         }
         {cookie.toString() === "chess" &&
           <Chess data={props.data}/>
+        }
+        {cookie.toString() === "financier" &&
+          <Financier data={props.data}/>
         }
         {cookie.toString() === "madeleine" &&
           <Madeleine data={props.data}/>
@@ -78,7 +85,7 @@ const CookieProfile = (props) => {
         {cookie.toString() === "softcookie" &&
           <SoftCookie data={props.data}/>
         }
-      </div>
+
     </div>}
     </>
   )

@@ -2,13 +2,16 @@ import { useState } from 'react';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import Screenshot from '../img/temp/gallery_screenshot.png';
+import { useNavigate } from 'react-router-dom';
 
 const Gallery = () => {
+  const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
       <div className="hamburger-container">
+        <div className="backarrow" onClick={() => navigate(-1)}></div>
         <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
         <NavMenu open={openMenu} setOpen={setOpenMenu}/>
       </div>

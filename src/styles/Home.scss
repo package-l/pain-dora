@@ -511,3 +511,61 @@ a.brownie {
     height: 2vh;
     //visibility: hidden;
 }
+
+.dot-navigation {
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    display: block;
+    height: 50%;
+    z-index: 40;
+
+    ul {
+        display: inline-block;
+        position: relative;
+        line-height: 0;
+        padding: 0;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+            color: darken(#64868E, 20%);
+        }
+
+        li {
+            margin: 1em 0;
+            transition: linear 0.3s;
+            &:before {
+              position: relative;
+              display: inline-block;
+              
+              content: '';
+              width: 10px;
+              height: 10px;
+              
+              margin-right: 1em;
+              
+              border: 2px solid #64868E;
+              border-radius: 100px;
+              
+              box-shadow: 0 0 2px #64868E;
+              
+              transition: linear 0.3s;
+            }
+            
+            /*&:hover {
+              cursor: pointer;
+              &:before {
+                box-shadow: 0 0 3px darken(#64868E, 10%);
+              }
+            }*/
+            
+            &.active {
+              transition: linear 0.3s;
+              &:before {
+                background-color: #64868E;
+              }
+            }
+        }
+    }
+}

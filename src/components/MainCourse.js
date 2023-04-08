@@ -5,9 +5,11 @@ import Heart from '../img/maincourse/Heart_Black.png';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router-dom';
 
 const MainCourse = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const navigate = useNavigate();
 
   //Media Query
   const isBigScreen = useMediaQuery({ 
@@ -29,6 +31,7 @@ const MainCourse = () => {
     </div>
         : 
         <div className="maincourse">
+          <div className="backarrow" onClick={() => navigate(-1)}></div>
         <div className="hamburger-container">
           <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
           <NavMenu open={openMenu} setOpen={setOpenMenu}/>

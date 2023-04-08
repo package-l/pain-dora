@@ -203,4 +203,57 @@ export const cookieData = [
             ]
         },
     },
+    {
+        "name": "financier",
+        "fullname": "moNsiEUr fiNANciEr",
+        "description": "Age: 58",
+        "icon": require('../../img/icons/Icon_Brownie.png'),
+        "img": require('../../img/Financier/Financier.png'),
+        "bgImg": require('../../img/Financier/BG_Financier.png'),
+        "customAssets": {
+            "instructionBox": require('../../img/Financier/Black_Box_Financier.png'),
+            "interactionBox1": require('../../img/Financier/White_Box_1_Financier.png'),
+            "interactionBox2": require('../../img/Financier/White_Box_2_Financier.png'),
+            "instructionText": `Click Here\nto Add Cache !`,
+            "dialogue": [
+
+                {
+                    "text": `Do you want info ?\n I won't speak & spill unless\n you pay me some dough .`,
+                },
+                {
+                    "text": `Thank you,\nplease come again !`,
+                },
+                {
+                    "text": `Note #1\n\nI am Mon. Financier,\n& my wife is Lady M(oney),\ntogether we are M & M .`,
+                },
+                {
+                    "text": `Note #2\n\nYes, Soft Cookie's gone --\nBut how can we capitalize\non expired Cookie(s) ?`,
+                },
+                {
+                    "text": `Note #3\n\nI'd rather rot w/ my gold\ningots, than be ripe & alive .`,
+                },
+                {
+                    "text": `Note #4\n\nCookies kids are koo koo,\nthey haven't learnted that\ncontentment is bought .`,
+                },
+                {
+                    "text": `Note #5\n\nMoney = Happiness\n Money = No Problems\nMoney = Blood & Butter`,
+                },
+                {
+                    "text": `Note #6\n\nThe idea of enjoyment\nthat doesn't involve\nmoney -- is nuts .`,
+                },
+                {
+                    "text": `Note #7\n\nI can't remember a fun\ntime w/out Fun-FETTI\nC.R.E.A.M --`,
+                },
+                {
+                    "text": `Note #8\n\nI don't know how Soft\nCookie stayed Soft, even\nwhen I milked them dry ?`,
+                },
+                {
+                    "text": `Note #9\n\nI can pay people\nto do the work to fix me\nw/ chips & almonds .`,
+                },
+                {
+                    "text": `Note #10\n\nExcuse moi, I must check\nmy Cold-well-storage for\nstock of beurre noisette .`,
+                },
+            ]
+        },
+    },
 ]

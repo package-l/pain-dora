@@ -13,10 +13,6 @@
     letter-spacing: 0.192vh;
 }
 
-.reject-container {
-    overflow: hidden;
-}
-
 .line1a, .line1b {
     @include fontA;
 }
@@ -36,17 +32,28 @@
 }
 
 .reject-container {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas:
-        "line1a line1b"
-        "line2 line2"
+        "back . . ."
+        ". line1a line1b ."
+        ". line2 line2 .";
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    overflow: hidden;
+    //padding: 10%;
+    //overflow: hidden;
+    //margin: 10%;
+}
+
+.reject-container .backarrow {
+    grid-area: back;
+    position: absolute;
+    left: 2vh;
+    top: 5vh;
 }
 
 .reject-container .line1a {
@@ -54,7 +61,7 @@
     text-align: right;
     position: absolute;
     bottom: 10%;
-    right: 10%;
+    right: 22%;
 }
 
 .reject-container .line1b {
@@ -62,7 +69,7 @@
     text-align: left;
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 22%;
 }
 
 .reject-container .line2 {
@@ -70,4 +77,18 @@
     grid-area: line2;
     height: 50vh;
     width: 100vw;
+}
+
+/*.reject-container .line2 svg {
+    width: 100vw;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transform: translateY(-50%);
+}*/
+
+.reject-container .line2 path {
+    position: absolute;
+    top: 0;
+    left: 50%;
 }

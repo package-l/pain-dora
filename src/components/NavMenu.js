@@ -2,11 +2,16 @@ import '../styles/NavMenu.scss';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 
-const NavMenu = ({ open }) => {
+const NavMenu = ({ open, setOpen }) => {
   const [flip, setFlip] = useState(false);
 
   const handleCardFlipClick = () => {
     setFlip(!flip);
+  }
+
+  const toggleOpen = () => {
+    setOpen(!open);
+    console.log("toggle" + open);
   }
 
   return (
@@ -15,13 +20,15 @@ const NavMenu = ({ open }) => {
           <div className={`flip-card-inner ${flip ? "flip" : ""}`}>
             <div className="flip-card-front">
               <div className="navmenu-border">
-                    <div>
+                    <div className="close" onClick={toggleOpen}>x</div>
+                    <div className="front-text">
                         <ul>
                             <li className="titlemenu">menu</li>
                             <li></li>
                             <li><Link to="/">start_er</Link></li>
                             <li><Link to="/home">home</Link></li>
                             <li><Link to="/flavourprofiles">flavour<br/>profiles</Link></li>
+                            <li></li>
                             <li></li>
                             <li><Link to="/maincourse">main course<br/>of action</Link></li>
                             <li></li>
@@ -36,6 +43,7 @@ const NavMenu = ({ open }) => {
                 <p>fine,</p>
                 <p>di(n)e</p>
                 <p>w/ me</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.</p>
               </Link>
               <p className="arrowback link" onClick={handleCardFlipClick}>&lt;</p>
             </div>

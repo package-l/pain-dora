@@ -1,8 +1,8 @@
 @mixin fontA {
     font-family: Sinhala MN;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: black;
-    letter-spacing: 0.4vw;
+    letter-spacing: 0.3vw;
 }
 
 @mixin fontB {
@@ -34,24 +34,16 @@
     color: black;
     height: 100%;
     width: 100%;
-}
-
-.close {
-    position: absolute;
-    top: 2.5%;
-    left: 5%;
-    font-size: 2vh;
-    z-index: 30;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: grey;
+    
 }
 
 .navmap-border {
     height: 100%;
-    position: relative;
+}
+
+.navmap-border div {
+    height: 100%;
+    text-align: center;
 }
 
 .navmap-border ul {
@@ -71,7 +63,7 @@
 .navmap li {
     padding: 3vh;
     transition: color 0.3s linear;
-    height: 35%;
+    height: 30%;
     width: 60%;
     margin: auto;
     border: 1.5px solid grey;
@@ -94,23 +86,11 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    //transform: translateY(-10%);
-}
-
-.roof {
-    transform: translateY(-10%);
 }
 
 .roof-angle {
-    transform: rotate(-25deg) translateY(55%);
+    transform: rotate(-20deg) translateY(45);
     display: inline-block;
-    padding-right: 0.2rem;
-}
-
-.lid-angle {
-    transform: rotate(25deg) translateY(55%);
-    display: inline-block;
-    padding-left: 0.2rem;
 }
 
 /*.navmap-border {

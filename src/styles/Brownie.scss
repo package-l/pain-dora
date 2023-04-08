@@ -220,3 +220,15 @@
     display: flex;
     flex-direction: column;
 }
+
+.right-section {
+    position: absolute;
+    width: 57vw;
+    height: 100vh;
+    right: 5vw;
+    max-height: 90vh;
+    top: 50%;
+    transform: translateY(-50%);
+    //bottom: 10vh;
+    //apply grid to right-section
+}

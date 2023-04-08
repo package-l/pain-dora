@@ -47,7 +47,7 @@ const Madeleine = (props) => {
 
   return (
     <div className="madeleine-interaction-container">
-        <div className="consumerBox">
+        <div className="instructionBox">
           <div className="test" onClick={handleMadeleineDialogueClick} style={{
             backgroundImage: `url(${props.data.customAssets.consumerBox})`
           }}><p className="dialogue">{consumerText}</p></div>

@@ -1,19 +1,23 @@
 import '../styles/NavMap.scss';
 
-const NavMap = ({ open }) => {
+const NavMap = ({ open, setOpen }) => {
+
+  const toggleOpen = () => {
+    setOpen(!open);
+    console.log("toggle" + open);
+  }
 
   return (
     <div className="navmap" open={open} style={{transform:`${open ? 'translateX(0)' : 'translateX(300%)'}`}}>
         <div className="navmap-border">
-
-                <ul>
-                    <a href="#roof"><li>Roof/Lid</li></a>
-                    <a href="#floor2"><li>Floor 2</li></a>
-                    <a href="#ground"><li>_Ground_</li></a>
-                    <a href="#cellar"><li>||Cellar||</li></a>
-                    <a href="#basement"><li>Basement</li></a>
-                </ul>
-
+          <div className="close" onClick={toggleOpen}>x</div>
+          <ul>
+              <a href="#roof"><li><p className="roof"><span className="roof-angle">Roo</span>f<span className="lid-angle">/Lid</span></p></li></a>
+              <a href="#floor2"><li><p>Floor 2</p></li></a>
+              <a href="#ground"><li><p>_Ground_</p></li></a>
+              <a href="#cellar"><li><p>||Cellar||</p></li></a>
+              <a href="#basement"><li><p>Basement</p></li></a>
+          </ul>
         </div>
     </div>
   )

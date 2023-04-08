@@ -1,7 +1,7 @@
 @mixin nameFont {
     font-family: Chantal;
     font-weight: light;
-    font-size: 3vh;
+    font-size: 1.5vw;
     letter-spacing: 0.1em;
     line-height: 2vh;
 }
@@ -9,9 +9,9 @@
 //Age font
 @mixin ageFont {
     font-family: Sinhala MN, sans-serif;
-    font-size: 2vh;
+    font-size: 1vw;
     line-height: 2vh;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
 }
 
 @mixin instructionFont {
@@ -36,6 +36,24 @@
     width: 33vw;
     height: 100vh;
 }*/
+
+.backarrow {
+    height: 8vh;
+    width: 8vh;
+    margin-left: -2vh;
+    top: 8vh;
+    background-color: black;
+    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.backarrow:hover {
+    background-color: grey;
+    border-color: grey;
+}
 
 .character-card {
     width: 28vw;
@@ -62,6 +80,7 @@
     height: 23vh;
     z-index: 20;
     padding-top: 10vh;
+    padding-bottom: 2vh;
 }
 
 .character-card .fullname {
@@ -109,6 +128,22 @@
     aspect-ratio: 457 / 778;
 }
 
+.instructionBox {
+    position: absolute;
+    width: 28vw;
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 80vh;
+    //add height and make max-height px
+    max-height: 90vh;
+    left: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    //bottom: 10vh;
+    aspect-ratio: 457/778;
+    cursor: pointer;
+}
+
 /*.consumerBox img {
     height: 23vh;
     z-index: 20;
@@ -121,20 +156,20 @@
 
 .test {
     @include instructionFont;
-    width:23vw;
-    height:30vh;  
+    width: 18vw;
+    //height:30vh;  
+    aspect-ratio: 753 / 457;
     display: table; 
     //display: inline-block;
     margin: 0 auto;
-    padding: 1vh;
+    //padding: 1vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     //height: 28vh;
-    margin-top: 50vh;
+    margin-top: 55vh;
     text-align: center;
-    cursor: pointer;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .consumerBox .dialogue {
@@ -159,3 +194,9 @@
 .consumerBox .dialogue#text {
     padding-left: 10vw;
 }
+
+/*.character-right-section {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}*/

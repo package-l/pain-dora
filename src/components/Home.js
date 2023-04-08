@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import { useSplash } from './SplashProvider';
 import '../styles/Home.scss';
@@ -16,6 +16,7 @@ import Wafer from '../img/icons/Icon_Wafer.png';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import NavMap from './NavMap';
+import DotNavigation from './DotNavigation';
 
 import Roof from '../img/house/Floor_2.png';
 import Ground from '../img/house/Floor_G_Text.png'
@@ -74,6 +75,7 @@ const Home = () => {
       </div>
         : 
         <div className="home-main" id="home-grid">
+
         <div className="hamburger-container">
           <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
           <NavMenu open={openMenu} setOpen={setOpenMenu}/>
@@ -101,9 +103,9 @@ const Home = () => {
               </div>
           </div>
   </section>*/}
-        <section className="tempwrapper" id="roof">
+        <section data-status className="tempwrapper" id="roof">
         </section>
-        <section className="map-container" id="floor2">
+        <section data-status className="map-container" id="floor2">
           {/*<img className="map" src={Roof} alt="Roof floor"></img>*/}
           <div className="cookie-map-container">
             <div id="f2-grid" className="content">
@@ -119,7 +121,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="map-container" id="ground">
+        <section data-status className="map-container" id="ground">
           <div className="cookie-map-container">
             {/*<img className="map" src={Ground} alt="Roof floor"></img>*/}
             <div id="ground-grid" className="content">
@@ -138,7 +140,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="map-container" id="cellar">
+        <section data-status className="map-container" id="cellar">
           <img className="fork" src={Fork} alt="Fork"></img>
           {/*<img className="map" src={Cellar} alt="Cellar floor"></img>*/}
           <div className="cookie-map-container">
@@ -158,7 +160,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="map-container basement" id="basement">
+        <section data-status className="map-container basement" id="basement">
           <img className="map" src={Basement} alt="Basement floor"></img>
 
           {/*<div>

@@ -7,7 +7,7 @@ const Brownie = (props) => {
 
   return (
     <div className="brownie-interaction-container">
-      <div className="consumerBox">
+      <div className="instructionBox">
         <div className="ripple-container">
           <WaterWave className="leftBox-img" imageUrl={props.data.img} 
               style={{ width: '88%', height: '88%', backgroundSize: 'contain'}}

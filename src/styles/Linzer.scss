@@ -7,6 +7,23 @@
 
 .linzer-interaction-container {
 
+    .instructionBox .dialogue {
+        color: white;
+        max-height: 25vh;
+        padding: 2vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        //width: 17vw;
+        //left: 50%;
+        //transform: translateX(-50%);
+        //top: 70%;
+        //height: 20vh;
+        aspect-ratio: 753 / 457;
+        text-align:center; 
+        vertical-align: middle;
+        display: table-cell;  
+    }
+
     .dialogue {
         padding-left: 2vh !important;
         padding-right: 2vh !important;
@@ -57,11 +74,19 @@
     }
 
     .right-section {
-        position: absolute;
+        /*position: absolute;
         width: 60vw;
         height: 90vh;
         right: 0;
-        margin: 1vw;
+        margin: 1vw;*/
+
+        position: absolute;
+        width: 57vw;
+        height: 100vh;
+        right: 5vw;
+        max-height: 90vh;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
 }

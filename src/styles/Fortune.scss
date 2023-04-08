@@ -5,16 +5,47 @@
 
 .fortune-interaction-container {
 
-    .right-section {
+    .instructionBox {
         position: absolute;
-        width: 60vw;
-        height: 90vh;
-        right: 0;
-        padding-right: 5%;
+        width: 28vw;
+        min-width: 200px;
+        max-width: 400px;
+        min-height: 80vh;
+        //add height and make max-height px
+        max-height: 90vh;
+        left: 5vw;
+        top: 50%;
+        transform: translateY(-50%);
+        //bottom: 10vh;
+        aspect-ratio: 457/778;
+        cursor: pointer;
     }
 
-    .grid-container {
-        height: 100%;
+    .instructionBox .dialogue {
+        color: white;
+        max-height: 25vh;
+        padding: 2vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        //width: 17vw;
+        //left: 50%;
+        //transform: translateX(-50%);
+        //top: 70%;
+        //height: 20vh;
+        aspect-ratio: 753 / 457;
+        text-align:center; 
+        vertical-align: middle;
+        display: table-cell;  
+    }
+
+    .right-section {
+        position: absolute;
+        width: 57vw;
+        height: 100vh;
+        right: 5vw;
+        max-height: 90vh;
+        top: 50%;
+        transform: translateY(-50%);
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 20% 20% 20% 20%;
@@ -25,6 +56,27 @@
             ". number2 number2 ."
             "pentagon . . square";
     }
+
+    /*.right-section {
+        position: absolute;
+        width: 60vw;
+        height: 90vh;
+        right: 0;
+        padding-right: 5%;
+    }*/
+
+    /*.grid-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20% 20% 20% 20%;
+        grid-template-areas:
+            "triangle . . rhombus"
+            ". number1 number1 ."
+            "circle . . heart"
+            ". number2 number2 ."
+            "pentagon . . square";
+    }*/
 
     .grid-item {
         display: flex;
@@ -73,8 +125,8 @@
     }
 
     #fortune-triangle {
-        height: 9vh;
-        width: 9vh;
+        height: 12vh;
+        width: 12vh;
         background-color: black;
         clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
         color: white;
@@ -97,8 +149,8 @@
 
 
     #fortune-rhombus {
-        height: 9vh;
-        width: 9vh;
+        height: 12vh;
+        width: 12vh;
         background-color: black;
         //top: 50%;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -108,8 +160,8 @@
     }
 
     #fortune-circle {
-        height: 9vh;
-        width: 9vh;
+        height: 12vh;
+        width: 12vh;
         background-color: black;
         border-radius: 50%;
         color: white;
@@ -117,48 +169,48 @@
     }
 
     #fortune-heart {
-        height: 9vh;
+        height: 12vh;
         background-image: url('../img/Fortune/Heart_Fortune.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 9vh;
+        width: 12vh;
         color: white;
     }
 
     #fortune-pentagon {
         color: white;
-        width: 9vh;
-        height: 9vh;
+        width: 12vh;
+        height: 12vh;
         background-color: black;
         clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
     }
 
     #fortune-square {
-        width: 9vh;
-        height: 9vh;
+        width: 12vh;
+        height: 12vh;
         background-color: black;
         color: white;
     }
 
     #fortune-number1 {
         grid-area: number1;
-        height: 6vh;
+        height: 9vh;
         width: 100%;
         background-color: white;
     }
 
     #fortune-number2 {
         grid-area: number2;
-        height: 6vh;
+        height: 9vh;
         width: 100%;
         background-color: white;
     }
 
     .fortune-paper {
         //width: 40vh;
-        width: 6vh;
-        height: 5vh;
+        width: 5vw;
+        height: 7vh;
         background-color: white;
         animation-duration: 3s;
         animation-timing-function: linear;
@@ -207,19 +259,19 @@
 
 @keyframes grow {
     0% {
-        width: 6vh;
+        width: 4vw;
     }
     100% {
-        width: 60vh;
+        width: 25vw;
     }
 }
 
 @keyframes shrink {
     from {
-        width: 60vh;
+        width: 25vw;
     }
     to {
-        width: 6vh;
+        width: 4vw;
     }
 }
 
