@@ -204,7 +204,7 @@
         grid-area: number2;
         height: 9vh;
         width: 100%;
-        background-color: white;
+        background-color: black;
     }
 
     .fortune-paper {
@@ -301,6 +301,10 @@
     }
 }
 
+#fortune-number2 .flip-card-front, #fortune-number2 .flip-card-back {
+    background-color: black;
+}
+
 #fortune-number1, #fortune-number2 {
 
     .flip-card-inner {
@@ -328,6 +332,7 @@
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
         text-justify: distribute;
+        transform: rotateX(0deg)
     }
 
     .flip-card-front div, .flip-card-back div {
@@ -347,6 +352,10 @@
         text-align: center;
     }
 
+}
+
+#fortune-number2 .flip-card-back {
+    color: white;
 }
 
 

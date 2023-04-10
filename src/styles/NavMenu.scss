@@ -66,6 +66,7 @@
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
         border: 1px solid black;
+        transform: rotateX(0deg)
     }
 
     .front-text {
@@ -110,12 +111,12 @@
     
     .navmenu li a {
         text-decoration: none;
-        color: grey;
+        color: black;
     }
     
     .navmenu li a:hover {
         text-decoration: none;
-        color: black;
+        color: red;
     }
     
     .flip-card-back {
@@ -147,6 +148,7 @@
     
     .flip-card-back .text:hover {
         opacity: 50%;
+        //color: red;
     }
     
     .flip-card-back .text p:first-of-type + p {
@@ -163,7 +165,11 @@
     
     .link {
         cursor: pointer;
-        color: grey;
+        color: black;
+    }
+
+    .link:hover {
+        color: red;
     }
 
 }

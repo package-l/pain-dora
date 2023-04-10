@@ -45,11 +45,11 @@ const LinzerAnswerCard = ({ cardNum, answer, bgImgEven, bgImgOdd }) => {
 
   const handleHover= () => {
     setOpacity("100");
-}
+  }
 
-const handleLeave= () => {
+  const handleLeave= () => {
     setOpacity("0");
-}
+  }
 
   return (
     <div className="answer-card" onMouseOver={handleHover} onMouseOut={handleLeave} style={ cardNum === 1 || cardNum === 2 || cardNum === 5 ? {

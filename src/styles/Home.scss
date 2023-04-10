@@ -138,47 +138,51 @@ section {
     grid-template-columns: inherit;
     grid-template-rows: 50%;
     //grid-template-columns: 15.4% 13.5% 18.5% 26.5% 26.5%;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 20% 20% 20% 19% 21%;
     grid-template-areas:
-        ". macaron . . fortune"
+        ". macaron . fortune . "
         ". chess . finance .";
 }
 
 .mac {
     grid-area: macaron;
-    height: 10vw;
-    width: 10vw;
-    top: 50%;
-    position: relative;
 }
 
 .che {
-    grid-area: fortune;
+    grid-area: chess;
 }
 
 .for {
-    grid-area: chess;
+    grid-area: fortune;
 }
+
+//financier here
 
 .bro {
     grid-area: brownie;
 }
 
 .fortune {
-    top: 18%;
-    left: 65%;
+    position: relative;
+    top: 55%;
+    transform: translateY(-50%);
 }
 
 .fortune:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    //position: relative;
+    //top: 55%;
+    -webkit-transform: scale(1.2) translateY(-50%);
+    -ms-transform: scale(1.2) translateY(-50%);
+    transform: scale(1.2) translateY(-50%);
     transition: 1s ease;
 }
 
 .macaron {
     //top: 28%;
     //left: 26%;
+    top: 50%;
+    left: 0;
+    position: relative;
     transform: rotate(-25deg);
 }
 
@@ -190,8 +194,10 @@ section {
 }
 
 .chess {
-    top: 72%;
-    left: 18.5%;
+    position: relative;
+    top: 40%;
+    left: 0;
+    transform: translateX(-60%);
     height: 9vw !important;
     transition: 0.5s;
 }
@@ -202,13 +208,13 @@ section {
 
 @keyframes slide {
     25% {
-        transform: translateX(-30px);
+        transform: translateX(-90%);
     }
-    75% {
-        transform: translate(30px);
+    65% {
+        transform: translateX(-30%);
     }
     100% {
-        transform: translate(0px);
+        transform: translateX(-60%);
     }
 }
 
@@ -231,6 +237,18 @@ section {
     z-index: 10;
 }
 
+#cellar-grid.content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-rows: 50%;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+        ".  ."
+        "soft ."
+}
+
 .bigcircleborder {
     position: absolute;
     top: 50%;
@@ -242,6 +260,7 @@ section {
     border-radius: 50%;
     outline: 4px solid #0000004D;
     outline-offset: 3px;
+    //box-shadow: 0 0 0 3px gray
 }
 
 .bigcircle {
@@ -359,8 +378,8 @@ section {
     grid-template-rows: 25% 25% 43%;
     grid-template-columns: 12.5% 18% 5.5% 15.75%;
     grid-template-areas:
-        "madeleine  madeleine  . wafer ."
-        "madeleine madeleine  . . brownie"
+        ".  .  . wafer ."
+        ". madeleine  . . brownie"
         ". .  linzer linzer . "
         ". .  . . .";
 }
@@ -391,8 +410,7 @@ a {
 
 .home img.madeleine {
     position: relative;
-    top: 60%;
-    left: 25%;
+    top: 15%;
     transform: rotate(-5deg);
     height: 8.5vw;
     display: inline-block;

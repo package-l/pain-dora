@@ -33,33 +33,33 @@ const Financier = (props) => {
 
   return (
     <div className="financier-interaction-container">
-    <div className="instructionBox">
-      <div className="test" onClick={handleDialogueClick} style={{
-        backgroundImage: `url(${props.data.customAssets.instructionBox})`
-      }}><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
-      {/*<img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
-      <p className="dialogue">{consumerText}</p>*/}
-    </div>
-    <div className="right-section">
-        {list.map((item, i) => 
-            (
-                text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
-                
-                <div className="financierBox" key={i} id={`financier-${i}`} style={{
-                    backgroundImage: `url(${props.data.customAssets.interactionBox1})`
-                  }}>
-                    <div className="fin-dialogue">{item.text}</div>
-                </div> :
-                <div className="financierBox" key={i} id={`financier-${i}`} style={{
-                    backgroundImage: `url(${props.data.customAssets.interactionBox2})`
+        <div className="instructionBox">
+        <div className="test" onClick={handleDialogueClick} style={{
+            backgroundImage: `url(${props.data.customAssets.instructionBox})`
+        }}><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
+        {/*<img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
+        <p className="dialogue">{consumerText}</p>*/}
+        </div>
+        <div className="right-section">
+            {list.map((item, i) => 
+                (
+                    text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
+                    
+                    <div className="financierBox" key={i} id={`financier-${i}`} style={{
+                        backgroundImage: `url(${props.data.customAssets.interactionBox1})`
                     }}>
-                    <div className="fin-dialogue">{item.text}</div>
-                </div>
+                        <div className="fin-dialogue">{item.text}</div>
+                    </div> :
+                    <div className="financierBox" key={i} id={`financier-${i}`} style={{
+                        backgroundImage: `url(${props.data.customAssets.interactionBox2})`
+                        }}>
+                        <div className="fin-dialogue">{item.text}</div>
+                    </div>
 
-            )
-        }
+                )
+            }
+        </div>
     </div>
-</div>
   )
 }
 

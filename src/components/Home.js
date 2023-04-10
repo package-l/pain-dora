@@ -144,19 +144,21 @@ const Home = () => {
           <img className="fork" src={Fork} alt="Fork"></img>
           {/*<img className="map" src={Cellar} alt="Cellar floor"></img>*/}
           <div className="cookie-map-container">
-            {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') &&
-            Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
-                 <Link to="/softcookie"><img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img></Link> :
-                (<div className="Locked">
-                  <img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img>
-                  <FontAwesomeIcon className="Icon" icon={faLock} />
-                </div>)
-              }
-            <div className="circles">
-              <div className="bigcircleborder"></div>
-              <div className="bigcircle circle"><p>Garden<br />of Eating</p></div>
-              <div className="bloodcircle circle"><p>Blood<br />Pool</p></div>
-              <div className="watercircle circle"><p>Water<br />Pond</p></div>
+          <div id="cellar-grid" className="content">
+              {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') &&
+              Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
+                  <Link to="/softcookie"><img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img></Link> :
+                  (<div className="Locked">
+                    <img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img>
+                    <FontAwesomeIcon className="Icon" icon={faLock} />
+                  </div>)
+                }
+              <div className="circles">
+                <div className="bigcircleborder"></div>
+                <div className="bigcircle circle"><p>Garden<br />of Eating</p></div>
+                <div className="bloodcircle circle"><p>Blood<br />Pool</p></div>
+                <div className="watercircle circle"><p>Water<br />Pond</p></div>
+              </div>
             </div>
           </div>
         </section>

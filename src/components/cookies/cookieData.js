@@ -17,11 +17,40 @@ export const cookieData = [
     },
     {
         "name": "wafer",
-        "fullname": "",
-        "description": "This page has not yet been coded.",
+        "fullname": `FLAkEY waFEr\nJAkE`,
+        "description": "Age : 22",
         "icon": require('../../img/icons/Icon_Wafer.png'),
-        "img": require('../../img/Madeleine/Madeleine.png'),
-        "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
+        "img": require('../../img/Macaron/Macaron.png'),
+        "bgImg": require('../../img/Wafer/BG_Wafer.png'),
+        "customAssets": {
+            "blackBoxDialogue" : [
+                `Hi Flakey Wafter Jake,\n can I borrow you for a bit ? I would like to ask you about Soft Cookie.`,
+                `Great thanks !\nLet's get started.`,
+                `When was the last you heard of Soft Cookie ?`,
+                `Do you know what\nSoft Cookie ended up doing ?`,
+                `Do you think not\n showing up ave upset Soft Cookie ?`,
+                `Is there a reason you don't attend or often reply ?`,
+                `Have you thought about what it feels like when a cookie doesn't show up for you?`,
+                `Okay, anyways, let's get back to our main topic, Soft Cookie -`,
+                `Could you tell me\nmore about your\nrelationship with\nSoft Cookie ?`,
+            ],
+            "whiteBoxDialogue" : [
+                `Totally,\nof course -\nuhh. . . wait . . .\ncan i pass . . ?`,
+                `I know I'd do it,\nbut . . . nevermind . . .`,
+                `A couple of us had\nplanned a day for milk.\nLittle Debbie Downer Brownie "rain" checked,\n& I stayed in leavening, leaving them hanging.`,
+                `Y'know, I'm just\nreally messy and all over the place in my own space all the time, and I need y'all to\nunderstand that,\nso - I don't know.`,
+                `Just because I don't go,\ndoesn't mean I'm a ghost .\nI'm there in spirit -\nThough, you can't taste it.\nor feel it . . . or smell it . . .\nYou get what I mean.\nDing* Oh look, another\ninvite that I can decline !\nEhh, they'll know what it means if I don't reply.`,
+                `It's really hard to get me out of the oven. I have a\npattern of procrastinating then pulling out last minute.\nIt's okay though, I usually ding them 10 minutes prior meeting -`,
+                `Oh yeah,\nI hate when flake on me.`,
+                `Look, I don't know who comminuted Soft Cookie, but I for sure did not\ncommit the crime because\nI clearly don't have that\nwill of a commitment.`,
+                `actually . . . i'm gonna\ndwindle away . . . i'm\nnot feeling it . . .`,
+            ],
+            "tapeDialogue": {
+                "tapeBox": require('../../img/Wafer/Wafer_Box.png'),
+                "text1": "._.",
+                "text2": "bye bye"
+            }
+        }
     },
     {
         "name": "fortune",
