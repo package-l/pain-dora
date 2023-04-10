@@ -34,11 +34,9 @@ const Financier = (props) => {
   return (
     <div className="financier-interaction-container">
         <div className="instructionBox">
-        <div className="test" onClick={handleDialogueClick} style={{
-            backgroundImage: `url(${props.data.customAssets.instructionBox})`
-        }}><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
-        {/*<img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
-        <p className="dialogue">{consumerText}</p>*/}
+            <div className="test" onClick={handleDialogueClick} style={{
+                backgroundImage: `url(${props.data.customAssets.instructionBox})`
+            }}><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
         </div>
         <div className="right-section">
             {list.map((item, i) => 

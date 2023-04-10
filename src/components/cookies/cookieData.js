@@ -9,11 +9,11 @@ export const cookieData = [
     },
     {
         "name": "macaron",
-        "fullname": "Macaron",
+        "fullname": "mADamE mAcarOn",
         "description": "This page's interaction has not yet been coded.",
         "icon": require('../../img/icons/Icon_Macaron.png'),
         "img": require('../../img/Macaron/Macaron.png'),
-        "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
+        "bgImg": require('../../img/Macaron/BG_Macaron_GreyWhite.png'),
     },
     {
         "name": "wafer",

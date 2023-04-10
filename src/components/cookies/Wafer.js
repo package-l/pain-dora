@@ -23,7 +23,11 @@ const Wafer = (props) => {
 
   return (
     <div className="wafer-interaction-container">
-      <div className="instructionBox"></div>
+      <div className="instructionBox">
+        <div className="test" style={{
+              backgroundImage: `url(${props.data.customAssets.tapeDialogue.tapeBox})`
+          }}><p className="dialogue">{`Hover over each Black Square\nthen Click each White square.`}</p></div>
+        </div>
       <div className="right-section">
         <div className="tape-layer" id="tape-1" style={{
           backgroundImage: `url(${props.data.customAssets.tapeDialogue.tapeBox})`

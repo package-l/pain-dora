@@ -12,6 +12,27 @@
     //position: absolute;
     overflow: hidden;
 
+    .instructionBox {
+        pointer-events: none;
+
+        .dialogue {
+            color: white;
+            max-height: 25vh;
+            padding: 2vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            //width: 17vw;
+            //left: 50%;
+            //transform: translateX(-50%);
+            //top: 70%;
+            //height: 20vh;
+            aspect-ratio: 753 / 457;
+            text-align:center; 
+            vertical-align: middle;
+            display: table-cell;  
+        }
+    }
+
     .right-section {
         @include cardFont;
         white-space: pre-line;
