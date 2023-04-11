@@ -1,0 +1,80 @@
+@mixin dialogueText {
+    font-family: Sinhala MN, sans-serif;
+    font-size: 1vw;
+    line-height: 1.9vh;
+    letter-spacing: 0.1em;
+}
+
+.macaron-interaction-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+
+    .dialogueBox {
+        @include dialogueText;
+        position: relative;
+        width: 75%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        aspect-ratio: 1/1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mac-dialogue {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+        white-space: pre-line;
+    }
+
+    .controlBox {
+        position: absolute;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18%;
+        height: 60%;
+        background-color: white;
+        //evenly spaced vertical center 
+        //display: table-cell;
+        //vertical-align: middle;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .macaron-button {
+            //transform: translate(-50%, -50%);
+            height: 30%;
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .rectangle {
+            height: 25%;
+            margin: 1.5%;
+            pointer-events: none;
+        }
+
+        .macaron-button.active {
+            .rectangle {
+                background-color: #9fcdea !important;
+            }
+        }
+
+    }
+}

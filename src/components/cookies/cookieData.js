@@ -10,10 +10,71 @@ export const cookieData = [
     {
         "name": "macaron",
         "fullname": "mADamE mAcarOn",
-        "description": "This page's interaction has not yet been coded.",
+        "description": "Age : 87",
         "icon": require('../../img/icons/Icon_Macaron.png'),
         "img": require('../../img/Macaron/Macaron.png'),
         "bgImg": require('../../img/Macaron/BG_Macaron_GreyWhite.png'),
+        "customAssets": {
+            "instructionsBox": require('../../img/Fortune/BlackBox_Fortune.png'),
+            "dialogueBox": require('../../img/Macaron/Macaron_Circle_Box.png'),
+            "dialogue": [
+                {
+                    "id": 0,
+                    "you": `Pardon me,\nAre you Madame Macaron ?`,
+                    "mm": `Ahh !\nHow audacious of you !\nYou shall not dare to eve speak to me\n
+                            until you dress into something much more bougie !\n
+                            Might I recommend some\nCocoa Chanel, Jacquemousse, Peter Dough,\n
+                            & Simone Rocher ?\n&\nI better not smell any Fast Food Fashion,\n& I better
+                            not be served any distasteful knock offs\nlike Alexander McFlurry, FerraGMO,\n
+                            & Thome Brownie -`
+                },
+                {
+                    "id": 1,
+                    "you": `Madame,\nI'm working on-`,
+                    "mm": `Oh !\nWhy didn't you tell me\nyou were waiting on me ??\n\nWhere is your
+                            uniform ?\n Go put on your buttercream ribbons,\n blue - white - or whatever
+                            colour fondant collars\n& your velveteen bowties .\n\nOnly then, I'll tell you
+                            what I want ~\nGo . Go .`
+                },
+                {
+                    "id": 2,
+                    "you": `I don't work for you .\nI am here to ask about Soft Cookie .`,
+                    "mm": `Oh oh, that explains why you're here,\nbut doesn't explain how cheap you look .\n
+                            Soft Cookie, truly one of thee worst cookies ever\nImmensely lazy,
+                            trying to teach silly things\n"work smart, not hard"\nAs if .\n
+                            It tried whipping them into shape,\ncontantly telling them to get\nback up on their feet ;\n
+                            & they believe in\nbreaks .`
+                },
+                {
+                    "id": 3,
+                    "you": `What else can-\n`,
+                    "mm": `Then\nthey had the nerve to talk back to me,\n
+                            preaching about how bleaching is harmful -\nwhen they
+                            are made of unrefined all purpose flour !\n\n
+                            Ugh, disgusting !\nThis is why\nthere is a price difference between us .\n
+                            They should recognize that being\nin my very presence,\n is a privilege .`
+                },
+                {
+                    "id": 4,
+                    "you": `Alright,\ndo you know anything else about them ?`,
+                    "mm": `Mmm . . .\nThey would always ask about what is fulfilling to me ?\n
+                            & As an expensive cookie, I know what is quality ;\nSurprisingly,
+                            I found that Soft Cookie was not\nas cheesy as I thought, & did have some\n
+                            good taste like me - strangely .\n\nThey enjoyed flavours like :\n
+                            Jasmine, Rose, Pistachio, Wheat, Lemongrass\nPandan, Lilac, Lavender, Violet, X-Y-Z Tea\n
+                            Fig, Bergamot, & Lilies of the Valley,\n& all things delicate .`
+                },
+                {
+                    "id": 5,
+                    "you": `Great, let's call it finished .\nThank you for your time .`,
+                    "mm": `Haha,\nYou definitely should be thankful .\n
+                            You're lucky I don't charge money for my time,\nlike Monsieur Financier .\n
+                            Oh\n by the way,\nanother thing I barely remember, Soft Cookie,
+                            had mentioned something about how\nalmonds can be unsustainable\n??\n
+                            Anyways,\nAu Revoir -`
+                },
+            ]
+        }
     },
     {
         "name": "wafer",
