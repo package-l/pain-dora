@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import '../../styles/Financier.scss'
+import audio from "../../img/Financier/cashier.mp3";
 
 const Financier = (props) => {
     Cookies.set('financier', true);
@@ -11,6 +12,8 @@ const Financier = (props) => {
     }, {
         text: props.data.customAssets.dialogue[1].text
     }]);
+    
+    const [ dollarAnimation, setDollarAnimation ] = useState(false);
 
     const handleDialogueClick = () => {
         if (index <= props.data.customAssets.dialogue.length-1) {
@@ -19,6 +22,8 @@ const Financier = (props) => {
             console.log(text);
             console.log(index);
             console.log(list);
+            setDollarAnimation(true);
+            new Audio(audio).play();
         }
     }
 
@@ -47,11 +52,21 @@ const Financier = (props) => {
                         backgroundImage: `url(${props.data.customAssets.interactionBox1})`
                     }}>
                         <div className="fin-dialogue">{item.text}</div>
-                    </div> :
+                            {(i !== 0) &&
+                                <div className={`dollar-sign ${dollarAnimation ? "float": ""}`}>
+                                        + $ $ $
+                                </div>
+                            }
+                        </div> :
                     <div className="financierBox" key={i} id={`financier-${i}`} style={{
                         backgroundImage: `url(${props.data.customAssets.interactionBox2})`
                         }}>
                         <div className="fin-dialogue">{item.text}</div>
+                            {(i !== 1) &&
+                                <div className={`dollar-sign ${dollarAnimation ? "float": ""}`}>
+                                        + $ $ $
+                                </div>
+                            }
                     </div>
 
                 )

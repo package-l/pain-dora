@@ -91,4 +91,26 @@
         transform: translate(-50%, -50%);
         width: 90%;
     }
+
+    .dollar-sign {
+        position: absolute;
+        right: 0;
+        top: 30%;
+        opacity: 0;
+        font-weight: semi-bold;
+        font-size: 1.1vw;
+    }
+
+    .float {
+        animation-name: float;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); opacity: 100;}
+    100%   { transform: translate(0, -20px); opacity: 0;}   
 }
