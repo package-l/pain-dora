@@ -30,7 +30,7 @@ export const cookieData = [
                 },
                 {
                     "id": 1,
-                    "you": `Madame,\nI'm working on-`,
+                    "you": "Madame,\nI'm working o",
                     "mm": `Oh !\nWhy didn't you tell me\nyou were waiting on me ??\n\nWhere is your
                             uniform ?\n Go put on your buttercream ribbons,\n blue - white - or whatever
                             colour fondant collars\n& your velveteen bowties .\n\nOnly then, I'll tell you
@@ -47,7 +47,7 @@ export const cookieData = [
                 },
                 {
                     "id": 3,
-                    "you": `What else can-\n`,
+                    "you": `What else ca`,
                     "mm": `Then\nthey had the nerve to talk back to me,\n
                             preaching about how bleaching is harmful -\nwhen they
                             are made of unrefined all purpose flour !\n\n

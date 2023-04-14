@@ -1,17 +1,15 @@
 import Cookies from 'js-cookie';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import MacaronButton from './MacaronButton';
 import BackArrow from '../BackArrow';
 import '../../styles/Macaron.scss';
 
 const Macaron = (props) => {
   Cookies.set('macaron', true);
-  const navigate = useNavigate();
   const [list, setList] = useState(props.data.customAssets.dialogue);
-  const [activeButton, setActiveButton] = useState(0);
-  const [youDialogue, setYouDialogue] = useState(props.data.customAssets.dialogue[0].you);
-  const [mmDialogue, setMmDialogue] = useState(props.data.customAssets.dialogue[0].mm);
+  const [activeButton, setActiveButton] = useState(null);
+  const [youDialogue, setYouDialogue] = useState("");
+  const [mmDialogue, setMmDialogue] = useState("");
 
   const handleClick = (item) => {
     setActiveButton(item.id);
@@ -32,16 +30,24 @@ const Macaron = (props) => {
           <div className="dialogueBox" style={{
               backgroundImage: `url(${props.data.customAssets.dialogueBox})`
           }}>
-            <div className="mac-dialogue">
-              <div>You :</div><br/>
-              <div className="you">
-                {youDialogue}
-              </div><br/><br/>
-              <div>Mme Macaron :</div><br/><br/>
-              <div className="mm">
-                {mmDialogue}
+            {activeButton !== null &&
+              <div className="mac-dialogue">
+                <div className="speaker">You :</div><br/>         
+                {(activeButton === 3 || activeButton === 1 ) ?
+                  <div className="you">
+                    {youDialogue}<p className="fade">n</p><p className="fade">&mdash;</p>
+                  </div> :
+                  <div className="you">
+                    {youDialogue}
+                  </div>
+                }
+                <br/><br/>
+                <div className="speaker">Mme Macaron :</div><br/><br/>
+                <div className="mm">
+                  {mmDialogue}
+                </div>
               </div>
-            </div>
+            }
           </div>
           <div className="controlBox">
             {list.map((item, i) => (

@@ -25,11 +25,20 @@
         padding-right: 2vh !important;
     }
 
-    .questions, .answers {
+    .cards {
+        height: 100%;
+        width: 100%;
+    }
+
+    .cards {
         @include cardFont;
         white-space: pre-line;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "card0 card1"
+            "card2 card3"
+            "card4 card5";
         gap: 2vh;
         position: absolute;
         top: 50%;
@@ -37,7 +46,7 @@
         width: 100%;
     }
 
-    .question-card, .answer-card {
+    .question-card, .answer-card, .click-container {
         color: white;
         height: 23vh;
         background-size: contain;
@@ -52,20 +61,51 @@
         aspect-ratio: 760 / 458;
         padding-right: 1vw;
         padding-left: 1vw;
+        cursor: pointer;
     }
+
+    .card0 {
+        grid-area: card0;
+    }
+
+    .card1 {
+        grid-area: card1;
+    }
+
+    .card2 {
+        grid-area: card2;
+    }
+
+    .card3 {
+        grid-area: card3;
+    }
+
+    .card4 {
+        grid-area: card4;
+    }
+
+    .card5 {
+        grid-area: card5;
+    }
+
+
 
     .answer-card {
         color: black;
         flex-direction: column;
+        line-height: 1.9vh;
+    }
+
+    .answer-card-text {
+        margin: 0.5vw;
+        margin-top: 0.9vw;
     }
 
     .question-card-text {
-        padding: 2vw;
+        margin: 2vw;
     }
 
     .line1, .line2, .line3 {
-        padding: 0.8vh;
-        width: 90%;
         cursor: pointer;
     }
 

@@ -15,24 +15,17 @@ const Linzer = (props) => {
         <BackArrow />
         <div className="test"style={{
           backgroundImage: `url(${props.data.customAssets.instructionsBox})`
-        }}><p className="dialogue">2 Lies & a Truth .<br></br><br></br>Hover over any prompt -<br></br>the black box.<br></br>Choose the correct truth .</p></div>
-        {/*<img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
-        <p className="dialogue">{consumerText}</p>*/}
+        }}><p className="dialogue">2 Lies & a Truth .<br></br><br></br>Hover over any prompt &mdash;<br></br>
+        the black box&mdash; click to begin,<br></br>then choose the correct truth .</p></div>
+
       </div>
       <div className="right-section">
         <div className="cards">
-        <div className="questions">
-            {linzerQuestionData.map((question, key) => (
-                <LinzerQuestionCard key={key} question={question} bgImg={props.data.customAssets.promptBox}/>
-            ))}
-          </div>
-          <div className="answers">
-            {linzerAnswerData?.map((answers, key) => {
-              return (
-                <LinzerAnswerCard key={key} cardNum={key} answer={answers} bgImgEven={props.data.customAssets.answerBoxEven} bgImgOdd={props.data.customAssets.answerBoxOdd}/>
-              )
-            })}
-          </div>
+          {linzerQuestionData.map((card, key) => {
+            return (
+              <LinzerQuestionCard key={key} cardNum={key} card={card} bgImg={props.data.customAssets.promptBox} bgImgEven={props.data.customAssets.answerBoxEven} bgImgOdd={props.data.customAssets.answerBoxOdd}/>
+            )
+          })}
         </div>
       </div>
     </div>
