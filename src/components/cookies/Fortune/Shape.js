@@ -13,7 +13,7 @@ const Shape = ({ id, side, text }) => {
         []
       );
     
-      const [ref, pressed, handleMouseDown, paperTextVisibility, setPaperTextVisibility, fadeAnimation, setFadeAnimation] = useDraggable({
+      const [ref, pressed, handleMouseDown] = useDraggable({
         onDrag: handleDrag
       });
 
@@ -27,12 +27,8 @@ const Shape = ({ id, side, text }) => {
           ref.current.parentNode.parentNode.classList.remove("active");
           ref.current.nextSibling.firstChild.style.visibility = "hidden";
           ref.current.firstChild.style.animationName = "fadeOut";
-          //setFadeAnimation("fadeOut");
         }, 0);
       });
-      //ref.current.nextSibling.firstChild.style.visibility = "hidden";
-      //setCloseVisibility("hidden");
-      setPaperTextVisibility("hidden");
     }
     
   return (

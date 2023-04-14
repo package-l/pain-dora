@@ -7,7 +7,6 @@ const useDraggable = ({ onDrag = id } = {}) => {
     const [closeVisibility, setCloseVisibility] = useState("hidden");
     const [paperTextVisibility, setPaperTextVisibility] = useState("hidden");
     const [fadeAnimation, setFadeAnimation] = useState("none");
-    const [otherAnimation, setOtherAnimation] = useState("");
 
     const position = useRef({ x: 0, y: 0});
     const ref = useRef();
@@ -33,67 +32,70 @@ const useDraggable = ({ onDrag = id } = {}) => {
                 y: pos.y + eve.movementY
             });
 
+            // If the sibling fortune cookie is open, shrink it.
             if (elem.parentNode.parentNode.classList.contains("active")) {
 
-                    
-                        if (elem.parentNode.previousSibling !== null) {
-                            if (elem.parentNode.previousSibling.firstChild.style.animationName === "grow") {
-                                elem.parentNode.previousSibling.firstChild.style.animationName ="shrink";
-                                elem.parentNode.previousSibling.firstChild.firstChild.style.visibility ="hidden";
-                                console.log(elem.parentNode.previousSibling.lastChild.firstChild)
-                                //elem.nextSibling.firstChild.style.visibility = "hidden";
-                                requestAnimationFrame(() => {
-                                    //allows animation to reset
-                                    setTimeout(() => {
-                                        elem.parentNode.previousSibling.lastChild.firstChild.style.visibility = "hidden";
-                                    }, 0);
-                                });
+                // Check if the sibling comes before or after current target                    
+                if (elem.parentNode.previousSibling !== null) {
+                    if (elem.parentNode.previousSibling.firstChild.style.animationName === "grow") {
+                        elem.parentNode.previousSibling.firstChild.style.animationName ="shrink";
+                        elem.parentNode.previousSibling.firstChild.firstChild.style.visibility ="hidden";
+                        
+                        //elem.nextSibling.firstChild.style.visibility = "hidden";
 
-                                elem.style.animationName = "grow";
-                                elem.parentNode.parentNode.classList.add("active");
-                                //setCloseVisibility("visible");
-                                elem.nextSibling.firstChild.style.visibility = "visible";
-                                console.log(elem.firstChild.firstChild);
-                                elem.firstChild.style.visibility = "visible";
-                                elem.firstChild.style.animationName = "fadeIn";
-                            }
-                        }
-                        else if (elem.parentNode.nextSibling !== null) {
-                            if (elem.parentNode.nextSibling.firstChild.style.animationName === "grow") {
-                                elem.parentNode.nextSibling.firstChild.style.animationName ="shrink";
-                                elem.parentNode.nextSibling.firstChild.firstChild.style.visibility ="hidden";
-                                console.log(elem.nextSibling.firstChild)
-                                elem.nextSibling.firstChild.style.visibility = "hidden";
+                        elem.parentNode.previousSibling.lastChild.firstChild.style.visibility = "hidden";
+                        /*requestAnimationFrame(() => {
+                            //allows animation to reset
+                            setTimeout(() => {
+                                elem.parentNode.previousSibling.lastChild.firstChild.style.visibility = "hidden";
+                            }, 0);
+                        });*/
 
-                                elem.parentNode.nextSibling.lastChild.firstChild.style.visibility = "hidden";
 
-                                elem.style.animationName = "grow";
-                                elem.parentNode.parentNode.classList.add("active");
-                                //setCloseVisibility("visible");
-                                elem.nextSibling.firstChild.style.visibility = "visible";
-                                console.log(elem.firstChild.firstChild);
-                                elem.firstChild.style.visibility = "visible";
-                                elem.firstChild.style.animationName = "fadeIn";
-                            }
-                        }
+                    }
+                }
+                else if (elem.parentNode.nextSibling !== null) {
+                    if (elem.parentNode.nextSibling.firstChild.style.animationName === "grow") {
+                        elem.parentNode.nextSibling.firstChild.style.animationName ="shrink";
+                        elem.parentNode.nextSibling.firstChild.firstChild.style.visibility ="hidden";
+                        
+                        elem.nextSibling.firstChild.style.visibility = "hidden";
+
+                        elem.parentNode.nextSibling.lastChild.firstChild.style.visibility = "hidden";
+
+
+                    }
+                }
 
                 
             }
-            else {
-                elem.style.animationName = "grow";
-                elem.nextSibling.firstChild.style.visibility = "visible";
+                //  ERASE LATER BUT - elem/ref is <div> fortune-paper
+
+                // Send class name to parent class in order to know the status of sibling cookie
                 elem.parentNode.parentNode.classList.add("active");
-                //setCloseVisibility("visible");
-            }
+
+                // Animate fortune cookie paper to come out
+                elem.style.animationName = "grow";
+
+                // Make the close button visible
+                elem.nextSibling.firstChild.style.visibility = "visible";
+
+                // Style fortune cookie text
+                elem.firstChild.style.visibility = "visible";
+                elem.firstChild.style.animationName = "fadeIn";
+
+                console.log(elem);
         }
         const handleMouseUp = (e) => {
+
+                // ERASE LATER BUT - e.target is <p>
                 e.target.style.userSelect = "auto";
-                e.target.nextSibling.firstChild.style.visibility = "visible";
-                setOtherAnimation("shrink");
+                
                 setPressed(false);
+                //e.target.nextSibling.firstChild.style.visibility = "visible";
                 //setCloseVisibility("visible");
-                e.target.firstChild.firstChild.firstChild.style.visibility = "visible";
-                e.target.firstChild.firstChild.firstChild.style.animationName = "fadeIn";
+                //e.target.firstChild.firstChild.firstChild.style.visibility = "visible";
+                //e.target.firstChild.firstChild.firstChild.style.animationName = "fadeIn";
                 //setPaperTextVisibility("visible");
                 //setFadeAnimation("fadeIn");
         };
@@ -103,8 +105,8 @@ const useDraggable = ({ onDrag = id } = {}) => {
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);
         };
-    }, [pressed, onDrag, closeVisibility, paperTextVisibility, fadeAnimation])
-    return [ref, pressed, handleMouseDown, paperTextVisibility, setPaperTextVisibility, fadeAnimation, setFadeAnimation];
+    }, [pressed, onDrag])
+    return [ref, pressed, handleMouseDown];
 };
 
 export default useDraggable
