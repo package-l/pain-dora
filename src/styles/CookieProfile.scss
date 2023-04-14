@@ -37,9 +37,9 @@
     height: 100vh;
 }*/
 
-.backarrow {
-    height: 8vh;
-    width: 8vh;
+/*.backarrow {
+    height: 5.5vh;
+    width: 5.5vh;
     margin-left: -2vh;
     top: 8vh;
     background-color: black;
@@ -48,6 +48,21 @@
     position: absolute;
     cursor: pointer;
     z-index: 20;
+}*/
+
+.backarrow {
+    height: 5vh;
+    width: 5vh;
+    //other styling puts it in upper corner again
+    //top: 5vh;
+    top: 5vh;
+    left: 0.8vw;
+    background-color: black;
+    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    z-index: 60;
 }
 
 .backarrow:hover {

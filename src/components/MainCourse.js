@@ -6,6 +6,7 @@ import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom';
+import BackArrow from './BackArrow';
 
 const MainCourse = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -31,7 +32,7 @@ const MainCourse = () => {
     </div>
         : 
         <div className="maincourse">
-          <div className="backarrow" onClick={() => navigate(-1)}></div>
+          <BackArrow />
         <div className="hamburger-container">
           <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
           <NavMenu open={openMenu} setOpen={setOpenMenu}/>

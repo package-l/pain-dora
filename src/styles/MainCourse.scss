@@ -3,6 +3,7 @@
     font-size: 1.8vh;
     color: black;
     letter-spacing: 0.1vw;
+    line-height: 3vh;
 }
 
 .maincourse {
@@ -14,9 +15,25 @@
     height: 100vh;
 }
 
+//HAMBURGER CONTAINER IS SCROLLING WHY IDK HELP K THX
 .maincourse .hamburger-container {
-    height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100vw !important;
+    height: 0 !important;
+}
+
+.maincourse .navmenu {
+    padding-left: 6vh;
+    left: 0;
+}
+
+.maincourse .backarrow {
+    top: 14vh;
+    left: 2vw;
+    z-index: 10;
 }
 
 .maincourse > *:not(:first-child){
@@ -31,8 +48,8 @@
     outline: 8px solid grey;
     outline-offset: 5px;
     border-radius: 50%;
-    height: 70vh;
-    width: 70vh;
+    aspect-ratio: 1/1;
+    width: 65vh;
     position: relative;
 }
 
@@ -47,8 +64,8 @@
 
 .middle-circle div:last-of-type {
     position: absolute;
-    bottom: 10%;
-    line-height: 3vh;
+    bottom: 5%;
+    //line-height: 3vh;
 }
 
 .left-text, .right-text {

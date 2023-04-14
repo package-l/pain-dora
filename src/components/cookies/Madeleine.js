@@ -1,7 +1,7 @@
 import '../../styles/Madeleine.scss';
 import { useState, useEffect, useRef } from 'react';
 import Cookies from 'js-cookie';
-
+import BackArrow from '../BackArrow';
 
 const Madeleine = (props) => {
   Cookies.set('madeleine', true);
@@ -48,6 +48,7 @@ const Madeleine = (props) => {
   return (
     <div className="madeleine-interaction-container">
         <div className="instructionBox">
+          <BackArrow />
           <div className="test" onClick={handleMadeleineDialogueClick} style={{
             backgroundImage: `url(${props.data.customAssets.consumerBox})`
           }}><p className="dialogue">{consumerText}</p></div>

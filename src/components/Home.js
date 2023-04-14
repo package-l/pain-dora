@@ -16,7 +16,7 @@ import Wafer from '../img/icons/Icon_Wafer.png';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import NavMap from './NavMap';
-import DotNavigation from './DotNavigation';
+import DownArrow from './DownArrow';
 
 import Roof from '../img/house/Floor_2.png';
 import Ground from '../img/house/Floor_G_Text.png'
@@ -104,6 +104,7 @@ const Home = () => {
           </div>
   </section>*/}
         <section data-status className="tempwrapper" id="roof">
+
         </section>
         <section data-status className="map-container" id="floor2">
           {/*<img className="map" src={Roof} alt="Roof floor"></img>*/}
@@ -118,10 +119,13 @@ const Home = () => {
               <div className="for">
                 <Link to="/fortune"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
               </div>
+              <div className="f2-down">
+                <DownArrow nextFloor={"ground"}/>
+              </div>
             </div>
           </div>
         </section>
-        <section data-status className="map-container" id="ground">
+        <section className="map-container" id="ground">
           <div className="cookie-map-container">
             {/*<img className="map" src={Ground} alt="Roof floor"></img>*/}
             <div id="ground-grid" className="content">
@@ -137,10 +141,13 @@ const Home = () => {
               <div className="bro">
                 <Link to="/brownie"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
               </div>
+              <div className="ground-down">
+                <DownArrow nextFloor={"cellar"}/>
+              </div>
             </div>
           </div>
         </section>
-        <section data-status className="map-container" id="cellar">
+        <section className="map-container" id="cellar">
           <img className="fork" src={Fork} alt="Fork"></img>
           {/*<img className="map" src={Cellar} alt="Cellar floor"></img>*/}
           <div className="cookie-map-container">
@@ -158,6 +165,9 @@ const Home = () => {
                 <div className="bigcircle circle"><p>Garden<br />of Eating</p></div>
                 <div className="bloodcircle circle"><p>Blood<br />Pool</p></div>
                 <div className="watercircle circle"><p>Water<br />Pond</p></div>
+              </div>
+              <div className="cellar-down">
+                <DownArrow nextFloor={"basement"}/>
               </div>
             </div>
           </div>

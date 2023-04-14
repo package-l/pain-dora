@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import '../../styles/Financier.scss'
 import audio from "../../img/Financier/cashier.mp3";
+import BackArrow from '../BackArrow';
 
 const Financier = (props) => {
     Cookies.set('financier', true);
@@ -39,6 +40,7 @@ const Financier = (props) => {
   return (
     <div className="financier-interaction-container">
         <div className="instructionBox">
+            <BackArrow />
             <div className="test" onClick={handleDialogueClick} style={{
                 backgroundImage: `url(${props.data.customAssets.instructionBox})`
             }}><p className="dialogue">{props.data.customAssets.instructionText}</p></div>

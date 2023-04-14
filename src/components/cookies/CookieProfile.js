@@ -45,7 +45,7 @@ const CookieProfile = (props) => {
         backgroundImage: `url(${props.data.bgImg})`
       }}>
       {/*<div className="character-left-section">*/}
-        <div className="backarrow" onClick={() => navigate(-1)}></div>
+        {/*<div className="backarrow" onClick={() => navigate(-1)}></div>*/}
         <div className="character-card">
           <div className="character-card-border"></div>
             {cookie.toString() === "brownie" ? 

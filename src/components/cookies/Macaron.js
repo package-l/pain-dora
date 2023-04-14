@@ -1,10 +1,13 @@
 import Cookies from 'js-cookie';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MacaronButton from './MacaronButton';
+import BackArrow from '../BackArrow';
 import '../../styles/Macaron.scss';
 
 const Macaron = (props) => {
   Cookies.set('macaron', true);
+  const navigate = useNavigate();
   const [list, setList] = useState(props.data.customAssets.dialogue);
   const [activeButton, setActiveButton] = useState(0);
   const [youDialogue, setYouDialogue] = useState(props.data.customAssets.dialogue[0].you);
@@ -22,7 +25,9 @@ const Macaron = (props) => {
 
   return (
     <div className="macaron-interaction-container">
-        <div className="instructionBox"></div>
+        <div className="instructionBox">
+          <BackArrow />
+        </div>
         <div className="right-section">
           <div className="dialogueBox" style={{
               backgroundImage: `url(${props.data.customAssets.dialogueBox})`

@@ -2,6 +2,7 @@ import { linzerAnswerData } from './linzerAnswerData';
 import { linzerQuestionData } from './linzerQuestionData'; 
 import LinzerQuestionCard from './LinzerQuestionCard';
 import LinzerAnswerCard from './LinzerAnswerCard';
+import BackArrow from '../../BackArrow';
 import '../../../styles/Linzer.scss';
 import Cookies from 'js-cookie';
 
@@ -11,6 +12,7 @@ const Linzer = (props) => {
   return (
     <div className="linzer-interaction-container">
       <div className="instructionBox">
+        <BackArrow />
         <div className="test"style={{
           backgroundImage: `url(${props.data.customAssets.instructionsBox})`
         }}><p className="dialogue">2 Lies & a Truth .<br></br><br></br>Hover over any prompt -<br></br>the black box.<br></br>Choose the correct truth .</p></div>

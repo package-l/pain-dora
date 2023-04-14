@@ -1,6 +1,7 @@
 import '../../styles/Brownie.scss';
 import WaterWave from 'react-water-wave';
 import Cookies from 'js-cookie';
+import BackArrow from '../BackArrow';
 
 const Brownie = (props) => {
   Cookies.set('brownie', true);
@@ -8,6 +9,7 @@ const Brownie = (props) => {
   return (
     <div className="brownie-interaction-container">
       <div className="instructionBox">
+        <BackArrow />
         <div className="ripple-container">
           <WaterWave className="leftBox-img" imageUrl={props.data.img} 
               style={{ width: '88%', height: '88%', backgroundSize: 'contain'}}

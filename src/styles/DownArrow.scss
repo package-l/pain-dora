@@ -1,0 +1,79 @@
+@mixin font {
+    font-family: Sinhala MN, sans-serif;
+    font-size: 1.6vh;
+}
+
+.down-arrow {
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.arrows {
+    pointer-events: none;
+    position: relative;
+	width: 30px;
+	height: 50px;
+	left: 0;
+    top: 55%;
+    font-size: 3vw;
+}
+
+.down-arrow:hover {
+    .arrow-text {
+        opacity: 100;
+    }
+}
+
+.arrow-text {
+    @include font;
+    position: relative;
+    top: 49%;
+    left: 46%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 100;
+    opacity: 0;
+    transition: opacity 3s ease-out;
+}
+
+.arrows path {
+	stroke: black;
+	fill: transparent;
+	stroke-width: 2px;	
+	animation: arrow 5s infinite;
+	-webkit-animation: arrow 5s infinite; 
+}
+
+@keyframes arrow {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+.arrows path.a1 {
+    pointer-events: none;
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+    pointer-events: none;
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+    pointer-events: none;
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
