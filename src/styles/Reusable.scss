@@ -1,0 +1,36 @@
+@function tracking( $target ){
+    @return ($target / 1000) * 1em;
+}
+
+@mixin tracking( $target ){
+    letter-spacing: tracking( $target );
+}
+
+@mixin Sinhala {
+    @include tracking(100);
+    font-family: Sinhala MN, sans-serif;
+    font-size: 0.9vw; //allows font zoom
+    line-height: 1.85vh;
+}
+
+@mixin nameFont {
+    font-family: Chantal;
+    font-weight: light;
+    font-size: 1.34vw;
+    letter-spacing: 0.1em;
+    line-height: 2vh;
+}
+
+@mixin ageFont {
+    @include tracking(100);
+    font-family: Sinhala MN, sans-serif;
+    font-size: 1vw;
+    line-height: 1.5vh;
+}
+
+@mixin instructionFont {
+    @include tracking(100);
+    font-family: Sinhala MN, sans-serif;
+    font-size: 0.8vw;
+    line-height: 2.1vh;
+}

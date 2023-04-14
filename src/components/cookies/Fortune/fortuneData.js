@@ -1,11 +1,11 @@
 export const fortuneData = [
     {
         "number1" : {
-            "front": "21 14 12 21 3 11 25",
+            "front": [21, 14, 12, 21, 3, 11, 25],
             "back": `Constantly misunderstood w/ misfortune\n I choose to be Mis . Fortune .`,
         },
         "number2" : {
-            "front": "14 21 13 2 5 18 19",
+            "front": [14, 21, 13, 2, 5, 18, 19],
             "back": "How can I - not help ?",
         },
         "triangle" : "Are you upset ? (:",

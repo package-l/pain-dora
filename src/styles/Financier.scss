@@ -1,3 +1,5 @@
+@import './Reusable.scss';
+
 @mixin interactionBoxFont {
     font-family: Sinhala MN, sans-serif;
     font-size: 0.9vw;
@@ -47,7 +49,8 @@
     }
     
     .right-section {
-        @include interactionBoxFont;
+        @include Sinhala;
+        line-height: 1.85vh;
         position: absolute;
         width: 57vw;
         height: 100vh;

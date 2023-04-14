@@ -1,8 +1,8 @@
+@import './Reusable.scss';
+
 @mixin dialogueText {
-    font-family: Sinhala MN, sans-serif;
+    @include instructionFont;
     font-size: 1vw;
-    line-height: 1.9vh;
-    letter-spacing: 0.1em;
 }
 
 .macaron-interaction-container {

@@ -115,8 +115,8 @@ export const cookieData = [
     },
     {
         "name": "fortune",
-        "fullname": "mis .FOrTUnE",
-        "description": "Age: 19",
+        "fullname": "mis . FOrTUnE",
+        "description": "Age : 1920",
         "icon": require('../../img/icons/Icon_Fortune.png'),
         "img": require('../../img/Fortune/MisFortune.png'),
         "bgImg": require('../../img/Fortune/BG_Fortune.png'),

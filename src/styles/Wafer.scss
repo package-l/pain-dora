@@ -1,9 +1,7 @@
+@import './Reusable.scss';
+
 @mixin cardFont {
-    font-family: Sinhala MN, sans-serif;
-    font-size: 0.9vw;
-    line-height: 1.5vh;
-    letter-spacing: 0.1em;
-    color: black;
+    @include Sinhala;
 }
 
 .wafer-interaction-container {

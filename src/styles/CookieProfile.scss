@@ -1,25 +1,5 @@
-@mixin nameFont {
-    font-family: Chantal;
-    font-weight: light;
-    font-size: 1.5vw;
-    letter-spacing: 0.1em;
-    line-height: 2vh;
-}
+@import './Reusable.scss';
 
-//Age font
-@mixin ageFont {
-    font-family: Sinhala MN, sans-serif;
-    font-size: 1vw;
-    line-height: 2vh;
-    letter-spacing: 0.2em;
-}
-
-@mixin instructionFont {
-    font-family: Sinhala MN, sans-serif;
-    font-size: 1.5vh;
-    line-height: 1.5vh;
-    letter-spacing: 0.1em;
-}
 
 .cookie-container {
     @include nameFont;
@@ -92,10 +72,10 @@
 }
 
 .character-card .profileImg {
-    height: 23vh;
+    height: 26vh;
     z-index: 20;
     padding-top: 10vh;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
 }
 
 .character-card .fullname {
@@ -104,7 +84,7 @@
     top: 55%;
     transform: translate(-50%, -50%);*/
     width: 20vw;
-    padding: 2vh;
+    padding: 1vh;
 }
 
 .character-card .description {
@@ -113,7 +93,7 @@
     left: 50%;
     top: 55%;
     transform: translate(-50%, 100%);*/
-    padding: 2vh;
+    padding: 1vh;
     white-space: pre-line;
 }
 

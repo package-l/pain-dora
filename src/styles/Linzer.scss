@@ -1,8 +1,9 @@
+@import './Reusable.scss';
+
 @mixin cardFont {
-    font-family: Sinhala MN;
-    font-size: 1.5vh;
-    letter-spacing: 0.1em;
-    line-height: 1.8vh;
+    @include Sinhala;
+    font-size: 0.8vw;
+    line-height: 2.3vh;
 }
 
 .linzer-interaction-container {
@@ -13,11 +14,6 @@
         padding: 2vh;
         padding-left: 5vw;
         padding-right: 5vw;
-        //width: 17vw;
-        //left: 50%;
-        //transform: translateX(-50%);
-        //top: 70%;
-        //height: 20vh;
         aspect-ratio: 753 / 457;
         text-align:center; 
         vertical-align: middle;
@@ -31,6 +27,7 @@
 
     .questions, .answers {
         @include cardFont;
+        white-space: pre-line;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2vh;
@@ -46,7 +43,6 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        //z-index: 20;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -74,12 +70,6 @@
     }
 
     .right-section {
-        /*position: absolute;
-        width: 60vw;
-        height: 90vh;
-        right: 0;
-        margin: 1vw;*/
-
         position: absolute;
         width: 57vw;
         height: 100vh;

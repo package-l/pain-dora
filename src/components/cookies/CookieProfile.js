@@ -52,8 +52,9 @@ const CookieProfile = (props) => {
               <div className="profileImg"></div> :
               <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
             }
-            <br/><br/>
+            <br/>
           <div className="fullname">{props.data.fullname}</div>
+          <br/>
           <div className="description">{props.data.description}</div><br/>
         </div>
       {/*</div>*/}

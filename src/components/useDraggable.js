@@ -35,13 +35,18 @@ const useDraggable = ({ onDrag = id } = {}) => {
             // If the sibling fortune cookie is open, shrink it.
             if (elem.parentNode.parentNode.classList.contains("active")) {
 
-                // Check if the sibling comes before or after current target                    
+                // Check if the sibling comes before or after current target
+                
+                // Before
                 if (elem.parentNode.previousSibling !== null) {
                     if (elem.parentNode.previousSibling.firstChild.style.animationName === "grow") {
                         elem.parentNode.previousSibling.firstChild.style.animationName ="shrink";
                         elem.parentNode.previousSibling.firstChild.firstChild.style.visibility ="hidden";
                         
                         //elem.nextSibling.firstChild.style.visibility = "hidden";
+
+                        // Set sibling fortune cookie's text to fade out
+                        elem.parentNode.previousSibling.firstChild.firstChild.style.animationName = "fadeOut";
 
                         elem.parentNode.previousSibling.lastChild.firstChild.style.visibility = "hidden";
                         /*requestAnimationFrame(() => {
@@ -54,13 +59,19 @@ const useDraggable = ({ onDrag = id } = {}) => {
 
                     }
                 }
+                // After
                 else if (elem.parentNode.nextSibling !== null) {
                     if (elem.parentNode.nextSibling.firstChild.style.animationName === "grow") {
                         elem.parentNode.nextSibling.firstChild.style.animationName ="shrink";
                         elem.parentNode.nextSibling.firstChild.firstChild.style.visibility ="hidden";
                         
-                        elem.nextSibling.firstChild.style.visibility = "hidden";
+                        elem.parentNode.nextSibling.firstChild.firstChild.style.animationName = "fadeOut";
 
+                        elem.nextSibling.firstChild.style.visibility = "hidden";
+                        elem.firstChild.style.animationName = "fadeOut";
+                        
+                        //elem.parentNode.nextSibling.lastChild.firstChild.style.animationName = "fadeOut";
+                        // Hide x
                         elem.parentNode.nextSibling.lastChild.firstChild.style.visibility = "hidden";
 
 
@@ -84,7 +95,6 @@ const useDraggable = ({ onDrag = id } = {}) => {
                 elem.firstChild.style.visibility = "visible";
                 elem.firstChild.style.animationName = "fadeIn";
 
-                console.log(elem);
         }
         const handleMouseUp = (e) => {
 

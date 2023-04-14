@@ -7,11 +7,16 @@ const Numbers = ({ id, frontText, backText }) => {
     setFlip(!flip);
   }
 
-
+  console.log(frontText);
   return (
     <div id={id} className="grid-item" onClick={handleCardFlipClick}>
         <div className={`flip-card-inner ${flip ? "flip" : ""}`}>
-          <div className="flip-card-front"><div>{frontText}</div></div>
+          <div className="flip-card-front">
+            {Object.values(frontText).map((item, i) => (
+              <div key={i}>{item}</div>
+            ))
+            } 
+          </div>
           <div className="flip-card-back"><div>{backText}</div></div>
         </div>
     </div>

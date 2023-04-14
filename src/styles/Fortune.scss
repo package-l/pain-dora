@@ -1,7 +1,4 @@
-@mixin fontA {
-    font-family: Sinhala MN;
-    font-size: 1vw;
-}
+@import "./Reusable.scss";
 
 .fortune-interaction-container {
 
@@ -25,8 +22,10 @@
         color: white;
         max-height: 25vh;
         padding: 2vh;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        position: relative;
+        top: 2%;
         //width: 17vw;
         //left: 50%;
         //transform: translateX(-50%);
@@ -125,8 +124,8 @@
     }
 
     #fortune-triangle {
-        height: 12vh;
-        width: 12vh;
+        height: 6.589vw;
+        width: 6.589vw;
         background-color: black;
         clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
         color: white;
@@ -144,13 +143,13 @@
         top: 50%;
         font-size: 5vh; 
         cursor: pointer;
-        color: red;
+        color: #da1f27;
     }
 
 
     #fortune-rhombus {
-        height: 12vh;
-        width: 12vh;
+        height: 6.589vw;
+        width: 6.589vw;
         background-color: black;
         //top: 50%;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -160,8 +159,8 @@
     }
 
     #fortune-circle {
-        height: 12vh;
-        width: 12vh;
+        height: 6.589vw;
+        width: 6.589vw;
         background-color: black;
         border-radius: 50%;
         color: white;
@@ -169,26 +168,26 @@
     }
 
     #fortune-heart {
-        height: 12vh;
+        height: 6.589vw;
+        width: 6.589vw;
         background-image: url('../img/Fortune/Heart_Fortune.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 12vh;
         color: white;
     }
 
     #fortune-pentagon {
         color: white;
-        width: 12vh;
-        height: 12vh;
+        height: 6.589vw;
+        width: 6.589vw;
         background-color: black;
         clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
     }
 
     #fortune-square {
-        width: 12vh;
-        height: 12vh;
+        height: 6.589vw;
+        width: 6.589vw;
         background-color: black;
         color: white;
     }
@@ -234,20 +233,20 @@
     }
 
     .fortune-paper p {
-        @include fontA;
+        @include Sinhala;
         //visibility: hidden;
     }
 
-    #fortune-number1 .flip-card-back {
+    /*#fortune-number1 .flip-card-back {
         background-color: black !important;
-    }
+    }*/
 
     #fortune-number1 .flip-card-back div {
         color: #da1f27 !important;
     }
 
     #fortune-number2 .flip-card-back {
-        background-color: white;
+        //background-color: white;
         color: black;
     }
 
@@ -259,8 +258,8 @@
         animation-duration: 3s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
         
     }
 
@@ -333,15 +332,16 @@
         opacity: 1;
         visibility: "visible";
     }
+    30% {
+        opacity: 0;
+        visibility: hidden;
+    }
     100% {
         opacity: 0;
         visibility: hidden;
     }
 }
 
-#fortune-number2 .flip-card-front, #fortune-number2 .flip-card-back {
-    background-color: black;
-}
 
 #fortune-number1, #fortune-number2 {
 
@@ -363,38 +363,54 @@
     
     /* Position the front and back side */
     .flip-card-front, .flip-card-back {
-        @include fontA;
+        @include Sinhala;
+        line-height: 1.3vw;
         position: absolute;
-        width: 100%;
+        width: 70%;
         height: 100%;
+        left: 50%;
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
-        text-justify: distribute;
-        transform: rotateX(0deg)
+        transform: rotateX(0deg) translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
     }
 
     .flip-card-front div, .flip-card-back div {
+        display: flex;
+        align-items:center;
+        height: 9vh;
+        width: 100%;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        padding-left: 1vw;
-        padding-right: 1vw;
+        justify-content: center;
     }
 
     .flip-card-back {
         position: absolute;
         color: black;
-        transform: rotateY(180deg);
+        transform: rotateY(180deg) translateX(50%);
         z-index: 20;
         text-align: center;
     }
 
 }
 
-#fortune-number2 .flip-card-back {
-    color: white;
+#fortune-number2 .flip-card-inner {
+    background-color: black;
 }
+
+#fortune-number2 .flip-card-inner.flip {
+    background-color: white;
+}
+
+#fortune-number1 .flip-card-inner.flip {
+    background-color: black;
+}
+
 
 
 /*
