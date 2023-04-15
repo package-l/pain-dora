@@ -79,12 +79,15 @@
 }
 
 .character-card .fullname {
+    @include nameFont;
     /*position: absolute;
     left: 50%;
     top: 55%;
     transform: translate(-50%, -50%);*/
     width: 20vw;
     padding: 1vh;
+    white-space: pre-line;
+
 }
 
 .character-card .description {

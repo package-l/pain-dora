@@ -165,7 +165,7 @@ export const cookieData = [
     },
     {
         "name": "madeleine",
-        "fullname": "mad mad baby madeleine",
+        "fullname": `mad mad baby\nmadeleine`,
         "description": `Age: Physically 21 - ???\nEmotionally 2`,
         "icon": require('../../img/icons/Icon_Madeleine.png'),
         "img": require('../../img/Madeleine/Madeleine.png'),

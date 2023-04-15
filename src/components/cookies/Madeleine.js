@@ -52,8 +52,6 @@ const Madeleine = (props) => {
           <div className="test" onClick={handleMadeleineDialogueClick} style={{
             backgroundImage: `url(${props.data.customAssets.consumerBox})`
           }}><p className="dialogue">{consumerText}</p></div>
-          {/*<img onClick={handleMadeleineDialogueClick} src={props.data.customAssets.consumerBox} alt="User Dialogue Box"></img>
-          <p className="dialogue">{consumerText}</p>*/}
         </div>
         <div className="right-section" ref={ref}>
           {list.map((item, i) => 
@@ -67,7 +65,6 @@ const Madeleine = (props) => {
                   <img src={props.data.customAssets.madeleineBox} alt="Mad Mad Baby Madeleine Dialogue Box"></img>
                   <div className="mad-dialogue">{item.text}</div>
                 </div>
-
             )
           )}
         </div>
