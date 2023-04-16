@@ -14,8 +14,8 @@ const Madeleine = (props) => {
   // State management for text dialogue
   const [index, setIndex] = useState(0);
   const [madeleineText, setMadeleineText] = useState();
-  const [consumerText, setConsumerText] = useState(`This will be your dialogue box - the Investigator.\n
-  Please c/lick this black box\n to begin, & continue c/licking.`);
+  const [consumerText, setConsumerText] = useState(<>This will be your dialogue box &mdash; the Investigator.<br /><br/>
+  Please c/lick this black box<br/> to begin, & continue c/licking.</>);
   const [list, setList] = useState([]);
 
   const handleMadeleineDialogueClick = () => {
@@ -39,8 +39,8 @@ const Madeleine = (props) => {
     setRightHeight(ref.current.clientHeight);
     setRightWidth(ref.current.clientWidth);
     setList(state => [...state, {
-      right:  Math.abs(((Math.random() * rightWidth*.8 - rightWidth*.2))) + "px",
-      top: Math.abs(((Math.random() * rightHeight - rightHeight*.2))) + "px",
+      right:  Math.abs(((Math.random() * rightWidth - rightWidth*.50))) + "px",
+      top: Math.abs(((Math.random() * rightHeight - rightHeight*.27))) + "px",
       text: madeleineText
     }])
  }, [index, madeleineText, props, rightWidth, rightHeight])

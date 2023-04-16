@@ -1,7 +1,7 @@
 @mixin fontA {
     font-family: nautica, sans-serif;
     font-weight: 700;
-    font-size: 5vw;
+    font-size: 4.5vw;
     letter-spacing: 0.06em;
     font-style: normal;
 }
@@ -11,79 +11,84 @@
     font-weight: semi-bold;
     font-style: italic;
     letter-spacing: 0.12em;
-    font-size: 1.25vw;
+    font-size: 1.1vw;
+    line-height: 2.5vh;
 }
 
-.wrapper {
+#roof .cookie-map-container{
+    background-image: url('../img/house/Wrapper_Plain.png');
+    background-size: cover;
     /*height: 100vh;
     width: 100%;*/
-    position: relative;
     /*overflow-x: hidden;*/
     z-index: 10;
+    
 }
 
-.wrapper-modal {
+#wrapper-grid.content {
     height: 100%;
     width: 100%;
-    z-index: 9;
-    /*display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 8% 8% 16% 8% 35%;
-    grid-template-areas:*/
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 33% 21%;
+    grid-template-areas:
+        ". title title ."
+        "line line line line"
+        "titlec titlec info info";
 }
 
-.wrapper-modal .titlea {
-    padding-top: 3%;
+.titlea {
+    grid-area: title;
+    position: relative;
+    top: 55%;
+    text-align: start;
+    padding-left: 7%;
 }
 
-.wrapper-modal .titleb {
-    padding-left: 30%;
+.titleb {
+    grid-area: title;
+    position: relative;
+    top: 75%;
+    padding-right: 6%;
+    text-align: end;
 }
 
-.wrapper-modal .line2 {
-    text-align: left;
-    padding-bottom: 3%;
-    padding-top: 6%;
+.line2 {
+    grid-area: line;
+    position: relative;
+    top: 42%;
+    text-align: start;
+    left: 12.5%;
 }
 
-.wrapper-modal .line3 {
-    text-align: center;
-    padding-left: 25%;
-    padding-right: 35%;
-    padding-bottom: 3%;
-}
-
-.wrapper-modal .line4 {
-    text-align: right;
-}
-
-.wrapper-modal .titlec {
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 60%;
-    position: absolute;
+.line3 {
+    grid-area: line;
+    position: relative;
     top: 70%;
-
+    left: -5%;
 }
 
+.line4 {
+    grid-area: info;
+    position: relative;
+    text-align: right;
+    right: 25%;
+}
 
-.wrapper-text {
+#wrapper-grid .titlea, #wrapper-grid .titleb, #wrapper-grid .titlec {
     @include fontA;
-    position: absolute;
-    z-index: 10;
-    top: 10vh;
-    left: 10vw;
-    width: 80%;
 }
 
-.wrapper-text h3 {
-    font-size: 3vw;
+#wrapper-grid .line2, #wrapper-grid .line3, #wrapper-grid .line4 {
+    @include fontB;
+    font-weight: bold;
 }
 
-.wrapper-text p {
-    @include fontB
-}
-
-.wrapperImage {
-    width: 100%;
+.titlec {
+    grid-area: titlec;
+    position: relative;
+    font-size: 2.5em !important;
+    top: 18%;  
+    left: 5%;
 }

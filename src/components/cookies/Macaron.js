@@ -25,6 +25,10 @@ const Macaron = (props) => {
     <div className="macaron-interaction-container">
         <div className="instructionBox">
           <BackArrow />
+          <div className="test" style={{
+            backgroundImage: `url(${props.data.customAssets.instructionsBox})`
+          }}><p className="dialogue">Click & Chew-se<br/>the Macarons in the Box,<br/>
+          from top to bottom,<br/>to converse .</p></div>
         </div>
         <div className="right-section">
           <div className="dialogueBox" style={{
@@ -32,7 +36,7 @@ const Macaron = (props) => {
           }}>
             {activeButton !== null &&
               <div className="mac-dialogue">
-                <div className="speaker">You :</div><br/>         
+                <div id="you">You :</div><br/>         
                 {(activeButton === 3 || activeButton === 1 ) ?
                   <div className="you">
                     {youDialogue}<p className="fade">n</p><p className="fade">&mdash;</p>
@@ -42,7 +46,7 @@ const Macaron = (props) => {
                   </div>
                 }
                 <br/><br/>
-                <div className="speaker">Mme Macaron :</div><br/><br/>
+                <div id="mm">Mme Macaron :</div><br/><br/>
                 <div className="mm">
                   {mmDialogue}
                 </div>
@@ -54,18 +58,18 @@ const Macaron = (props) => {
               (i%2 !== 0)) ?
                 <div key={i} id={item.id} className={`macaron-button${activeButton === item.id ? " active" : ""}`} onClick={() => handleClick(item)}>
                     <div className="rectangle" style={{
-                        backgroundColor: "#c4ceb2",
+                        backgroundColor: "#dce2d3",
                     }}></div>
                     <div className="rectangle" style={{
-                        backgroundColor: "#c4ceb2",
+                        backgroundColor: "#dce2d3",
                     }}></div>
                 </div> :
                 <div key={i} id={item.id} className={`macaron-button${activeButton === item.id ? " active" : ""}`} onClick={() => handleClick(item)}>
                   <div className="rectangle" style={{
-                      backgroundColor: "#fce0e2",
+                      backgroundColor: "#fce0e3",
                   }}></div>
                   <div className="rectangle" style={{
-                      backgroundColor: "#fce0e2",
+                      backgroundColor: "#fce0e3",
                   }}></div>
                 </div>
             )}

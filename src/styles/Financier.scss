@@ -96,9 +96,10 @@
     }
 
     .dollar-sign {
+        @include Sinhala;
         position: absolute;
         right: 0;
-        top: 30%;
+        top: 70%;
         opacity: 0;
         font-weight: semi-bold;
         font-size: 1.1vw;

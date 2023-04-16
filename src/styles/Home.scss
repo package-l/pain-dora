@@ -54,7 +54,7 @@ section {
 }
 
 .tempwrapper {
-    background-image: url('../img/house/Wrapper_With_Text.png');
+    background-image: url('../img/house/Wrapper_Plain.png');
 }
 
 /*this needs to be fixed with reusable components and styling*/
@@ -100,22 +100,22 @@ section {
 }
 
 #floor2 .cookie-map-container{
-    background: url('../img/house/Floor_2.png') no-repeat center center;
+    background: url('../img/house/2F_Text.png') no-repeat center center;
     background-size:cover; /* any size that stretches the background */
 }
 
 #ground .cookie-map-container{
-    background: url('../img/house/Floor_G_Text.png') no-repeat center center;
+    background: url('../img/house/Ground_Text.png') no-repeat center center;
     background-size:cover; /* any size that stretches the background */
 }
 
 #cellar .cookie-map-container {
-    background: url('../img/house/Floor_Cellar.png') no-repeat center center;
+    background: url('../img/house/Cellar_Text.png') no-repeat center center;
     background-size:cover; /* any size that stretches the background */
 }
 
 #basement .cookie-map-container {
-    background: url('../img/house/Grey_Basement.png') no-repeat center center;
+    background: url('../img/house/Floor_Grey_Basement_Fixed.png') no-repeat center center;
     background-size:cover; /* any size that stretches the background */
 }
 
@@ -237,7 +237,7 @@ section {
     height: 60vh;
     transform: rotate(-35deg);
     left: 20%;
-    top: -20%;
+    top: -26%;
     overflow: visible;
     z-index: 10;
 }
@@ -465,9 +465,12 @@ a {
 
 .wafer {
     position: relative;
-    top: 65%;
-    left: 10%;
-    height: 7vw !important;
+    top: 60%;
+    left: -5%;
+    height: 6.5vw !important;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 
     /*-webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

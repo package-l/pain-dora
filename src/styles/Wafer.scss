@@ -18,11 +18,6 @@
             padding: 2vh;
             padding-left: 5vw;
             padding-right: 5vw;
-            //width: 17vw;
-            //left: 50%;
-            //transform: translateX(-50%);
-            //top: 70%;
-            //height: 20vh;
             aspect-ratio: 753 / 457;
             text-align:center; 
             vertical-align: middle;
@@ -34,13 +29,14 @@
         @include cardFont;
         white-space: pre-line;
         position: absolute;
-        width: 57vw;
-        height: 100vh;
-        right: 5vw;
-        max-height: 90vh;
+        width: 85vh;
+        height: auto;
+        //max-height: 90vh;
         top: 50%;
-        transform: translateY(-50%);
+        right: 25%;
+        transform: translate(30%, -50%);
 
+        aspect-ratio: 1/1 !important;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -120,19 +116,6 @@
         color: white;
     }
 
-    /*.wafer-grid {
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "one two three"
-            "four five six"
-            "seven eight nine"
-            "ten eleven twelve";
-    }*/
-
     .tape-layer {
         background-size: contain;
         background-repeat: no-repeat;
@@ -144,7 +127,7 @@
     }
 
     .tape-dialogue {
-        color: white;
+        color: black;
         position: absolute;
         left: 50%;
         top: 60%;
@@ -163,7 +146,6 @@
         position: absolute;
         right: 0;
         bottom: 5%;
-        //transform: translate(-50%, -50%);
     }
 
 }
