@@ -38,57 +38,60 @@
         "titlec titlec info info";
 }
 
-.titlea {
-    grid-area: title;
-    position: relative;
-    top: 55%;
-    text-align: start;
-    padding-left: 7%;
-}
+#wrapper-grid {
 
-.titleb {
-    grid-area: title;
-    position: relative;
-    top: 75%;
-    padding-right: 6%;
-    text-align: end;
-}
+    .titlea {
+        grid-area: title;
+        position: relative;
+        top: 55%;
+        text-align: start;
+        padding-left: 7%;
+    }
 
-.line2 {
-    grid-area: line;
-    position: relative;
-    top: 42%;
-    text-align: start;
-    left: 12.5%;
-}
+    .titleb {
+        grid-area: title;
+        position: relative;
+        top: 75%;
+        padding-right: 6%;
+        text-align: end;
+    }
 
-.line3 {
-    grid-area: line;
-    position: relative;
-    top: 70%;
-    left: -5%;
-}
+    .line2 {
+        grid-area: line;
+        position: relative;
+        top: 42%;
+        text-align: start;
+        left: 12.5%;
+    }
 
-.line4 {
-    grid-area: info;
-    position: relative;
-    text-align: right;
-    right: 25%;
-}
+    .line3 {
+        grid-area: line;
+        position: relative;
+        top: 70%;
+        left: -5%;
+    }
 
-#wrapper-grid .titlea, #wrapper-grid .titleb, #wrapper-grid .titlec {
-    @include fontA;
-}
+    .line4 {
+        grid-area: info;
+        position: relative;
+        text-align: right;
+        right: 25%;
+    }
 
-#wrapper-grid .line2, #wrapper-grid .line3, #wrapper-grid .line4 {
-    @include fontB;
-    font-weight: bold;
-}
+    .titlea, .titleb, .titlec {
+        @include fontA;
+    }
 
-.titlec {
-    grid-area: titlec;
-    position: relative;
-    font-size: 2.5em !important;
-    top: 18%;  
-    left: 5%;
+    .line2, .line3, .line4 {
+        @include fontB;
+        font-weight: bold;
+    }
+
+    .titlec {
+        grid-area: titlec;
+        position: relative;
+        font-size: 2.5em !important;
+        top: 18%;  
+        left: 5%;
+    }
 }
