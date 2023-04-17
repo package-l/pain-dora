@@ -30,15 +30,19 @@
     width: 100%;
     display: grid;
     grid-template-columns: inherit;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 20%;
     grid-template-rows: 33% 21%;
     grid-template-areas:
-        ". title title ."
-        "line line line line"
-        "titlec titlec info info";
+        ". title title . ."
+        "line line line line ."
+        "titlec titlec info info backarrow";
 }
 
 #wrapper-grid {
+
+    .wrapper-down {
+        grid-area: backarrow;
+    }
 
     .titlea {
         grid-area: title;
@@ -75,7 +79,7 @@
         grid-area: info;
         position: relative;
         text-align: right;
-        right: 25%;
+        right: 17%;
     }
 
     .titlea, .titleb, .titlec {

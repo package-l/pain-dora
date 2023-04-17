@@ -127,11 +127,54 @@ export const cookieData = [
     },
     {
         "name": "chess",
-        "fullname": "Queen Knowah",
-        "description": "The interaction for this page isn't coded yet. :)",
+        "fullname": "QuEEn knowAh",
+        "description": "Age : 32",
         "icon": require('../../img/icons/Icon_Chess.png'),
         "img": require('../../img/Chess/Chess.png'),
         "bgImg": require('../../img/Chess/BG_Chess.png'),
+        "customAssets": {
+            "instructionBox": require('../../img/Chess/Chess_InstructionBox.png'),
+            "instructionText": `On the chess board, hover\nover each piece, to see\nwhat Queen Knowah thinks .`,
+            "bubbleBox": require('../../img/Chess/Chess_Bubble.png'),
+            "chessBoard": require('../../img/Chess/ChessBoard_Blank.png'),
+            "dialogue": [
+                {
+                    "name": "h8",
+                    "shape": "square",
+                    "text": `My rook will stay on H8,\nready to defend any\nunknown possibilities .`
+                },
+                {
+                    "name": "b4",
+                    "shape": "circle",
+                    "text": `I must calculate what will\nhappen, B4, as a safety\nprecaution measure .`
+                },
+                {
+                    "name": "a5",
+                    "shape": "square",
+                    "text": `If it does not follow the\ncookbook I like, then any\nmov(i)es outside of it are\nsimply wrong .`
+                },
+                {
+                    "name": "f8",
+                    "shape": "square",
+                    "text": `You cannot fact\ncheck-mate F8, therefore,\nit is a threat, not a treat .`
+                },
+                {
+                    "name": "h1",
+                    "shape": "circle",
+                    "text": `You cannot fact\ncheck-mate F8, therefore,\nit is a threat, not a treat .`
+                },
+                {
+                    "name": "d6",
+                    "shape": "circle",
+                    "text": `Things can only be\none way - my way,\nblack & white,\n& never grey.`
+                },
+                {
+                    "name": "f2",
+                    "shape": "circle",
+                    "text": `If you know\nsomething I don't\nF1 to F2,\nbecause F U .`
+                },
+            ]
+        }
     },
     {
         "name": "linzer",

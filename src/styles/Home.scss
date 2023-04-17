@@ -99,6 +99,11 @@ section {
     margin: auto;
 }
 
+#lid-roof .cookie-map-container {
+    background: url('../img/house/Lid.png') no-repeat center center;
+    background-size: cover;
+}
+
 #floor2 .cookie-map-container{
     background: url('../img/house/2F_Text.png') no-repeat center center;
     background-size:cover; /* any size that stretches the background */

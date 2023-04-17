@@ -8,7 +8,7 @@ import spotlightImage from '../img/SpotlightWIP.png';
 import Cookies from 'js-cookie';
 import '../styles/Splash.scss';
 
-import PageSizeWarning from './PageSizeWarning';
+import PageSizeWarning from './unused/PageSizeWarning';
 
 //Maybe you want to make the spotlight size relative to window size?
 

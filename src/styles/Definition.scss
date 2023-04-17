@@ -1,3 +1,5 @@
+@import './Reusable.scss';
+
 @mixin fontC {
     font-family: Sinhala MN;
     font-size: 1.8vh;
@@ -27,99 +29,70 @@
         ". line2 line2 ."
         "header header header header"
         "sidebar line4 line4 .";
-}
 
-.definition-container .line1 {
-    grid-area: line1;
-    text-align: right;
-}
+    div {
+        @include fontC;
+        color: black;
+    }
 
-.definition-container .line2 {
-    grid-area: line2;
-    color: #a8a8a8!important;
-    letter-spacing: 0.5vw!important;
-    text-align: left;
-}
+    .line1 {
+        grid-area: line1;
+        text-align: right;
+    }
 
-.definition-container .line3 {
-    grid-area: header;
-}
+    .line2 {
+        grid-area: line2;
+        color: #a8a8a8!important;
+        letter-spacing: 0.5vw!important;
+        text-align: left;
+    }
 
-#coo, #kie {
-    @include fontA;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
+    .line3 {
+        grid-area: header;
+    }
 
-#coo {
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-110%, -60%); //review translate
-}
+    #coo, #kie {
+        @include fontA;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    
+    #coo {
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-110%, -60%);
+    }
+    
+    #kie {
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(30%, -60%);
+    }
 
-#kie {
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(30%, -60%); //review translate
-}
+    .line4a {
+        grid-area: sidebar;
+        padding-top: 10%;
+    }
 
-.definition-container .line4a {
-    grid-area: sidebar;
-    //adjusted padding due to line4b
-    padding-top: 10%;
-}
+    .line4b {
+        grid-area: line4;
+        text-align: left;
+        padding-left: 10%;
+        padding-top: 5%;
+    }
+    
+    .dot {
+        transition-property: opacity;
+        transition-duration: 2.5s;
+        animation: fadeIn ease-in 4.5s;
+    }
 
-.definition-container .line4b {
-    grid-area: line4;
-    text-align: left; //fix this placement
-    padding-left: 10%;
-    padding-top: 5%;
-}
-
-
-/*
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.left {
-    left: 2vw;
-}
-
-.right {
-    right: 0;
-}
-
-.centered {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.centered #coo {
-    right: 0;
-}
-*/
-
-.definition-container div {
-    @include fontC;
-    color: black;
-}
-
-.definition-container .dot {
-    transition-property: opacity;
-    transition-duration: 2.5s;
-}
-
-.definition-container .dot{
-    animation: fadeIn ease-in 4.5s;
+    .cookiedefinition {
+        animation: fadeInDefinition ease-in 5s forwards;
+        animation-delay: 4s;
+        opacity: 0;
+    }
+    
 }
 
 @keyframes fadeIn {
@@ -127,26 +100,7 @@
     100% {opacity: 1;}
 }
 
-.definition-container .cookiedefinition {
-    animation: fadeInDefinition ease-in 5s forwards;
-    animation-delay: 4s;
-    opacity: 0;
-}
-
 @keyframes fadeInDefinition {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
-
-/*#coo {
-    left: 20%;
-    color: black;
-    position: absolute;
-}
-
-#kie {
-    right: 20%;
-    color: black;
-    position: absolute;
-}*/

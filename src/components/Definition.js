@@ -12,7 +12,7 @@ const Definition = () => {
         (async () => {
           // Simulating some background work
           await sleep(10500);//10500
-          // As soon as the backgorund work finishes, hide the splash and display the home screen
+          // As soon as the background work finishes, hide this page and display the spotlight page
           hideDefinition();
           showSpotlight();
         })();

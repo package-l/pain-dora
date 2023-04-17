@@ -83,6 +83,11 @@ const Home = () => {
           <NavMap open={openMap} setOpen={setOpenMap}/>
         </div>
 
+        <section className="map-container" id="lid-roof">
+          <div className="cookie-map-container">
+          </div>
+        </section>
+
         <section className="map-container" id="roof">
               <div className="cookie-map-container">
                   <div className="content" id="wrapper-grid">
@@ -98,6 +103,9 @@ const Home = () => {
                           Help find the Soft Cookie Kid<br/> that's gone missing.
                       </p>
                       <h3 className="titlec">a <br/> Cookie <br/>Murder Mystery :</h3>
+                      <div className="wrapper-down">
+                            <DownArrow nextFloor={"floor 2"}/>
+                      </div>
                   </div>
               </div>
 

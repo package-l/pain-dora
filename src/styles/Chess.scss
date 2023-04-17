@@ -1,16 +1,235 @@
-.cookie-container {
+@import './Reusable.scss';
+
+.chess-interaction-container {
     height: 100vh;
     width: 100vw;
-    background-color: grey;
-    background-image: url('../img/Madeleine/Madeleine BG.png');
-    background-size: cover;
-    position: relative;
+    position: absolute;
+    overflow: hidden;
 }
 
-.character-card img {
-    height: 50vh;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index:20;
+.chess-interaction-container {
+    .instructionBox {
+        position: absolute;
+        width: 28vw;
+        min-width: 200px;
+        max-width: 400px;
+        min-height: 80vh;
+        //add height and make max-height px
+        max-height: 90vh;
+        left: 5vw;
+        top: 50%;
+        transform: translateY(-50%);
+        //bottom: 10vh;
+        aspect-ratio: 457/778;
+        cursor: auto;
+    }
+
+    .instructionBox .dialogue {
+        color: white;
+        white-space: pre-line;
+        max-height: 25vh;
+        padding: 2vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        //width: 17vw;
+        //left: 50%;
+        //transform: translateX(-50%);
+        //top: 70%;
+        //height: 20vh;
+        aspect-ratio: 753 / 457;
+        text-align:center; 
+        vertical-align: middle;
+        display: table-cell;  
+    }
+    
+    .right-section {
+        @include Sinhala;
+        line-height: 1.85vh;
+        position: absolute;
+        width: 57vw;
+        height: 100vh;
+        right: 5vw;
+        max-height: 90vh;
+        top: 50%;
+        transform: translateY(-50%);
+        //bottom: 10vh;
+        //apply grid to right-section
+        display: grid;
+        grid-template-columns: 48%;
+        grid-template-rows: auto;
+        grid-template-areas: "thoughts board";
+    }
+
+    .thoughts {
+        position: relative;
+        z-index: 20;
+        grid-area: thoughts;
+        max-height: 90vh;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 14.3% 14.3% 14.3% 14.3% 14.3% 14.3%;
+        grid-template-areas:
+            "thought-h8"
+            "thought-b4"
+            "thought-a5"
+            "thought-f8"
+            "thought-h1"
+            "thought-d6"
+            "thought-f2";
+    }
+
+    .thought {
+        visibility: hidden;
+        width: 75%;
+        aspect-ratio: 774/333;
+        background-size: contain;
+        background-repeat: no-repeat;
+        //background-position: center;
+    }
+
+    .thought p {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    #thought-h8.thought {
+        grid-area: thought-h8;
+    }
+
+    #thought-b4 {
+        grid-area: thought-b4;
+        position: relative;
+        right: 0%;
+    }
+
+    #thought-a5 {
+        grid-area: thought-a5;
+        position: relative;
+        left: -28%;
+        top: -50%;
+    }
+
+    #thought-f8 {
+        grid-area: thought-f8;
+        position: relative;
+        top: -25%;
+        right: -10%;
+    }
+
+    #thought-h1 {
+        grid-area: thought-h1;
+        position: relative;
+        top: -35%;
+        left: -10%;
+    }
+
+    #thought-d6 {
+        grid-area: thought-d6;
+        position: relative;
+        top: -44%;
+        right: -15%;
+    }
+
+    #thought-f2 {
+        grid-area: thought-f2;
+        position: relative;
+        top: -48%;
+        left: -15%;
+    }
+
+    .board {
+        aspect-ratio: 597 / 781;
+        grid-area: board;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .piece-container {
+        height: 100%;
+        //aspect-ratio: 597 / 781;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2.55fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2.4fr;
+        grid-template-areas:
+            ". . . . . . . . . ."
+            ". . . . . . f8 . h8 ."
+            ". . . . . . . . . ."
+            ". . . d6 . . . . . ."
+            ". a5 . . . . . . . ."
+            ". . b4 . . . . . . ."
+            ". . . . . . . . . ."
+            ". . . . . . f2 . . ."
+            ". . . . . . . . h1 ."
+            ". . . . . . . . . ."
+    }
+
+    #h8 {
+        grid-area: h8;
+    }
+
+    #f8 {
+        grid-area: f8;
+    }
+
+    #d6 {
+        grid-area: d6;
+    }
+
+    #a5 {
+        grid-area: a5;
+    }
+
+    #b4 {
+        grid-area: b4;
+    }
+
+    #f2 {
+        grid-area: f2;
+    }
+
+    #h1 {
+        grid-area: h1;
+    }
+
+    .circle, .square {
+        cursor: pointer;
+    }
+
+    .circle:hover, .square:hover {
+        filter: brightness(90%);
+    }
+
+    .circle {
+        height: 55%;
+        width: 55%;
+        position: relative;
+        background-color: grey;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    .square {
+        height: 55%;
+        width: 55%;
+        position: relative;
+        background-color: grey;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .thought.active {
+        visibility: visible;
+    }
 }

@@ -1,4 +1,4 @@
-import '../../styles/Brownie.scss';
+import '../../styles/cookies/Brownie.scss';
 import WaterWave from 'react-water-wave';
 import Cookies from 'js-cookie';
 import BackArrow from '../BackArrow';
