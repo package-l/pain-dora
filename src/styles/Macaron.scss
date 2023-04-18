@@ -32,6 +32,7 @@
 
     .dialogueBox {
         @include dialogueText;
+        @include transform(translateY(-50%));
         position: relative;
         width: 75%;
         background-size: contain;
@@ -39,14 +40,13 @@
         background-position: center;
         aspect-ratio: 1/1;
         top: 50%;
-        transform: translateY(-50%);
     }
 
     .mac-dialogue {
+        @include transform(translate(-50%, -50%));
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         width: 80%;
         text-align: center;
         white-space: pre-line;
@@ -72,12 +72,12 @@
     }
 
     .controlBox {
+        @include transform(translateY(-50%));
         position: absolute;
         padding-top: 3%;
         padding-bottom: 3%;
         right: 0;
         top: 50%;
-        transform: translateY(-50%);
         width: 18%;
         height: 60%;
         background-color: white;

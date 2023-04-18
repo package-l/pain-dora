@@ -5,7 +5,9 @@ const DownArrow = ({ nextFloor }) => {
 
   return (
     <div className={`down-arrow`}>
+      {nextFloor !== "wrapper" &&
         <div className="arrow-text">{nextFloor}</div>
+      }
         <svg className="arrows" viewBox="0 0 70 70"> 
             <path className="a1" d="M0 0 L30 32 L60 0"></path>
             <path className="a2" d="M0 30 L30 62 L60 30"></path>

@@ -1,3 +1,5 @@
+@import './Reusable.scss';
+
 //General page styles
 
 @mixin fontA {
@@ -53,8 +55,7 @@ body {
 }
 
 .accept {
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
+    @include transform(translate(-50%, -50%));
     position: absolute;
     top: 45%;
     left: 37%;
@@ -63,8 +64,7 @@ body {
 }
 
 .decline {
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
+    @include transform(translate(-50%, -50%));
     position: absolute;
     top: 45%;
     left: 67%;
@@ -113,20 +113,18 @@ body {
 
 .cookietext {
     @include fontB;
+    @include transform(translate(-50%, -50%));
     background-color: black;
     color: white;
     padding: 10px 20px;
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
     position: absolute;
     top: 20%;
     left: 50%;
 }
 
 .cookie-explanation {
+    @include transform(translate(-50%, -50%));
     text-align: center;
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
     position: absolute;
     top: 75%;
     left: 25%;
@@ -134,18 +132,18 @@ body {
 }
 
 .dot {
+    @include transform(translate(-50%, -50%));
     border-radius: 50%;
     background-color: black;
     height: 19px;
     width: 19px;
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
 .accept-cookies-page button {
+    @include transform(translate(-50%, -50%));
     background-color: black;
     color: transparent;
     border: none;
@@ -153,8 +151,6 @@ body {
     height: 100px;
     z-index: 14;
     margin-top: 50vh;
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
     display: transparent;
 }
 
@@ -173,10 +169,10 @@ body {
 }
 
 .accept-cookies-page .text {
+    @include transform(translate(-50%, -50%));
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
     font-family: "Roboto", Arial, sans-serif;
     font-size: calc(20px + 2vw);

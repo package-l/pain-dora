@@ -51,6 +51,7 @@
 }
 
 .character-card {
+    @include transform(translateY(-50%));
     width: 28vw;
     background-color: white;
     min-height: 80vh;
@@ -58,9 +59,9 @@
     max-height: 90vh;
     max-width: 400px;
     position: absolute;
-    left: 5vw;
+    //left: 5vw;
+    left: 0;
     top: 50%;
-    transform: translateY(-50%);
     bottom: 10vh;
     outline: 0.6vh double black;
     outline-offset: -2vh;
@@ -113,6 +114,7 @@
 //For instructions img
 
 .consumerBox {
+    @include transform(translateY(-50%));
     width: 28vw;
     min-height: 80vh;
     min-width: 200px;
@@ -121,12 +123,12 @@
     position: absolute;
     left: 5vw;
     top: 50%;
-    transform: translateY(-50%);
     bottom: 10vh;
     aspect-ratio: 457 / 778;
 }
 
 .instructionBox {
+    @include transform(translateY(-50%));
     position: absolute;
     width: 28vw;
     min-width: 200px;
@@ -136,7 +138,6 @@
     max-height: 90vh;
     left: 5vw;
     top: 50%;
-    transform: translateY(-50%);
     //bottom: 10vh;
     aspect-ratio: 457/778;
     cursor: pointer;

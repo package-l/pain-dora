@@ -1,3 +1,5 @@
+@import './Reusable.scss';
+
 .hamburger {
     width: 2vh;
     height: 2vh;
@@ -36,17 +38,17 @@
 }
 
 .hamburgerwrapper {
+    @include transform(translate(-25%, 10%));
     position: absolute;
     top: 24%;
     left: 50%;
-    transform: translate(-25%, 10%);
 }
 
 #map .hamburgerwrapper {
+    @include transform(translate(-25%, 10%));
     position: absolute;
     top: 24%;
     right: -50%;
-    transform: translate(-25%, 10%);
 }
 
 .burger {

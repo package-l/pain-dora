@@ -27,6 +27,7 @@
 
     .right-section {
         @include cardFont;
+        @include transform(translate(30%, -50%));
         white-space: pre-line;
         position: absolute;
         width: 85vh;
@@ -34,7 +35,6 @@
         //max-height: 90vh;
         top: 50%;
         right: 25%;
-        transform: translate(30%, -50%);
 
         aspect-ratio: 1/1 !important;
         display: grid;
@@ -65,12 +65,12 @@
     }
 
     .white-dialogue {
+        @include transform(translate(-50%, -50%));
         pointer-events: none;
         position: absolute;
         top: 50%;
         left: 50%;
         width: 90%;
-        transform: translate(-50%, -50%);
     }
 
     #grid-0 {
@@ -107,12 +107,12 @@
     }
 
     .black-dialogue {
+        @include transform(translate(-50%, -50%));
         pointer-events: none;
         position: absolute;
         top: 50%;
         left: 50%;
         width: 90%;
-        transform: translate(-50%, -50%);
         color: white;
     }
 
@@ -127,19 +127,19 @@
     }
 
     .tape-dialogue {
+        @include transform(translate(-50%, -50%));
         color: black;
         position: absolute;
         left: 50%;
         top: 60%;
-        transform: translate(-50%, -50%);
         width: 90%;
     }
 
     #tape-1 {
+        @include transform(translate(-50%, -50%));
         position: absolute;
         left: 50%;
         top: 40%;
-        transform: translate(-50%, -50%);
     }
 
     #tape-2 {

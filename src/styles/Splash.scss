@@ -1,3 +1,5 @@
+@import './Reusable.scss';
+
 @mixin fontA {
     font-family: minion-pro, serif;
     font-size: 16px;
@@ -16,6 +18,7 @@
 }
 
 .splash .enter {
+    @include transform(translate(-50%, -50%));
     background-color: black;
     color: transparent;
     border: none;
@@ -23,8 +26,6 @@
     height: 100px;
     z-index: 14;
     margin-top: 50vh;
-    -ms-transform: translate(-50%, -50%); //review translate
-    transform: translate(-50%, -50%); //review translate
     display: transparent;
     position: absolute;
 }

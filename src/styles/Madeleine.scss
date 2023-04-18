@@ -12,13 +12,13 @@
     overflow: hidden;
 
     .right-section {
+        @include transform(translateY(-50%));
         position: absolute;
         width: 57vw;
         height: 100vh;
         right: 5vw;
         max-height: 90vh;
         top: 50%;
-        transform: translateY(-50%);
         white-space: pre-line;
 
 
@@ -65,12 +65,12 @@
         }
         
         #index-24 .mad-dialogue {
+            @include transform(translate(-50%, 50%));
             animation: shake 0.7s infinite;
             font-size: 1.4vw;
             line-height: 1.6vw;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, 50%);
         }
         
         #index-25 img {
@@ -90,6 +90,7 @@
         }
         
         #index-25 .mad-dialogue {
+            @include transform(translate(-50%, -40%));
             animation-name: dance-shake;
             animation-duration: 0.5s;
             animation-iteration-count: infinite;
@@ -97,7 +98,6 @@
             line-height: 3vw;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -40%);
         }
 
         #index-11 .mad-dialogue, #index-13 .mad-dialogue, #index-14 .mad-dialogue, #index-17 .mad-dialogue, #index-19 .mad-dialogue, #index-23 .mad-dialogue {
@@ -133,36 +133,36 @@
     
     .madeleineBox .mad-dialogue {
         @include fontA;
+        @include transform(translate(-50%, -50%));
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
         width: 85%;
     }
 }
 
 @keyframes mini-shake {
-    0% { transform: translateX(0) translate(-50%, -50%)}
-    25% { transform: translateX(5px) translate(-50%, -50%)}
-    50% { transform: translateX(-5px) translate(-50%, -50%)}
-    75% { transform: translateX(5px) translate(-50%, -50%)}
-    100% { transform: translateX(0) translate(-50%, -50%)}
+    0% {  @include transform(translateX(0) translate(-50%, -50%))}
+    25% { @include transform(translateX(5px) translate(-50%, -50%))}
+    50% { @include transform(translateX(-5px) translate(-50%, -50%))}
+    75% { @include transform(translateX(5px) translate(-50%, -50%))}
+    100% { @include transform(translateX(0) translate(-50%, -50%))}
 }
 
 @keyframes shake {
-    0% { transform: translateX(0) translate(-50%, -50%)}
-    25% { transform: translateX(5px) translate(-50%, -50%)}
-    50% { transform: translateX(-5px) translate(-50%, -50%)}
-    75% { transform: translateX(5px) translate(-50%, -50%)}
-    100% { transform: translateX(0) translate(-50%, -50%)}
+    0% { @include transform(translateX(0) translate(-50%, -50%))}
+    25% { @include transform(translateX(5px) translate(-50%, -50%))}
+    50% { @include transform(translateX(-5px) translate(-50%, -50%))}
+    75% { @include transform(translateX(5px) translate(-50%, -50%))}
+    100% { @include transform(translateX(0) translate(-50%, -50%))}
 }
 
 @keyframes dance-shake {
-    0% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
-    25% { transform: translate(-50%, -50%) translate(5px, 5px) rotate(5deg); }
-    50% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
-    75% { transform: translate(-50%, -50%) translate(-5px, 5px) rotate(-5deg); }
-    100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+    0% { @include transform(translate(-50%, -50%) translate(0, 0) rotate(0deg)); }
+    25% { @include transform(translate(-50%, -50%) translate(5px, 5px) rotate(5deg)); }
+    50% { @include transform(translate(-50%, -50%) translate(0, 0) rotate(0deg)); }
+    75% { @include transform(translate(-50%, -50%) translate(-5px, 5px) rotate(-5deg)); }
+    100% { @include transform(translate(-50%, -50%) translate(0, 0) rotate(0deg)); }
 }
 
 

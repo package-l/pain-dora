@@ -1,3 +1,5 @@
+@import './Reusable.scss';
+
 @mixin fontA {
     font-family: Sinhala MN;
     font-size: 0.8rem;
@@ -13,8 +15,8 @@
 
 .navmap {
     @include fontA;
-    height: 90vh;
-    width: 25vw;
+    height: 92vh;
+    width: 22vw; //25vw
     display: flex;
     list-style: none;
     flex-direction: column;
@@ -55,12 +57,12 @@
 }
 
 .navmap-border ul {
+    @include transform(translateY(-50%));
     height: 100%;
     width: 100%;
     text-align: center;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
 
     display: flex;
     flex-direction: column;
@@ -69,6 +71,7 @@
 }
 
 .navmap li {
+    @include transform(translateY(-50%));
     padding: 3vh;
     transition: color 0.3s linear;
     height: 35%;
@@ -80,7 +83,6 @@
     display: inline-block;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
     text-align: center;
     vertical-align: middle;
     display: table;
@@ -98,17 +100,17 @@
 }
 
 .roof {
-    transform: translateY(-10%);
+    @include transform(translateY(-10%));
 }
 
 .roof-angle {
-    transform: rotate(-25deg) translateY(55%);
+    @include transform(rotate(-25deg) translateY(55%));
     display: inline-block;
     padding-right: 0.2rem;
 }
 
 .lid-angle {
-    transform: rotate(25deg) translateY(80%);
+    @include transform(rotate(25deg) translateY(80%));
     display: inline-block;
     padding-left: 0.2rem;
 }

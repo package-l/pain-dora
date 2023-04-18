@@ -16,6 +16,7 @@
 
 .financier-interaction-container {
     .instructionBox {
+        @include transform(translateY(-50%));
         position: absolute;
         width: 28vw;
         min-width: 200px;
@@ -25,7 +26,6 @@
         max-height: 90vh;
         left: 5vw;
         top: 50%;
-        transform: translateY(-50%);
         //bottom: 10vh;
         aspect-ratio: 457/778;
         cursor: pointer;
@@ -50,6 +50,7 @@
     
     .right-section {
         @include Sinhala;
+        @include transform(translateY(-50%));
         line-height: 1.85vh;
         position: absolute;
         width: 57vw;
@@ -57,7 +58,6 @@
         right: 5vw;
         max-height: 90vh;
         top: 50%;
-        transform: translateY(-50%);
         //bottom: 10vh;
         //apply grid to right-section
         display: grid;
@@ -88,10 +88,10 @@
     }
 
     .fin-dialogue {
+        @include transform(translate(-50%, -50%));
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
         width: 90%;
     }
 
@@ -115,6 +115,6 @@
 }
 
 @keyframes float {
-    0% { transform: translate(0,  0px); opacity: 100;}
-    100%   { transform: translate(0, -20px); opacity: 0;}   
+    0% { @include transform(translate(0,  0px)); opacity: 100;}
+    100%   { @include transform(translate(0, -20px)); opacity: 0;}   
 }

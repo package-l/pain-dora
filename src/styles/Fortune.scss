@@ -3,6 +3,7 @@
 .fortune-interaction-container {
 
     .instructionBox {
+        @include transform(translateY(-50%));
         position: absolute;
         width: 28vw;
         min-width: 200px;
@@ -10,9 +11,9 @@
         min-height: 80vh;
         //add height and make max-height px
         max-height: 90vh;
-        left: 5vw;
+        //left: 5vw;
+        left: 0;
         top: 50%;
-        transform: translateY(-50%);
         //bottom: 10vh;
         aspect-ratio: 457/778;
         cursor: pointer;
@@ -38,13 +39,14 @@
     }
 
     .right-section {
+        @include transform(translateY(-50%));
         position: absolute;
         width: 57vw;
         height: 100vh;
-        right: 5vw;
+        //right: 5vw;
+        right: 0;
         max-height: 90vh;
         top: 50%;
-        transform: translateY(-50%);
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 20% 20% 20% 20%;
@@ -78,6 +80,7 @@
     }*/
 
     .grid-item {
+        @include transform(translate(-50%, -50%));
         display: flex;
         align-items: center;
         justify-content: center;
@@ -85,7 +88,6 @@
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     #fortune-triangle-container {
@@ -357,13 +359,14 @@
 
     /* Do an horizontal flip when you move the mouse over the flip box container */
     .flip {
-        transform: rotateY(180deg);
+        @include transform(rotateY(180deg));
     }
 
     
     /* Position the front and back side */
     .flip-card-front, .flip-card-back {
         @include Sinhala;
+        @include transform(rotateX(0deg) translateX(-50%));
         line-height: 1.3vw;
         position: absolute;
         width: 70%;
@@ -371,28 +374,27 @@
         left: 50%;
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
-        transform: rotateX(0deg) translateX(-50%);
         display: flex;
         justify-content: space-around;
         align-items:center;
     }
 
     .flip-card-front div, .flip-card-back div {
+        @include transform(translateY(-50%));
         display: flex;
         align-items:center;
         height: 9vh;
         width: 100%;
         position: relative;
         top: 50%;
-        transform: translateY(-50%);
         cursor: pointer;
         justify-content: center;
     }
 
     .flip-card-back {
+        @include transform(rotateY(180deg) translateX(50%));
         position: absolute;
         color: black;
-        transform: rotateY(180deg) translateX(50%);
         z-index: 20;
         text-align: center;
     }

@@ -9,6 +9,7 @@
 
 .chess-interaction-container {
     .instructionBox {
+        @include transform(translateY(-50%));
         position: absolute;
         width: 28vw;
         min-width: 200px;
@@ -18,7 +19,6 @@
         max-height: 90vh;
         left: 5vw;
         top: 50%;
-        transform: translateY(-50%);
         //bottom: 10vh;
         aspect-ratio: 457/778;
         cursor: auto;
@@ -44,6 +44,7 @@
     
     .right-section {
         @include Sinhala;
+        @include transform(translateY(-50%));
         line-height: 1.85vh;
         position: absolute;
         width: 57vw;
@@ -51,7 +52,6 @@
         right: 5vw;
         max-height: 90vh;
         top: 50%;
-        transform: translateY(-50%);
         //bottom: 10vh;
         //apply grid to right-section
         display: grid;
@@ -88,10 +88,10 @@
     }
 
     .thought p {
+        @include transform(translate(-50%, -50%));
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         padding-left: 3vw;
         padding-right: 3vw;
     }
@@ -142,6 +142,7 @@
     }
 
     .board {
+        @include transform(translateY(-50%));
         aspect-ratio: 597 / 781;
         grid-area: board;
         background-size: contain;
@@ -150,7 +151,6 @@
         position: relative;
         width: 100%;
         top: 50%;
-        transform: translateY(-50%);
     }
 
     .piece-container {
@@ -209,24 +209,24 @@
     }
 
     .circle {
+        @include transform(translate(-50%, -50%));
         height: 55%;
         width: 55%;
         position: relative;
         background-color: grey;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         border-radius: 50%;
     }
 
     .square {
+        @include transform(translate(-50%, -50%));
         height: 55%;
         width: 55%;
         position: relative;
         background-color: grey;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .thought.active {

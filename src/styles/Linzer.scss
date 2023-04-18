@@ -32,6 +32,7 @@
 
     .cards {
         @include cardFont;
+        @include transform(translateY(-50%));
         white-space: pre-line;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -42,7 +43,6 @@
         gap: 2vh;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         width: 100%;
     }
 
@@ -110,13 +110,13 @@
     }
 
     .right-section {
+        @include transform(translateY(-50%));
         position: absolute;
         width: 57vw;
         height: 100vh;
         right: 5vw;
         max-height: 90vh;
         top: 50%;
-        transform: translateY(-50%);
     }
 
 }

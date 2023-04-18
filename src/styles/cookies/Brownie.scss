@@ -1,3 +1,5 @@
+@import '../Reusable.scss';
+
 @mixin fontA {
     font-family: Sinhala MN;
     font-size: 14pt;
@@ -18,6 +20,7 @@
 }
 
 .ripple-container {
+    @include transform(translateX(-50%));
     //left: 60%;
     //top: 18vh;
     //transform: translateX(-50%);
@@ -28,7 +31,6 @@
     aspect-ratio: 4/3;
     position: absolute;
     left: 45%;
-    transform: translateX(-50%)
 }
 
 .brownie-interaction-container .test {
@@ -52,10 +54,10 @@
 }
 
 .ripple-container .leftBox-img {
+    @include transform(translateX(-50%));
     position: absolute;
     left: 58%;
     top: 15%;
-    transform: translateX(-50%);
 }
 
 .leftBox {
@@ -100,6 +102,7 @@
 }
 
 .brownie-interaction-container .right-section {
+    @include transform(translateY(-50%));
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -110,7 +113,6 @@
     position: absolute;
     right: 0;
     top: 45%;
-    transform: translateY(-50%);
     padding-top: 45%;
 }
 
@@ -223,13 +225,13 @@
 }
 
 .right-section {
+    @include transform(translateY(-50%));
     position: absolute;
     width: 57vw;
     height: 100vh;
     right: 5vw;
     max-height: 90vh;
     top: 50%;
-    transform: translateY(-50%);
     //bottom: 10vh;
     //apply grid to right-section
 }
