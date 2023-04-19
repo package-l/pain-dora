@@ -4,14 +4,21 @@ import BackArrow from '../../BackArrow';
 import '../../../styles/Fortune.scss';
 import { fortuneData } from './fortuneData';
 import useDraggable from '../../useDraggable';
+import { useMediaQuery } from 'react-responsive';
 
 import Cookies from 'js-cookie';
 
 const Fortune = (props) => {
   Cookies.set('fortune', true);
 
+  //Media Query
+  const isSizingAspectRatio = useMediaQuery({
+    query: '(max-aspect-ratio: 16/9)'
+  })
+
   return (
     <div className="fortune-interaction-container">
+      <div className="content-container">
         <div className="instructionBox">
           <BackArrow />
           <div className="test" style={{
@@ -34,6 +41,7 @@ const Fortune = (props) => {
             <Shape id="fortune-square" side="right" text={fortuneData[0].square}/>
           </div>
         </div>
+      </div>
     </div>
   )
 }

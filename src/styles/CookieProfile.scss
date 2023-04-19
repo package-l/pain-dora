@@ -10,6 +10,27 @@
     //background-image: url('../img/Madeleine/Madeleine BG.png');
     background-size: cover;
     overflow-y: hidden;
+
+    .container-90 {
+        @include transform(translate(-50%, -50%));
+        //display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        max-width: 90%;
+        //width: 85%; //alternative
+        //height: 85%; //alternative
+        height: 90%;
+        aspect-ratio: 16/9;
+        
+        .content-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    }
 }
 
 /*.character-left-section {
@@ -34,9 +55,8 @@
     height: 5vh;
     width: 5vh;
     //other styling puts it in upper corner again
-    //top: 5vh;
-    top: 5vh;
-    left: 0.8vw;
+    top: 6%;
+    left: 3.5%;
     background-color: black;
     clip-path: polygon(100% 0, 50% 50%, 100% 100%);
     border: none;
@@ -52,17 +72,19 @@
 
 .character-card {
     @include transform(translateY(-50%));
-    width: 28vw;
+    //width: 30%;
     background-color: white;
-    min-height: 80vh;
-    min-width: 200px;
-    max-height: 90vh;
-    max-width: 400px;
+    //min-height: 75%;
+    //min-width: 350px;
+    height: 97%;
+    //max-height: 800px;
+    max-width: 40%;
+    min-width: 100px;
     position: absolute;
     //left: 5vw;
     left: 0;
     top: 50%;
-    bottom: 10vh;
+    //bottom: 10vh;
     outline: 0.6vh double black;
     outline-offset: -2vh;
     aspect-ratio: 457 / 778;
@@ -156,6 +178,9 @@
 .test {
     @include instructionFont;
     width: 18vw;
+    min-width: 250px;
+    max-width: 300px;
+    max-height: 30%;
     //height:30vh;  
     aspect-ratio: 753 / 457;
     display: table; 
@@ -166,9 +191,9 @@
     background-repeat: no-repeat;
     background-position: center;
     //height: 28vh;
-    margin-top: 57vh;
+    position: relative;
+    top: 65%;
     text-align: center;
-    max-width: 300px;
 }
 
 .consumerBox .dialogue {
@@ -199,3 +224,43 @@
     width: 100vw;
     position: absolute;
 }*/
+
+
+
+.instructionBox {
+    @include transform(translateY(-50%));
+    position: absolute;
+    height: 97%;
+    width: auto;
+    max-width: 40%;
+    min-width: 100px;
+    left: 0;
+    top: 50%;
+    aspect-ratio: 457/778;
+    cursor: auto;
+}
+
+.instructionBox .dialogue {
+    color: white;
+    white-space: pre-line;
+    max-height: 25%;
+    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    top: 2%;
+    position: relative;
+    aspect-ratio: 753 / 457;
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell;  
+}
+
+.right-section {
+    @include Sinhala;
+    @include transform(translateY(-50%));
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    top: 50%;
+}

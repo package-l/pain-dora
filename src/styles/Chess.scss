@@ -1,25 +1,20 @@
 @import './Reusable.scss';
 
 .chess-interaction-container {
-    height: 90vh;
-    width: 90vw;
-    position: absolute;
-    overflow: hidden;
-}
 
-.chess-interaction-container {
-    .instructionBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    /*.instructionBox {
         @include transform(translateY(-50%));
         position: absolute;
-        width: 28vw;
-        min-width: 200px;
-        max-width: 400px;
-        min-height: 80vh;
-        //add height and make max-height px
-        max-height: 90vh;
+        height: 97%;
+        width: auto;
+        max-width: 40%;
+        min-width: 100px;
         left: 0;
         top: 50%;
-        //bottom: 10vh;
         aspect-ratio: 457/778;
         cursor: auto;
     }
@@ -27,15 +22,12 @@
     .instructionBox .dialogue {
         color: white;
         white-space: pre-line;
-        max-height: 25vh;
-        padding: 2vh;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        //width: 17vw;
-        //left: 50%;
-        //transform: translateX(-50%);
-        //top: 70%;
-        //height: 20vh;
+        max-height: 25%;
+        padding: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        top: 2%;
+        position: relative;
         aspect-ratio: 753 / 457;
         text-align:center; 
         vertical-align: middle;
@@ -45,15 +37,19 @@
     .right-section {
         @include Sinhala;
         @include transform(translateY(-50%));
-        line-height: 1.85vh;
         position: absolute;
-        width: 57vw;
-        height: 100vh;
+        width: 60%;
+        height: 100%;
         right: 0;
-        max-height: 90vh;
         top: 50%;
-        //bottom: 10vh;
-        //apply grid to right-section
+        
+        display: grid;
+        grid-template-columns: 48%;
+        grid-template-rows: auto;
+        grid-template-areas: "thoughts board";
+    }*/
+
+    .right-section {
         display: grid;
         grid-template-columns: 48%;
         grid-template-rows: auto;
@@ -67,7 +63,7 @@
         max-height: 90vh;
         height: 100%;
         display: grid;
-        grid-template-rows: 14.3% 14.3% 14.3% 14.3% 14.3% 14.3%;
+        grid-template-rows: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
         grid-template-areas:
             "thought-h8"
             "thought-b4"
@@ -79,6 +75,7 @@
     }
 
     .thought {
+        grid-area: thoughts;
         visibility: hidden;
         width: 75%;
         aspect-ratio: 774/333;
@@ -104,6 +101,7 @@
         grid-area: thought-b4;
         position: relative;
         right: 0%;
+        height: 100%;
     }
 
     #thought-a5 {

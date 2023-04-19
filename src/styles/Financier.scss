@@ -7,57 +7,26 @@
     letter-spacing: 0.1em;
 }
 
-.financier-interaction-container {
+/*.financier-interaction-container {
     height: 90vh;
     width: 90vw;
     position: absolute;
     overflow: hidden;
-}
+}*/
 
 .financier-interaction-container {
     .instructionBox {
-        @include transform(translateY(-50%));
-        position: absolute;
-        width: 28vw;
-        min-width: 200px;
-        max-width: 400px;
-        min-height: 80vh;
-        //add height and make max-height px
-        max-height: 90vh;
-        left: 0;
-        top: 50%;
-        //bottom: 10vh;
-        aspect-ratio: 457/778;
         cursor: pointer;
-    }
-
-    .instructionBox .dialogue {
-        color: white;
-        max-height: 25vh;
-        padding: 2vh;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        //width: 17vw;
-        //left: 50%;
-        //transform: translateX(-50%);
-        //top: 70%;
-        //height: 20vh;
-        aspect-ratio: 753 / 457;
-        text-align:center; 
-        vertical-align: middle;
-        display: table-cell;  
+        
+        p { //FLAG - some way to get rid of google box for clicking? (maybe style a link idk?)
+            pointer-events: none;
+        }
     }
     
     .right-section {
         @include Sinhala;
         @include transform(translateY(-50%));
         line-height: 1.85vh;
-        position: absolute;
-        width: 57vw;
-        height: 100vh;
-        right: 0;
-        max-height: 90vh;
-        top: 50%;
         //bottom: 10vh;
         //apply grid to right-section
         display: grid;

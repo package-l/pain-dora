@@ -153,7 +153,7 @@ const Home = () => {
                   <Link to="/fortune"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
                 </div>
                 <div className="fin">
-                  <Link to="/financier"><img className="financier cookie" src={Financier} alt="Financier Character"></img></Link>
+                  <Link to="/financier"><img className="financier cookie" src={Financier} alt="Financier Character"></img><p>$ $ $</p></Link>
                 </div>
                 <div className="f2-down">
                   <DownArrow nextFloor={"ground"}/>
@@ -198,9 +198,15 @@ const Home = () => {
                   }
                 <div className="circles">
                   <div className="bigcircleborder"></div>
-                  <div className="bigcircle circle"><p>Garden<br />of Eating</p></div>
-                  <div className="bloodcircle circle"><p>Blood<br />Pool</p></div>
-                  <div className="watercircle circle"><p>Water<br />Pond</p></div>
+                  <div className="bigcircle circle"><p style={{
+                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '3vh'}`
+                  }}>Garden<br />of Eating</p></div>
+                  <div className="bloodcircle circle"><p style={{
+                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '3vh'}`
+                  }}>Blood<br />Pool</p></div>
+                  <div className="watercircle circle"><p style={{
+                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '3vh'}`
+                  }}>Water<br />Pond</p></div>
                 </div>
                 <div className="cellar-down">
                   <DownArrow nextFloor={"basement"}/>
