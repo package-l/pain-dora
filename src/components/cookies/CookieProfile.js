@@ -57,6 +57,7 @@ const CookieProfile = (props) => {
           left: '50%',
           top: '50%',
           transform: 'translate(-50%, -50%)'
+          
         }}>
           <div className="character-card">
             <div className="character-card-border"></div>
