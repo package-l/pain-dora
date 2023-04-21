@@ -1,0 +1,57 @@
+@import './Reusable.scss';
+
+.soft-interaction-container {
+
+    .right-section {
+        width: 65%;
+        display: grid;
+        grid-template-columns: 60%;
+        grid-template-rows: 60%;
+        grid-template-areas: "left right" "left trash";
+        grid-gap: 5%;
+    }
+
+    .bigBox, .smallBox {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .bigBox {
+        @include transform(translateY(-50%));
+        grid-area: left;
+        width: 100%;
+        aspect-ratio: 602/711;
+        top: 50%;
+    }
+
+    .smallBox {
+        grid-area: right;
+        width: 90%;
+        aspect-ratio: 599/736;
+    }
+
+    .trash {
+        grid-area: trash;
+        background-color: black;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+
+        position: absolute;
+    }
+
+    .word-parts, .space {
+        float: left;
+    }
+
+    .word-parts:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    .nohover {
+        pointer-events: none;
+    }
+}

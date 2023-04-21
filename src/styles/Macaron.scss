@@ -10,6 +10,10 @@
     height: 100%;
     position: relative;
 
+    .right-section {
+        width: 65%;
+    }
+
     .dialogueBox {
         @include dialogueText;
         @include transform(translateY(-50%));

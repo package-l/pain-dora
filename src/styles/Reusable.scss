@@ -74,7 +74,8 @@ $grey-color: grey;
 @mixin instructionFont {
     @include tracking(100);
     font-family: Sinhala MN, sans-serif;
-    font-size: 0.8vw;
+    //white-space: pre-line;
+    font-size: 0.9vw;
     line-height: 2.1vh;
 }
 

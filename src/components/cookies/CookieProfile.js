@@ -12,7 +12,7 @@ import Linzer from './Linzer/Linzer';
 import Macaron from './Macaron';
 import Chess from './Chess';
 import Wafer from './Wafer';
-import SoftCookie from './SoftCookie';
+import SoftCookie from './Soft/SoftCookie';
 import Financier from './Financier';
 //import '../../styles/Madeleine.scss';
 

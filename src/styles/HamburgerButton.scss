@@ -38,16 +38,17 @@
 }
 
 .hamburgerwrapper {
-    @include transform(translate(-25%, 10%));
+    @include transform(translate(-50%, -50%));
     position: absolute;
-    top: 24%;
-    left: 50%;
+    top: 50%;
+    left: 60%;
 }
 
 #map .hamburgerwrapper {
-    @include transform(translate(-25%, 10%));
+    @include transform(translate(-50%, -50%));
     position: absolute;
-    top: 24%;
+    //top: 24%;
+    top: 50%;
     right: -50%;
 }
 

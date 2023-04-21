@@ -8,6 +8,8 @@
 
     .right-section {
         @include cardFont;
+        left: 44%; //take these out to do large grid
+        width: 52%; //take these out to do large grid
         white-space: pre-line;
         aspect-ratio: 1/1 !important;
         display: grid;
@@ -111,7 +113,7 @@
     #tape-1 {
         @include transform(translate(-50%, -50%));
         position: absolute;
-        left: 50%;
+        left: 38%;
         top: 40%;
     }
 

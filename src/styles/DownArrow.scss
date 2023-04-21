@@ -1,6 +1,7 @@
 @import './Reusable.scss';
 
 @mixin font {
+    @include tracking(150);
     font-family: Sinhala MN, sans-serif;
     font-size: 1.6vh;
 }

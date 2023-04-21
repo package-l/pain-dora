@@ -5,9 +5,13 @@
     height: 100%;
     position: relative;
 
+    .content-container {
+        width: 105%;
+    }
     
     .right-section {
         @include nameFont;
+        width: 65%;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 20% 20% 20% 20%;
@@ -68,6 +72,14 @@
 
     #fortune-rhombus-container {
         grid-area: rhombus;
+    }
+
+    #fortune-rhombus-container .close,
+    #fortune-circle-container .close,
+    #fortune-pentagon-container .close,
+    #fortune-square-container .close
+    {
+        @include transform(translateY(-40%));
     }
 
     #fortune-circle-container {
@@ -206,6 +218,7 @@
 
     #fortune-number1 .flip-card-back div {
         color: #da1f27 !important;
+        font-weight: bold;
     }
 
     #fortune-number2 .flip-card-back {
@@ -215,6 +228,7 @@
 
     #fortune-number2 .flip-card-front div {
         color: #da1f27;
+        font-weight: bold;
     }
 
     .fortune-paper p {
@@ -254,6 +268,8 @@
     .fortune-paper p {
         visibility: hidden;
     }
+
+
 
 }
 

@@ -1,16 +1,24 @@
 export const cookieData = [
     {
         "name": "softcookie",
-        "fullname": "Madame Fortune",
+        "fullname": "SoFT cookIE(s)",
         "description": "Age: Physically 21 - ??? Emotionally 2",
         "icon": require('../../img/icons/Icon_Madeleine.png'),
         "img": require('../../img/Madeleine/Madeleine.png'),
-        "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
+        "bgImg": require('../../img/Soft/Soft_BG.png'),
+        "customAssets": {
+            "instructionsBox": require('../../img/Soft/SoftCookie_Instruction.png'),
+            "instructionText": `Undo Soft Cookies'\nlearnt self destructive phrases,\n
+                                into self loving affirmations,\nby dragging words into the trash !`,
+            "dialogueBox_Big": require('../../img/Soft/SoftCookie_Big.png'),
+            "dialogueBox_Small": require('../../img/Soft/SoftCookie_Small.png'),
+            "dialogueTextData": require('./Soft/softData'),
+        }
     },
     {
         "name": "macaron",
         "fullname": "mADamE mAcarOn",
-        "description": "Age : 87",
+        "description": "Age : 1 - 12+",
         "icon": require('../../img/icons/Icon_Macaron.png'),
         "img": require('../../img/Macaron/Macaron.png'),
         "bgImg": require('../../img/Macaron/BG_Macaron_GreyWhite.png'),
@@ -325,7 +333,7 @@ export const cookieData = [
             "instructionBox": require('../../img/Financier/Black_Box_Financier.png'),
             "interactionBox1": require('../../img/Financier/White_Box_1_Financier.png'),
             "interactionBox2": require('../../img/Financier/White_Box_2_Financier.png'),
-            "instructionText": `Click Here\nto Add Cache !`,
+            "instructionText": `Tap here\nto pay w/ cache !`,
             "dialogue": [
 
                 {

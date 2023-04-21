@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import Cookies from 'js-cookie';
@@ -16,7 +16,8 @@ import Linzer from '../img/icons/Icon_Linzer.png';
 import Macaron from '../img/icons/Icon_Macaron.png';
 import Madeleine from '../img/icons/Icon_Madeleine.png';
 import Financier from '../img/icons/Icon_Financier.png';
-import SoftCookie from '../img/icons/Icon_SoftCookie.png';
+import SoftCookieCrack from '../img/icons/Icon_SoftCookie.png';
+import SoftCookie from '../img/icons/Icon_Soft_Cookie_Black.png';
 import Wafer from '../img/icons/Icon_Wafer.png';
 
 // Import components
@@ -40,6 +41,10 @@ const Home = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openMap, setOpenMap] = useState(false);
 
+  const [isSoftCookieCracked, setIsSoftCookieCracked] = useState(false);
+  
+  const [largeFont, setLargeFont] = useState('4.5vw');
+
   const wrapperRef = useRef();
 
   //Media Query
@@ -59,6 +64,14 @@ const Home = () => {
 
   const handleLiftLid = (eve) => {
     wrapperRef.current.scrollIntoView({behavior: 'smooth'});
+  }
+
+  const handleSoftCookieHover = () => {
+    setIsSoftCookieCracked(!isSoftCookieCracked);
+  }
+
+  const handleSoftCookieLeave = () => {
+    setIsSoftCookieCracked(!isSoftCookieCracked);
   }
 
   //useEffect(() => {
@@ -96,7 +109,9 @@ const Home = () => {
           <section className="map-container" id="roof">
             <div className="cookie-map-container">
               <div className="lid-text" onClick={(eve) => handleLiftLid(eve)}>
-                <p>lift lid</p>
+                <p style={{
+                  fontSize: `${isSizingAspectRatio ? '4.5vw' : '8vh'}`
+                }}>lift lid</p>
                 <div className="roof-down">
                     <DownArrow nextFloor={"wrapper"}/>
                 </div>
@@ -144,16 +159,16 @@ const Home = () => {
             <div className="cookie-map-container">
               <div id="f2-grid" className="content">
                 <div className="mac">
-                  <Link to="/macaron"><img className="macaron cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
+                  <Link to="/macaron" className="macaron"><img className="cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
                 </div>
                 <div className="che">
-                  <Link to="/chess"><img className="chess cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
+                  <Link to="/chess" className="chess"><img className="cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
                 </div>
                 <div className="for">
-                  <Link to="/fortune"><img className="fortune cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
+                  <Link to="/fortune" className="fortune"><img className="cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
                 </div>
-                <div className="fin">
-                  <Link to="/financier"><img className="financier cookie" src={Financier} alt="Financier Character"></img><p>$ $ $</p></Link>
+                <div className="fin" >
+                  <Link to="/financier" className="financier"><img className="cookie" src={Financier} alt="Financier Character"></img><p>$ $ $</p></Link>
                 </div>
                 <div className="f2-down">
                   <DownArrow nextFloor={"ground"}/>
@@ -165,16 +180,16 @@ const Home = () => {
             <div className="cookie-map-container">
               <div id="ground-grid" className="content">
                 <div className="mad">
-                  <Link to="/madeleine"><img className="madeleine cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
+                  <Link to="/madeleine" className="madeleine"><img className="cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
                 </div>
                 <div className="waf">
-                  <Link to="/wafer"><img className="wafer cookie" src={Wafer} alt="Wafer cookie"></img></Link>
+                  <Link to="/wafer" className="wafer"><img className="cookie" src={Wafer} alt="Wafer cookie"></img></Link>
                 </div>
                 <div className="linz">
-                  <Link to="/linzer"><img className="linzer cookie" src={Linzer} alt="Linzer cookie"></img></Link>
+                  <Link to="/linzer" className="linzer"><img className="cookie" src={Linzer} alt="Linzer cookie"></img></Link>
                 </div>
                 <div className="bro">
-                  <Link to="/brownie"><img className="brownie cookie" src={Brownie} alt="Brownie cookie"></img></Link>
+                  <Link to="/brownie" className="brownie"><img className="cookie" src={Brownie} alt="Brownie cookie"></img></Link>
                 </div>
                 <div className="ground-down">
                   <DownArrow nextFloor={"cellar"}/>
@@ -189,7 +204,7 @@ const Home = () => {
                 {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') &&
                 Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
                     <div className="sof">
-                      <Link to="/softcookie"><img className="softcookie cookie" src={SoftCookie} alt="Soft Cookie Character"></img></Link> 
+                      <Link to="/softcookie" className="softcookie"><img className="cookie" src={`${isSoftCookieCracked ? SoftCookieCrack : SoftCookie}`} alt="Soft Cookie Character" onMouseOver={handleSoftCookieHover} onMouseOut={handleSoftCookieLeave}></img></Link> 
                     </div> :
                     (<div className="Locked">
                       <img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img>
@@ -202,10 +217,10 @@ const Home = () => {
                     fontSize: `${isSizingAspectRatio ? '1.5vw' : '3vh'}`
                   }}>Garden<br />of Eating</p></div>
                   <div className="bloodcircle circle"><p style={{
-                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '3vh'}`
+                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '2.6vh'}`
                   }}>Blood<br />Pool</p></div>
                   <div className="watercircle circle"><p style={{
-                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '3vh'}`
+                    fontSize: `${isSizingAspectRatio ? '1.5vw' : '2.6vh'}`
                   }}>Water<br />Pond</p></div>
                 </div>
                 <div className="cellar-down">

@@ -17,10 +17,10 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        max-width: 90%;
+        max-width: 97%;
         //width: 85%; //alternative
         //height: 85%; //alternative
-        height: 90%;
+        height: 87%;
         aspect-ratio: 16/9;
         
         .content-container {
@@ -76,7 +76,7 @@
     background-color: white;
     //min-height: 75%;
     //min-width: 350px;
-    height: 97%;
+    height: 95%;
     //max-height: 800px;
     max-width: 40%;
     min-width: 100px;
@@ -151,7 +151,7 @@
 
 .instructionBox {
     @include transform(translateY(-50%));
-    position: absolute;
+    position: relative;
     width: 28vw;
     min-width: 200px;
     max-width: 400px;
@@ -177,10 +177,11 @@
 
 .test {
     @include instructionFont;
+    @include transform(translate(-50%, -50%));
     width: 18vw;
-    min-width: 250px;
-    max-width: 300px;
-    max-height: 30%;
+    min-width: 150px;
+    //max-width: 300px;
+    //max-height: 25%;
     //height:30vh;  
     aspect-ratio: 753 / 457;
     display: table; 
@@ -191,8 +192,9 @@
     background-repeat: no-repeat;
     background-position: center;
     //height: 28vh;
-    position: relative;
-    top: 65%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
     text-align: center;
 }
 
@@ -230,7 +232,7 @@
 .instructionBox {
     @include transform(translateY(-50%));
     position: absolute;
-    height: 97%;
+    height: 95%;
     width: auto;
     max-width: 40%;
     min-width: 100px;
@@ -241,6 +243,7 @@
 }
 
 .instructionBox .dialogue {
+    font-weight: 600;
     color: white;
     white-space: pre-line;
     max-height: 25%;

@@ -4,9 +4,20 @@
     @include Sinhala;
     font-size: 0.8vw;
     line-height: 2.3vh;
+    font-weight: 600;
 }
 
 .linzer-interaction-container {
+    .content-container {
+        width: 103%;
+    }
+
+    .right-section {
+        @include transform(translateY(-48%));
+        top: 46%;
+        height: 90%;
+        width: 64%;
+    }
 
     .dialogue {
         padding-left: 2vh !important;
@@ -28,7 +39,7 @@
             "card0 card1"
             "card2 card3"
             "card4 card5";
-        gap: 2vh;
+        gap: 3% 3%;
         position: absolute;
         top: 50%;
         width: 100%;
@@ -76,8 +87,6 @@
         grid-area: card5;
     }
 
-
-
     .answer-card {
         color: black;
         flex-direction: column;
@@ -86,7 +95,8 @@
 
     .answer-card-text {
         margin: 0.5vw;
-        margin-top: 0.9vw;
+        margin-top: 1vw;
+        font-weight: normal;
     }
 
     .question-card-text {

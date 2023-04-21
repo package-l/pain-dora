@@ -47,26 +47,29 @@ const Madeleine = (props) => {
 
   return (
     <div className="madeleine-interaction-container">
-        <div className="instructionBox">
-          <BackArrow />
-          <div className="test" onClick={handleMadeleineDialogueClick} style={{
-            backgroundImage: `url(${props.data.customAssets.consumerBox})`
-          }}><p className="dialogue">{consumerText}</p></div>
-        </div>
-        <div className="right-section" ref={ref}>
-          {list.map((item, i) => 
-            (
-              item.text !== undefined &&
-              
-                <div className="madeleineBox" key={i} id={`index-${i}`} style={{
-                    right: item.right,
-                    top: item.top
-                }}>
-                  <img src={props.data.customAssets.madeleineBox} alt="Mad Mad Baby Madeleine Dialogue Box"></img>
-                  <div className="mad-dialogue">{item.text}</div>
-                </div>
-            )
-          )}
+        <div className="content-container">
+
+          <div className="instructionBox">
+            <BackArrow />
+            <div className="test" onClick={handleMadeleineDialogueClick} style={{
+              backgroundImage: `url(${props.data.customAssets.consumerBox})`
+            }}><p className="dialogue">{consumerText}</p></div>
+          </div>
+          <div className="right-section" ref={ref}>
+            {list.map((item, i) => 
+              (
+                item.text !== undefined &&
+                
+                  <div className="madeleineBox" key={i} id={`index-${i}`} style={{
+                      right: item.right,
+                      top: item.top
+                  }}>
+                    <img src={props.data.customAssets.madeleineBox} alt="Mad Mad Baby Madeleine Dialogue Box"></img>
+                    <div className="mad-dialogue">{item.text}</div>
+                  </div>
+              )
+            )}
+          </div>
         </div>
     </div>
   )

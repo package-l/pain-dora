@@ -34,7 +34,7 @@ export const linzerQuestionData = [
                                     "isTruth": false,
                                 }
                         },
-                        "initialState": "||",
+                        "initialState": "| |",
                         "hoverState": "And, can you tell me anything about\nSoft Cookie ?",
                 },
         }, {
@@ -53,7 +53,7 @@ export const linzerQuestionData = [
                                     "isTruth": true,
                                 }
                         },
-                        "initialState": "|||",
+                        "initialState": "| | |",
                         "hoverState": `To be honest,\nI don't recall Soft Cookie being devious ?`,
                 },
         }, {
@@ -72,7 +72,7 @@ export const linzerQuestionData = [
                                     "isTruth": true,
                                 }
                         },
-                        "initialState": "||||",
+                        "initialState": "| | | |",
                         "hoverState": `Alright, is there anything else you can say that\nyou feel would be fruitful for this case ?`,
                 },
         }, {
@@ -91,7 +91,7 @@ export const linzerQuestionData = [
                                     "isTruth": false,
                                 },
                         },
-                        "initialState": "|||||",
+                        "initialState": "| | | | |",
                         "hoverState": `For technicality purposes, I will be\nomitting anything unbeneficial to this investigation .`,
                 },
         }, {
@@ -110,7 +110,7 @@ export const linzerQuestionData = [
                                     "isTruth": true,
                                 }
                         },
-                        "initialState": "||||||",
+                        "initialState": "| | | | | |",
                         "hoverState": `Okay, well I will be going now,\nenjoy the rest of your day .`
                 },
         }
