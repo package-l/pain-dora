@@ -8,46 +8,73 @@ const SoftCookie = (props) => {
     Cookies.set('softcookie', true);
 
     const [list, setList] = useState(props.data.customAssets.dialogueTextData.softData);
+    const [smallList, setSmallList] = useState(props.data.customAssets.smallDialogueTextData.softDataSmall);
     const divRef = useRef();
     const dragItemOver = useRef();
+    const box = useRef();
 
-    const dragStart = (eve, i, j, k) => {
-      divRef.current = list[i][j][k];
+    const dragStart = (eve, i, j, k, size) => {
+      if (size === "big") {
+        divRef.current = list[i][j][k];
+      }
+      else {
+        divRef.current = smallList[i][j][k];
+      }
+      box.current = size;
     }
 
-    const dragEnter = (eve, i, j, k) => {
-      dragItemOver.current = list[i][j][k];
+    const dragEnter = (eve, i, j, k, size) => {
+      if (size === "big") {
+        dragItemOver.current = list[i][j][k];
+      }
+      else {
+        dragItemOver.current = smallList[i][j][k];
+      }
     }
 
-    console.log(list);
 
-    const onTrashDrop = (eve, index) => {
-
+    const onTrashDrop = (eve) => {
       const copyList = [...list];
+      const smallCopyList = [...smallList]
+
+      //DO THIS FOR SMALL LIST
+      if (box.current === "small") {
+        smallCopyList.forEach((line, index) => {
+          line.forEach((word, j) => {
+            word.forEach((item, k) => {
+              if (smallList[index][j][k] === divRef.current ) {
+                console.log(smallList[index][j][k].style);
+                smallList[index][j][k].style = "hidden";
+              }
+            })
+          })
+        });
+        //console.log(copyList);
+        setSmallList(smallCopyList);
+      }
+
+      else if (box.current === "big") {
+        copyList.forEach((line, index) => {
+          line.forEach((word, j) => {
+            word.forEach((item, k) => {
+              if (list[index][j][k] === divRef.current ) {
+                console.log(list[index][j][k].style);
+                list[index][j][k].style = "hidden";
+              }
+            })
+          })
+        });
+        console.log(copyList);
+        setList(copyList);
+      }
+
       //const dragItemContent = copyListItems[divRef.current];
 
 
   
       console.log(divRef.current);
       let newList = [];
-
-      copyList.forEach((line, index) => {
-        line.forEach((word, j) => {
-          word.forEach((item, k) => {
-            if (list[index][j][k] === divRef.current ) {
-              console.log(list[index][j][k].style);
-              list[index][j][k].style = "hidden";
-            }
-          })
-        })
-      });
-      console.log(copyList);
-      setList(copyList);
     }
-
-    useEffect(() => {
-
-    }, [list])
 
     // REVIEW this
     const onDragOver = (eve) => {
@@ -69,72 +96,52 @@ const SoftCookie = (props) => {
             backgroundImage: `url(${props.data.customAssets.dialogueBox_Big})`
           }}>
             {list.map((line, i) => (
-              <div key={i} className={`line${i+1}`}>
+              <div key={i} className={`line`}>
                 {line.map((word, j) => (
-                  <div key={`word${j}`} className={`word${i+1}`}>
-                  {word.map((item, k) => item.isVisible === true ? (
-                    <div 
+                  <p key={`word${j}`} className={`word`}>
+                  {word.map((item, k) => item.isDeletable === true ? (
+                    <p 
                     key={`item${k}`} 
                     className="word-parts"                 
-                    onDragStart={(eve) => dragStart(eve, i, j, k)}
-                    onDragEnter={(eve) => dragEnter(eve, i, j, k)}
+                    onDragStart={(eve) => dragStart(eve, i, j, k, "big")}
+                    onDragEnter={(eve) => dragEnter(eve, i, j, k, "big")}
                     draggable
-                    style={{ visibility: `${item.style}` }}>{item.word}</div>
+                    style={{ visibility: `${item.style}` }}>{item.word}</p>
                   ): (
-                    <div key={`item${k}`} id={k} className="word-parts nohover">{item.word}</div>
+                    <p key={`item${k}`} id={k} className="word-parts nohover">{item.word}</p>
                   ))}
-                <p className="space">&nbsp;</p></div>
+                <p className="space">&nbsp;</p></p>
                 ))}
-              </div>
+              <br/> <br/></div>
             ))}
-            {/*Object.values(list).map((line, i) => (
-              <div key={i} className={`line${i+1}`}>
-                {line.map((word, j) => (
-                  <div key={`word${j}`} className={`word${i+1}`}>
-                    {word.map((item, k) => item[1] === true ? (
-                      <div 
-                      key={`item${k}`} 
-                      className="word-parts"                 
-                      onDragStart={(eve) => dragStart(eve, k)}
-                      onDragEnter={(eve) => dragEnter(eve, k)}
-                      draggable
-                      style={{ visibility: `${item[2]}` }}>{item[0]}</div>
-                    ): (
-                      <div key={`item${k}`} id={k} className="word-parts nohover">{item[0]}</div>
-                    ))}
-                  <p className="space">&nbsp;</p></div>
-                ))}<br/><br/>
-              </div>
-            ))
-                    */}
           </div>
 
           <div className="smallBox" style={{
             backgroundImage: `url(${props.data.customAssets.dialogueBox_Small})`
           }}>
-
+            {smallList.map((line, i) => (
+              <div key={i} className={`line`}>
+                {line.map((word, j) => (
+                  <p key={`small-word${j}`} className={`word`}>
+                  {word.map((item, k) => item.isDeletable === true ? (
+                    <p 
+                    key={`small-item${k}`} 
+                    className="word-parts"                 
+                    onDragStart={(eve) => dragStart(eve, i, j, k, "small")}
+                    onDragEnter={(eve) => dragEnter(eve, i, j, k, "small")}
+                    draggable
+                    style={{ visibility: `${item.style}` }}>{item.word}</p>
+                  ): (
+                    <p key={`small-item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+                  ))}
+                <p className="space">&nbsp;</p></p>
+                ))}
+              <br/> <br/></div>
+            ))}
           </div>
           <div className="trash"        
             onDragOver={(e) => onDragOver(e)}
             onDrop={(e) => onTrashDrop(e)}></div>
-            {/*<div className="thoughts">
-                {list.map((item, i) => (
-                  <div key={i} className={`thought${activePiece === item.name ? " active" : ""}`} id={`thought-${item.name}`} style={{
-                    backgroundImage: `url(${props.data.customAssets.bubbleBox})`,
-                  }}><p>{item.text}</p></div>
-                ))
-                }
-              </div>
-            <div className="board" style={{
-              backgroundImage: `url(${props.data.customAssets.chessBoard})`
-            }}>
-              <div className="piece-container">
-                {list.map((item, i) => (
-                  <div key={i} className={`${item.shape}`} id={`${item.name}`} onMouseOver={() => handleHover(item)} onMouseOut={handleLeave}></div>
-                ))
-                }
-              </div>
-              </div>*/}
         </div>
 
       </div>

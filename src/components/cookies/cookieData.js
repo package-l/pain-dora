@@ -13,6 +13,7 @@ export const cookieData = [
             "dialogueBox_Big": require('../../img/Soft/SoftCookie_Big.png'),
             "dialogueBox_Small": require('../../img/Soft/SoftCookie_Small.png'),
             "dialogueTextData": require('./Soft/softData'),
+            "smallDialogueTextData": require('./Soft/softDataSmall'),
         }
     },
     {

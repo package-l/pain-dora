@@ -24,6 +24,8 @@
         width: 100%;
         aspect-ratio: 602/711;
         top: 50%;
+        white-space: pre-line;
+        //justify-content: center;
     }
 
     .smallBox {
@@ -42,8 +44,12 @@
         position: absolute;
     }
 
+    .word {
+        display: inline;
+    }
+
     .word-parts, .space {
-        float: left;
+        display: inline;
     }
 
     .word-parts:hover {
@@ -54,4 +60,9 @@
     .nohover {
         pointer-events: none;
     }
+
+    .line {
+        text-align: center;
+    }
+
 }
