@@ -37,8 +37,8 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <div className="backarrow" onClick={() => navigate(-1)}></div>
-      <div className="hamburger-container">
+      <div className="backarrow" onClick={() => navigate(-1)} role="button" aria-label="Go to previous page"></div>
+      <div className="hamburger-container" role="button" aria-label="Open website navigation menu">
         <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
         <NavMenu open={openMenu} setOpen={setOpenMenu}/>
       </div>
@@ -50,9 +50,9 @@ const Gallery = () => {
               <div className="chess">
                 <div className="image">
                   {Cookies.get("chess") ? 
-                    <Link to="/chess"><img className="visited" src={galleryData[0].characters.chess.visited} alt="Queen Knowah"></img></Link> :
+                    <Link to="/chess" ><img className="visited" src={galleryData[0].characters.chess.visited} alt="Link to Queen Knowah's Profile Page"></img></Link> :
                     <>
-                      <img src={galleryData[0].characters.chess.locked} alt="Locked Queen Knowah"></img>
+                      <img src={galleryData[0].characters.chess.locked} alt="Locked Queen Knowah Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -63,9 +63,9 @@ const Gallery = () => {
               <div className="wafer">
                 <div className="image">
                   {Cookies.get("wafer") ? 
-                    <img className="visited" src={galleryData[0].characters.wafer.visited} alt="Flaky Wafer Jake"></img> :
+                    <img className="visited" src={galleryData[0].characters.wafer.visited} alt="Link to Flaky Wafer Jake's Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.wafer.locked} alt="Locked Flaky Wafer Jake"></img>
+                      <img src={galleryData[0].characters.wafer.locked} alt="Locked Flaky Wafer Jake Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -76,9 +76,9 @@ const Gallery = () => {
               <div className="financier">
                 <div className="image">
                   {Cookies.get("financier") ? 
-                    <img className="visited" src={galleryData[0].characters.financier.visited} alt="Monsieur Financier"></img> :
+                    <img className="visited" src={galleryData[0].characters.financier.visited} alt="Link to Monsieur Financier's Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.financier.locked} alt="Locked Monsieur Financier"></img>
+                      <img src={galleryData[0].characters.financier.locked} alt="Locked Monsieur Financier Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -89,9 +89,9 @@ const Gallery = () => {
               <div className="macaron">
                 <div className="image">
                   {Cookies.get("macaron") ? 
-                    <img className="visited" src={galleryData[0].characters.macaron.visited} alt="Madame Macaron"></img> :
+                    <img className="visited" src={galleryData[0].characters.macaron.visited} alt="Link to Madame Macaron Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.macaron.locked} alt="Locked Madame Macaron"></img>
+                      <img src={galleryData[0].characters.macaron.locked} alt="Locked Madame Macaron Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -102,9 +102,9 @@ const Gallery = () => {
               <div className="soft">
                 <div className="image">
                   {Cookies.get("softcookie") ? 
-                    <img className="visited" src={galleryData[0].characters.soft.visited} alt="Soft Cookie"></img> :
+                    <img className="visited" src={galleryData[0].characters.soft.visited} alt="Link to Soft Cookie Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.soft.locked} alt="Locked Soft Cookie"></img>
+                      <img src={galleryData[0].characters.soft.locked} alt="Locked Soft Cookie Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -115,9 +115,9 @@ const Gallery = () => {
               <div className="linzer">
                 <div className="image">
                   {Cookies.get("linzer") ? 
-                    <img className="visited" src={galleryData[0].characters.linzer.visited} alt="Lying Linzer Lindsay"></img> :
+                    <img className="visited" src={galleryData[0].characters.linzer.visited} alt="Link to Lying Linzer Lindsay Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.linzer.locked} alt="Locked Lying Linzer Lindsay"></img>
+                      <img src={galleryData[0].characters.linzer.locked} alt="Locked Lying Linzer Lindsay Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -128,9 +128,9 @@ const Gallery = () => {
               <div className="brownie">
                 <div className="image">
                   {Cookies.get("brownie") ? 
-                    <img className="visited" src={galleryData[0].characters.brownie.visited} alt="Little Debbie Downer Brownie"></img> :
+                    <img className="visited" src={galleryData[0].characters.brownie.visited} alt="Link to Little Debbie Downer Brownie Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.brownie.locked} alt="Locked Little Debbie Downer Brownie"></img>
+                      <img src={galleryData[0].characters.brownie.locked} alt="Locked Little Debbie Downer Brownie Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   
@@ -142,9 +142,9 @@ const Gallery = () => {
               <div className="madeleine">
                 <div className="image">
                   {Cookies.get("madeleine") ? 
-                    <img className="visited" src={galleryData[0].characters.madeleine.visited} alt="Mad Mad Babu Madeleine"></img> :
+                    <img className="visited" src={galleryData[0].characters.madeleine.visited} alt="Link to Mad Mad Baby Madeleine's Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.madeleine.locked} alt="Locked Mad Mad Baby Madeleine"></img>
+                      <img src={galleryData[0].characters.madeleine.locked} alt="Locked Mad Mad Baby Madeleine Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
@@ -155,9 +155,9 @@ const Gallery = () => {
               <div className="fortune">
                 <div className="image">
                   {Cookies.get("fortune") ? 
-                    <img className="visited" src={galleryData[0].characters.fortune.visited} alt="Mis-Fortune"></img> :
+                    <img className="visited" src={galleryData[0].characters.fortune.visited} alt="Link to Mis-Fortune's Profile Page"></img> :
                     <>
-                      <img src={galleryData[0].characters.fortune.locked} alt="Locked Mis-Fortune"></img>
+                      <img src={galleryData[0].characters.fortune.locked} alt="Locked Mis-Fortune Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
                   }
