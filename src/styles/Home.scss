@@ -507,9 +507,17 @@ body::-webkit-scrollbar {
         max-height: 53vh;
         max-width: 53vh;
         border-radius: 50%;
-        outline: 4px solid #0000004D;
-        outline-offset: 3px;
-        //box-shadow: 0 0 0 3px gray
+        -webkit-box-shadow:inset 0px 0px 0px 4px lightgrey,
+                            0px 0px 0px 3px white,
+                            0px 0px 0px 5px lightgrey;
+        -moz-box-shadow:inset 0px 0px 0px 4px lightgrey,
+                            0px 0px 0px 3px white,
+                            0px 0px 0px 5px lightgrey;
+        box-shadow:inset 0px 0px 0px 0.5px #0000004D,
+                            0px 0px 0px 3px white,
+                            0px 0px 0px 7px #0000004D;
+        //outline: 4px solid #0000004D;
+        //outline-offset: 3px;
     }
 
     .bigcircle {
