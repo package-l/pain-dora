@@ -207,8 +207,10 @@ const Home = () => {
                       <Link to="/softcookie" className="softcookie"><img className="cookie" src={`${isSoftCookieCracked ? SoftCookieCrack : SoftCookie}`} alt="Soft Cookie Character" onMouseOver={handleSoftCookieHover} onMouseOut={handleSoftCookieLeave}></img></Link> 
                     </div> :
                     (<div className="Locked">
-                      <img className="softcookie cookie" src={'https://upload.wikimedia.org/wikipedia/commons/a/a8/Ski_trail_rating_symbol_black_circle.png'} alt="Soft Cookie Character"></img>
-                      <FontAwesomeIcon className="Icon" icon={faLock} />
+                      <div className="softcookie">
+                        <img className="cookie" src={SoftCookie} alt="Soft Cookie Character"></img>
+                        <FontAwesomeIcon className="Icon" icon={faLock} />
+                      </div>
                     </div>)
                   }
                 <div className="circles">

@@ -9,13 +9,21 @@
         grid-template-rows: 60%;
         grid-template-areas: "left right" "left trash";
         grid-gap: 5%;
+
+        @include transform(translateY(-48%));
+        top: 46%;
+        height: 90%;
     }
 
     .bigBox, .smallBox {
+        @include Sinhala;
+        @include tracking(120);
+        line-height: 2vh;
+        font-weight: 600;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        position: absolute;
+        position: relative;
     }
 
     .bigBox {
@@ -28,6 +36,30 @@
         //justify-content: center;
     }
 
+    .box-container {
+        @include transform(translate(-50%, -50%));
+        position: relative;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 85%;
+    }
+
+    .box-container-small {
+        @include transform(translate(-50%, -50%));
+        position: relative;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 75%;
+        width: 83%;
+        white-space: pre-line;
+    }
+
     .smallBox {
         grid-area: right;
         width: 90%;
@@ -35,13 +67,16 @@
     }
 
     .trash {
+        @include transform(translate(-50%, -50%));
+        top: 50%;
+        left: 50%;
         grid-area: trash;
         background-color: black;
         height: 120px;
         width: 120px;
         border-radius: 50%;
 
-        position: absolute;
+        position: relative;
     }
 
     .word {
@@ -63,6 +98,15 @@
 
     .line {
         text-align: center;
+    }
+
+    .trash .icon {
+        @include transform(translate(-50%, -50%));
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        color: white;
+        height: 5vh;
     }
 
 }

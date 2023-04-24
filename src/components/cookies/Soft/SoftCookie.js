@@ -4,6 +4,9 @@ import Cookies from 'js-cookie';
 import BackArrow from '../../BackArrow';
 import '../../../styles/SoftCookie.scss';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 const SoftCookie = (props) => {
     Cookies.set('softcookie', true);
 
@@ -87,7 +90,7 @@ const SoftCookie = (props) => {
         <div className="instructionBox">
           <BackArrow />
           <div className="test" style={{
-                  backgroundImage: `url(${props.data.customAssets.instructionBox})`
+                  backgroundImage: `url(${props.data.customAssets.instructionsBox})`
               }}><p className="dialogue">{props.data.customAssets.instructionText}</p>
           </div>
         </div>
@@ -95,53 +98,59 @@ const SoftCookie = (props) => {
           <div className="bigBox" style={{
             backgroundImage: `url(${props.data.customAssets.dialogueBox_Big})`
           }}>
-            {list.map((line, i) => (
-              <div key={i} className={`line`}>
-                {line.map((word, j) => (
-                  <p key={`word${j}`} className={`word`}>
-                  {word.map((item, k) => item.isDeletable === true ? (
-                    <p 
-                    key={`item${k}`} 
-                    className="word-parts"                 
-                    onDragStart={(eve) => dragStart(eve, i, j, k, "big")}
-                    onDragEnter={(eve) => dragEnter(eve, i, j, k, "big")}
-                    draggable
-                    style={{ visibility: `${item.style}` }}>{item.word}</p>
-                  ): (
-                    <p key={`item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+            <div className="box-container">
+              {list.map((line, i) => (
+                <div key={i} className={`line`}>
+                  {line.map((word, j) => (
+                    <p key={`word${j}`} className={`word`}>
+                    {word.map((item, k) => item.isDeletable === true ? (
+                      <p 
+                      key={`item${k}`} 
+                      className="word-parts"                 
+                      onDragStart={(eve) => dragStart(eve, i, j, k, "big")}
+                      onDragEnter={(eve) => dragEnter(eve, i, j, k, "big")}
+                      draggable
+                      style={{ visibility: `${item.style}` }}>{item.word}</p>
+                    ): (
+                      <p key={`item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+                    ))}
+                  <p className="space">&nbsp;</p></p>
                   ))}
-                <p className="space">&nbsp;</p></p>
-                ))}
-              <br/> <br/></div>
-            ))}
+                <br/></div>
+              ))}
+            </div>
           </div>
 
           <div className="smallBox" style={{
             backgroundImage: `url(${props.data.customAssets.dialogueBox_Small})`
           }}>
-            {smallList.map((line, i) => (
-              <div key={i} className={`line`}>
-                {line.map((word, j) => (
-                  <p key={`small-word${j}`} className={`word`}>
-                  {word.map((item, k) => item.isDeletable === true ? (
-                    <p 
-                    key={`small-item${k}`} 
-                    className="word-parts"                 
-                    onDragStart={(eve) => dragStart(eve, i, j, k, "small")}
-                    onDragEnter={(eve) => dragEnter(eve, i, j, k, "small")}
-                    draggable
-                    style={{ visibility: `${item.style}` }}>{item.word}</p>
-                  ): (
-                    <p key={`small-item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+            <div className="box-container-small">
+              {smallList.map((line, i) => (
+                <div key={i} className={`line`}>
+                  {line.map((word, j) => (
+                    <p key={`small-word${j}`} className={`word`}>
+                    {word.map((item, k) => item.isDeletable === true ? (
+                      <p 
+                      key={`small-item${k}`} 
+                      className="word-parts"                 
+                      onDragStart={(eve) => dragStart(eve, i, j, k, "small")}
+                      onDragEnter={(eve) => dragEnter(eve, i, j, k, "small")}
+                      draggable
+                      style={{ visibility: `${item.style}` }}>{item.word}</p>
+                    ): (
+                      <p key={`small-item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+                    ))}
+                  <p className="space">&nbsp;</p></p>
                   ))}
-                <p className="space">&nbsp;</p></p>
-                ))}
-              <br/> <br/></div>
-            ))}
+                  <br/></div>
+              ))}
+            </div>
           </div>
           <div className="trash"        
             onDragOver={(e) => onDragOver(e)}
-            onDrop={(e) => onTrashDrop(e)}></div>
+            onDrop={(e) => onTrashDrop(e)}>
+              <FontAwesomeIcon className="icon" icon={faTrash} />
+          </div>
         </div>
 
       </div>

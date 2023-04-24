@@ -597,6 +597,10 @@ body::-webkit-scrollbar {
         grid-area: soft;
     }
 
+    .Locked {
+        grid-area: soft;
+    }
+
     // Basement
 
     #ground-grid.content {
@@ -753,13 +757,17 @@ body::-webkit-scrollbar {
         transition: 1s ease;
     }
 
+    .Locked {
+        position: relative;
+    }
+
     .Icon {
+        @include transform(translate(-50%, -50%));
         position: absolute;
-        top: 62%;
-        left: 21%;
+        top: 50%;
+        left: 50%;
         color: white;
-        z-index: 30;
-        height: 2vh;
+        height: 1vw;
     }
 
     // BASEMENT STYLING
