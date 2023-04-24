@@ -6,7 +6,7 @@ export const galleryData = [
         "characters": {
             "chess": {
                 "locked": "placeholder",
-                "visited": '../img/Chess/Chess.png',
+                "visited": require('../img/Chess/Chess.png'),
                 "name": "QuEEn knowAh",
                 "description": `Dark Chocolate, White Chocolate,\nCharcoal, & Vanilla Bean`
             },
