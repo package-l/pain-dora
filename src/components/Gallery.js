@@ -42,7 +42,7 @@ const Gallery = () => {
         <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
         <NavMenu open={openMenu} setOpen={setOpenMenu}/>
       </div>
-      <div className="white-background">
+      <div role="main" className="white-background">
         <div className="border1">
 
             <h1 className="title">Flavour - Profiles</h1>
