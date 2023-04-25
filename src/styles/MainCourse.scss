@@ -2,7 +2,7 @@
 
 @mixin fontA {
     font-family: Sinhala MN;
-    font-size: 1.8vh;
+    font-size: 1vw;
     color: black;
     letter-spacing: 0.1vw;
     line-height: 3vh;
@@ -15,90 +15,125 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 94%;
 }
 
-//HAMBURGER CONTAINER IS SCROLLING WHY IDK HELP K THX
-.maincourse .hamburger-container {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100vw !important;
-    height: 0 !important;
+.maincourse {
+
+    .grid-container {
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        position: relative;
+        aspect-ratio: 4/3;
+
+        /*> *:not(:first-child){
+            display: inline-block;
+            vertical-align: middle;
+            margin: 2vw;
+            padding: 2vw;
+        }*/
+
+        .middle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .middle-circle {
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            width: 64vh;
+            height: 64vh;
+            position: relative;
+        
+            -webkit-box-shadow:inset 0px 0px 0px 2px lightgrey,
+                                0px 0px 0px 4px white,
+                                0px 0px 0px 10px lightgrey;
+            -moz-box-shadow:inset 0px 0px 0px 2px lightgrey,
+                                0px 0px 0px 4px white,
+                                0px 0px 0px 10px lightgrey;
+            box-shadow:inset 0px 0px 0px 4px lightgrey,
+                                0px 0px 0px 4px white,
+                                0px 0px 0px 15px lightgrey;
+        }
+        
+        .middle-circle div {
+            padding: 10%;
+            /*position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);*/
+        }
+        
+        .middle-circle div:last-of-type {
+            position: relative;
+            bottom: 9%;
+        }
+
+        .left-text {
+            padding-right: 20%;
+        }
+
+        .right-text {
+            padding-left: 20%;
+        }
+        
+        .left-text, .right-text {
+            @include transform(translate(-50%, -50%));
+            position: relative;
+            top: 50%;
+            left: 50%;
+            //display: flex;
+            //flex-direction: row;
+            text-align: justify;
+            text-align-last: justify;
+            text-align: left;
+            text-justify: inter-character;
+            line-height: 4vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .heartwrapper {
+            animation:pulse 1s infinite;
+        }
+        
+        .heart {
+            position: relative;
+            top: -2vh;
+            height: 8vh;
+            padding-top: 1vh;
+        }
+        
+        @keyframes pulse {
+            10% {@include transform(scale(1.1))}
+        }
+    }
+
+    .hamburger-container {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100vw !important;
+        height: 0 !important;
+    }
+
+    .navmenu {
+        padding-left: 6vh;
+        left: 0;
+    }
+
+    .backarrow {
+        top: 14vh;
+        left: 2vw;
+        z-index: 10;
+    }
 }
 
-.maincourse .navmenu {
-    padding-left: 6vh;
-    left: 0;
-}
 
-.maincourse .backarrow {
-    top: 14vh;
-    left: 2vw;
-    z-index: 10;
-}
 
-.maincourse > *:not(:first-child){
-    display: inline-block;
-    vertical-align: middle;
-    margin: 2vw;
-    padding: 2vw;
-}
-
-.middle-circle {
-    //border: 3px solid grey;
-    //outline: 8px solid grey;
-    //outline-offset: 5px;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    width: 65vh;
-    position: relative;
-
-    -webkit-box-shadow:inset 0px 0px 0px 2px lightgrey,
-                        0px 0px 0px 4px white,
-                        0px 0px 0px 10px lightgrey;
-    -moz-box-shadow:inset 0px 0px 0px 2px lightgrey,
-                        0px 0px 0px 4px white,
-                        0px 0px 0px 10px lightgrey;
-    box-shadow:inset 0px 0px 0px 2px lightgrey,
-                        0px 0px 0px 4px white,
-                        0px 0px 0px 10px lightgrey;
-}
-
-.middle-circle div {
-    padding: 10%;
-    /*position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);*/
-}
-
-.middle-circle div:last-of-type {
-    position: absolute;
-    bottom: 5%;
-    //line-height: 3vh;
-}
-
-.left-text, .right-text {
-    display: flex;
-    flex-direction: row;
-    text-align: justify;
-    text-align-last: justify;
-    text-align: left;
-    text-justify: inter-character;
-    line-height: 4vh;
-}
-
-.heartwrapper {
-    animation:pulse 1s infinite;
-}
-
-.heart {
-    height: 8vh;
-    padding-top: 1vh;
-}
-
-@keyframes pulse {
-	10% {@include transform(scale(1.1))}
-}

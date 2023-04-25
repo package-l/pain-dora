@@ -12,15 +12,18 @@ html, body {
     overscroll-behavior-y: none;
     overflow-x: hidden;
     overflow: -moz-scrollbars-none;
-}
-
-body {
-    //height: 100%;
-    //width: 100%;
     position: relative;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+//body {
+    //height: 100%;
+    //width: 100%;
+    //position: relative;
+   //-ms-overflow-style: none;  /* IE and Edge */
+   //scrollbar-width: none;  /* Firefox */
+//}
 
 body::-webkit-scrollbar {
     display: none;
@@ -93,6 +96,15 @@ body::-webkit-scrollbar {
     #roof .cookie-map-container {
         background: url('../img/house/Lid.png') no-repeat center center;
         background-size: cover;
+    }
+
+    #wrapper .cookie-map-container{
+        background-image: url('../img/house/Wrapper_Plain.png');
+        background-size: cover;
+        /*height: 100vh;
+        width: 100%;*/
+        /*overflow-x: hidden;*/
+        z-index: 10;
     }
 
     #floor2 .cookie-map-container{
@@ -204,16 +216,6 @@ body::-webkit-scrollbar {
         line-height: 2.1vh;
     }
     
-    #wrapper .cookie-map-container{
-        background-image: url('../img/house/Wrapper_Plain.png');
-        background-size: cover;
-        /*height: 100vh;
-        width: 100%;*/
-        /*overflow-x: hidden;*/
-        z-index: 10;
-        
-    }
-    
     #wrapper-grid.content {
         height: 100%;
         width: 100%;
@@ -296,7 +298,6 @@ body::-webkit-scrollbar {
         display: grid;
         grid-template-columns: inherit;
         grid-template-rows: 50%;
-        //grid-template-columns: 15.4% 13.5% 18.5% 26.5% 26.5%;
         grid-template-columns: 20% 20% 20% 19% 16% 5%;
         grid-template-areas:
             ". macaron . fortune . ."
@@ -327,15 +328,6 @@ body::-webkit-scrollbar {
     .bro {
         grid-area: brownie;
     }
-
-    /*.fortune {
-        @include transform(translateY(-50%));
-        position: relative;
-        top: 51%;
-        height: 9vw;
-    }*/
-
-
 
     .fortune {
         @include transform(translateY(-50%));
@@ -420,18 +412,6 @@ body::-webkit-scrollbar {
         animation: slide 4s;
     }
 
-    /*@include keyframes(slide) {
-        25% {
-            @include transform(translateX(-90%));
-        }
-        65% {
-            @include transform(translateX(-30%));
-        }
-        100% {
-            @include transform(translateX(-60%));
-        }
-    }*/
-
     @-webkit-keyframes slide {
         25% {
           -webkit-transform: translateX(-90%);
@@ -498,154 +478,7 @@ body::-webkit-scrollbar {
         transition: visibility 1s ease-in;
     }
 
-
-
-    //cellar with circles
-
-    #cellar {
-        position: relative;
-        overflow: visible;
-    }
-
-    .fork {
-        @include transform(rotate(-35deg));
-        position: absolute;
-        height: 60vh;
-        left: 20%;
-        top: -26%;
-        overflow: visible;
-        z-index: 10;
-    }
-
-    #cellar-grid.content {
-
-        display: grid;
-        grid-template-columns: inherit;
-        grid-template-rows: 50%;
-        grid-template-columns: 30% 65% 5%;
-        grid-template-areas:
-            ".  . ."
-            "soft . cellardown"
-    }
-
-    .cellar-down {
-        grid-area: cellardown;
-    }
-
-    .bigcircleborder {
-        @include transform(translate(-50%, -40%));
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border: 2px solid #0000004D;
-        height: 30vw;
-        width: 30vw;
-        max-height: 53vh;
-        max-width: 53vh;
-        border-radius: 50%;
-        -webkit-box-shadow:inset 0px 0px 0px 4px lightgrey,
-                            0px 0px 0px 3px white,
-                            0px 0px 0px 5px lightgrey;
-        -moz-box-shadow:inset 0px 0px 0px 4px lightgrey,
-                            0px 0px 0px 3px white,
-                            0px 0px 0px 5px lightgrey;
-        box-shadow:inset 0px 0px 0px 0.5px #0000004D,
-                            0px 0px 0px 3px white,
-                            0px 0px 0px 7px #0000004D;
-        //outline: 4px solid #0000004D;
-        //outline-offset: 3px;
-    }
-
-    .bigcircle {
-        @include fontA;
-        @include transform(translate(-50%, -36%));
-        border: none;
-        border-radius: 50%;
-        height: 22vw;
-        width: 22vw;
-        max-height: 38vh;
-        max-width: 38vh;
-        text-align: center;
-        line-height: 25pt;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        background: linear-gradient(to top, rgb(208, 15, 15) 50%, #0000001A 50%);
-        background-size: 100% 220%;
-        background-position: top;
-        transition: all 1s ease-out;
-    }
-
-    .bigcircle:hover {
-        background-position: bottom;
-        color: white;
-    }
-
-    .bigcircle:hover ~ .circle {
-        background-position: bottom;
-        color: white;
-    }
-
-    .bloodcircle p, .watercircle p {
-        @include transform(translate(-50%, -50%));
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    }
-
-    .bigcircle p {
-        padding-top: 40%;
-        /*transition: all .6s ease-out;*/
-    }
-
-    .bloodcircle {
-        @include fontA;
-        border: none;
-        border-radius: 50%;
-        height: 8vw;
-        width: 8vw;
-        max-width: 100px;
-        max-height: 100px;
-        text-align: center;
-        position: absolute;
-        top: 13%;
-        left: 64%;
-
-        background: linear-gradient(to top, rgb(208, 15, 15) 50%, #0000001A 50%);
-        background-size: 100% 220%;
-        background-position: top;
-        transition: all 1s ease-out;
-    }
-
-    .watercircle {
-        @include fontA;
-        border: none;
-        border-radius: 50%;
-        height: 8vw;
-        width: 8vw;
-        max-width: 100px;
-        max-height: 100px;
-        text-align: center;
-        position: absolute;
-        top: 19%;
-        left: 76%;
-
-        background: linear-gradient(to top, rgb(208, 15, 15) 50%, #0000001A 50%);
-        background-size: 100% 220%;
-        background-position: top;
-        transition: all 1s ease-out;
-    }
-
-    .sof { 
-        grid-area: soft;
-    }
-
-    .Locked {
-        grid-area: soft;
-    }
-
-    // Basement
+    // Ground styling
 
     #ground-grid.content {
         display: grid;
@@ -776,7 +609,7 @@ body::-webkit-scrollbar {
         10% {@include transform(scale(1.5))}
         100% {@include transform(scale(1))}
     }
-      
+        
     .brownie {
         @include transform(rotate(190deg));
         display: inline-block;
@@ -795,6 +628,138 @@ body::-webkit-scrollbar {
     .brownie:hover {
         @include transform(scale(0.5) rotate(190deg));
         transition: 1s ease;
+    }    
+
+
+
+    // Cellar styling
+
+    #cellar {
+        position: relative;
+        overflow: visible;
+    }
+
+    .fork {
+        @include transform(rotate(-35deg));
+        position: absolute;
+        height: 60vh;
+        left: 20%;
+        top: -26%;
+        overflow: visible;
+        z-index: 10;
+    }
+
+    #cellar-grid.content {
+
+        display: grid;
+        grid-template-columns: inherit;
+        grid-template-rows: 50%;
+        grid-template-columns: 30% 65% 5%;
+        grid-template-areas:
+            ".  . ."
+            "soft . cellardown"
+    }
+
+    .cellar-down {
+        grid-area: cellardown;
+    }
+
+    .bigcircleborder {
+        @include transform(translate(-50%, -40%));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 2px solid #0000004D;
+        height: 30vw;
+        width: 30vw;
+        max-height: 53vh;
+        max-width: 53vh;
+        border-radius: 50%;
+        -webkit-box-shadow:inset 0px 0px 0px 4px lightgrey,
+                            0px 0px 0px 3px white,
+                            0px 0px 0px 5px lightgrey;
+        -moz-box-shadow:inset 0px 0px 0px 4px lightgrey,
+                            0px 0px 0px 3px white,
+                            0px 0px 0px 5px lightgrey;
+        box-shadow:inset 0px 0px 0px 0.5px #0000004D,
+                            0px 0px 0px 3px white,
+                            0px 0px 0px 7px #0000004D;
+    }
+
+    .bigcircle {
+        @include fontA;
+        @include transform(translate(-50%, -36%));
+        border: none;
+        border-radius: 50%;
+        height: 22vw;
+        width: 22vw;
+        max-height: 38vh;
+        max-width: 38vh;
+        text-align: center;
+        line-height: 25pt;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        background: linear-gradient(to top, rgb(208, 15, 15) 50%, #0000001A 50%);
+        background-size: 100% 220%;
+        background-position: top;
+        transition: all 1s ease-out;
+    }
+
+    .bigcircle:hover {
+        background-position: bottom;
+        color: white;
+    }
+
+    .bigcircle:hover ~ .circle {
+        background-position: bottom;
+        color: white;
+    }
+
+    .bloodcircle p, .watercircle p {
+        @include transform(translate(-50%, -50%));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .bigcircle p {
+        padding-top: 40%;
+    }
+
+    .bloodcircle, .watercircle {
+        @include fontA;
+        border: none;
+        border-radius: 50%;
+        height: 8vw;
+        width: 8vw;
+        max-width: 100px;
+        max-height: 100px;
+        text-align: center;
+        position: absolute;
+        background: linear-gradient(to top, rgb(208, 15, 15) 50%, #0000001A 50%);
+        background-size: 100% 220%;
+        background-position: top;
+        transition: all 1s ease-out;
+    }
+
+    .bloodcircle {
+        top: 13%;
+        left: 64%;
+    }
+
+    .watercircle {
+        top: 19%;
+        left: 76%;
+    }
+
+    .sof { 
+        grid-area: soft;
+    }
+
+    .Locked {
+        grid-area: soft;
     }
 
     .softcookie {
@@ -831,7 +796,7 @@ body::-webkit-scrollbar {
 
     // BASEMENT STYLING
     
-    .map {
+    .base-map {
         @include transform(translate(-50%, -50%));
         max-height: 100%;
         max-width: 100%;

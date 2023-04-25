@@ -232,7 +232,7 @@ const Home = () => {
             </div>
           </section>
           <section className="map-container basement" id="basement">
-            <img className="map" src={Basement} alt="Under Construction Basement Floor Map"></img>
+            <img className="base-map" src={Basement} alt="Under Construction Basement Floor Map"></img>
           </section>
         </div>
         }

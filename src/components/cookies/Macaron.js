@@ -24,19 +24,21 @@ const Macaron = (props) => {
   return (
     <div className="macaron-interaction-container">
         {/*<div className="content-container">*/}
-          <div className="instructionBox">
+          {/*<div className="instructionBox">
             <BackArrow />
             <div className="instruction-image" style={{
               backgroundImage: `url(${props.data.customAssets.instructionsBox})`
             }}><div className="instruction-text"><p className="dialogue">Click & Chew-se<br/>the Macarons in the Box,<br/>
             from top to bottom,<br/>to converse .</p></div></div>
           </div>
-          <div className="right-section">
+          <div className="right-section">*/}
             <div className="dialogueBox" style={{
                 backgroundImage: `url(${props.data.customAssets.dialogueBox})`
             }}>
               {activeButton !== null &&
-                <div className="mac-dialogue">
+                <div className="mac-dialogue" style={{
+                  fontSize: `${props.wide ? '0.75vw' : '1.8vh'}`
+                }}>
                   <div id="you">You :</div><br/>         
                   {(activeButton === 3 || activeButton === 1 ) ?
                     <div className="you">
@@ -75,7 +77,7 @@ const Macaron = (props) => {
                   </div>
               )}
             </div>
-          </div>
+          {/*</div>*/}
        {/* </div>*/}
     </div>
   )

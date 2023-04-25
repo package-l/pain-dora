@@ -16,17 +16,29 @@
 
 .financier-interaction-container {
     .instructionBox {
+
+        position: relative;
+        
+
+        .instruction-image {
+            @include transform(translate(-50%, -35%)); //this is where you position it
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-bottom: 0;
+            //margin-bottom: -3vh;
+        }
+
         cursor: pointer;
         
-        p { //FLAG - some way to get rid of google box for clicking? (maybe style a link idk?)
-            pointer-events: none;
-        }
     }
     
     .right-section {
         @include Sinhala;
         @include transform(translateY(-50%));
+        font-size: 0.8vw;
         line-height: 1.85vh;
+        width: 63%;
         //bottom: 10vh;
         //apply grid to right-section
         display: grid;
@@ -62,6 +74,7 @@
         left: 50%;
         top: 50%;
         width: 90%;
+        padding-top: 5%;
     }
 
     .dollar-sign {

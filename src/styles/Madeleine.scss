@@ -10,10 +10,20 @@
 
     .instructionBox {
         cursor: pointer;
+        position: relative;
+
+        .instruction-image {
+            @include transform(translate(-50%, -35%));
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-bottom: 0;
+            // /margin-bottom: -3vh;
+        }
     }
 
     .right-section {
-        width: 57vw;
+        width: 60%;
         height: 100vh;
         right: 0;
         max-height: 90vh;

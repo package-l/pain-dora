@@ -17,10 +17,19 @@ const MainCourse = () => {
     query: '(min-width: 850px)' 
   })
   const isAspectRatio = useMediaQuery({
-    query: '(min-aspect-ratio: 8/3)'
+    query: '(max-aspect-ratio: 13/9)' // 8/3
   })
   const isTallScreen = useMediaQuery({
-    query: '(min-height: 450px)'
+    query: '(max-aspect-ratio: 22/9)'//'(min-height: 450px)'
+  })
+
+  // Sizing font media query
+  const isSizingAspectRatio = useMediaQuery({
+    query: '(max-aspect-ratio: 16/9)'
+  })
+
+  const isSizingNarrowAspectRatio = useMediaQuery({
+    query: '(max-aspect-ratio: 11/9)'
   })
 
   return (
@@ -37,38 +46,45 @@ const MainCourse = () => {
           <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
           <NavMenu open={openMenu} setOpen={setOpenMenu}/>
         </div>
-        <div className="left-text">
-          strings together a multitude<br></br>
-          of microaggressive<br></br>
-          behaviors that are carried<br></br>
-          onto adulthood<br></br>
-          illuminating how gravely<br></br>
-          these environmental factors<br></br>
-          effect everyone's personal<br></br>
-          human development,<br></br>
-          especially those coming<br></br>
-          of ages - emotionally,<br></br>
-          physically, mentally, etc.
-        </div>
-        <div className="middle-circle">
-          <div>This <br></br>Cookie Monster website ,</div>
-          <div className="heartwrapper"><img className="heart" src={Heart} alt="Heart"></img></div>
-          <div>aims to <br></br> create genuine, nourishing, & reflective practices, <br></br>
-                through exposing normalized toxic dialogues, <br></br>
-                between relationships of self & others.
+        <div className="grid-container" style={{
+          fontSize: `${isSizingAspectRatio ? '1vw' : '1.6vh'}`,
+          width: `${isSizingAspectRatio ? '90%' : '80%'}`
+        }}>
+          <div className="left-text">
+            strings together a multitude<br></br>
+            of microaggressive<br></br>
+            behaviors that are carried<br></br>
+            onto adulthood<br></br>
+            illuminating how gravely<br></br>
+            these environmental factors<br></br>
+            effect everyone's personal<br></br>
+            human development,<br></br>
+            especially those coming<br></br>
+            of ages - emotionally,<br></br>
+            physically, mentally, etc.
           </div>
-        </div>
-        <div className="right-text">
-          was created with<br></br>
-          love, compassion, &<br></br>
-          pain, in response to<br></br>
-          the lack of<br></br>
-          proper emotional & mental<br></br>
-          resources; in hopes<br></br>
-          to promote more<br></br>
-          emotional & mental<br></br>
-          health in education<br></br>
-          and us all..<br></br>
+          <div className="middle">
+            <div className="middle-circle">
+              <div>This <br></br>Cookie Monster website ,</div>
+              <div className="heartwrapper"><img className="heart" src={Heart} alt="Heart"></img></div>
+              <div>aims to <br></br> create genuine, nourishing, & reflective practices, <br></br>
+                    through exposing normalized toxic dialogues, <br></br>
+                    between relationships of self & others.
+              </div>
+            </div>
+          </div>
+          <div className="right-text">
+            was created with<br></br>
+            love, compassion, &<br></br>
+            pain, in response to<br></br>
+            the lack of<br></br>
+            proper emotional & mental<br></br>
+            resources; in hopes<br></br>
+            to promote more<br></br>
+            emotional & mental<br></br>
+            health in education<br></br>
+            and us all..<br></br>
+          </div>
         </div>
       </div>}
     </>

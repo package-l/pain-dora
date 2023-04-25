@@ -1,18 +1,23 @@
 @import './Reusable.scss';
 
 .soft-interaction-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
 
-    .right-section {
-        width: 65%;
+    .content-container {
+        width: 100%;
+        height: 100%;
         display: grid;
         grid-template-columns: 60%;
         grid-template-rows: 60%;
         grid-template-areas: "left right" "left trash";
         grid-gap: 5%;
 
-        @include transform(translateY(-48%));
-        top: 46%;
-        height: 90%;
+        position: absolute;
+        @include transform(translate(-50%, -50%));
+        top: 50% !important;
+        left: 50% !important;
     }
 
     .bigBox, .smallBox {
@@ -68,8 +73,8 @@
 
     .trash {
         @include transform(translate(-50%, -50%));
-        top: 50%;
-        left: 50%;
+        top: 30%;
+        left: 45%;
         grid-area: trash;
         background-color: black;
         height: 120px;

@@ -21,7 +21,7 @@ const Brownie = (props) => {
               >{()=> {}}</WaterWave>
             </div>
             <div className="instruction-image" style={{
-              backgroundImage: `url(${props.data.customAssets.instructionsBox})`
+              backgroundImage: `url(${props.data.customAssets.instructionBox})`
             }}><div className="instruction-text"><p className="dialogue">{`Move the Cursor\n
             around specific areas\n
             & find out what happens !`}</p></div></div>

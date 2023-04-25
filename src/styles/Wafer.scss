@@ -1,15 +1,25 @@
 @import './Reusable.scss';
 
+// MAKE IT SO THAT ONHOVER YOU TRANSITION FROM BLACK BACKGROUND TO WHITE AND SWITCH <P> LIKE LINZER,
+// THEN ON CLICK, THE GRID DISAPPEARS
+
 @mixin cardFont {
     @include Sinhala;
 }
 
 .wafer-interaction-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
 
-    .right-section {
+    .content-container {
         @include cardFont;
-        left: 44%; //take these out to do large grid
-        width: 52%; //take these out to do large grid
+        @include transform(translate(-50%, -50%));
+        font-size: 0.8vw;
+        top: 50% !important;
+        left: 50% !important;
+        //left: 44%; //take these out to do large grid
+        width: 90%; //take these out to do large grid
         white-space: pre-line;
         aspect-ratio: 1/1 !important;
         display: grid;
@@ -56,7 +66,7 @@
         grid-area: two;
     }
 
-    .black-grid {
+    /*.black-grid {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -68,7 +78,11 @@
         grid-template-areas:
             "one two three"
             "four five six"
-            "seven eight nine"
+            "seven eight nine";
+    }*/
+
+    .freeze {
+        pointer-events: none;
     }
 
     .black {

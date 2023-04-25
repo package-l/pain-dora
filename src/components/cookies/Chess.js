@@ -23,14 +23,14 @@ const Chess = (props) => {
   return (
     <div className="chess-interaction-container">
       <div className="content-container">
-        <div className="instructionBox">
+        {/*<div className="instructionBox">
           <BackArrow />
           <div className="instruction-image" style={{
                   backgroundImage: `url(${props.data.customAssets.instructionBox})`
               }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
           </div>
         </div>
-        <div className="right-section">
+            <div className="right-section">*/}
             <div className="thoughts">
                 {list.map((item, i) => (
                   <div key={i} className={`thought${activePiece === item.name ? " active" : ""}`} id={`thought-${item.name}`} style={{
@@ -49,9 +49,9 @@ const Chess = (props) => {
                 }
               </div>
             </div>
-        </div>
+        {/*</div>*/}
 
-      </div>
+              </div>
     </div>
   )
 }

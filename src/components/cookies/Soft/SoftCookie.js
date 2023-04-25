@@ -87,14 +87,14 @@ const SoftCookie = (props) => {
   return (
     <div className="soft-interaction-container">
       <div className="content-container">
-        <div className="instructionBox">
+        {/*<div className="instructionBox">
           <BackArrow />
           <div className="instruction-image" style={{
                   backgroundImage: `url(${props.data.customAssets.instructionsBox})`
               }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
           </div>
         </div>
-        <div className="right-section">
+            <div className="right-section">*/}
           <div className="bigBox" style={{
             backgroundImage: `url(${props.data.customAssets.dialogueBox_Big})`
           }}>
@@ -153,7 +153,7 @@ const SoftCookie = (props) => {
           </div>
         </div>
 
-      </div>
+      {/*</div>*/}
     </div>
   )
 }

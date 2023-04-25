@@ -32,7 +32,7 @@ export const linzerAnswerData = [
     }, {
         2 : {
             "line1": {
-                "text": `Clearly, you've remembered them all wrong,\n& have constructed some delusional sweetheart fantasy,\nto see only what you've wanted .`,
+                "text": `Clearly, you've remembered them all wrong, & have constructed some delusional sweetheart fantasy, to see only what you've wanted .`,
                 "isTruth": false,
             },
             "line2": {

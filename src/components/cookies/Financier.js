@@ -3,6 +3,7 @@ import Cookies from 'js-cookie';
 import '../../styles/Financier.scss'
 import audio from "../../img/Financier/cashier.mp3";
 import BackArrow from '../BackArrow';
+import { useMediaQuery } from 'react-responsive';
 
 const Financier = (props) => {
     Cookies.set('financier', true);
@@ -15,6 +16,16 @@ const Financier = (props) => {
     }]);
     
     const [ dollarAnimation, setDollarAnimation ] = useState(false);
+
+
+    // Sizing font media query
+    const isSizingAspectRatio = useMediaQuery({
+        query: '(max-aspect-ratio: 16/9)'
+    })
+
+    const isSizingNarrowAspectRatio = useMediaQuery({
+        query: '(max-aspect-ratio: 11/9)'
+    })
 
     const handleDialogueClick = () => {
         if (index <= props.data.customAssets.dialogue.length-1) {
@@ -39,63 +50,68 @@ const Financier = (props) => {
 
   return (
     <div className="financier-interaction-container">
-        <div className="instructionBox">
-            <BackArrow />
-            {list.map((item, i) => 
+        <div className="content-container">
+            <div className="instructionBox">
+                <BackArrow />
+                {list.map((item, i) => 
 
-                (text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
-                    <>
-                        {(i !== 0) &&
-                            <div className={`dollar-sign ${dollarAnimation ? "float": ""}`} style={{
-                                left: '20%', top: '13%', textAlign: 'start'
-                            }}>
-                                    + $ $ $
-                            </div>
-                        }
-                    </> :
-                    <>
-                        {(i !== 0) &&
-                            <div className={`dollar-sign ${dollarAnimation ? "float": ""}`} style={{
-                                right: '20%', top: '8%', textAlign: 'end'
-                            }}>
-                                    + $ $ $
-                            </div>
-                        }
-                    </>
-                )
-            }
-            <div className="instruction-image" onClick={handleDialogueClick} style={{
-                backgroundImage: `url(${props.data.customAssets.instructionBox})`
-            }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div></div>
-        </div>
-        <div className="right-section">
-            {list.map((item, i) => 
-                (
-                    text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
-                    
-                    <div className="financierBox" key={i} id={`financier-${i}`} style={{
-                        backgroundImage: `url(${props.data.customAssets.interactionBox1})`
-                    }}>
-                        <div className="fin-dialogue">{item.text}</div>
-                            {/*(i !== 0) &&
-                                <div className={`dollar-sign ${dollarAnimation ? "float": ""}`}>
+                    (text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
+                        <>
+                            {(i !== 0) &&
+                                <div className={`dollar-sign ${dollarAnimation ? "float": ""}`} style={{
+                                    left: '20%', top: '13%', textAlign: 'start'
+                                }}>
                                         + $ $ $
                                 </div>
-                */}
-                        </div> :
-                    <div className="financierBox" key={i} id={`financier-${i}`} style={{
-                        backgroundImage: `url(${props.data.customAssets.interactionBox2})`
+                            }
+                        </> :
+                        <>
+                            {(i !== 0) &&
+                                <div className={`dollar-sign ${dollarAnimation ? "float": ""}`} style={{
+                                    right: '20%', top: '8%', textAlign: 'end'
+                                }}>
+                                        + $ $ $
+                                </div>
+                            }
+                        </>
+                    )
+                }
+                <div className="instruction-image" onClick={handleDialogueClick} style={{
+                    backgroundImage: `url(${props.data.customAssets.instructionBox})`
+                }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div></div>
+            </div>
+            <div className="right-section">
+                {list.map((item, i) => 
+                    (
+                        text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
+                        
+                        <div className="financierBox" key={i} id={`financier-${i}`} style={{
+                            backgroundImage: `url(${props.data.customAssets.interactionBox1})`,
+                            fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.5vh'}`
                         }}>
-                        <div className="fin-dialogue">{item.text}</div>
-                            {/*(i !== 1) &&
-                                <div className={`dollar-sign ${dollarAnimation ? "float": ""}`}>
-                                        + $ $ $
-                                </div>
-                            */}
-                    </div>
+                            <div className="fin-dialogue">{item.text}</div>
+                                {/*(i !== 0) &&
+                                    <div className={`dollar-sign ${dollarAnimation ? "float": ""}`}>
+                                            + $ $ $
+                                    </div>
+                    */}
+                            </div> :
+                        <div className="financierBox" key={i} id={`financier-${i}`} style={{
+                            backgroundImage: `url(${props.data.customAssets.interactionBox2})`,
+                            fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.5vh'}`
+                            
+                            }}>
+                            <div className="fin-dialogue">{item.text}</div>
+                                {/*(i !== 1) &&
+                                    <div className={`dollar-sign ${dollarAnimation ? "float": ""}`}>
+                                            + $ $ $
+                                    </div>
+                                */}
+                        </div>
 
-                )
-            }
+                    )
+                }
+            </div>
         </div>
     </div>
   )

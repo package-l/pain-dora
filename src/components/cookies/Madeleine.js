@@ -1,10 +1,16 @@
 import '../../styles/Madeleine.scss';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 import Cookies from 'js-cookie';
 import BackArrow from '../BackArrow';
+import { useMediaQuery } from 'react-responsive';
 
-const Madeleine = (props) => {
+const Madeleine = forwardRef((props, isAspectRatio) => {
   Cookies.set('madeleine', true);
+
+      // Sizing font media query
+      const isSizingAspectRatio = useMediaQuery({
+        query: '(max-aspect-ratio: 16/9)'
+    })
 
   //State management for position of elements
   const [rightHeight, setRightHeight] = useState(0);
@@ -14,27 +20,33 @@ const Madeleine = (props) => {
   // State management for text dialogue
   const [index, setIndex] = useState(0);
   const [madeleineText, setMadeleineText] = useState();
+  const [list, setList] = useState([]);  
   const [consumerText, setConsumerText] = useState(<>This will be your dialogue box &mdash; the Investigator.<br /><br/>
   Please c/lick this black box<br/> to begin, & continue c/licking.</>);
-  const [list, setList] = useState([]);
 
-  const handleMadeleineDialogueClick = () => {
-    if (index < props.data.customAssets.dialogue.length-1) {
-      setIndex(index+1);
-    }
-    else {
-      setIndex(22);
-    }
-    if (props.data.customAssets.dialogue[index].speaker === "consumer") {
-      setConsumerText(props.data.customAssets.dialogue[index].text)
-      setMadeleineText(undefined)
-    }
-    else if (props.data.customAssets.dialogue[index].speaker === "madeleine") {
-      setMadeleineText(props.data.customAssets.dialogue[index].text);
-    }
-  } 
+  //useImperativeHandle(cookieRef, () => ({
+    const handleMadeleineDialogueClick = () => {
+   
+      if (index < props.data.customAssets.dialogue.length-1) {
+        setIndex(index+1);
+      }
+      else {
+        setIndex(22);
+      }
+      if (props.data.customAssets.dialogue[index].speaker === "consumer") {
+        console.log(props.data.customAssets.dialogue[index].text)
+        setConsumerText(props.data.customAssets.dialogue[index].text)
+        setMadeleineText(undefined)
+      }
+      else if (props.data.customAssets.dialogue[index].speaker === "madeleine") {
+        setMadeleineText(props.data.customAssets.dialogue[index].text);
+      }
+  
+    } 
+  //}))
 
   useEffect(() => { 
+
     //this edit allows text to not infinitely loop (using a state variable)
     setRightHeight(ref.current.clientHeight);
     setRightWidth(ref.current.clientWidth);
@@ -47,12 +59,13 @@ const Madeleine = (props) => {
 
   return (
     <div className="madeleine-interaction-container">
-        <div className="content-container">
+        <div className="content-container" ref={ref}>
 
           <div className="instructionBox">
             <BackArrow />
             <div className="instruction-image" onClick={handleMadeleineDialogueClick} style={{
-              backgroundImage: `url(${props.data.customAssets.consumerBox})`
+              backgroundImage: `url(${props.data.customAssets.instructionBox})`,
+              fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.6vh'}`
             }}><div className="instruction-text"><p className="dialogue">{consumerText}</p></div></div>
           </div>
           <div className="right-section" ref={ref}>
@@ -73,6 +86,6 @@ const Madeleine = (props) => {
         </div>
     </div>
   )
-}
+})
 
 export default Madeleine

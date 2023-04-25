@@ -19,13 +19,13 @@ const Fortune = (props) => {
   return (
     <div className="fortune-interaction-container">
       <div className="content-container">
-        <div className="instructionBox">
+        {/*<div className="instructionBox">
           <BackArrow />
           <div className="instruction-image" style={{
               backgroundImage: `url(${props.data.customAssets.instructionsBox})`
           }}><div className="instruction-text"><p className="dialogue">Pull out each fortune<br></br>w/ your cursor<br></br>to reveal each curse .</p></div></div>
         </div>
-        <div className="right-section">
+        <div className="right-section">*/}
           <div className="group-1" >
             <Shape id="fortune-triangle" side="left" text={fortuneData[0].triangle}/>
             <Shape id="fortune-rhombus" side="right" text={fortuneData[0].rhombus}/>
@@ -40,7 +40,7 @@ const Fortune = (props) => {
             <Shape id="fortune-pentagon" side="left" text={fortuneData[0].pentagon}/>
             <Shape id="fortune-square" side="right" text={fortuneData[0].square}/>
           </div>
-        </div>
+       {/* </div>*/}
       </div>
     </div>
   )

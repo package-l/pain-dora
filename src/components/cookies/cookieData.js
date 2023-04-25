@@ -2,12 +2,12 @@ export const cookieData = [
     {
         "name": "softcookie",
         "fullname": "SoFT cookIE(s)",
-        "description": "Age: Physically 21 - ??? Emotionally 2",
+        "description": "Age: 1 - 12+",
         "icon": require('../../img/icons/Icon_Madeleine.png'),
         "img": require('../../img/Madeleine/Madeleine.png'),
         "bgImg": require('../../img/Soft/Soft_BG.png'),
         "customAssets": {
-            "instructionsBox": require('../../img/Soft/SoftCookie_Instruction.png'),
+            "instructionBox": require('../../img/Soft/SoftCookie_Instruction.png'),
             "instructionText": `Undo Soft Cookies'\nlearnt self destructive phrases,\n
                                 into self loving affirmations,\nby dragging words into the trash !`,
             "dialogueBox_Big": require('../../img/Soft/SoftCookie_Big.png'),
@@ -19,12 +19,14 @@ export const cookieData = [
     {
         "name": "macaron",
         "fullname": "mADamE mAcarOn",
-        "description": "Age : 1 - 12+",
+        "description": "Age : 87",
         "icon": require('../../img/icons/Icon_Macaron.png'),
         "img": require('../../img/Macaron/Macaron.png'),
         "bgImg": require('../../img/Macaron/BG_Macaron_GreyWhite.png'),
         "customAssets": {
-            "instructionsBox": require('../../img/Macaron/Macaron_InstructionBox.png'),
+            "instructionBox": require('../../img/Macaron/Macaron_InstructionBox.png'),
+            "instructionText": `Click & Chew-se\nthe Macarons in the Box,\n
+            from top to bottom,\nto converse .`,
             "dialogueBox": require('../../img/Macaron/Macaron_Circle_Box.png'),
             "dialogue": [
                 {
@@ -93,7 +95,8 @@ export const cookieData = [
         "img": require('../../img/Macaron/Macaron.png'),
         "bgImg": require('../../img/Wafer/BG_Wafer.png'),
         "customAssets": {
-            "instructionsBox": require('../../img/Wafer/Wafer_Box.png'),
+            "instructionBox": require('../../img/Wafer/Wafer_Box.png'),
+            "instructionText": `Hover over each Black Square\nthen Click each White square.`,
             "blackBoxDialogue" : [
                 `Hi Flakey Wafter Jake,\n can I borrow you for a bit ? I would like to ask you about Soft Cookie.`,
                 `Great thanks !\nLet's get started.`,
@@ -131,7 +134,8 @@ export const cookieData = [
         "img": require('../../img/Fortune/MisFortune.png'),
         "bgImg": require('../../img/Fortune/BG_Fortune.png'),
         "customAssets": {
-            "instructionsBox": require('../../img/Fortune/BlackBox_Fortune.png')
+            "instructionBox": require('../../img/Fortune/BlackBox_Fortune.png'),
+            "instructionText": `Pull out each fortune\nw/ your cursor\nto reveal each curse .`
         }
     },
     {
@@ -195,7 +199,8 @@ export const cookieData = [
         "customAssets": {
             "answerBoxOdd": require('../../img/Linzer/Linzer_Dialogue_ANSWER_Box_1_3_5.png'),
             "answerBoxEven" : require('../../img/Linzer/Linzer_Dialogue_ANSWER_Box_2_4_6.png'),
-            "instructionsBox": require('../../img/Linzer/Linzer_Dialogue_INSTRUCTIONS_Box.png'),
+            "instructionText": `2 Lies & a Truth .\n \nHover over any prompt -\nthe black box- click to begin,\nthen choose the correct truth .`,
+            "instructionBox": require('../../img/Linzer/Linzer_Dialogue_INSTRUCTIONS_Box.png'),
             "promptBox": require('../../img/Linzer/Linzer_Dialogue_PROMPT_Box.png')
         }
     },
@@ -207,7 +212,7 @@ export const cookieData = [
         "img": require('../../img/Brownie/Brownie.png'),
         "bgImg": require('../../img/Brownie/BG_Brownie_Grey_White.png'),
         "customAssets": {
-            "instructionsBox": require('../../img/Brownie/Black_Box_Brownie.png'),
+            "instructionBox": require('../../img/Brownie/Black_Box_Brownie.png'),
             "interactionBox": require('../../img/Brownie/Chat_Box_Tape_Brownie.png'),
             "dialogue1": require('../../img/Brownie/Bold_BD1.png'),
             "dialogue2": require('../../img/Brownie/Bold_BD2.png'),
@@ -225,7 +230,7 @@ export const cookieData = [
         "bgImg": require('../../img/Madeleine/BG_Madeleine.png'),
         "customAssets": {
             "madeleineBox": require('../../img/Madeleine/Chat_Box_50.png'),
-            "consumerBox": require('../../img/Madeleine/Con_D_Blank.png'),
+            "instructionBox": require('../../img/Madeleine/Con_D_Blank.png'),
             "dialogue": [
 
                 {
@@ -338,7 +343,7 @@ export const cookieData = [
             "dialogue": [
 
                 {
-                    "text": `Do you want info ?\n I won't speak & spill unless\n you pay me some dough .`,
+                    "text": `Do you want info ?\n I won't speak & spill unless you pay me some dough .`,
                 },
                 {
                     "text": `Thank you,\nplease come again !`,

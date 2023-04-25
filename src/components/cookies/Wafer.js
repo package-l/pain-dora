@@ -8,30 +8,40 @@ const Wafer = (props) => {
     Cookies.set('wafer', true);
     const [whiteDialogueList, setWhiteDialogueList] = useState(props.data.customAssets.whiteBoxDialogue);
     const [blackDialogueList, setBlackDialogueList] = useState(props.data.customAssets.blackBoxDialogue);
+    const [opacity, setOpacity] = useState(0);
 
     const handleWhiteBox = (eve) => {
       eve.preventDefault();
+      console.log(eve.currentTarget.lastChild.style.opacity)
+      if (eve.currentTarget.lastChild.style.opacity === 100) {
+        console.log("yes")
+        eve.currentTarget.style.opacity = "0";
+      }
       eve.currentTarget.style.opacity = "0";
+
+
     }
 
     const handleHover = (eve) => {
       eve.target.style.opacity = "100";
+      setOpacity(100);
     }
 
     const handleLeave = (eve) => {
       eve.target.style.opacity = "0";
+      setOpacity(0);
     }
 
   return (
     <div className="wafer-interaction-container">
       <div className="content-container">
-        <div className="instructionBox">
+        {/*<div className="instructionBox">
           <BackArrow />
           <div className="instruction-image" style={{
                 backgroundImage: `url(${props.data.customAssets.instructionsBox})`
             }}><div className="instruction-text"><p className="dialogue">{`Hover over each Black Square\nthen Click each White square.`}</p></div></div>
         </div>
-        <div className="right-section">
+          <div className="right-section">*/}
           <div className="tape-layer" id="tape-1" style={{
             backgroundImage: `url(${props.data.customAssets.tapeDialogue.tapeBox})`
           }}>
@@ -55,7 +65,7 @@ const Wafer = (props) => {
             )
           )}
         </div>
-      </div>
+      {/*</div>*/}
   </div>
   )
 }

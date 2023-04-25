@@ -1,6 +1,6 @@
 //import '../../styles/Chess.scss';
 import '../../styles/CookieProfile.scss';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
@@ -16,25 +16,41 @@ import SoftCookie from './Soft/SoftCookie';
 import Financier from './Financier';
 //import '../../styles/Madeleine.scss';
 
+import BackArrow from '../BackArrow';
+
 //Math.random() * width*0.7 - width*0.7,
 const CookieProfile = (props) => {
   const [cookie, setCookie] = useState([props.data.name]);
   const navigate = useNavigate();
   //const navigate = useNavigate();
+  const [instructionText, setInstructionText] = useState(props.data.customAssets.instructionText);
+  console.log(instructionText);
 
-  //Media Query
+  const [consumerText, setConsumerText] = useState(<>This will be your dialogue box &mdash; the Investigator.<br /><br/>
+  Please c/lick this black box<br/> to begin, & continue c/licking.</>);
+  const madeleineRef = useRef();
+  function handleText() {
+    setConsumerText("");
+  }
+
+  //Media Query for screen visibility
   const isBigScreen = useMediaQuery({ 
-    query: '(min-width: 850px)' 
+    query: '(min-width: 880px)' 
   })
   const isAspectRatio = useMediaQuery({
-    query: '(min-aspect-ratio: 8/3)'
+    query: '(max-aspect-ratio: 12/9)' // 8/3
   })
   const isTallScreen = useMediaQuery({
-    query: '(min-height: 450px)'
+    query: '(max-aspect-ratio: 22/9)'//'(min-height: 450px)'
   })
 
+  // Sizing font media query
   const isSizingAspectRatio = useMediaQuery({
     query: '(max-aspect-ratio: 16/9)'
+  })
+
+  const isSizingNarrowAspectRatio = useMediaQuery({
+    query: '(max-aspect-ratio: 11/9)'
   })
   
   return (
@@ -54,45 +70,60 @@ const CookieProfile = (props) => {
           <div className="content-container">
             <div className="character-card">
               <div className="character-card-border"></div>
+                <BackArrow />
                 {cookie.toString() === "brownie" ? 
                   <div className="profileImg"></div> :
                   <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
                 }
-                <br/>
-              <div className="fullname">{props.data.fullname}</div>
-              <br/>
-              <div className="description">{props.data.description}</div><br/>
+                
+              <div className="fullname" style={{
+                fontSize: `${isSizingAspectRatio ? '1.5vw' : '2.8vh'}`
+              }}>{props.data.fullname}</div>
+              
+              <div className="description" style={{
+                fontSize: `${isSizingAspectRatio ? '1vw' : '1.8vh'}`
+              }}>{props.data.description}</div>
+
+              {(cookie.toString() !== "madeleine" && cookie.toString() !== "financier" && cookie.toString() !== "brownie") ?
+              <div className="cookie-instruction-image" style={{
+                backgroundImage: `url(${props.data.customAssets.instructionBox})`,
+                fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.6vh'}`
+              }}><div className="cookie-instruction-text"><p className="dialogue">{instructionText}</p></div></div> :
+                <div className="cookie-instruction-image"></div>
+              }
+
             </div>
           {/*</div>*/}
-
-            {cookie.toString() === "fortune" &&
-              <Fortune data={props.data}/>
-            }
-            {cookie.toString() === "macaron" &&
-              <Macaron data={props.data}/>
-            }
-            {cookie.toString() === "chess" &&
-              <Chess data={props.data}/>
-            }
-            {cookie.toString() === "financier" &&
-              <Financier data={props.data}/>
-            }
-            {cookie.toString() === "madeleine" &&
-              <Madeleine data={props.data}/>
-            }
-            {cookie.toString() === "linzer" &&
-              <Linzer data={props.data}/>
-            }
-            {cookie.toString() === "wafer" &&
-              <Wafer data={props.data}/>
-            }
-            {cookie.toString() === "brownie" &&
-              <Brownie data={props.data}/>
-            }
-            {cookie.toString() === "softcookie" &&
-              <SoftCookie data={props.data}/>
-            }
+            <div className="cookie-right-section">
+              {cookie.toString() === "fortune" &&
+                <Fortune data={props.data}/>
+              }
+              {cookie.toString() === "macaron" &&
+                <Macaron data={props.data}/>
+              }
+              {cookie.toString() === "chess" &&
+                <Chess data={props.data}/>
+              }
+              {cookie.toString() === "linzer" &&
+                <Linzer data={props.data} big={isBigScreen} size={isSizingAspectRatio}/>
+              }
+              {cookie.toString() === "wafer" &&
+                <Wafer data={props.data}/>
+              }
+              {cookie.toString() === "softcookie" &&
+                <SoftCookie data={props.data}/>
+              }
+            </div>
           </div>
+          {cookie.toString() === "financier" &&
+                <Financier data={props.data} big={isBigScreen} size={isSizingAspectRatio}/>
+              }
+              {cookie.toString() === "brownie" &&
+                <Brownie data={props.data}/>
+              }
+              {cookie.toString() === "madeleine" &&
+                <Madeleine data={props.data} narrow={isSizingNarrowAspectRatio} wide={isSizingAspectRatio}/>
+              }
           
 
         </div>
