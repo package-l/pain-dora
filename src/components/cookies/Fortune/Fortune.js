@@ -21,9 +21,9 @@ const Fortune = (props) => {
       <div className="content-container">
         <div className="instructionBox">
           <BackArrow />
-          <div className="test" style={{
+          <div className="instruction-image" style={{
               backgroundImage: `url(${props.data.customAssets.instructionsBox})`
-          }}><p className="dialogue">Pull out each fortune<br></br>w/ your cursor<br></br>to reveal each curse .</p></div>
+          }}><div className="instruction-text"><p className="dialogue">Pull out each fortune<br></br>w/ your cursor<br></br>to reveal each curse .</p></div></div>
         </div>
         <div className="right-section">
           <div className="group-1" >

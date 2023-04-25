@@ -27,9 +27,9 @@ const Wafer = (props) => {
       <div className="content-container">
         <div className="instructionBox">
           <BackArrow />
-          <div className="test" style={{
+          <div className="instruction-image" style={{
                 backgroundImage: `url(${props.data.customAssets.instructionsBox})`
-            }}><p className="dialogue">{`Hover over each Black Square\nthen Click each White square.`}</p></div>
+            }}><div className="instruction-text"><p className="dialogue">{`Hover over each Black Square\nthen Click each White square.`}</p></div></div>
         </div>
         <div className="right-section">
           <div className="tape-layer" id="tape-1" style={{

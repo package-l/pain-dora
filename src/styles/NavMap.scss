@@ -72,10 +72,10 @@
 
 .navmap li {
     @include transform(translateY(-50%));
-    padding: 3vh;
+    //padding: 3vh;
     transition: color 0.3s linear;
     height: 35%;
-    width: 60%;
+    width: 70%;
     margin: auto;
     border: 1.5px solid grey;
     outline: 1px solid grey;
@@ -83,8 +83,8 @@
     display: inline-block;
     position: relative;
     top: 50%;
-    text-align: center;
-    vertical-align: middle;
+    //text-align: center;
+    //vertical-align: middle;
     display: table;
 }
 
@@ -94,6 +94,8 @@
 
 .navmap li p {
     display: table-cell;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     text-align: center;
     vertical-align: middle;
     //transform: translateY(-10%);

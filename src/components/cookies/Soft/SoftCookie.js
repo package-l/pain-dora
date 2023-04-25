@@ -89,9 +89,9 @@ const SoftCookie = (props) => {
       <div className="content-container">
         <div className="instructionBox">
           <BackArrow />
-          <div className="test" style={{
+          <div className="instruction-image" style={{
                   backgroundImage: `url(${props.data.customAssets.instructionsBox})`
-              }}><p className="dialogue">{props.data.customAssets.instructionText}</p>
+              }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
           </div>
         </div>
         <div className="right-section">
@@ -135,7 +135,7 @@ const SoftCookie = (props) => {
                       className="word-parts"                 
                       onDragStart={(eve) => dragStart(eve, i, j, k, "small")}
                       onDragEnter={(eve) => dragEnter(eve, i, j, k, "small")}
-                      draggable
+                      draggable = "true"
                       style={{ visibility: `${item.style}` }}>{item.word}</p>
                     ): (
                       <p key={`small-item${k}`} id={k} className="word-parts nohover">{item.word}</p>

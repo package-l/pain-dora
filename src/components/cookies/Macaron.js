@@ -26,10 +26,10 @@ const Macaron = (props) => {
         {/*<div className="content-container">*/}
           <div className="instructionBox">
             <BackArrow />
-            <div className="test" style={{
+            <div className="instruction-image" style={{
               backgroundImage: `url(${props.data.customAssets.instructionsBox})`
-            }}><p className="dialogue">Click & Chew-se<br/>the Macarons in the Box,<br/>
-            from top to bottom,<br/>to converse .</p></div>
+            }}><div className="instruction-text"><p className="dialogue">Click & Chew-se<br/>the Macarons in the Box,<br/>
+            from top to bottom,<br/>to converse .</p></div></div>
           </div>
           <div className="right-section">
             <div className="dialogueBox" style={{

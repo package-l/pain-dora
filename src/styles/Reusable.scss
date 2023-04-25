@@ -40,6 +40,18 @@ $grey-color: grey;
     }
 }
 
+@mixin animation($str, $time, $count, $timing) {
+    -webkit-animation-name: #{$str};
+    -moz-animation-name: #{$str};
+    -ms-animation-name: #{$str};
+    -o-animation-name: #{$str};
+    animation-name: #{$str};
+    -webkit-animation-duration: #{$time};
+    -webkit-animation-iteration-count: #{$count};
+    -webkit-animation-timing-function: #{$timing};   
+}
+  
+
 @mixin Nautica {
     font-family: nautica, sans-serif;
     font-weight: 700;
@@ -57,8 +69,9 @@ $grey-color: grey;
 }
 
 @mixin nameFont {
-    font-family: Chantal;
-    font-weight: light;
+    font-family: "chantal", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     font-size: 1.34vw;
     letter-spacing: 0.1em;
     line-height: 3vh;

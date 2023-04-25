@@ -3,7 +3,9 @@
 //General page styles
 
 @mixin fontA {
-    font-family: Arbotek Light, sans-serif;
+    font-family: "arbotek", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     font-size: 1.8vh;
     font-weight: semi-bold;
     letter-spacing: 0.192vh;

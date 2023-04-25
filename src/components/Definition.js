@@ -11,7 +11,7 @@ const Definition = () => {
     useEffect(() => {
         (async () => {
           // Simulating some background work
-          await sleep(10500);//10500
+          await sleep(12000);//10500 12000
           // As soon as the background work finishes, hide this page and display the spotlight page
           hideDefinition();
           showSpotlight();

@@ -64,9 +64,9 @@ const Financier = (props) => {
                     </>
                 )
             }
-            <div className="test" onClick={handleDialogueClick} style={{
+            <div className="instruction-image" onClick={handleDialogueClick} style={{
                 backgroundImage: `url(${props.data.customAssets.instructionBox})`
-            }}><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
+            }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div></div>
         </div>
         <div className="right-section">
             {list.map((item, i) => 

@@ -51,9 +51,9 @@ const Madeleine = (props) => {
 
           <div className="instructionBox">
             <BackArrow />
-            <div className="test" onClick={handleMadeleineDialogueClick} style={{
+            <div className="instruction-image" onClick={handleMadeleineDialogueClick} style={{
               backgroundImage: `url(${props.data.customAssets.consumerBox})`
-            }}><p className="dialogue">{consumerText}</p></div>
+            }}><div className="instruction-text"><p className="dialogue">{consumerText}</p></div></div>
           </div>
           <div className="right-section" ref={ref}>
             {list.map((item, i) => 

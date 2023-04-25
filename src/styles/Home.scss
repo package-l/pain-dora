@@ -11,6 +11,7 @@ html, body {
     scroll-snap-type: y mandatory;
     overscroll-behavior-y: none;
     overflow-x: hidden;
+    overflow: -moz-scrollbars-none;
 }
 
 body {
@@ -131,6 +132,12 @@ body::-webkit-scrollbar {
         color: rgb(86, 85, 85);
         animation: flash 5s infinite;
         -webkit-animation: flash 5s infinite; 
+        @include Nautica;
+        @include transform(translateX(-50%));
+        letter-spacing: 0.8vw;
+        position: absolute;
+        bottom: 21%;
+        left: 50%;
 
         :hover {
             color: black;
@@ -360,18 +367,20 @@ body::-webkit-scrollbar {
                   transform: rotateY(180deg) translateY(-50%); }
         100% {
           -webkit-transform: rotateY(360deg) translateY(-50%);
-                  transform: rotateY(360deg) translateY(-50%); } }
+                  transform: rotateY(360deg) translateY(-50%); }
+    }
       
-      @keyframes rotation {
+    @keyframes rotation {
         0% {
-          -webkit-transform: translate(-50%, -50%) rotateY(0deg);
-                  transform: translate(-50%, -50%) rotateY(0deg); }
+            -webkit-transform: translate(-50%, -50%) rotateY(0deg);
+                    transform: translate(-50%, -50%) rotateY(0deg); }
         50% {
-          -webkit-transform: translate(-50%, -50%) rotateY(180deg);
-                  transform: translate(-50%, -50%) rotateY(180deg); }
+            -webkit-transform: translate(-50%, -50%) rotateY(180deg);
+                    transform: translate(-50%, -50%) rotateY(180deg); }
         100% {
-          -webkit-transform: translate(-50%, -50%) rotateY(360deg);
-                  transform: translate(-50%, -50%) rotateY(360deg); } }
+            -webkit-transform: translate(-50%, -50%) rotateY(360deg);
+                    transform: translate(-50%, -50%) rotateY(360deg); } 
+    }
 
     .macaron { 
         @include transform(rotate(-25deg));
@@ -411,7 +420,7 @@ body::-webkit-scrollbar {
         animation: slide 4s;
     }
 
-    @keyframes slide {
+    /*@include keyframes(slide) {
         25% {
             @include transform(translateX(-90%));
         }
@@ -421,6 +430,33 @@ body::-webkit-scrollbar {
         100% {
             @include transform(translateX(-60%));
         }
+    }*/
+
+    @-webkit-keyframes slide {
+        25% {
+          -webkit-transform: translateX(-90%);
+                  transform: translateX(-90%); }
+        65% {
+          -webkit-transform: translateX(-30%);
+                  transform: translateX(-30%); }
+        100% {
+          -webkit-transform: transform(translateX(-60%));
+                  transform: transform(translateX(-60%)); }
+    }
+      
+    @keyframes slide {
+        0% {
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%); }
+        25% {
+            -webkit-transform: translateX(-90%);
+                    transform: translateX(-90%); }
+        65% {
+            -webkit-transform: translateX(-30%);
+                    transform: translateX(-30%); }
+        100% {
+            -webkit-transform: transform(translateX(-60%));
+                    transform: transform(translateX(-60%)); } 
     }
 
     .financier {
@@ -662,9 +698,14 @@ body::-webkit-scrollbar {
 
     .madeleine:hover img {
         animation: scale 1s forwards;
+        animation-duration: 1s;
+        animation-timing-function: forwards;
+        -webkit-animation: scale;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: forwards;
     }
 
-    @keyframes shake {
+    /*@keyframes shake {
         0% { @include transform(rotate(0deg)); }
         10% { @include transform(rotate(-10deg)); }
         20% { @include transform(rotate(10deg)); }
@@ -676,9 +717,12 @@ body::-webkit-scrollbar {
         80% { @include transform(rotate(10deg)); }
         90% { @include transform(rotate(0deg)); }
         100% { @include transform(rotate(-10deg)); }
-    }
+    }*/
 
     @keyframes scale {
+        0% {
+            @include transform(scale(1));
+        }
         100% {
             @include transform(scale(3));
         }
@@ -719,13 +763,20 @@ body::-webkit-scrollbar {
     }
 
     .linzer:hover img {
-        animation:pulse 1s infinite;
+        animation: pulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        -webkit-animation: pulse;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
     }
 
     @keyframes pulse {
+        0% {@include transform(scale(1))}
         10% {@include transform(scale(1.5))}
+        100% {@include transform(scale(1))}
     }
-
+      
     .brownie {
         @include transform(rotate(190deg));
         display: inline-block;

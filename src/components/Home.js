@@ -108,10 +108,10 @@ const Home = () => {
 
           <section className="map-container" id="roof">
             <div className="cookie-map-container">
-              <div className="lid-text" onClick={(eve) => handleLiftLid(eve)}>
-                <p style={{
+              <div className="lid-text" onClick={(eve) => handleLiftLid(eve)} style={{
                   fontSize: `${isSizingAspectRatio ? '4.5vw' : '8vh'}`
-                }}>lift lid</p>
+                }}>
+                lift lid
                 <div className="roof-down">
                     <DownArrow nextFloor={"wrapper"}/>
                 </div>

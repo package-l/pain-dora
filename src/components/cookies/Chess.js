@@ -25,9 +25,9 @@ const Chess = (props) => {
       <div className="content-container">
         <div className="instructionBox">
           <BackArrow />
-          <div className="test" style={{
+          <div className="instruction-image" style={{
                   backgroundImage: `url(${props.data.customAssets.instructionBox})`
-              }}><p className="dialogue">{props.data.customAssets.instructionText}</p>
+              }}><div className="instruction-text"><p className="dialogue">{props.data.customAssets.instructionText}</p></div>
           </div>
         </div>
         <div className="right-section">

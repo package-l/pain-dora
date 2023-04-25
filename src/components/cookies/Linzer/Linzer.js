@@ -14,10 +14,10 @@ const Linzer = (props) => {
       <div className="content-container">
         <div className="instructionBox">
           <BackArrow />
-          <div className="test"style={{
+          <div className="instruction-image" style={{
             backgroundImage: `url(${props.data.customAssets.instructionsBox})`
-          }}><p className="dialogue">2 Lies & a Truth .<br></br><br></br>Hover over any prompt &mdash;<br></br>
-          the black box&mdash; click to begin,<br></br>then choose the correct truth .</p></div>
+          }}><div className="instruction-text"><p className="dialogue">2 Lies & a Truth .<br></br><br></br>Hover over any prompt &mdash;<br></br>
+          the black box&mdash; click to begin,<br></br>then choose the correct truth .</p></div></div>
 
         </div>
         <div className="right-section">

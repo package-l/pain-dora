@@ -1,4 +1,4 @@
-//Code for the box lid and wrapper introduction
+//Code for the box lid and wrapper introduction- notused?
 
 import '../styles/Introduction.scss';
 import { useSplash } from './SplashProvider';
