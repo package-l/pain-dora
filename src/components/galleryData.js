@@ -30,7 +30,7 @@ export const galleryData = [
             },
             "soft": {
                 "locked": require('../img/Gallery/icons/Grey_SoftCookie.png'),
-                "visited": "placeholder",
+                "visited": require('../img/Gallery/Sofy_Cookie_ALL.png'),
                 "name": "SoFT cookIE(s)",
                 "description": `Soft, Warm, & 7 Senses\n(Tasteful, Fragrant, Textural, Hearty, Visual, Harmonious, & Emotional)`
             },

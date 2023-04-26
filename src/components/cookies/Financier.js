@@ -28,7 +28,8 @@ const Financier = (props) => {
     })
 
     const handleDialogueClick = () => {
-        if (index <= props.data.customAssets.dialogue.length-1) {
+        console.log("# " + props.data.customAssets.dialogue.length)
+        if (index <= props.data.customAssets.dialogue.length) {
             setText(props.data.customAssets.dialogue[index].text);
             setIndex(index+1);
             console.log(text);
@@ -41,11 +42,12 @@ const Financier = (props) => {
 
     useEffect(() => { 
         //this edit allows text to not infinitely loop (using a state variable)
-        if (text !== "") {
+        if (text !== "" && index <= 12) {
             setList(state => [...state, {
                 text: text
             }])
         }
+        console.log(list);
      }, [index, text, props])
 
   return (
@@ -85,7 +87,7 @@ const Financier = (props) => {
                     (
                         text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
                         
-                        <div className="financierBox" key={i} id={`financier-${i}`} style={{
+                        <div className="financierBox" key={`${i}-financeA`} id={`financier-${i}`} style={{
                             backgroundImage: `url(${props.data.customAssets.interactionBox1})`,
                             fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.5vh'}`
                         }}>
@@ -96,7 +98,7 @@ const Financier = (props) => {
                                     </div>
                     */}
                             </div> :
-                        <div className="financierBox" key={i} id={`financier-${i}`} style={{
+                        <div className="financierBox" key={`${i}-financeB`} id={`financier-${i}`} style={{
                             backgroundImage: `url(${props.data.customAssets.interactionBox2})`,
                             fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.5vh'}`
                             
