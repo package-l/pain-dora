@@ -12,24 +12,17 @@ const Wafer = (props) => {
 
     const handleWhiteBox = (eve) => {
       eve.preventDefault();
-      console.log(eve.currentTarget.lastChild.style.opacity)
-      if (eve.currentTarget.lastChild.style.opacity === 100) {
-        console.log("yes")
-        eve.currentTarget.style.opacity = "0";
-      }
       eve.currentTarget.style.opacity = "0";
-
-
     }
 
     const handleHover = (eve) => {
       eve.target.style.opacity = "100";
-      setOpacity(100);
+      //setOpacity(100);
     }
 
     const handleLeave = (eve) => {
       eve.target.style.opacity = "0";
-      setOpacity(0);
+      //setOpacity(0);
     }
 
   return (
