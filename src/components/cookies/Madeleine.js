@@ -51,7 +51,7 @@ const Madeleine = forwardRef((props, isAspectRatio) => {
     setRightHeight(ref.current.clientHeight);
     setRightWidth(ref.current.clientWidth);
     setList(state => [...state, {
-      right:  Math.abs(((Math.random() * rightWidth - rightWidth*.50))) + "px",
+      right:  Math.abs(((Math.random() * rightWidth*.50 - rightWidth*.50))) + "px",
       top: Math.abs(((Math.random() * rightHeight - rightHeight*.27))) + "px",
       text: madeleineText
     }])
