@@ -24,7 +24,6 @@ const CookieProfile = (props) => {
   const navigate = useNavigate();
   //const navigate = useNavigate();
   const [instructionText, setInstructionText] = useState(props.data.customAssets.instructionText);
-  console.log(instructionText);
 
   const [consumerText, setConsumerText] = useState(<>This will be your dialogue box &mdash; the Investigator.<br /><br/>
   Please c/lick this black box<br/> to begin, & continue c/licking.</>);

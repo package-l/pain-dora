@@ -24,26 +24,26 @@ const Madeleine = forwardRef((props, isAspectRatio) => {
   const [consumerText, setConsumerText] = useState(<>This will be your dialogue box &mdash; the Investigator.<br /><br/>
   Please c/lick this black box<br/> to begin, & continue c/licking.</>);
 
-  //useImperativeHandle(cookieRef, () => ({
-    const handleMadeleineDialogueClick = () => {
-   
-      if (index < props.data.customAssets.dialogue.length-1) {
-        setIndex(index+1);
-      }
-      else {
-        setIndex(22);
-      }
-      if (props.data.customAssets.dialogue[index].speaker === "consumer") {
-        console.log(props.data.customAssets.dialogue[index].text)
-        setConsumerText(props.data.customAssets.dialogue[index].text)
-        setMadeleineText(undefined)
-      }
-      else if (props.data.customAssets.dialogue[index].speaker === "madeleine") {
-        setMadeleineText(props.data.customAssets.dialogue[index].text);
-      }
+
+  const handleMadeleineDialogueClick = () => {
   
-    } 
-  //}))
+    if (index < props.data.customAssets.dialogue.length-1) {
+      setIndex(index+1);
+    }
+    else {
+      setIndex(22);
+    }
+    if (props.data.customAssets.dialogue[index].speaker === "consumer") {
+      console.log(props.data.customAssets.dialogue[index].text)
+      setConsumerText(props.data.customAssets.dialogue[index].text)
+      setMadeleineText(undefined)
+    }
+    else if (props.data.customAssets.dialogue[index].speaker === "madeleine") {
+      setMadeleineText(props.data.customAssets.dialogue[index].text);
+    }
+
+  } 
+
 
   useEffect(() => { 
 
