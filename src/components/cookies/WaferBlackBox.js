@@ -1,5 +1,3 @@
-import { useRef } from 'react';
-
 const WaferBlackBox = ({i, item}) => {
   const handleWhiteBox = (eve) => {
     eve.preventDefault();

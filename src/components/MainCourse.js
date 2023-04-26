@@ -5,12 +5,10 @@ import Heart from '../img/maincourse/Heart_Black.png';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import { useMediaQuery } from 'react-responsive';
-import { useNavigate } from 'react-router-dom';
 import BackArrow from './BackArrow';
 
 const MainCourse = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const navigate = useNavigate();
 
   //Media Query
   const isBigScreen = useMediaQuery({ 
@@ -26,10 +24,6 @@ const MainCourse = () => {
   // Sizing font media query
   const isSizingAspectRatio = useMediaQuery({
     query: '(max-aspect-ratio: 16/9)'
-  })
-
-  const isSizingNarrowAspectRatio = useMediaQuery({
-    query: '(max-aspect-ratio: 11/9)'
   })
 
   return (

@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
-import Cookies from 'js-cookie';
+import { useState, useRef } from 'react';
 
-import BackArrow from '../../BackArrow';
+
+
 import '../../../styles/SoftCookie.scss';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -75,7 +75,7 @@ const SoftCookie = (props) => {
 
   
       console.log(divRef.current);
-      let newList = [];
+ 
     }
 
     // REVIEW this

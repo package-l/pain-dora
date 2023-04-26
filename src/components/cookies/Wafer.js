@@ -1,14 +1,12 @@
 import Cookies from 'js-cookie';
 import { useState } from 'react';
 import '../../styles/Wafer.scss'
-import WaferBlackBox from './WaferBlackBox';
-import BackArrow from '../BackArrow';
+
 
 const Wafer = (props) => {
     Cookies.set('wafer', true);
-    const [whiteDialogueList, setWhiteDialogueList] = useState(props.data.customAssets.whiteBoxDialogue);
-    const [blackDialogueList, setBlackDialogueList] = useState(props.data.customAssets.blackBoxDialogue);
-    const [opacity, setOpacity] = useState(0);
+    const [whiteDialogueList] = useState(props.data.customAssets.whiteBoxDialogue);
+    const [blackDialogueList] = useState(props.data.customAssets.blackBoxDialogue);
 
     const handleWhiteBox = (eve) => {
       eve.preventDefault();

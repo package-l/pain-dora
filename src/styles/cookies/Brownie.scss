@@ -7,10 +7,6 @@
 }
 
 .brownie-interaction-container {
-    /*height: 90vh;
-    width: 90vw;
-    position: relative;
-    overflow: hidden;*/
     width: 100%;
     height: 100%;
     position: relative;
@@ -21,11 +17,38 @@
         bottom: 0;
         left: 50%;
         margin-bottom: 0;
-        //margin-bottom: -3vh;
     }
 
     .dialogue {
         line-height: 0.9vh;
+    }
+
+    .test {
+        cursor: default;
+    }
+
+    .right-section {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        text-align: center;
+        padding-right: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+            "dialogue1 dialogue2 dialogue3 dialogue4"
+            "dialogue5 dialogue5 dialogue5 dialogue5 .";
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+        width: 68%;
+        aspect-ratio: 1423 / 1063;
+    }
+
+    .content-container {
+        width: 105%;
     }
 
 }
@@ -38,45 +61,20 @@
 
 .ripple-container {
     @include transform(translateX(-55%));
-    //left: 60%;
-    //top: 18vh;
-    //transform: translateX(-50%);
-    //width: 15vw;
-    //height: auto;
-    //position: absolute;
     height: 28vh;
     aspect-ratio: 4/3;
     position: absolute;
     left: 50%;
     top: 5%;
+
+    .leftBox-img {
+        @include transform(translateX(-50%));
+        position: absolute;
+        left: 58%;
+        top: 15%;
+    }
 }
 
-.brownie-interaction-container .test {
-    cursor: default;
-}
-
-/*.brownie-interaction-container .dialogue {
-    max-height: 20vh;
-    padding: 5vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    //width: 17vw;
-    //left: 50%;
-    //transform: translateX(-50%);
-    //top: 70%;
-    //height: 20vh;
-    text-align:center; 
-    vertical-align: middle;
-    display: table-cell;  
-    color: white;
-}*/
-
-.ripple-container .leftBox-img {
-    @include transform(translateX(-50%));
-    position: absolute;
-    left: 58%;
-    top: 15%;
-}
 
 .leftBox {
     width: 35vw;
@@ -84,17 +82,7 @@
 }
 
 .leftBox-img {
-    /*box-sizing: border-box;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 20;*/
-    //background-size: contain;
     background-repeat: no-repeat;
-
-    //left: 55%;
-    //transform: translateX(-50%);
-    //top: 10vh;
 }
 
 .leftBox-img .canvas {
@@ -105,46 +93,11 @@
     height:100%;
 }
 
-/*.rightBox-text {
-    width:23%;
-    height:30vh;  
-    display: table; 
-    //display: inline-block;
-    margin: 0 auto;
-    padding: 1vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    //height: 28vh;
-    margin-top: 50vh;
-    text-align: center;
-    cursor: pointer;
-    max-width: 400px;
-}*/
-
-
-/*.rightBox {
-    position: relative;
-    width: 60%;
-    align-self: center;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-
-/*.rightBox-text {
-    height: 70vh;
-    width: 100%;
-}*/
-
 .dialogue1 {
     position: absolute;
     top: 10%;
     left: 7%;
     aspect-ratio: 357 / 663;
-    //background-size: contain;
     max-width: 90%;
     height: 60%;
     grid-area: dialogue1;
@@ -158,7 +111,6 @@
     max-width: 90%;
     max-height: 90%;
     grid-area: dialogue2;
-    //height: 60vh;
 }
 
 .dialogue3 {
@@ -168,7 +120,6 @@
     aspect-ratio: 357 / 663;
     max-width: 90%;
     max-height: 90%;
-    //height: 60vh;
     grid-area: dialogue3;
 }
 
@@ -221,51 +172,7 @@
     flex-direction: column;
 }
 
-/*.brownie-interaction-container .right-section {
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    position: absolute;
-    right: 10%;
-    padding-right: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas:
-        "dialogue1 dialogue2 dialogue3 dialogue4"
-        "dialogue5 dialogue5 dialogue5 dialogue5 ."
-}
-
-.brownie-interaction-container .right-section {
-    @include transform(translateY(-50%));
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 60%;
-    height: 0;
-    aspect-ratio: 1423 / 1063;
-    margin: 3%;
-    position: absolute;
-    right: 0;
-    top: 45%;
-    padding-top: 45%;
-}
-
-.brownie-interaction-container {
-    .right-section {
-        @include transform(translateY(-50%));
-        position: absolute;
-        width: 57vw;
-        height: 100vh;
-        right: 5vw;
-        max-height: 90vh;
-        top: 50%;
-        //bottom: 10vh;
-        //apply grid to right-section
-    }
-}*/
-
-.brownie-interaction-container {
+/*.brownie-interaction-container {
     .right-section {
         justify-content: center;
         align-items: center;
@@ -284,12 +191,10 @@
         height: auto;
         width: 68%;
         aspect-ratio: 1423 / 1063;
-        //margin: 3%;
-        //padding-top: 45%;
     }
 
     .content-container {
         width: 105%;
     }
-}
+}*/
 

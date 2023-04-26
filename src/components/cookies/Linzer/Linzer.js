@@ -1,10 +1,12 @@
-import { linzerAnswerData } from './linzerAnswerData';
-import { linzerQuestionData } from './linzerQuestionData'; 
-import LinzerQuestionCard from './LinzerQuestionCard';
-import LinzerAnswerCard from './LinzerAnswerCard';
-import BackArrow from '../../BackArrow';
-import '../../../styles/Linzer.scss';
 import Cookies from 'js-cookie';
+import '../../../styles/Linzer.scss';
+
+// Data
+import { linzerQuestionData } from './linzerQuestionData'; 
+
+// Components
+import LinzerQuestionCard from './LinzerQuestionCard';
+
 
 const Linzer = ({data, narrow, wide}) => {
   Cookies.set('linzer', true);

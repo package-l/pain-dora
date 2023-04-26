@@ -1,14 +1,14 @@
 import { createContext, useState, useContext } from 'react';
 //import { Link } from 'react-router-dom';
-import AcceptCookies from './AcceptCookies';
-import Definition from './Definition';
-import Start from './Start';
-import useWindowDimensions from './useWindowDimensions';
-import spotlightImage from '../img/SpotlightWIP.png';
-import Cookies from 'js-cookie';
+//import AcceptCookies from './AcceptCookies';
+//import Definition from './Definition';
+//import Start from './Start';
+//import useWindowDimensions from './useWindowDimensions';
+//import spotlightImage from '../img/SpotlightWIP.png';
+//import Cookies from 'js-cookie';
 import '../styles/Splash.scss';
 
-import PageSizeWarning from './unused/PageSizeWarning';
+//import PageSizeWarning from './unused/PageSizeWarning';
 
 //Maybe you want to make the spotlight size relative to window size?
 
@@ -42,30 +42,30 @@ export const SplashProvider = ({children}) => {
   const [isAcceptCookiesShowing, setIsAcceptCookiesShowing] = useState(true);
   const [isDefinitionShowing, setIsDefinitionShowing] = useState(false);
   const [isSpotlightShowing, setIsSpotlightShowing] = useState(false);
-  const [position, setPosition] = useState({
+  /*const [position, setPosition] = useState({
     left: -500,
     top: -500
-  })
+  })*/
   //const [isDoorShowing, setIsDoorShowing] = useState(false);
   const [isLidShowing, setIsLidShowing] = useState(false);
-  const { height, width } = useWindowDimensions();
+  //const { height, width } = useWindowDimensions();
   const [isWrapperShowing, setIsWrapperShowing] = useState(false);
 
-  function handleMouseMove(eve) {
+  /*function handleMouseMove(eve) {
     setPosition({ left: eve.pageX, top: eve.pageY});
     //console.log(`radial-gradient(circle at ${position.left / width * 100}% ${position.top / height * 100}%, transparent 160px, rgba(0, 0, 0, 0.85) 200px)`)
-  }
+  }*/
 
   //This handleButtonClick() goes directly to Home page without Menu
   /*function handleButtonClick() {
     setIsShowing(false);
   }*/
 
-  function handleButtonClick() {
+  /*function handleButtonClick() {
     setIsLidShowing(true);
     setIsWrapperShowing(true);
     setIsSpotlightShowing(false);
-  }
+  }*/
 
   return (
     <>

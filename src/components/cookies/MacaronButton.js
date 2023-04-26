@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const MacaronButton = ({className, color}) => {
     //const [ active, setActive ] = useState(null);
 

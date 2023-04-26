@@ -1,7 +1,6 @@
 //import '../../styles/Chess.scss';
 import '../../styles/CookieProfile.scss';
-import { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 //Cookies:
@@ -20,17 +19,15 @@ import BackArrow from '../BackArrow';
 
 //Math.random() * width*0.7 - width*0.7,
 const CookieProfile = (props) => {
-  const [cookie, setCookie] = useState([props.data.name]);
-  const navigate = useNavigate();
-  //const navigate = useNavigate();
-  const [instructionText, setInstructionText] = useState(props.data.customAssets.instructionText);
+  const [cookie] = useState([props.data.name]);
 
-  const [consumerText, setConsumerText] = useState(<>This will be your dialogue box &mdash; the Investigator.<br /><br/>
-  Please c/lick this black box<br/> to begin, & continue c/licking.</>);
-  const madeleineRef = useRef();
+  //const navigate = useNavigate();
+  const [instructionText] = useState(props.data.customAssets.instructionText);
+
+  /*const madeleineRef = useRef();
   function handleText() {
     setConsumerText("");
-  }
+  }*/
 
   //Media Query for screen visibility
   const isBigScreen = useMediaQuery({ 

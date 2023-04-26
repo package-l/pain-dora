@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation, ScrollRestoration } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './styles/App.scss';
 
@@ -6,7 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import MainCourse from './components/MainCourse';
 import Gallery from './components/Gallery';
-import AcceptCookies from './components/AcceptCookies';
+//import AcceptCookies from './components/AcceptCookies';
 import RejectCookies from './components/RejectCookies';
 import Start from './components/Start';
 import { SplashProvider } from "./components/SplashProvider";
@@ -19,7 +19,7 @@ import CookieProfile from './components/cookies/CookieProfile';
 import { cookieData } from './components/cookies/cookieData';
 
 //temp
-import Cookies from 'js-cookie';
+//import Cookies from 'js-cookie';
 
 function App() {
   /*
@@ -27,7 +27,7 @@ function App() {
   ^For 404 errors or other pages not specified.
   */
   
-  Cookies.remove('home');
+  //Cookies.remove('home');
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {

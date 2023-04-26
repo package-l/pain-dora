@@ -1,5 +1,5 @@
 import '../../styles/Madeleine.scss';
-import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
+import { useState, useEffect, useRef, forwardRef } from 'react';
 import Cookies from 'js-cookie';
 import BackArrow from '../BackArrow';
 import { useMediaQuery } from 'react-responsive';

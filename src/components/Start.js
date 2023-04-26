@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import Cookies from 'js-cookie';
 
 const Start = () => {
-  const { isSpotlightShowing, isDefinitionShowing, isAcceptCookiesShowing, showLid, showWrapper, hideSpotlight, showDefinition, showSpotlight } = useSplash();
+  const { isSpotlightShowing, isDefinitionShowing, isAcceptCookiesShowing, showLid, showWrapper, hideSpotlight, showDefinition } = useSplash();
   const { height, width } = useWindowDimensions();
   const [position, setPosition] = useState({
     left: -500,

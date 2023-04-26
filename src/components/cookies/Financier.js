@@ -23,9 +23,6 @@ const Financier = (props) => {
         query: '(max-aspect-ratio: 16/9)'
     })
 
-    const isSizingNarrowAspectRatio = useMediaQuery({
-        query: '(max-aspect-ratio: 11/9)'
-    })
 
     const handleDialogueClick = () => {
         console.log("# " + props.data.customAssets.dialogue.length)
@@ -47,7 +44,6 @@ const Financier = (props) => {
                 text: text
             }])
         }
-        console.log(list);
      }, [index, text, props])
 
   return (

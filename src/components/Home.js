@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link, ScrollRestoration } from "react-router-dom";
+import { useState, useRef } from 'react';
+import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import Cookies from 'js-cookie';
 import '../styles/Home.scss';
@@ -42,8 +42,6 @@ const Home = () => {
   const [openMap, setOpenMap] = useState(false);
 
   const [isSoftCookieCracked, setIsSoftCookieCracked] = useState(false);
-  
-  const [largeFont, setLargeFont] = useState('4.5vw');
 
   const wrapperRef = useRef();
 
@@ -201,7 +199,7 @@ const Home = () => {
             <img className="fork" src={Fork} alt="Fork"></img>
             <div className="cookie-map-container">
             <div id="cellar-grid" className="content">
-                {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') &&
+                {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') && Cookies.get('fortune') &&
                 Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
                     <div className="sof">
                       <Link to="/softcookie" className="softcookie"><img className="cookie" src={`${isSoftCookieCracked ? SoftCookieCrack : SoftCookie}`} alt="Soft Cookie Character" onMouseOver={handleSoftCookieHover} onMouseOut={handleSoftCookieLeave}></img></Link> 

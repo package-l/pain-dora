@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
-import { useState, useEffect } from 'react';
-import BackArrow from '../BackArrow';
+import { useState } from 'react';
+
 import '../../styles/Chess.scss'
 
 const Chess = (props) => {

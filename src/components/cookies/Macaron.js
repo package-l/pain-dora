@@ -1,12 +1,11 @@
 import Cookies from 'js-cookie';
 import { useState, useEffect } from 'react';
-import MacaronButton from './MacaronButton';
-import BackArrow from '../BackArrow';
+
 import '../../styles/Macaron.scss';
 
 const Macaron = (props) => {
   Cookies.set('macaron', true);
-  const [list, setList] = useState(props.data.customAssets.dialogue);
+  const [list] = useState(props.data.customAssets.dialogue);
   const [activeButton, setActiveButton] = useState(null);
   const [youDialogue, setYouDialogue] = useState("");
   const [mmDialogue, setMmDialogue] = useState("");

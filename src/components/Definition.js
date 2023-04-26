@@ -1,12 +1,12 @@
 import { useSplash } from './SplashProvider';
 import { useEffect } from 'react';
 import '../styles/Definition.scss';
-import Start from './Start';
+
 
 const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Definition = () => {
-    const { isSpotlightShowing, isDefinitionShowing,  hideDefinition, showSpotlight } = useSplash();
+    const { isDefinitionShowing,  hideDefinition, showSpotlight } = useSplash();
 
     useEffect(() => {
         (async () => {

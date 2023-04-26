@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
-import Screenshot from '../img/temp/gallery_screenshot.png';
+
 import { galleryData } from './galleryData';
 import Cookies from 'js-cookie';
-import BackArrow from './BackArrow';
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
@@ -26,9 +26,6 @@ const Gallery = () => {
     query: '(min-height: 450px)'
   })
 
-  const isSizingAspectRatio = useMediaQuery({
-    query: '(max-aspect-ratio: 16/9)'
-  })
 
 
   const navigate = useNavigate();

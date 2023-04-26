@@ -4,8 +4,7 @@ import { useSplash } from './SplashProvider';
 import '../styles/AcceptCookies.scss';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import Start from './Start';
-import Definition from './Definition';
+
 import { useMediaQuery } from 'react-responsive';
 
 const AcceptCookies = () => {
@@ -20,7 +19,7 @@ const AcceptCookies = () => {
     query: '(min-height: 450px)'
   })
 
-  const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSpotlight, isDefinitionShowing } = useSplash();
+  const { isAcceptCookiesShowing, hideAcceptCookies, showDefinition, hideSpotlight } = useSplash();
   const [opacity, setOpacity] = useState({
     accept: 1,
     decline: 1,

@@ -1,20 +1,15 @@
+import Cookies from 'js-cookie';
+import '../../../styles/Fortune.scss';
+
+// Data
+import { fortuneData } from './fortuneData';
+
+// Components
 import Shape from './Shape';
 import Numbers from './Numbers';
-import BackArrow from '../../BackArrow';
-import '../../../styles/Fortune.scss';
-import { fortuneData } from './fortuneData';
-import useDraggable from '../../useDraggable';
-import { useMediaQuery } from 'react-responsive';
-
-import Cookies from 'js-cookie';
 
 const Fortune = (props) => {
   Cookies.set('fortune', true);
-
-  //Media Query
-  const isSizingAspectRatio = useMediaQuery({
-    query: '(max-aspect-ratio: 16/9)'
-  })
 
   return (
     <div className="fortune-interaction-container">
