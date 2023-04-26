@@ -4,7 +4,15 @@ export const cookieData = [
         "fullname": "SoFT cookIE(s)",
         "description": "Age: 1 - 12+",
         "icon": require('../../img/icons/Icon_Madeleine.png'),
-        "img": require('../../img/Madeleine/Madeleine.png'),
+        "img": [
+            require('../../img/Soft/Soft_Cookie1.png'),
+            require('../../img/Soft/Soft_Cookie2.png'),
+            require('../../img/Soft/Soft_Cookie3.png'),
+            require('../../img/Soft/Soft_Cookie4.png'),
+            require('../../img/Soft/Soft_Cookie5.png'),
+            require('../../img/Soft/Soft_Cookie6.png'),
+            require('../../img/Soft/Soft_Cookie7.png'),
+        ],
         "bgImg": require('../../img/Soft/Soft_BG.png'),
         "customAssets": {
             "instructionBox": require('../../img/Soft/SoftCookie_Instruction.png'),

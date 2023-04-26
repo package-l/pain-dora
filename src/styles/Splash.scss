@@ -17,17 +17,29 @@
     overflow: hidden;
 }
 
-.splash .enter {
+.splash .rectangle {
     @include transform(translate(-50%, -50%));
     background-color: black;
-    color: transparent;
-    border: none;
     width: 100px;
     height: 100px;
-    z-index: 14;
-    margin-top: 50vh;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.splash .enter {
+    @include transform(translate(-50%, -50%));
+    top: 70vh;
+    right: 8vw;
+    background-color: black;
+    position: absolute;
+    width: 65px;
+    height: 100px;
     display: transparent;
     position: absolute;
+    color: transparent;
+    z-index: 14;
+    border: none;
 }
 
 .splash .enter a {

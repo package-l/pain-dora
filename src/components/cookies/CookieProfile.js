@@ -51,7 +51,7 @@ const CookieProfile = (props) => {
   const isSizingNarrowAspectRatio = useMediaQuery({
     query: '(max-aspect-ratio: 11/9)'
   })
-  
+
   return (
     <>
       {!isBigScreen || isAspectRatio || !isTallScreen ? 
@@ -70,11 +70,15 @@ const CookieProfile = (props) => {
             <div className="character-card">
               <div className="character-card-border"></div>
                 <BackArrow />
-                {cookie.toString() === "brownie" ? 
-                  <div className="profileImg"></div> :
+                {cookie.toString() === "brownie" && 
+                  <div className="profileImg"></div>
+                }
+                {cookie.toString() === "softcookie" &&
+                  <img src={props.data.img[Math.floor(Math.random() * 7)]} className="profileImg soft" alt="Character Profile Card"></img>
+                }
+                {cookie.toString() !== "brownie" && cookie.toString() !== "softcookie" &&
                   <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
                 }
-                
               <div className="fullname" style={{
                 fontSize: `${isSizingAspectRatio ? '1.5vw' : '2.8vh'}`
               }}>{props.data.fullname}</div>

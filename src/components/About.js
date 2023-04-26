@@ -1,7 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+// Other components
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
-import { useNavigate } from 'react-router-dom';
+
+//temp
+import Screenshot from '../img/Screenshot.png';
 
 const About = () => {
   const navigate = useNavigate();
@@ -14,7 +19,11 @@ const About = () => {
         <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
         <NavMenu open={openMenu} setOpen={setOpenMenu}/>
       </div>
-      <div>This page has not yet been coded. This will be an about page for the artist, Andy Chan.</div>
+      <div>This page has not yet been coded. This will be an About page for Andy Chan.</div>
+      <img src={Screenshot} alt="Temporary About Page Plan" style={{
+        height: '75vh',
+        marginTop: '5%'
+      }}></img>
     </>
   )
 }

@@ -83,7 +83,12 @@ const Gallery = () => {
               <div className="financier">
                 <div className="image">
                   {Cookies.get("financier") ? 
-                    <Link to="/financier" ><img role="link" className="visited" src={galleryData[0].characters.financier.visited} alt="Link to Monsieur Financier's Profile Page"></img></Link> :
+                    <>
+                      <Link to="/financier" ><img role="link" className="visited" src={galleryData[0].characters.financier.visited} alt="Link to Monsieur Financier's Profile Page"></img></Link> 
+                      <div className="dollar-sign1 visited">+ $ $ $</div>
+                      <div className="dollar-sign2 visited">+ $ $ $</div>
+                      <div className="dollar-sign3 visited">+ $ $ $</div>
+                    </> :
                     <>
                       <img src={galleryData[0].characters.financier.locked} alt="Locked Monsieur Financier Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />

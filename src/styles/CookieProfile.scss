@@ -98,6 +98,10 @@
     padding-bottom: 1vh;
 }
 
+.character-card .profileImg.soft {
+    height: 24vh;
+}
+
 .character-card .fullname {
     @include nameFont;
     /*position: absolute;

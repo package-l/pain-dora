@@ -58,6 +58,7 @@ const Start = () => {
         ): null*/}
         {isSpotlightShowing ? (
           <div className="splash" onMouseMove={(eve) => handleMouseMove(eve)}>
+            <div className="rectangle"></div>
             <button className="enter"><Link to="/home" onClick={handleButtonClick}><span>Enter</span></Link></button>
             <img className="spotlight-image" src={spotlightImage} alt="room background"></img>
             <div className="mouse" style={{

@@ -53,6 +53,10 @@ html {
                     0px 0px 0px 13px lightgrey;
     }
 
+    .image {
+        position: relative;
+    }
+
     .chess .image, 
     .financier .image, 
     .soft .image, 
@@ -212,8 +216,14 @@ html {
         transition: 1s ease;
     }
 
-    .softcookie:hover img.visited {
-        transition: 1s ease;
+    .soft img.visited {
+        max-height: 80%;
+        max-width: 80%;
+    }
+
+    .soft:hover img.visited {
+        transition: 4s ease;
+        @include transform(translateY(-50%) rotate(360deg));
     }
 
     .linzer:hover img.visited {
@@ -234,6 +244,31 @@ html {
         animation: gallery-rotation 4s infinite;
     }
 
+    .dollar-sign1 {
+        visibility: hidden;
+        position: absolute;
+        bottom: 20%;
+        left: 64%;
+    }
+
+    .dollar-sign2 {
+        visibility: hidden;
+        position: absolute;
+        top: 8%;
+        right: 15%;
+    }
+
+    .dollar-sign3 {
+        visibility: hidden;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+    }
+
+    .financier:hover .image .visited {
+        @include transform(translateY(-50%) scale(1.1));
+        visibility: visible;
+    }
 
     @keyframes gallery-slide {
         25% {
