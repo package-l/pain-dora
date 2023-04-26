@@ -36,44 +36,44 @@
             z-index: 20;
         }
         
-        #index-5 {
+        #index-4 { //local build is one index up from this
             display: inline-block;
             right: 0 !important;
             top: 6% !important;
         }
         
-        #index-14 {
+        #index-13 {
             display: inline-block;
             right: 0 !important;
             top: 65% !important;
         }
         
-        #index-17 {
+        #index-16 {
             display: inline-block;
             right: auto !important;
             left: 0 !important;
             top: 60% !important;
         }
 
-        #index-21 {
+        #index-20 {
             display: inline-block;
             right: auto !important;
             left: 0 !important;
             top: 0 !important;
         }
         
-        #index-24 img {
+        #index-23 img {
             height: 35vh;
             z-index: 5;
             display: inline-block;
         }
 
-        #index-24 {
+        #index-23 {
             right: 10% !important;
             top: 50% !important;
         }
         
-        #index-24 .mad-dialogue {
+        #index-23 .mad-dialogue {
             @include transform(translate(-50%, 50%));
             animation: shake 0.7s infinite;
             font-size: 1.4vw;
@@ -82,7 +82,7 @@
             left: 50%;
         }
         
-        #index-25 img {
+        #index-24 img {
             height: 45vh;
             z-index: 5;
             display: inline-block;
@@ -90,7 +90,7 @@
             top: 20% !important; 
         }
         
-        #index-25.madeleineBox {
+        #index-24.madeleineBox {
             height: 45vh;
             z-index: 5;
             display: inline-block;
@@ -98,7 +98,7 @@
             top: 20% !important; 
         }
         
-        #index-25 .mad-dialogue {
+        #index-24 .mad-dialogue {
             @include transform(translate(-50%, -40%));
             animation-name: dance-shake;
             animation-duration: 0.5s;
@@ -109,7 +109,7 @@
             left: 50%;
         }
 
-        #index-11 .mad-dialogue, #index-13 .mad-dialogue, #index-14 .mad-dialogue, #index-17 .mad-dialogue, #index-19 .mad-dialogue, #index-23 .mad-dialogue {
+        #index-10 .mad-dialogue, #index-12 .mad-dialogue, #index-13 .mad-dialogue, #index-16 .mad-dialogue, #index-18 .mad-dialogue, #index-22 .mad-dialogue {
             animation-name: mini-shake;
             animation-duration: 0.5s;
             animation-iteration-count: 1;
