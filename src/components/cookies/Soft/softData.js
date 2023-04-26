@@ -421,8 +421,15 @@ export const softData =  [
         ],  
         [
             {
-                "word": `the cookie tin ?\n`,
+                "word": `the cookie tin`,
                 "isDeletable": false,
+                "style": "visible",
+            }
+        ],  
+        [
+            {
+                "word": `?`,
+                "isDeletable": true,
                 "style": "visible",
             }
         ],  

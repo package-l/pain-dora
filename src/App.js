@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, ScrollRestoration } from 'react-router-dom';
 import { useEffect } from 'react';
 import './styles/App.scss';
 
@@ -47,6 +47,8 @@ function App() {
 
   return (
 
+  
+
       <Routes>
         {/* Website Overall + Navigation */}
         <Route path="/" element={<SplashProvider><Start /></SplashProvider>} />
@@ -65,7 +67,8 @@ function App() {
           )
         })
         }
-      </Routes>        
+      </Routes>
+   
 
   );
 }

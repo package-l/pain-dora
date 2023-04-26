@@ -4,6 +4,7 @@ import NavMenu from './NavMenu';
 import Screenshot from '../img/temp/gallery_screenshot.png';
 import { galleryData } from './galleryData';
 import Cookies from 'js-cookie';
+import BackArrow from './BackArrow';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
@@ -44,7 +45,7 @@ const Gallery = () => {
       </div>
         : 
       <>
-            <div className="backarrow" onClick={() => navigate(-1)} role="button" aria-label="Go to previous page" tabIndex="0"></div>
+      <div className="backarrow" onClick={() => navigate(-1)} role="button" aria-label="Go to previous page" tabIndex="0"></div>
       <div className="hamburger-container" role="button" aria-label="Open website navigation menu" tabIndex="0">
         <HamburgerButton name="menu" open={openMenu} setOpen={setOpenMenu}/>
         <NavMenu open={openMenu} setOpen={setOpenMenu}/>

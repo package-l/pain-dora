@@ -40,7 +40,7 @@ export const cookieData = [
                 {
                     "id": 0,
                     "you": `Pardon me,\nAre you Madame Macaron ?`,
-                    "mm": `Ahh !\nHow audacious of you !\nYou shall not dare to eve speak to me\n
+                    "mm": `Ahh !\nHow audacious of you !\nYou shall not dare to even speak to me\n
                             until you dress into something much more bougie !\n
                             Might I recommend some\nCocoa Chanel, Jacquemousse, Peter Dough,\n
                             & Simone Rocher ?\n&\nI better not smell any Fast Food Fashion,\n& I better
@@ -106,7 +106,7 @@ export const cookieData = [
             "instructionBox": require('../../img/Wafer/Wafer_Box.png'),
             "instructionText": `Hover over each Black Square\nthen Click each White square.`,
             "blackBoxDialogue" : [
-                `Hi Flakey Wafter Jake,\n can I borrow you for a bit ? I would like to ask you about Soft Cookie.`,
+                `Hi Flakey Wafer Jake,\n can I borrow you for a bit ? I would like to ask you about Soft Cookie.`,
                 `Great thanks !\nLet's get started.`,
                 `When was the last you heard of Soft Cookie ?`,
                 `Do you know what\nSoft Cookie ended up doing ?`,

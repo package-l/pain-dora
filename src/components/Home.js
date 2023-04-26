@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import Cookies from 'js-cookie';
 import '../styles/Home.scss';
@@ -133,14 +133,14 @@ const Home = () => {
                         }}>"Home", unfortunately is where abuse often resides.</p><br/>
                         <p className="line3" style={{
                           fontSize: `${isSizingAspectRatio ? '1.1vw' : '2vh'}`
-                        }}>Disguised as a warm, safe, & loving space, everday is day,<br/>soft cookie kids are forced to face
+                        }}>Disguised as a warm, safe, & loving space, everday is a day,<br/>soft cookie kids are forced to face
                             emotional damage<br />verbally and/or physically. 
                         </p>
                         <p className="line4" style={{
                           fontSize: `${isSizingAspectRatio ? '1.1vw' : '2vh'}`
                         }}>
-                            In this case, <br/> I invite you to question & listen, <br/> to what each cookie (character) in this box
-                            ass.ortment has to say & feel. <br/> <br/>Explore the house, <br/>through the kitchen, by c/licking around. <br/><br/>
+                            In this case, <br/> I invite you to question & listen, <br/>to what each cookie (character) has to
+                             say & feel – in this cookie ass.ortment box.<br/> <br/>Explore the house<br/>by c/licking around & scrolling through the kitchen floors<br/><br/>
                             Help find the Soft Cookie Kid<br/> that's gone missing.
                         </p>
                         <h3 className="titlec" style={{
