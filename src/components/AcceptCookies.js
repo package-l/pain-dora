@@ -67,7 +67,7 @@ const AcceptCookies = () => {
               <div className="accept" onMouseEnter={handleAcceptHover} onMouseLeave={handleMouseLeave} onClick={handleAccept} style={{
                 opacity: `${opacity.accept}`
               }}>
-                <div className="arbotek">Y<div className="minion-small">e</div><div className="minion-small">s</div></div>
+                <div className="arbotek yes">Y<div className="minion-small">e</div><div className="minion-small">s</div></div>
               </div>
               <div className="dot" style={{
                 opacity: `${opacity.text}`
@@ -75,7 +75,7 @@ const AcceptCookies = () => {
               <Link to="/declinecookie" className="decline" onMouseEnter={handleDeclineHover} onMouseLeave={handleMouseLeave} style={{
                 opacity: `${opacity.decline}`
               }}>
-                <div className="arbotek">N<div className="minion-small">o</div></div>
+                <div className="arbotek no">N<div className="minion-small">o</div></div>
               </Link>
             <div className="cookie-explanation" style={{
                 opacity: `${opacity.text}`
@@ -84,6 +84,9 @@ const AcceptCookies = () => {
                 & all of your privacy rights are respected.
               </p>
             </div>
+            <div className="x" style={{
+                opacity: `${opacity.text}`
+              }}>X</div>
           </div>
         </div>
       )}
