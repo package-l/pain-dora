@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import '../../styles/Financier.scss'
 import audio from "../../img/Financier/cashier.mp3";
-import BackArrow from '../BackArrow';
+import BackArrowHome from '../BackArrowHome';
 import { useMediaQuery } from 'react-responsive';
 
 const Financier = (props) => {
@@ -50,7 +50,7 @@ const Financier = (props) => {
     <div className="financier-interaction-container">
         <div className="content-container">
             <div className="instructionBox">
-                <BackArrow />
+                <BackArrowHome />
                 {list.map((item, i) => 
 
                     (text !== undefined && ((i%2 !== 0 && i !== 1) || i === 0)) ?
