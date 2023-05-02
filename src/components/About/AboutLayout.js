@@ -5,9 +5,8 @@ import About from './About';
 const AboutLayout = () => {
   return (
     <>
-        <AboutNav />
-        <About />
         <Outlet />
+        <About />
     </>
   )
 }

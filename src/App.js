@@ -3,15 +3,21 @@ import { useEffect } from 'react';
 import './styles/App.scss';
 
 import Home from './components/Home';
-import About from './components/About';
+import About from './components/About/About';
 import MainCourse from './components/MainCourse';
 import Gallery from './components/Gallery';
 //import AcceptCookies from './components/AcceptCookies';
 import RejectCookies from './components/RejectCookies';
 import Start from './components/Start';
-import AboutNav from './components/AboutNav';
+
+// About page route imports
+import AboutDine from './components/About/AboutDine';
+import AboutAndy from './components/About/AboutAndy';
+import AboutLoui from './components/About/AboutLoui';
+import AboutBeta from './components/About/AboutBeta';
+
 import Test from './components/Test';
-import AboutLayout from './components/AboutLayout';
+import AboutLayout from './components/About/AboutLayout';
 import { SplashProvider } from "./components/SplashProvider";
 //import { SplashContextLayout } from "./components/SplashContextLayout";
 
@@ -61,10 +67,10 @@ function App() {
         <Route path="/declinecookie" element={<RejectCookies />} />
         <Route path="/flavourprofiles" element={<Gallery />} />
         <Route path="/about" element={<AboutLayout />}>
-          <Route index element={<About />}/>
-          <Route path="/about/andy" element={<Test />} />
-          <Route path="/about/loui" element={<Test />} />
-          <Route path="/about/beta" element={<Test />} />
+          <Route index element={<AboutDine />}/>
+          <Route path="/about/andy" element={<AboutAndy />} />
+          <Route path="/about/loui" element={<AboutLoui />} />
+          <Route path="/about/beta" element={<AboutBeta />} />
         </Route>
         <Route path="/maincourse" element={<MainCourse />} />
 
