@@ -1,12 +1,21 @@
 @import './Reusable.scss';
 
+@mixin Avenir {
+    @include tracking(40);
+    font-family: Avenir Next Condensed, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: black;
+    line-height: 3vh;
+}
+
 .about-container {
     height: 100vh;
 
     .content {
         @include transform(translate(-50%, -50%));
         max-height: 90%;
-        width: 95%;
+        max-width: 95%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -27,15 +36,16 @@
                             ". . . . .";*/
     }
 
-    .line1, .dine, .line2, .line3, .inquire, .line4, .email, .insta {
+    .line1, .dine, .line2, .line3, .inquire, .line4, .email, .insta, .bullets {
         position: relative;
     }
 
-    .line1 p, .dine h2, .line2 p, .line3 p, .inquire p, .line4 p, .email p, .insta p {
+    .line1 p, .dine h2, .line2 p, .line3 p, .inquire p, .line4 p, .email p, .insta p, .bullets p {
         position: absolute;
     }
 
     .line1 {
+        @include Avenir;
         grid-row: 2;
         grid-column: 3/5;
     }
@@ -46,8 +56,10 @@
     }
 
     .dine {
+        @include Nautica;
+        @include tracking(140);
         grid-row: 3;
-        grid-column: 2/5;
+        grid-column: 1/6;
     }
 
     .dine h2 {
@@ -57,22 +69,27 @@
     }
 
     .line2 {
+        @include Sinhala;
         grid-row: 4;
         grid-column: 2/3;
+        line-height: 2.5vh;
     }
 
     .line2 p {
-        right: 5%;
+        right: 2%;
         text-align: left;
     }
 
     .bullets {
+        @include Sinhala;
+        line-height: 2.5vh;
         grid-row: 4;
         grid-column: 3/4;
     }
 
     .bullets p {
         text-align: left;
+        left: 3%;
     }
 
     .bullet {
@@ -80,6 +97,7 @@
     }
 
     .line3 {
+        @include Sinhala;
         grid-row: 5;
         grid-column: 3/5;
     }
@@ -87,45 +105,57 @@
     .line3 p {
         text-align: left;
         left: 10%;
+        top: 50%;
     }
 
     .line3.second p {
+        @include Sinhala;
         @include transform(translate(-50%, -50%));
         left: 50%;
-        top: 50%;
+        top: 100%;
         text-align: right;
+        width: 100%;
     }
 
     .inquire {
-        grid-row: 6;
+        @include Sinhala;
+        grid-row: 7;
         grid-column: 2/3;
+        top: -40%;
     }
 
     .line4 {
+        @include Sinhala;
         grid-row: 6;
         grid-column: 3/5;
     }
 
     .line4 p {
-        right: 40%;
+        top: 25%;
+        right: 30%;
     }
 
     .email, .insta {
-        grid-row: 6;
+        @include Sinhala;
+        grid-row: 7;
         grid-column: 2/4;
     }
 
     .email p {
-        bottom: 50%;
+        @include Sinhala;
+        top: 5%;
         left: 15%;
     }
 
     .insta p {
-        bottom: 15%;
+        @include Sinhala;
+        top: 40%;
         left: 25%;
     }
 
     .copyright {
+        @include Avenir;
+        @include tracking(60);
         position: absolute;
         bottom: 2%;
         left: 2%;

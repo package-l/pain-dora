@@ -9,6 +9,9 @@ import Gallery from './components/Gallery';
 //import AcceptCookies from './components/AcceptCookies';
 import RejectCookies from './components/RejectCookies';
 import Start from './components/Start';
+import AboutNav from './components/AboutNav';
+import Test from './components/Test';
+import AboutLayout from './components/AboutLayout';
 import { SplashProvider } from "./components/SplashProvider";
 //import { SplashContextLayout } from "./components/SplashContextLayout";
 
@@ -57,7 +60,12 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/declinecookie" element={<RejectCookies />} />
         <Route path="/flavourprofiles" element={<Gallery />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutLayout />}>
+          <Route index element={<About />}/>
+          <Route path="/about/andy" element={<Test />} />
+          <Route path="/about/loui" element={<Test />} />
+          <Route path="/about/beta" element={<Test />} />
+        </Route>
         <Route path="/maincourse" element={<MainCourse />} />
 
         {/* Cookie Profiles */}\
