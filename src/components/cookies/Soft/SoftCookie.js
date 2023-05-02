@@ -6,8 +6,10 @@ import '../../../styles/SoftCookie.scss';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import Cookies from 'js-cookie';
 
 const SoftCookie = (props) => {
+    Cookies.set('softcookie', true);
 
     const [list, setList] = useState(props.data.customAssets.dialogueTextData.softData);
     const [smallList, setSmallList] = useState(props.data.customAssets.smallDialogueTextData.softDataSmall);

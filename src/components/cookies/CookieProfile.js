@@ -15,7 +15,7 @@ import SoftCookie from './Soft/SoftCookie';
 import Financier from './Financier';
 //import '../../styles/Madeleine.scss';
 
-import BackArrow from '../BackArrow';
+import BackArrowHome from '../BackArrowHome';
 
 //Math.random() * width*0.7 - width*0.7,
 const CookieProfile = (props) => {
@@ -66,7 +66,7 @@ const CookieProfile = (props) => {
           <div className="content-container">
             <div className="character-card">
               <div className="character-card-border"></div>
-                <BackArrow />
+                <BackArrowHome />
                 {cookie.toString() === "brownie" && 
                   <div className="profileImg"></div>
                 }

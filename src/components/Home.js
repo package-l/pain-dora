@@ -1,8 +1,9 @@
-import { useState, useRef } from 'react';
-import { Link } from "react-router-dom";
+import { useState, useRef, useEffect } from 'react';
+import { Link, ScrollRestoration } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import Cookies from 'js-cookie';
 import '../styles/Home.scss';
+import useScrollSnap from 'react-use-scroll-snap';
 
 // Import Splash/website start indicators
 import { useSplash } from './SplashProvider';
@@ -44,6 +45,15 @@ const Home = () => {
   const [isSoftCookieCracked, setIsSoftCookieCracked] = useState(false);
 
   const wrapperRef = useRef();
+  //const scrollRef = useRef(null);
+  //useScrollSnap({ ref: scrollRef, duration: 10});
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageY;
+    setScrollPosition(position);
+    console.log(window.scrollY);
+  };
 
   //Media Query
   const isBigScreen = useMediaQuery({ 
@@ -82,6 +92,25 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   //}, []);
 
+    useEffect(() => {
+      /*const scrollPosition = sessionStorage.getItem('scrollPosition');
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+        sessionStorage.removeItem('scrollPosition');
+      }
+      console.log(window.pageYOffset);
+      console.log(scrollPosition);*/
+
+
+
+      handleScroll();
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+
+  }, []);
+
   return (
     <div className="home">
       {isLidShowing ? (
@@ -103,6 +132,7 @@ const Home = () => {
             <HamburgerButton name="map" open={openMap} setOpen={setOpenMap}/>
             <NavMap open={openMap} setOpen={setOpenMap}/>
           </div>
+
 
           <section className="map-container" id="roof">
             <div className="cookie-map-container">
@@ -157,16 +187,16 @@ const Home = () => {
             <div className="cookie-map-container">
               <div id="f2-grid" className="content">
                 <div className="mac">
-                  <Link to="/macaron" className="macaron"><img className="cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
+                  <Link to="/macaron" className="macaron" state={{section: "f2-grid"}}><img className="cookie" src={Macaron} alt="Madame Macaron Character"></img></Link>
                 </div>
                 <div className="che">
-                  <Link to="/chess" className="chess"><img className="cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
+                  <Link to="/chess" className="chess" state={{section: "f2-grid"}}><img className="cookie" src={Chess} alt="Lady Knowah Character"></img></Link>
                 </div>
                 <div className="for">
-                  <Link to="/fortune" className="fortune"><img className="cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
+                  <Link to="/fortune" className="fortune" state={{section: "f2-grid"}}><img className="cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
                 </div>
                 <div className="fin" >
-                  <Link to="/financier" className="financier"><img className="cookie" src={Financier} alt="Financier Character"></img><p>$ $ $</p></Link>
+                  <Link to="/financier" className="financier" state={{section: "f2-grid"}}><img className="cookie" src={Financier} alt="Financier Character"></img><p>$ $ $</p></Link>
                 </div>
                 <div className="f2-down">
                   <DownArrow nextFloor={"ground"}/>
@@ -178,16 +208,16 @@ const Home = () => {
             <div className="cookie-map-container">
               <div id="ground-grid" className="content">
                 <div className="mad">
-                  <Link to="/madeleine" className="madeleine"><img className="cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
+                  <Link to="/madeleine" className="madeleine" state={{section: "ground-grid"}}><img className="cookie" src={Madeleine} alt="Mad Mad Baby Madeliene"></img></Link>
                 </div>
                 <div className="waf">
-                  <Link to="/wafer" className="wafer"><img className="cookie" src={Wafer} alt="Wafer cookie"></img></Link>
+                  <Link to="/wafer" className="wafer" state={{section: "ground-grid"}}><img className="cookie" src={Wafer} alt="Wafer cookie"></img></Link>
                 </div>
                 <div className="linz">
-                  <Link to="/linzer" className="linzer"><img className="cookie" src={Linzer} alt="Linzer cookie"></img></Link>
+                  <Link to="/linzer" className="linzer" state={{section: "ground-grid"}}><img className="cookie" src={Linzer} alt="Linzer cookie"></img></Link>
                 </div>
                 <div className="bro">
-                  <Link to="/brownie" className="brownie"><img className="cookie" src={Brownie} alt="Brownie cookie"></img></Link>
+                  <Link to="/brownie" className="brownie" state={{section: "ground-grid"}}><img className="cookie" src={Brownie} alt="Brownie cookie"></img></Link>
                 </div>
                 <div className="ground-down">
                   <DownArrow nextFloor={"cellar"}/>
@@ -202,7 +232,7 @@ const Home = () => {
                 {Cookies.get('brownie') && Cookies.get('madeleine') && Cookies.get('linzer') && Cookies.get('fortune') &&
                 Cookies.get('chess') && Cookies.get('macaron') && Cookies.get('wafer') && Cookies.get('brownie') ?
                     <div className="sof">
-                      <Link to="/softcookie" className="softcookie"><img className="cookie" src={`${isSoftCookieCracked ? SoftCookieCrack : SoftCookie}`} alt="Soft Cookie Character" onMouseOver={handleSoftCookieHover} onMouseOut={handleSoftCookieLeave}></img></Link> 
+                      <Link to="/softcookie" className="softcookie" state={{section: "cellar-grid"}}><img className="cookie" src={`${isSoftCookieCracked ? SoftCookieCrack : SoftCookie}`} alt="Soft Cookie Character" onMouseOver={handleSoftCookieHover} onMouseOut={handleSoftCookieLeave}></img></Link> 
                     </div> :
                     (<div className="Locked">
                       <div className="softcookie">

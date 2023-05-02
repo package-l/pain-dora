@@ -59,7 +59,7 @@ const Start = () => {
         {isSpotlightShowing ? (
           <div className="splash" onMouseMove={(eve) => handleMouseMove(eve)}>
             <div className="rectangle"></div>
-            <button className="enter"><Link to="/home" onClick={handleButtonClick}><span>Enter</span></Link></button>
+            <Link to="/home" onClick={handleButtonClick}><button className="enter">Enter</button></Link>
             <img className="spotlight-image" src={spotlightImage} alt="room background"></img>
             <div className="mouse" style={{
               backgroundImage: `radial-gradient(circle at ${position.left / width * 100}% ${position.top / height * 100}%, transparent ${height/5}px, black ${height/5}px)`

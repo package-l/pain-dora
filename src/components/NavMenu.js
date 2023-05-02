@@ -26,7 +26,7 @@ const NavMenu = ({ open, setOpen }) => {
                             <li className="titlemenu">menu</li>
                             <li></li>
                             <li><Link to="/">start_er</Link></li>
-                            <li><Link to="/home">home</Link></li>
+                            <li><Link reloadDocument to="/home">home</Link></li>
                             <li><Link to="/flavourprofiles">flavour<br/>profiles</Link></li>
                             <li></li>
                             <li></li>

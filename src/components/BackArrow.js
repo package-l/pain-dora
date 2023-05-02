@@ -6,7 +6,6 @@ const BackArrow = () => {
   return (
     <>
         <div className="backarrow" onClick={() => navigate(-1)}></div>
-        {/*<NavLink to="/home"><div className="backarrow"></div></NavLink>*/}
     </>
     )
 }

@@ -84,12 +84,12 @@
     .dot {
         transition-property: opacity;
         transition-duration: 2.5s;
-        animation: fadeIn ease-in 4.5s;
+        animation: fadeIn ease-in 1.5s; //4.5s
     }
 
     .cookiedefinition {
         animation: fadeInDefinition ease-in 5s forwards;
-        animation-delay: 4s;
+        animation-delay: 1.5s;
         opacity: 0;
     }
     

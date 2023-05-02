@@ -10,7 +10,6 @@ const NavMap = ({ open, setOpen }) => {
   return (
     <div className="navmap" open={open} style={{transform:`${open ? 'translateX(0)' : 'translateX(300%)'}`}}>
         <div className="navmap-border">
-          <div className="close" onClick={toggleOpen}>x</div>
           <ul>
               <a href="#roof"><li><p className="roof"><span className="roof-angle">Roo</span>f<span className="lid-angle">/Lid</span></p></li></a>
               <a href="#wrapper"><li><p>Wrapper</p></li></a>
@@ -19,6 +18,7 @@ const NavMap = ({ open, setOpen }) => {
               <a href="#cellar"><li><p>||Cellar||</p></li></a>
               <a href="#basement"><li><p>Basement</p></li></a>
           </ul>
+          <div className="close" onClick={toggleOpen}>x</div>
         </div>
     </div>
   )

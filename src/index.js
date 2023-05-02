@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//React.StrictMode
 
 root.render(
   <React.StrictMode>

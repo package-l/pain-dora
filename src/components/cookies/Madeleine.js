@@ -1,7 +1,7 @@
 import '../../styles/Madeleine.scss';
 import { useState, useEffect, useRef, forwardRef } from 'react';
 import Cookies from 'js-cookie';
-import BackArrow from '../BackArrow';
+import BackArrowHome from '../BackArrowHome';
 import { useMediaQuery } from 'react-responsive';
 
 const Madeleine = forwardRef((props, isAspectRatio) => {
@@ -62,7 +62,7 @@ const Madeleine = forwardRef((props, isAspectRatio) => {
         <div className="content-container" ref={ref}>
 
           <div className="instructionBox">
-            <BackArrow />
+            <BackArrowHome />
             <div className="instruction-image" onClick={handleMadeleineDialogueClick} style={{
               backgroundImage: `url(${props.data.customAssets.instructionBox})`,
               fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.6vh'}`
