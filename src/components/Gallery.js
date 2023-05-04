@@ -57,6 +57,7 @@ const Gallery = () => {
                   {Cookies.get("chess") ? 
                     <Link to="/chess" ><img role="link" className="visited" src={galleryData[0].characters.chess.visited} alt="Link to Queen Knowah's Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.chess.locked} alt="Locked Queen Knowah Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -70,6 +71,7 @@ const Gallery = () => {
                   {Cookies.get("wafer") ? 
                     <Link to="/wafer" ><img role="link" className="visited" src={galleryData[0].characters.wafer.visited} alt="Link to Flaky Wafer Jake's Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.wafer.locked} alt="Locked Flaky Wafer Jake Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -88,6 +90,7 @@ const Gallery = () => {
                       <div className="dollar-sign3 visited">+ $ $ $</div>
                     </> :
                     <>
+                      <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.financier.locked} alt="Locked Monsieur Financier Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -101,6 +104,7 @@ const Gallery = () => {
                   {Cookies.get("macaron") ? 
                     <Link to="/macaron" ><img role="link" className="visited" src={galleryData[0].characters.macaron.visited} alt="Link to Madame Macaron Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.macaron.locked} alt="Locked Madame Macaron Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -114,6 +118,7 @@ const Gallery = () => {
                   {Cookies.get("softcookie") ? 
                     <Link to="/softcookie" ><img role="link" className="visited" src={galleryData[0].characters.soft.visited} alt="Link to Soft Cookie Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text rhombus">You must meet<br/>everyone else before me !</div>
                       <img src={galleryData[0].characters.soft.locked} alt="Locked Soft Cookie Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -127,6 +132,7 @@ const Gallery = () => {
                   {Cookies.get("linzer") ? 
                     <Link to="/linzer" ><img role="link" className="visited" src={galleryData[0].characters.linzer.visited} alt="Link to Lying Linzer Lindsay Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.linzer.locked} alt="Locked Lying Linzer Lindsay Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -140,6 +146,7 @@ const Gallery = () => {
                   {Cookies.get("brownie") ? 
                     <Link to="/brownie" ><img role="link" className="visited" src={galleryData[0].characters.brownie.visited} alt="Link to Little Debbie Downer Brownie Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.brownie.locked} alt="Locked Little Debbie Downer Brownie Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -154,6 +161,7 @@ const Gallery = () => {
                   {Cookies.get("madeleine") ? 
                     <Link to="/madeleine" ><img role="link" className="visited" src={galleryData[0].characters.madeleine.visited} alt="Link to Mad Mad Baby Madeleine's Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.madeleine.locked} alt="Locked Mad Mad Baby Madeleine Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>
@@ -167,6 +175,7 @@ const Gallery = () => {
                   {Cookies.get("fortune") ? 
                     <Link to="/fortune" ><img role="link" className="visited" src={galleryData[0].characters.fortune.visited} alt="Link to Mis-Fortune's Profile Page"></img></Link> :
                     <>
+                      <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.fortune.locked} alt="Locked Mis-Fortune Link"></img>
                       <FontAwesomeIcon className="icon" icon={faLock} />
                     </>

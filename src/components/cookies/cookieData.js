@@ -182,7 +182,7 @@ export const cookieData = [
                 {
                     "name": "h1",
                     "shape": "circle",
-                    "text": `You cannot fact\ncheck-mate F8, therefore,\nit is a threat, not a treat .`
+                    "text": `If you do not taste the\nexact way I expect you to be,\nthen something is wrong with you .`
                 },
                 {
                     "name": "d6",

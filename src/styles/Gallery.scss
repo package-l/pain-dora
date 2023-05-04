@@ -76,6 +76,30 @@
         background-image: url('../img/Gallery/Circle_Doily.png');
     }
 
+    .locked-text {
+        @include nameFont;
+        @include transform(translateX(-50%) rotate(25deg));
+        font-size: 0.85rem;
+        position: absolute;
+        left: 75%;
+        top: -10%;
+        width: 75%;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .locked-text.rhombus {
+        @include transform(translateX(-50%) rotate(-45deg));
+        top: 5%;
+        left: 20%;
+    }
+
+    .image:hover .locked-text {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 2s ease-in, opacity 1s;
+    }
+
     .image {
         width: 100%;
         height: 100%;

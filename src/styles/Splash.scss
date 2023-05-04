@@ -17,7 +17,7 @@
 }
 
 .splash .rectangle {
-    @include transform(translate(-50%, -50%));
+    @include transform(translate(-50%, -50%) rotate(45deg));
     background-color: black;
     width: 100px;
     height: 100px;
@@ -27,8 +27,9 @@
 }
 
 .splash .enter {
-    @include fontA;
+    @include nameFont;
     @include transform(translate(-50%, -50%));
+    font-size: 1.2vw;
     top: 70vh;
     right: 8vw;
     background-color: black;

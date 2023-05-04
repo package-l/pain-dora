@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 
 const AcceptCookies = () => {
+
   //Media Query
   const isBigScreen = useMediaQuery({ 
     query: '(min-width: 850px)' 
@@ -85,7 +86,7 @@ const AcceptCookies = () => {
             </div>
             <div className="x" style={{
                 opacity: `${opacity.text}`
-              }}>X</div>
+              }}>&#9651;</div>
           </div>
         </div>
       )}

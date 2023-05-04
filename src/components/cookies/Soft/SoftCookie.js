@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-
+import { useState, useRef, useEffect } from 'react';
+import Confetti from "react-confetti";
 
 
 import '../../../styles/SoftCookie.scss';
@@ -10,9 +10,19 @@ import Cookies from 'js-cookie';
 
 const SoftCookie = (props) => {
     Cookies.set('softcookie', true);
+    const [height, setHeight] = useState(null);
+    const [width, setWidth] = useState(null);
+    const confetiRef = useRef(null);
+
+    useEffect(() => {
+      setHeight(window.innerHeight);
+      console.log(height);
+      setWidth(confetiRef.current.clientWidth);
+    }, [height]);
 
     const [list, setList] = useState(props.data.customAssets.dialogueTextData.softData);
     const [smallList, setSmallList] = useState(props.data.customAssets.smallDialogueTextData.softDataSmall);
+    const [count, setCount] = useState(0);
     const divRef = useRef();
     const dragItemOver = useRef();
     const box = useRef();
@@ -74,7 +84,8 @@ const SoftCookie = (props) => {
 
       //const dragItemContent = copyListItems[divRef.current];
 
-
+      setCount(count+1);
+      console.log(count);
   
       console.log(divRef.current);
  
@@ -86,7 +97,7 @@ const SoftCookie = (props) => {
     }
     
   return (
-    <div className="soft-interaction-container">
+    <div className="soft-interaction-container" ref={confetiRef}>
       <div className="content-container">
         {/*<div className="instructionBox">
           <BackArrow />
@@ -105,17 +116,17 @@ const SoftCookie = (props) => {
                   {line.map((word, j) => (
                     <p key={`word${j}`} className={`word`}>
                     {word.map((item, k) => item.isDeletable === true ? (
-                      <p 
+                      <span 
                       key={`item${k}`} 
                       className="word-parts"                 
                       onDragStart={(eve) => dragStart(eve, i, j, k, "big")}
                       onDragEnter={(eve) => dragEnter(eve, i, j, k, "big")}
                       draggable
-                      style={{ visibility: `${item.style}` }}>{item.word}</p>
+                      style={{ visibility: `${item.style}` }}>{item.word}</span>
                     ): (
-                      <p key={`item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+                      <span key={`item${k}`} id={k} className="word-parts nohover">{item.word}</span>
                     ))}
-                  <p className="space">&nbsp;</p></p>
+                  <span className="space">&nbsp;</span></p>
                   ))}
                 <br/></div>
               ))}
@@ -131,17 +142,17 @@ const SoftCookie = (props) => {
                   {line.map((word, j) => (
                     <p key={`small-word${j}`} className={`word`}>
                     {word.map((item, k) => item.isDeletable === true ? (
-                      <p 
+                      <span
                       key={`small-item${k}`} 
                       className="word-parts"                 
                       onDragStart={(eve) => dragStart(eve, i, j, k, "small")}
                       onDragEnter={(eve) => dragEnter(eve, i, j, k, "small")}
                       draggable = "true"
-                      style={{ visibility: `${item.style}` }}>{item.word}</p>
+                      style={{ visibility: `${item.style}` }}>{item.word}</span>
                     ): (
-                      <p key={`small-item${k}`} id={k} className="word-parts nohover">{item.word}</p>
+                      <span key={`small-item${k}`} id={k} className="word-parts nohover">{item.word}</span>
                     ))}
-                  <p className="space">&nbsp;</p></p>
+                  <span className="space">&nbsp;</span></p>
                   ))}
                   <br/></div>
               ))}
@@ -153,7 +164,19 @@ const SoftCookie = (props) => {
               <FontAwesomeIcon className="icon" icon={faTrash} />
           </div>
         </div>
-
+          {count === 32 &&
+          <>
+            <div className="ticker-wrap">
+              <div className="ticker">
+                <div className="end">The story is over! Thank you for being here.</div>
+              </div>
+            </div>
+            <Confetti numberOfPieces={150} width={width} height={height} style={{
+              position: 'absolute',
+              top: '-8%',
+            }}/>
+          </>
+          }
       {/*</div>*/}
     </div>
   )

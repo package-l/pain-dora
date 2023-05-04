@@ -52,15 +52,15 @@ const LinzerAnswerCard = ({ cardNum, answer, bgImgEven, bgImgOdd, narrow, wide }
         <div className="line1" id={`card${cardNum+1}line1`} onClick={(eve) => {handleAnswerReveal1(eve)}} style={{
           color: `${line1Color}`,
           fontSize: `${wide ? '0.75vw' : '1.1em'}`,
-        }}>{answer.line1.text}</div> 
+        }}>&#x2022; {answer.line1.text}</div> 
         <div className="line2" id={`card${cardNum+1}line2`} onClick={(eve) => {handleAnswerReveal2(eve)}} style={{
           color: `${line2Color}`,
           fontSize: `${wide ? '0.75vw' : '1.1em'}`,
-        }}>{answer.line2.text}</div>
+        }}>&#x2022; {answer.line2.text}</div>
         <div className="line3" id={`card${cardNum+1}line3`} onClick={(eve) => {handleAnswerReveal3(eve)}} style={{
           color: `${line3Color}`,
           fontSize: `${wide ? '0.75vw' : '1.1em'}`,
-        }}>{answer.line3.text}</div>
+        }}>&#x2022; {answer.line3.text}</div>
       </div>
     </div>
   )

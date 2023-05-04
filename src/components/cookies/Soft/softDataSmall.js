@@ -18,7 +18,7 @@ export const softDataSmall =  [
         ], 
         [
             {
-                "word": `am so sorry to have caused all of these issues &\n`,
+                "word": `am so sorry to have caused \nall of these issues &\n`,
                 "isDeletable": true,
                 "style": "visible",
             }, 
@@ -39,7 +39,7 @@ export const softDataSmall =  [
         ], 
         [
             {
-                "word": `as everyone took a part of my death . . . Including I . . .\n`,
+                "word": `as everyone took a part of my\ndeath . . . Including I . . .\n`,
                 "isDeletable": true,
                 "style": "visible",
             }, 

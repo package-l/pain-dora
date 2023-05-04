@@ -29,7 +29,7 @@ import CookieProfile from './components/cookies/CookieProfile';
 import { cookieData } from './components/cookies/cookieData';
 
 //temp
-//import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 
 function App() {
   /*
@@ -37,7 +37,7 @@ function App() {
   ^For 404 errors or other pages not specified.
   */
   
-  //Cookies.remove('home');
+  Cookies.remove('home');
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {

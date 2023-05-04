@@ -65,7 +65,7 @@ const Madeleine = forwardRef((props, isAspectRatio) => {
             <BackArrowHome />
             <div className="instruction-image" onClick={handleMadeleineDialogueClick} style={{
               backgroundImage: `url(${props.data.customAssets.instructionBox})`,
-              fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.6vh'}`
+              fontSize: `${isSizingAspectRatio ? '0.8vw' : '1.3vh'}`
             }}><div className="instruction-text"><p className="dialogue">{consumerText}</p></div></div>
           </div>
           <div className="right-section" ref={ref}>

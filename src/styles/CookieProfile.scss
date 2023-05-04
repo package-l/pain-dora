@@ -8,6 +8,7 @@
     position: relative;
     background-size: cover;
     overflow-y: hidden;
+    overflow: hidden; //could be a problem
 
     .container-90 {
         @include transform(translate(-50%, -50%));
@@ -244,6 +245,10 @@
     vertical-align: middle;
     display: table-cell;  
     margin: 2vh;
+}
+
+.instructionBox .dialogue {
+    margin-top: 5vh;
 }
 
 /*.consumerBox .dialogue {
