@@ -29,6 +29,7 @@ const NavMenu = ({ open, setOpen }) => {
                             <li><Link reloadDocument to="/home">home</Link></li>
                             <li><Link to="/flavourprofiles">flavour<br/>profiles</Link></li>
                             <li></li>
+                            <li><Link to="/resources">resources</Link></li>
                             <li></li>
                             <li><Link to="/maincourse">main course<br/>of action</Link></li>
                             <li></li>

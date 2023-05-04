@@ -1,0 +1,81 @@
+@import './Reusable.scss';
+
+section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.quote {
+    @include transform(translate(-50%, -50%));
+    @include Avenir;
+    @include tracking(180);
+    font-weight: lighter;
+    width: 80%;
+    font-size: 23pt;
+    line-height: 1.07;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.scroll {
+    @include transform(translate(-50%, -50%));
+    @include Avenir;
+    @include tracking(180);
+    font-size: 16pt;
+    line-height: 1.6;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+}
+
+.list-container {
+
+    h1 {
+        @include Avenir;
+        font-size: 14pt;
+        padding: 2rem;
+    }
+
+    h2 {
+        @include Avenir;
+        @include tracking(100);
+        font-weight: 500;
+        font-size: 16pt;
+        padding: 2rem;
+    }
+
+    .list-row {
+        @include transform(translate(-50%, -50%));
+        position: absolute;
+        display: flex;
+        top: 40%;
+        left: 50%;
+        height: 60%;
+        width: 90%;
+    }
+
+    ul, li {
+        @include Avenir;
+        padding: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        opacity: 50%;
+    }
+
+    .border {
+        height: 90%;
+        border-right: solid 1.5px grey;
+    }
+
+    .list-column {
+        flex: 50%;
+    }
+
+}

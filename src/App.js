@@ -9,6 +9,7 @@ import Gallery from './components/Gallery';
 //import AcceptCookies from './components/AcceptCookies';
 import RejectCookies from './components/RejectCookies';
 import Start from './components/Start';
+import Resources from './components/Resources';
 
 // About page route imports
 import AboutDine from './components/About/AboutDine';
@@ -73,6 +74,7 @@ function App() {
           <Route path="/about/beta" element={<AboutBeta />} />
         </Route>
         <Route path="/maincourse" element={<MainCourse />} />
+        <Route path="/resources" element={<Resources />} />
 
         {/* Cookie Profiles */}\
         {cookieData.map((cookie, key) => {

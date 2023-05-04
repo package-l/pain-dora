@@ -68,6 +68,15 @@ $grey-color: grey;
     line-height: 1.85vh;
 }
 
+@mixin Avenir {
+    @include tracking(40);
+    font-family: Avenir Next Condensed, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: black;
+    line-height: 3vh;
+}
+
 @mixin nameFont {
     font-family: "chantal", sans-serif;
     font-weight: 300;

@@ -1,13 +1,13 @@
 @import './Reusable.scss';
 
-@mixin Avenir {
+/*@mixin Avenir {
     @include tracking(40);
     font-family: Avenir Next Condensed, sans-serif;
     font-weight: 300;
     font-style: italic;
     color: black;
     line-height: 3vh;
-}
+}*/
 
 // PART 1 -- Consistent style for tray across all pages
 
@@ -205,6 +205,7 @@
     .line3 p {
         text-align: left;
         left: 10%;
+        top: 10%;
     }
 
     .line3.second p {
@@ -429,7 +430,7 @@
         line-height: 1.2;
         left: 50%;
         top: 40%;
-        color: #63a1d0;
+        color:  #f3a7b1;
     }
 
     .line2 {
@@ -561,7 +562,7 @@
         line-height: 1.2;
         left: 50%;
         top: 40%;
-        color: #63a1d0;
+        color: #998cbc;
     }
 
     .line2 {
