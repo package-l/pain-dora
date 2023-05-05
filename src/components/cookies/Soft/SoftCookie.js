@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import Confetti from "react-confetti";
 
 
@@ -10,15 +10,7 @@ import Cookies from 'js-cookie';
 
 const SoftCookie = (props) => {
     Cookies.set('softcookie', true);
-    const [height, setHeight] = useState(null);
-    const [width, setWidth] = useState(null);
-    const confetiRef = useRef(null);
 
-    useEffect(() => {
-      setHeight(window.innerHeight);
-      console.log(height);
-      setWidth(confetiRef.current.clientWidth);
-    }, [height]);
 
     const [list, setList] = useState(props.data.customAssets.dialogueTextData.softData);
     const [smallList, setSmallList] = useState(props.data.customAssets.smallDialogueTextData.softDataSmall);
@@ -97,7 +89,7 @@ const SoftCookie = (props) => {
     }
     
   return (
-    <div className="soft-interaction-container" ref={confetiRef}>
+    <div className="soft-interaction-container">
       <div className="content-container">
         {/*<div className="instructionBox">
           <BackArrow />
@@ -164,16 +156,17 @@ const SoftCookie = (props) => {
               <FontAwesomeIcon className="icon" icon={faTrash} />
           </div>
         </div>
-          {count === 32 &&
+          {count === 2 &&
           <>
             <div className="ticker-wrap">
               <div className="ticker">
-                <div className="end">The story is over! Thank you for being here.</div>
+                <div className="end">ThAnk YoU For pLAYing, sAving, & sAvouring Us</div>
               </div>
             </div>
-            <Confetti numberOfPieces={150} width={width} height={height} style={{
+            <Confetti numberOfPieces={150} width={window.innerWidth} height={window.innerHeight} style={{
               position: 'absolute',
               top: '-8%',
+              left: '-60%'
             }}/>
           </>
           }

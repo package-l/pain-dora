@@ -222,11 +222,12 @@ body::-webkit-scrollbar {
     }
     
     @mixin wrapperFontB {
+        @include tracking(120);
         font-family: Minion Pro, serif;
         font-weight: semi-bold;
         font-style: italic;
-        letter-spacing: 0.12em;
-        font-size: 1.1vw;
+        //letter-spacing: 0.12em;
+        //font-size: 1.1vw;
         line-height: 2.1vh;
     }
     

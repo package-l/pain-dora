@@ -23,42 +23,71 @@ section {
     @include transform(translate(-50%, -50%));
     @include Avenir;
     @include tracking(180);
-    font-size: 16pt;
+    font-size: 20px;
     line-height: 1.6;
     position: absolute;
     top: 70%;
     left: 50%;
+    cursor: pointer;
+}
+
+.scroll:hover {
+    opacity: 50%;
+}
+
+.caret {
+    @include transform(translateX(-50%));
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 3vh;
 }
 
 .list-container {
 
+    .list-position-container {
+        @include transform(translate(-50%, -50%));
+        position: relative;
+        top: 50%;
+        left: 50%;
+        height: 90%;
+        width: 100%;
+    }
+
     h1 {
         @include Avenir;
-        font-size: 14pt;
-        padding: 2rem;
+        @include tracking(180);
+        font-weight: 300;
+        font-style: italic;
+        font-size: 24px;
+        padding: 1rem;
+        line-height: 1.33;
     }
 
     h2 {
         @include Avenir;
-        @include tracking(100);
+        @include tracking(180);
         font-weight: 500;
-        font-size: 16pt;
-        padding: 2rem;
+        font-style: italic;
+        font-size: 24px;
+        padding: 1rem;
+        padding-top: 2rem;
+        line-height: 1.33;
     }
 
     .list-row {
-        @include transform(translate(-50%, -50%));
-        position: absolute;
+        position: relative;
         display: flex;
-        top: 40%;
-        left: 50%;
-        height: 60%;
-        width: 90%;
     }
 
     ul, li {
         @include Avenir;
-        padding: 1rem;
+        @include tracking(180);
+        padding: 1.5rem;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1.33;
+        font-style: normal;
     }
 
     a {

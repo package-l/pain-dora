@@ -123,6 +123,7 @@
 
     /* (A) FIXED WRAPPER */
     .ticker-wrap {
+        @include nameFont;
         @include transform(translate(-50%));
         position: absolute;
         top: 99%;
@@ -131,7 +132,8 @@
         overflow: hidden; /* HIDE SCROLL BAR */
         background: black;
         color: white;
-        font-weight: bold;
+        font-weight: bolder;
+        font-size: 1.5rem
     }
     
     /* (B) MOVING TICKER WRAPPER */

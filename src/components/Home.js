@@ -157,19 +157,21 @@ const Home = () => {
                           fontSize: `${isSizingAspectRatio ? '4.5vw' : '8vh'}`
                         }}>of Cookie Monsters ,</h2>
                         <p className="line2" style={{
-                          fontSize: `${isSizingAspectRatio ? '1.1vw' : '2vh'}`
-                        }}>"Home", unfortunately is where abuse often resides.</p><br/>
+                          fontSize: `${isSizingAspectRatio ? '1.15vw' : '2vh'}`
+                        }}>“Home,” unfortunately is a space where abuse, often resides.</p><br/>
                         <p className="line3" style={{
-                          fontSize: `${isSizingAspectRatio ? '1.1vw' : '2vh'}`
-                        }}>Disguised as a warm, safe, & loving space, everday is a day,<br/>soft cookie kids are forced to face
-                            emotional damage<br />verbally and/or physically. 
+                          fontSize: `${isSizingAspectRatio ? '1.15vw' : '2vh'}`
+                        }}>Disguised as a warm, safe, & loving environment, everyday is a day,<br/>
+                        where soft cookie kids are forced to face hostile situations,<br/>
+                        imbuing emotional, mental, &/or physical trauma . 
                         </p>
                         <p className="line4" style={{
-                          fontSize: `${isSizingAspectRatio ? '1.1vw' : '2vh'}`
+                          fontSize: `${isSizingAspectRatio ? '1.15vw' : '2vh'}`
                         }}>
-                            In this case, <br/> I invite you to question & listen, <br/>to what each cookie (character) has to
-                             say & feel – in this cookie ass.ortment box.<br/> <br/>Explore the house<br/>by c/licking around & scrolling through the kitchen floors<br/><br/>
-                            Help find the Soft Cookie Kid<br/> that's gone missing.
+                            In this case,<br/>I invite you to question & listen,<br/>to what each cookie (character) has to
+                             say & feel<br/>– in this cookie ass.ortment box.<br/> <br/>Explore the house<br/>(inspired by kitchen & dining settings),<br/>
+                             by scrolling & strolling, & c/licking around .<br/><br/>
+                             Be the investigator,<br/>& help find the Soft Cookie Kid that has gone missing .
                         </p>
                         <h3 className="titlec" style={{
                           fontSize: `${isSizingAspectRatio ? '3.5vw' : '6vh'}`
