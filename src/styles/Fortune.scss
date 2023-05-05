@@ -195,6 +195,16 @@
 
     .right {
         right: 50%;
+        clip-path: polygon(
+            0% 0,
+            90% 0,
+            100% 30%,
+            100% 100%,
+            100% 100%,
+            100% 100%,
+            0% 100%,
+        );
+        
     }
 
     .fortune-paper {
@@ -316,6 +326,8 @@
         opacity: 0;
         visibility: hidden;
     }
+
+    
 }
 
 

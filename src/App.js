@@ -37,7 +37,7 @@ function App() {
   ^For 404 errors or other pages not specified.
   */
   
-  Cookies.remove('home');
+  //Cookies.remove('home');
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {

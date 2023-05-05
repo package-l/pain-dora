@@ -55,7 +55,7 @@ const Gallery = () => {
               <div className="chess">
                 <div className="image">
                   {Cookies.get("chess") ? 
-                    <Link to="/chess" ><img role="link" className="visited" src={galleryData[0].characters.chess.visited} alt="Link to Queen Knowah's Profile Page"></img></Link> :
+                    <Link to="/chess" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.chess.visited} alt="Link to Queen Knowah's Profile Page"></img></Link> :
                     <>
                       <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.chess.locked} alt="Locked Queen Knowah Link"></img>
@@ -69,7 +69,7 @@ const Gallery = () => {
               <div className="wafer">
                 <div className="image">
                   {Cookies.get("wafer") ? 
-                    <Link to="/wafer" ><img role="link" className="visited" src={galleryData[0].characters.wafer.visited} alt="Link to Flaky Wafer Jake's Profile Page"></img></Link> :
+                    <Link to="/wafer" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.wafer.visited} alt="Link to Flaky Wafer Jake's Profile Page"></img></Link> :
                     <>
                       <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.wafer.locked} alt="Locked Flaky Wafer Jake Link"></img>
@@ -84,7 +84,7 @@ const Gallery = () => {
                 <div className="image">
                   {Cookies.get("financier") ? 
                     <>
-                      <Link to="/financier" ><img role="link" className="visited" src={galleryData[0].characters.financier.visited} alt="Link to Monsieur Financier's Profile Page"></img></Link> 
+                      <Link to="/financier" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.financier.visited} alt="Link to Monsieur Financier's Profile Page"></img></Link> 
                       <div className="dollar-sign1 visited">+ $ $ $</div>
                       <div className="dollar-sign2 visited">+ $ $ $</div>
                       <div className="dollar-sign3 visited">+ $ $ $</div>
@@ -102,7 +102,7 @@ const Gallery = () => {
               <div className="macaron">
                 <div className="image">
                   {Cookies.get("macaron") ? 
-                    <Link to="/macaron" ><img role="link" className="visited" src={galleryData[0].characters.macaron.visited} alt="Link to Madame Macaron Profile Page"></img></Link> :
+                    <Link to="/macaron" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.macaron.visited} alt="Link to Madame Macaron Profile Page"></img></Link> :
                     <>
                       <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.macaron.locked} alt="Locked Madame Macaron Link"></img>
@@ -116,7 +116,7 @@ const Gallery = () => {
               <div className="soft">
                 <div className="image">
                   {Cookies.get("softcookie") ? 
-                    <Link to="/softcookie" ><img role="link" className="visited" src={galleryData[0].characters.soft.visited} alt="Link to Soft Cookie Profile Page"></img></Link> :
+                    <Link to="/softcookie" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.soft.visited} alt="Link to Soft Cookie Profile Page"></img></Link> :
                     <>
                       <div className="locked-text rhombus">You must meet<br/>everyone else before me !</div>
                       <img src={galleryData[0].characters.soft.locked} alt="Locked Soft Cookie Link"></img>
@@ -130,7 +130,7 @@ const Gallery = () => {
               <div className="linzer">
                 <div className="image">
                   {Cookies.get("linzer") ? 
-                    <Link to="/linzer" ><img role="link" className="visited" src={galleryData[0].characters.linzer.visited} alt="Link to Lying Linzer Lindsay Profile Page"></img></Link> :
+                    <Link to="/linzer" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.linzer.visited} alt="Link to Lying Linzer Lindsay Profile Page"></img></Link> :
                     <>
                       <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.linzer.locked} alt="Locked Lying Linzer Lindsay Link"></img>
@@ -144,7 +144,7 @@ const Gallery = () => {
               <div className="brownie">
                 <div className="image">
                   {Cookies.get("brownie") ? 
-                    <Link to="/brownie" ><img role="link" className="visited" src={galleryData[0].characters.brownie.visited} alt="Link to Little Debbie Downer Brownie Profile Page"></img></Link> :
+                    <Link to="/brownie" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.brownie.visited} alt="Link to Little Debbie Downer Brownie Profile Page"></img></Link> :
                     <>
                       <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.brownie.locked} alt="Locked Little Debbie Downer Brownie Link"></img>
@@ -159,7 +159,7 @@ const Gallery = () => {
               <div className="madeleine">
                 <div className="image">
                   {Cookies.get("madeleine") ? 
-                    <Link to="/madeleine" ><img role="link" className="visited" src={galleryData[0].characters.madeleine.visited} alt="Link to Mad Mad Baby Madeleine's Profile Page"></img></Link> :
+                    <Link to="/madeleine" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.madeleine.visited} alt="Link to Mad Mad Baby Madeleine's Profile Page"></img></Link> :
                     <>
                       <div className="locked-text">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.madeleine.locked} alt="Locked Mad Mad Baby Madeleine Link"></img>
@@ -173,7 +173,7 @@ const Gallery = () => {
               <div className="fortune">
                 <div className="image">
                   {Cookies.get("fortune") ? 
-                    <Link to="/fortune" ><img role="link" className="visited" src={galleryData[0].characters.fortune.visited} alt="Link to Mis-Fortune's Profile Page"></img></Link> :
+                    <Link to="/fortune" state={{section: ""}}><img role="link" className="visited" src={galleryData[0].characters.fortune.visited} alt="Link to Mis-Fortune's Profile Page"></img></Link> :
                     <>
                       <div className="locked-text rhombus">You must meet<br/> me in the house first !</div>
                       <img src={galleryData[0].characters.fortune.locked} alt="Locked Mis-Fortune Link"></img>
