@@ -174,7 +174,11 @@ const Home = () => {
                   <Link to="/fortune" className="fortune" state={{section: "f2-grid"}}><img className="cookie" src={Fortune} alt="Mis-fortune Character"></img></Link>
                 </div>
                 <div className="fin" >
-                  <Link to="/financier" className="financier" state={{section: "f2-grid"}}><img className="cookie" src={Financier} alt="Financier Character"></img><p>$ $ $</p></Link>
+                  <Link to="/financier" className="financier" state={{section: "f2-grid"}}><img className="cookie" src={Financier} alt="Financier Character"></img>
+                    <div className="dollar-sign1">$ $ $</div>
+                    <div className="dollar-sign2">$ $ $</div>
+                    <div className="dollar-sign3">$ $ $</div>
+                  </Link>
                 </div>
                 <div className="f2-down">
                   <DownArrow nextFloor={"ground"}/>

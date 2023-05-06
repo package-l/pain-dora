@@ -19,7 +19,7 @@ const AboutBeta = () => {
             <div className="info1"><p style={{
             fontSize: `${isSizingAspectRatio ? '1.25vw' : '1.9vh'}`
             }}>Calvin H.,  Celeste W.,  Eileen L.,  Hadley S.,<br/>
-            Haley P.,  July L.,  & Olivia V.                               
+            Haley P.,  July L., Olivia V. & Ya Pei C.                             
             </p></div>
             <div className="grey"></div>
             <div className="white"></div>

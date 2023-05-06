@@ -455,6 +455,37 @@ body::-webkit-scrollbar {
                     transform: transform(translateX(-60%)); } 
     }
 
+    .fin {
+        .dollar-sign1 {
+            font-weight: bold;
+            color: black;
+            visibility: hidden;
+            position: absolute;
+            top: -55%;
+            left: 30%;
+            //animation: gallery-fade 3s infinite 1s;
+        }
+        .dollar-sign2 {
+            font-weight: bold;
+            color: black;
+            visibility: hidden;
+            position: absolute;
+            top: 50%;
+            right: -30%;
+            //animation: gallery-fade 3s infinite 1s;
+        }
+    
+        .dollar-sign3 {
+            font-weight: bold;
+            color: black;
+            visibility: hidden;
+            position: absolute;
+            top: 95%;
+            left: -30%;
+            //animation: gallery-fade 3s infinite 2s;
+        }
+    }
+
     .financier {
         @include transform(translateX(-50%));
         display: inline-block;
@@ -489,7 +520,7 @@ body::-webkit-scrollbar {
         @include transform(translateX(-50%) scale(1.1));
     }
 
-    .financier img:hover + p {
+    .financier img:hover ~ div {
         visibility: visible;
         transition: visibility 1s ease-in;
     }

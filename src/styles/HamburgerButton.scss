@@ -41,12 +41,12 @@
     @include transform(translate(-50%, -50%));
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 50%;
 }
 
 #map .hamburgerwrapper {
     position: absolute;
-    right: -50%;
+    right: -5%;
 }
 
 .burger {
@@ -58,7 +58,7 @@
     //transition: all 0.3s linear;
 }
 
-.burger1, .burger2, .burger3 {
+.burger2, .burger3 {
    margin-top: 4px;
 }
 
