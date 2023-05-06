@@ -1,13 +1,19 @@
 @import './Reusable.scss';
 
+.gallery-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 .gallery-container {
     // was in html
     overscroll-behavior-y: none;
     overflow-x: hidden;
     overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 
 
-    width: 100%;
+    width: 100vw;
     height: 240vh;
     background-image: url('../img/Gallery/Flavour_Profile_BG.png');
     background-size: contain;
@@ -277,6 +283,7 @@
         position: absolute;
         bottom: 20%;
         left: 64%;
+        //animation: gallery-fade 3s infinite;
     }
 
     .dollar-sign2 {
@@ -284,6 +291,7 @@
         position: absolute;
         top: 8%;
         right: 15%;
+        //animation: gallery-fade 3s infinite 1s;
     }
 
     .dollar-sign3 {
@@ -291,11 +299,17 @@
         position: absolute;
         top: 25%;
         left: 10%;
+        //animation: gallery-fade 3s infinite 2s;
     }
 
     .financier:hover .image .visited {
         @include transform(translateY(-50%) scale(1.1));
         visibility: visible;
+    }
+
+    @keyframes gallery-fade {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
     }
 
     @keyframes gallery-slide {

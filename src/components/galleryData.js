@@ -6,13 +6,13 @@ export const galleryData = [
         "characters": {
             "chess": {
                 "locked": require('../img/Gallery/icons/Grey_Chess.png'),
-                "visited": require('../img/Chess/Chess.png'),
+                "visited": require('../img/Chess/Chess_Cookie.png'),
                 "name": "QuEEn knowAh",
                 "description": `Dark Chocolate, White Chocolate,\nCharcoal, & Vanilla Bean`
             },
             "wafer": {
                 "locked": require('../img/Gallery/icons/Grey_Wafer.png'),
-                "visited": "placeholder",
+                "visited": require('../img/Wafer/Wafer_Cookie.png'),
                 "name": "FLAkEY waFEr JAkE",
                 "description": `Dry, Crunchy, Bland,\nCoconut Flakes w/Taro Cream`
             },

@@ -45,16 +45,13 @@
 }
 
 #map .hamburgerwrapper {
-    @include transform(translate(-50%, -50%));
     position: absolute;
-    //top: 24%;
-    top: 50%;
     right: -50%;
 }
 
 .burger {
     width: 2.5vh;
-    height: 0.3vh;
+    height: 0.45vh;
     border-radius: 1vh;
     background-color: black;
     //transform-origin: 1px;
@@ -62,7 +59,7 @@
 }
 
 .burger1, .burger2, .burger3 {
-    margin-top: 0.4vh;
+   margin-top: 4px;
 }
 
 /*#navmap-button.hamburger {

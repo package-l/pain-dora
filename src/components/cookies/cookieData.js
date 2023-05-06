@@ -15,9 +15,8 @@ export const cookieData = [
         ],
         "bgImg": require('../../img/Soft/Soft_BG.png'),
         "customAssets": {
-            "instructionBox": require('../../img/Soft/SoftCookie_Instruction.png'),
-            "instructionText": `Undo Soft Cookies'\nlearnt self destructive phrases,\n
-                                into self loving affirmations,\nby dragging words into the trash !`,
+            "instructionBox": require('../../img/Soft/Soft_Cookie_Instruction_Box.png'),
+            "instructionText": `Undo Soft Cookies'\nlearnt self destructive phrases,\ninto self loving affirmations,\nby dragging words &/or letters into the trash !`,
             "dialogueBox_Big": require('../../img/Soft/SoftCookie_Big.png'),
             "dialogueBox_Small": require('../../img/Soft/SoftCookie_Small.png'),
             "dialogueTextData": require('./Soft/softData'),
@@ -100,7 +99,7 @@ export const cookieData = [
         "fullname": `FLAkEY waFEr\nJAkE`,
         "description": "Age : 22",
         "icon": require('../../img/icons/Icon_Wafer.png'),
-        "img": require('../../img/Macaron/Macaron.png'),
+        "img": require('../../img/Wafer/Wafer_Cookie.png'),
         "bgImg": require('../../img/Wafer/BG_Wafer.png'),
         "customAssets": {
             "instructionBox": require('../../img/Wafer/Wafer_Box.png'),
