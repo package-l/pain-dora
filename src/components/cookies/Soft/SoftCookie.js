@@ -166,7 +166,7 @@ const SoftCookie = (props) => {
           <>
             <div className="ticker-wrap">
               <div className="ticker">
-                <div className="end">ThAnk YoU For pLAYing, sAving, & sAvouring Us</div>
+                <div className="end">ThAnk YoU For pLAYing, sAving, & sAvouring Us !!</div>
               </div>
             </div>
             <Confetti numberOfPieces={150} width={window.innerWidth} height={window.innerHeight} style={{
