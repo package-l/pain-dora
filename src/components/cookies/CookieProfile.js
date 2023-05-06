@@ -73,7 +73,12 @@ const CookieProfile = (props) => {
                 {cookie.toString() === "softcookie" &&
                   <img src={props.data.img[Math.floor(Math.random() * 7)]} className="profileImg soft" alt="Character Profile Card"></img>
                 }
-                {cookie.toString() !== "brownie" && cookie.toString() !== "softcookie" &&
+                {cookie.toString() === "wafer" &&
+                  <img src={props.data.img} className="profileImg"  alt="Character Profile Card" style={{
+                    marginTop: '3rem'
+                  }}></img>
+                }
+                {cookie.toString() !== "brownie" && cookie.toString() !== "softcookie" && cookie.toString() !== "wafer"&&
                   <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
                 }
               <div className="fullname" style={{

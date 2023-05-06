@@ -143,7 +143,7 @@ const Home = () => {
                           fontSize: `${isSizingAspectRatio ? '1.15vw' : '2vh'}`
                         }}>
                             In this case,<br/>I invite you to question & listen,<br/>to what each cookie (character) has to
-                             say & feel<br/>– in this cookie ass.ortment box.<br/> <br/>Explore the house<br/>(inspired by kitchen & dining settings),<br/>
+                             say & feel<br/>– in this cookie box ass.ortment.<br/> <br/>Explore the house<br/>(inspired by kitchen & dining settings),<br/>
                              by scrolling & strolling, & c/licking around .<br/><br/>
                              Be the investigator,<br/>& help find the Soft Cookie Kid that has gone missing .
                         </p>

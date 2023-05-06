@@ -58,9 +58,9 @@ export const cookieData = [
                     "id": 2,
                     "you": `I don't work for you .\nI am here to ask about Soft Cookie .`,
                     "mm": `Oh oh, that explains why you're here,\nbut doesn't explain how cheap you look .\n
-                            Soft Cookie, truly one of thee worst cookies ever\nImmensely lazy,
-                            trying to teach silly things\n"work smart, not hard"\nAs if .\n
-                            It tried whipping them into shape,\ncontantly telling them to get\nback up on their feet ;\n
+                            Soft Cookie, truly one of thee worst cookies ever .\nImmensely lazy,
+                            trying to teach silly things like\n"work smart, not hard"\nAs if .\n
+                            I tried whipping them into shape,\ncontantly telling them to get\nback up on their feet ;\n
                             & they believe in\nbreaks .`
                 },
                 {
@@ -103,13 +103,13 @@ export const cookieData = [
         "bgImg": require('../../img/Wafer/BG_Wafer.png'),
         "customAssets": {
             "instructionBox": require('../../img/Wafer/Wafer_Box.png'),
-            "instructionText": `Hover over each Black Square\nthen Click each White square.`,
+            "instructionText": `Hover over each Black Square\nthen *CLICK* each White Square.`,
             "blackBoxDialogue" : [
                 `Hi Flakey Wafer Jake,\n can I borrow you for a bit ? I would like to ask you about Soft Cookie.`,
                 `Great thanks !\nLet's get started.`,
                 `When was the last you heard of Soft Cookie ?`,
                 `Do you know what\nSoft Cookie ended up doing ?`,
-                `Do you think not\n showing up ave upset Soft Cookie ?`,
+                `Do you think not\n showing up may have upset Soft Cookie ?`,
                 `Is there a reason you don't attend or often reply ?`,
                 `Have you thought about what it feels like when a cookie doesn't show up for you?`,
                 `Okay, anyways, let's get back to our main topic, Soft Cookie -`,
@@ -122,7 +122,7 @@ export const cookieData = [
                 `Y'know, I'm just\nreally messy and all over the place in my own space all the time, and I need y'all to\nunderstand that,\nso - I don't know.`,
                 `Just because I don't go,\ndoesn't mean I'm a ghost .\nI'm there in spirit -\nThough, you can't taste it.\nor feel it . . . or smell it . . .\nYou get what I mean.\nDing* Oh look, another\ninvite that I can decline !\nEhh, they'll know what it means if I don't reply.`,
                 `It's really hard to get me out of the oven. I have a\npattern of procrastinating then pulling out last minute.\nIt's okay though, I usually ding them 10 minutes prior meeting -`,
-                `Oh yeah,\nI hate when flake on me.`,
+                `Oh yeah,\nI hate when others flake on me.`,
                 `Look, I don't know who comminuted Soft Cookie, but I for sure did not\ncommit the crime because\nI clearly don't have that\nwill of a commitment.`,
                 `actually . . . i'm gonna\ndwindle away . . . i'm\nnot feeling it . . .`,
             ],

@@ -3,11 +3,6 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 const BackArrowHome = () => {
   const location = useLocation();
   const { section } = location.state;
-  console.log(section);
-  /*if (location.state) {
-    section = location.state;
-    console.log(section);
-  }*/
   const navigate = useNavigate();
 
 return (
