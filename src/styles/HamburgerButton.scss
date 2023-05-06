@@ -37,7 +37,7 @@
     border-color: grey;
 }
 
-.hamburgerwrapper {
+.menu .hamburgerwrapper {
     @include transform(translate(-50%, -50%));
     position: absolute;
     top: 50%;
@@ -45,8 +45,10 @@
 }
 
 #map .hamburgerwrapper {
+    @include transform(translate(-50%, -50%));
+    top: 50%;
     position: absolute;
-    right: -5%;
+    right: 10%;
 }
 
 .burger {
