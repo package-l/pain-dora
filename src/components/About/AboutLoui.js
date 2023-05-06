@@ -24,7 +24,7 @@ const AboutLoui = () => {
             }}>LoUIsA g.</h2></div>
             <div className="line2"><p style={{
                 fontSize: `${isSizingAspectRatio ? '1.25vw' : '2vh'}`
-            }}>Web Developer, Coder, Designer, & Artist
+            }}>Web Developer, Coder, Concept Designer, & Artist
             </p></div>
             <div className="info1"><p style={{
             fontSize: `${isSizingAspectRatio ? '0.9vw' : '1.65vh'}`
