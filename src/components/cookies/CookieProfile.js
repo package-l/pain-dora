@@ -78,7 +78,13 @@ const CookieProfile = (props) => {
                     marginTop: '3rem'
                   }}></img>
                 }
-                {cookie.toString() !== "brownie" && cookie.toString() !== "softcookie" && cookie.toString() !== "wafer"&&
+                {cookie.toString() === "financier" &&
+                  <img src={props.data.img} className="profileImg"  alt="Character Profile Card" style={{
+                   width: '70%',
+                   height: 'auto',
+                  }}></img>
+                }
+                {cookie.toString() !== "brownie" && cookie.toString() !== "softcookie" && cookie.toString() !== "financier" && cookie.toString() !== "wafer" &&
                   <img src={props.data.img} className="profileImg" alt="Character Profile Card"></img>
                 }
               <div className="fullname" style={{

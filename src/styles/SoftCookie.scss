@@ -77,11 +77,20 @@
         left: 45%;
         grid-area: trash;
         background-color: black;
-        height: 120px;
-        width: 120px;
+        height: 140px;
+        width: 140px;
         border-radius: 50%;
 
         position: relative;
+    }
+
+    .trash-count {
+        @include transform(translate(-50%, -30%));
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
     }
 
     .word {
@@ -112,7 +121,7 @@
         left: 50%;
         position: absolute;
         color: white;
-        height: 5vh;
+        height: 8vh;
     }
 
     /*.end {

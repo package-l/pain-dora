@@ -206,7 +206,7 @@ export const cookieData = [
         "customAssets": {
             "answerBoxOdd": require('../../img/Linzer/Linzer_Dialogue_ANSWER_Box_1_3_5.png'),
             "answerBoxEven" : require('../../img/Linzer/Linzer_Dialogue_ANSWER_Box_2_4_6.png'),
-            "instructionText": `2 Lies & a Truth .\n \nHover over any prompt -\nthe black box- click to begin,\nthen choose the correct truth .`,
+            "instructionText": `2 Lies & a Truth .\n \nHover over any prompt -\nthe black box- click to begin,\nthen press on the correct truth .`,
             "instructionBox": require('../../img/Linzer/Linzer_Dialogue_INSTRUCTIONS_Box.png'),
             "promptBox": require('../../img/Linzer/Linzer_Dialogue_PROMPT_Box.png')
         }
@@ -365,7 +365,7 @@ export const cookieData = [
                     "text": `Note #3\n\nI'd rather rot w/ my gold\ningots, than be ripe & alive .`,
                 },
                 {
-                    "text": `Note #4\n\nCookies kids are koo koo,\nthey haven't learnted that\ncontentment is bought .`,
+                    "text": `Note #4\n\nCookie kids are koo koo,\nthey haven't learned that\ncontentment is bought .`,
                 },
                 {
                     "text": `Note #5\n\nMoney = Happiness\n Money = No Problems\nMoney = Blood & Butter`,

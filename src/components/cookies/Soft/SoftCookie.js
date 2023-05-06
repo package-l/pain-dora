@@ -154,9 +154,15 @@ const SoftCookie = (props) => {
             onDragOver={(e) => onDragOver(e)}
             onDrop={(e) => onTrashDrop(e)}>
               <FontAwesomeIcon className="icon" icon={faTrash} />
+              <div className="trash-count" style={{
+                color: 'black',
+                position: 'absolute',
+                top: '50%',
+                left: '50%'
+              }}>{count}/32</div>
           </div>
         </div>
-          {count === 2 &&
+          {count === 32 &&
           <>
             <div className="ticker-wrap">
               <div className="ticker">
