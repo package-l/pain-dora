@@ -228,7 +228,7 @@ body::-webkit-scrollbar {
         font-style: italic;
         //letter-spacing: 0.12em;
         //font-size: 1.1vw;
-        line-height: 2.1vh;
+        line-height: 1.5;
     }
     
     #wrapper-grid.content {
@@ -270,7 +270,7 @@ body::-webkit-scrollbar {
         .line2 {
             grid-area: line;
             position: relative;
-            top: 42%;
+            top: 40%;
             text-align: start;
             left: 12.5%;
         }
@@ -278,8 +278,8 @@ body::-webkit-scrollbar {
         .line3 {
             grid-area: line;
             position: relative;
-            top: 70%;
-            left: -5%;
+            top: 69%;
+            left: -12%;
         }
     
         .line4 {
@@ -287,6 +287,7 @@ body::-webkit-scrollbar {
             position: relative;
             text-align: right;
             right: 17%;
+            top: -14%;
         }
     
         .titlea, .titleb, .titlec {

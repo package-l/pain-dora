@@ -132,7 +132,7 @@ const Home = () => {
                         }}>of Cookie Monsters ,</h2>
                         <p className="line2" style={{
                           fontSize: `${isSizingAspectRatio ? '1.15vw' : '2vh'}`
-                        }}>“Home,” unfortunately is a space where abuse, often resides.</p><br/>
+                        }}>“Home,” unfortunately, is a space where abuse often resides.</p><br/>
                         <p className="line3" style={{
                           fontSize: `${isSizingAspectRatio ? '1.15vw' : '2vh'}`
                         }}>Disguised as a warm, safe, & loving environment, everyday is a day,<br/>
@@ -149,7 +149,9 @@ const Home = () => {
                         </p>
                         <h3 className="titlec" style={{
                           fontSize: `${isSizingAspectRatio ? '3.5vw' : '6vh'}`
-                        }}>a <br/> Cookie <br/>Murder Mystery :</h3>
+                        }}>a <br/><span style={{
+                          letterSpacing: '0.5rem'
+                        }}>Cookie</span><br/>Murder Mystery :</h3>
                         <div className="wrapper-down">
                               <DownArrow nextFloor={"floor 2"}/>
                         </div>
