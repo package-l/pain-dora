@@ -1,9 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link, ScrollRestoration } from "react-router-dom";
+import { useState, useRef } from 'react';
+import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import Cookies from 'js-cookie';
 import '../styles/Home.scss';
-import useScrollSnap from 'react-use-scroll-snap';
 
 // Import Splash/website start indicators
 import { useSplash } from './SplashProvider';
@@ -48,13 +47,6 @@ const Home = () => {
   //const scrollRef = useRef(null);
   //useScrollSnap({ ref: scrollRef, duration: 10});
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageY;
-    setScrollPosition(position);
-    console.log(window.scrollY);
-  };
-
   //Media Query
   const isBigScreen = useMediaQuery({ 
     query: '(min-width: 850px)' 
@@ -92,24 +84,6 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   //}, []);
 
-    useEffect(() => {
-      /*const scrollPosition = sessionStorage.getItem('scrollPosition');
-      if (scrollPosition) {
-        window.scrollTo(0, parseInt(scrollPosition, 10));
-        sessionStorage.removeItem('scrollPosition');
-      }
-      console.log(window.pageYOffset);
-      console.log(scrollPosition);*/
-
-
-
-      handleScroll();
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-
-  }, []);
 
   return (
     <div className="home">
