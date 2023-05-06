@@ -110,7 +110,8 @@ const Gallery = () => {
                     </>
                   }
                 </div>
-                <div className="name">{galleryData[0].characters.macaron.name}</div>
+                <br/>
+                <div className="name">{galleryData[0].characters.macaron.name}</div><br/>
                 <div className="description">{galleryData[0].characters.macaron.description}</div>
               </div>
               <div className="soft">

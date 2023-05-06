@@ -14,19 +14,19 @@ export const galleryData = [
                 "locked": require('../img/Gallery/icons/Grey_Wafer.png'),
                 "visited": require('../img/Wafer/Wafer_Cookie.png'),
                 "name": "FLAkEY waFEr JAkE",
-                "description": `Dry, Crunchy, Bland,\nCoconut Flakes w/Taro Cream`
+                "description": `Dry, Crunchy, Bland,\nCoconut Flakes, & Blueberry Lavendar Butterfly Pea`
             },
             "financier": {
                 "locked": require('../img/Gallery/icons/Grey_Financier.png'),
                 "visited": require('../img/Financier/Financier.png'),
                 "name": "moNsiEUr fiNANciEr",
-                "description": `Amedine, Gold Nougats\nButter Bars, & Cheap Sugar`
+                "description": `Amandine, Gold Nougats\nButter Bars, & Cheap Sugar`
             },
             "macaron": {
                 "locked": require('../img/Gallery/icons/Grey_Macaron1.png'),
                 "visited": require('../img/Macaron/Macaron.png'),
                 "name": "mADamE mAcarOn",
-                "description": `Dried Rose, Pow(d)ered Sugar,\nPreserved Lychee,`
+                "description": `Rose Petals, Pow(d)ered Sugar,\nPreserved Lychee, & Old Money`
             },
             "soft": {
                 "locked": require('../img/Gallery/icons/Grey_SoftCookie.png'),
@@ -38,7 +38,7 @@ export const galleryData = [
                 "locked": require('../img/Gallery/icons/Grey_Linzer.png'),
                 "visited": require('../img/Linzer/Linzer.png'),
                 "name": "Lying Linzer Lindsay",
-                "description": `Sour, Tart, Li(m)e, Blood D'orange,\n& Ref Food Colouring`
+                "description": `Sour, Tart, Li(m)e, Blood D'orange,\n& Red Food Colouring`
             },
             "brownie": {
                 "locked": require('../img/Gallery/icons/Grey_Brownie.png'),

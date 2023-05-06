@@ -218,6 +218,10 @@
         animation: gallery-slide 4s;
     }
 
+    .wafer img.visited {
+        transition: .3s linear;
+    }
+
     .wafer:hover img.visited {
         opacity: 15%;
     }
