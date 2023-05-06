@@ -844,4 +844,12 @@ body::-webkit-scrollbar {
         left: 50%;
     }
 
+    .copyright {
+        @include Avenir;
+        @include tracking(60);
+        position: absolute;
+        bottom: 2%;
+        left: 2%;
+    }
+
 }

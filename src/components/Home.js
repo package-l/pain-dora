@@ -243,6 +243,11 @@ const Home = () => {
           </section>
           <section className="map-container basement" id="basement">
             <img className="base-map" src={Basement} alt="Under Construction Basement Floor Map"></img>
+            <p className="copyright" style={{
+            fontSize: `${isSizingAspectRatio ? '0.9vw' : '1.7vh'}`
+            }}>
+                Cookie Monsters (Website)  ||  Copyright © 2023 Fine, Di(n)e w/ Me & Andy C.  ||  All Rights Reserved .
+            </p>
           </section>
         </div>
         }
